@@ -1,5 +1,5 @@
 .container {
-    padding: 109px 0px 0px 75px;
+    padding: 150px 0px 0px 75px;
     width: 891px;
     position: relative;
     box-sizing: border-box;
@@ -9,7 +9,7 @@
 .headttx {
     color: var(--blacks-80, #303437);
     font-family: Montserrat;
-    font-size: 95.556px;
+    font-size: 6.59722222222vw;
     font-style: normal;
     font-weight: 700;
     line-height: 120%;
@@ -19,7 +19,7 @@
 .subtxt {
     color: #02010E;
     font-family: Montserrat;
-    font-size: 25px;
+    font-size: 1.73611111111vw;
     font-style: normal;
     font-weight: 500;
     line-height: 140%;
@@ -28,16 +28,18 @@
 }
 
 .rocket {
-    width: 144.024px;
-    height: 122.457px;
+    width: 10vw;
+    /* height: 122.457px; */
     flex-shrink: 0;
     position: relative;
+    aspect-ratio: 144/122;
 }
+
 
 .begantxt {
     color: var(--Accent-Purple-Base, #815FAA);
     font-family: "Simple Cakes";
-    font-size: 168.371px;
+    font-size: 11.66666666667vw;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
@@ -50,23 +52,24 @@
 }
 
 .rocketframe {
-    top: 80px;
-    right: 24px;
+    top: 40%;
+    right: 7%;
 }
 
 .began {
-    top: 160px;
-    right: 24px;
+    top: 60%;
+    right: 9%;
     transform: rotate(-9.204deg);
 }
 
 @media (max-width:450px) {
     .container {
-        padding: 16px;
+        padding: 16px 16px 0px 16px;
         width: 100%;
         gap: 44px;
         display: flex;
         flex-direction: column;
+        margin-top: 142px;
     }
 
     .headttx {
@@ -80,12 +83,14 @@
 
     .rocketframe {
         top: 10px;
-        right: 92px;
+        right: 100px;
     }
-.began {
-    top: 30px;
-        right: 95px;
-}
+
+    .began {
+        top: 30px;
+        right: 100px;
+    }
+
     .rocket {
         width: 47.526px;
         height: 40.411px;

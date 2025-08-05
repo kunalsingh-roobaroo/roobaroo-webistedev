@@ -3,9 +3,9 @@ import classes from "./NewsLetter.module.css";
 import Image from "next/image";
 import { upright } from "../../../../public/assets/icons";
 import { staticAlt } from "@/lib/constants";
-const NewsLetter = () => {
+const NewsLetter = ({ homepage }) => {
   return (
-    <div className={classes.box}>
+    <div className={`${classes.box} ${homepage ? classes.homebox : ""}`}>
       <div className={classes.inputwrapper}>
         <input
           type="email"

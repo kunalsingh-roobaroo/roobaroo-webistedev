@@ -138,7 +138,7 @@ const Footer = () => {
             <Link href={"/"} className={`${classes.linkl} link`}>
               terms of service
             </Link>
-            <Link href={"/"} className={`${classes.linkl} link`}>
+            <Link href={"/privacy-policy"} className={`${classes.linkl} link`}>
               Privacy Policy
             </Link>
           </div>

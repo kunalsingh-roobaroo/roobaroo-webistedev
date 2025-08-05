@@ -4,9 +4,11 @@ import BrandStoryHeroSection from "./components/HeroSection/HeroSection";
 import Ribbon from "./components/Ribbon/Ribbon";
 import Tiles from "./components/Tiles/Tiles";
 import Image from "next/image";
-import { blue, pink } from "../../../public/assets/images";
+import { blue, pink, strip } from "../../../public/assets/images";
 import { staticAlt } from "@/lib/constants";
 import Navbar from "@/components/Navbar/Navbar";
+import PinkBox from "@/components/Boxes/PinkBox";
+import BlueBox from "@/components/Boxes/BlueBox";
 
 const BrandStory = () => {
   return (
@@ -14,19 +16,24 @@ const BrandStory = () => {
       <Navbar />
       <div className={classes.container}>
         <BrandStoryHeroSection />
-        <Ribbon />
+        {/* <Ribbon /> */}
+        <div className={classes.ribbon}>
+          <Image src={strip} fill alt={staticAlt} />
+        </div>
         <div className={classes.tiles}>
           <Tiles />
         </div>
         <div className={classes.imagecontianer}>
-          <div className={classes.image}>
+          {/* <div className={classes.image}>
             <Image src={pink} fill alt={staticAlt} />
-          </div>
+          </div> */}
+          <PinkBox />
         </div>
         <div className={classes.blueimagecontianer}>
-          <div className={classes.image}>
+          {/* <div className={classes.image}>
             <Image src={blue} fill alt={staticAlt} />
-          </div>
+          </div> */}
+          <BlueBox />
         </div>
       </div>
     </>
