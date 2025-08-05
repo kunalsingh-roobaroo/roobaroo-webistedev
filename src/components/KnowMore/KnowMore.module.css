@@ -1,0 +1,43 @@
+.bluebox {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px 15px;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    /* Smooth animation */
+    cursor: pointer;
+    z-index: 1;
+}
+
+.top {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.boxttx {
+    color: var(--Whites-Base, #FFF);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.16px;
+    text-align: left;
+}
+
+.bluebox {
+    border-radius: 23px;
+    background: var(--Accent-Purple-Base, #815FAA);
+    width: 10.37013888889vw;
+    aspect-ratio: 149/146;
+}
+.bluebox:hover {
+    transform: scale(1.1);
+    /* Slight zoom */
+}
+.bluebox:hover{
+  background: var(--accent-purple-110, #684C8A)
+}

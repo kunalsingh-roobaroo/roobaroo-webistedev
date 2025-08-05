@@ -1,0 +1,368 @@
+.footer {
+    background-image: url("/assets/icons/footerbg.svg");
+    /* path relative to public/ folder */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    /* height: 40vh; */
+
+    /* or any height you want */
+    /* background-color: red; */
+    height: 624px;
+    padding: 0px 64px 16px 64px;
+    z-index: 0;
+    position: relative;
+    display: flex;
+    /* justify-content: flex-end; */
+    /* align-items: flex-end; */
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+.container {
+    width: 100%;
+    padding: 0px 75px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.actualframe {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.actual {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.heart {
+    width: 53.652px;
+    height: 45px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.made {
+    color: var(--Whites-Base, #FFF);
+    font-family: "Simple Cakes";
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 35px */
+    letter-spacing: 0.35px;
+}
+
+.lhstop {
+    display: flex;
+    align-items: center;
+
+}
+
+.lhs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 482px;
+}
+
+.whitelogo {
+    width: 306px;
+    height: 85px;
+    position: relative;
+}
+
+.gridSection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 16px;
+    /* margin-top: 16px; */
+}
+
+.gridItem {
+    color: var(--Whites-Base, #FFF);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.18px;
+}
+
+.headtxt {
+    color: var(--Whites-Base, #FFF);
+    font-family: "Simple Cakes";
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 45px */
+    letter-spacing: 0.45px;
+}
+
+.top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    gap: 171px;
+}
+
+.rhs {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: calc(100% - 482px);
+}
+
+.part {
+    color: var(--Whites-Base, #FFF);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 14px */
+    letter-spacing: 0.14px;
+}
+
+.middle {
+    width: 100%;
+    padding-top: 42px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+
+}
+
+.middlelhs {
+    width: auto;
+}
+
+.wework {
+    height: 32px;
+    /* align-self: stretch; */
+    aspect-ratio: 191.79/32.00;
+    position: relative;
+}
+
+.socialicons {
+    width: 23px !important;
+    height: 23px !important;
+    position: relative;
+}
+
+.icons {
+    display: flex;
+    gap: 31px;
+    align-items: center;
+}
+
+.ico {
+    width: 23.196px;
+    height: 23.197px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.dertail {
+    color: var(--Whites-Base, #FFF);
+    font-family: Montserrat;
+    font-size: 16.288px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 91%;
+    /* 14.822px */
+    letter-spacing: 0.163px;
+    text-align: end;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.contacts {
+    display: flex;
+    width: 436px;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    gap: 8px 3px;
+    flex-wrap: wrap;
+
+
+}
+
+.rule {
+    background: #FFF;
+    width: 100%;
+    height: 1px;
+    border: none;
+    margin-top: 20px;
+}
+
+.linkl {
+    color: var(--Whites-Base, #FFF);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31.767px;
+    /* 176.482% */
+}
+
+.coptxtx {
+    color: var(--Whites-Base, #FFF);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 31.767px;
+    /* 176.482% */
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 12px;
+}
+
+.subbottom {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+@media (max-width:450px) {
+
+    .footer,
+    .container {
+        padding: 0px;
+    }
+
+    .container {
+        background-image: url("/assets/icons/mobfooterbg.svg");
+        /* path relative to public/ folder */
+        background-size: cover;
+        height: auto;
+        background-position: center;
+        border: none;
+    }
+
+    .footer {
+        padding: 52px 24px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: auto;
+    }
+
+    .top {
+        flex-direction: column;
+        gap: 17px;
+        width: 100%;
+    }
+
+    .lhs {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .made {
+        font-size: 29.606px;
+    }
+
+    .whitelogo {
+        width: 257px;
+        height: 72px;
+    }
+
+    .gridSection {
+        gap: 12px 44px;
+        /* justify-content: space-between; */
+        margin-top: 48px;
+    }
+
+    .gridItem {
+        font-size: 13.64px;
+    }
+
+    .rhs {
+        width: 100%;
+    }
+
+    .headtxt {
+        font-size: 26.853px;
+    }
+
+    .middle {
+        width: 100%;
+        padding-top: 48px;
+        flex-direction: column-reverse;
+    }
+
+    .contacts {
+        width: 100%;
+        align-items: flex-start;
+        align-content: flex-start;
+        justify-content: flex-start;
+    }
+
+    .dertail {
+        text-align: left;
+    }
+
+    .detail {
+        gap: 4.22px;
+    }
+
+    .contacts {
+        gap: 5px 11px;
+    }
+
+    .icons {
+        margin-top: 19px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 26px;
+    }
+
+    .socialicons {
+        width: 27.926px !important;
+        height: 27.926px !important;
+        flex-shrink: 0;
+    }
+    .midlhs{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        gap: 4px; 
+        align-items: center;
+        justify-content: center;
+        margin-top: 48px;
+    }
+    .rule{
+        margin:12px 0px;
+    }
+    .bottom{
+        flex-direction: column;
+    }
+    .coptxtx,.linkl{
+       font-size: 10.558px; 
+    }
+}
