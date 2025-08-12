@@ -32,7 +32,7 @@
     background-size: contain;
     background-position: center;
     position: absolute;
-    top: 82vw;
+    top: 83vw;
     right: -8vw;
     width: 35.375vw;
     aspect-ratio: 1/1;
@@ -45,7 +45,7 @@
 }
 .knowmore {
     position: absolute;
-    top: 92vw;
+    top: 95vw;
     right: 6vw;
     z-index: 99;
 }
@@ -61,14 +61,14 @@
 
 .pinkbox {
 
-  top: 95vw;
+  top: 98vw;
   right: 24vw;
   animation: floatRandom 19s ease-in-out infinite;
   
 }
 
 .blueBox {
-  top: 102vw;
+  top: 105vw;
   right: 16vw;
   animation: floatRandom 14s ease-in-out infinite;
 

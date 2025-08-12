@@ -21,6 +21,9 @@ import {
   metadome,
   techbillion,
 } from "../../../../../public/assets/logos";
+import BlueBox from "@/components/Boxes/BlueBox";
+import PinkBox from "@/components/Boxes/PinkBox";
+import PurpleBox from "@/components/Boxes/PurpleBox";
 const BuildingSection = () => {
   const members = [
     member1,
@@ -70,7 +73,7 @@ const BuildingSection = () => {
               direction={i % 2 === 0 ? "up" : "down"}
               speed={30}
               gradient={false}
-              pauseOnHover
+              // pauseOnHover
               className={classes.marqueeline}
             >
               {[...col, ...col].map((member, idx) => (
@@ -107,10 +110,17 @@ const BuildingSection = () => {
               </div>
             );
           })}
-          <div className={classes.from}>
-            from
-          </div>
+          <div className={classes.from}>from</div>
         </div>
+      </div>
+      <div className={classes.bluebox}>
+        <BlueBox />
+      </div>
+      <div className={classes.pinkbox}>
+        <PinkBox />
+      </div>
+      <div className={classes.purplebox}>
+        <PurpleBox />
       </div>
     </section>
   );
