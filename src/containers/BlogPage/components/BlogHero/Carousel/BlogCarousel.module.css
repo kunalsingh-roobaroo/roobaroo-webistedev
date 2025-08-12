@@ -1,0 +1,64 @@
+.slide {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 75.83333333333vw !important;
+    align-self: center !important;
+    justify-self: center !important;
+    gap: 31px !important;
+}
+
+.rhs {
+    width: 36.80555555556vw;
+    aspect-ratio: 530/278;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.lhs {
+    width: calc(100% - 36.80555555556vw -31px);
+}
+
+
+.carouselWrapper {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.date {
+    color: var(--Blacks-Base, #0C0C0C);
+    text-align: justify;
+    font-family: Montserrat;
+    font-size: 1.11111111111vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 24px */
+    letter-spacing: 0.16px;
+    margin-top: 33px;
+}
+.title{
+color: var(--Blacks-Base, #0C0C0C);
+
+/* Heading 3 Desk */
+font-family: Montserrat;
+font-size: 2.08333333333vw;
+font-style: normal;
+font-weight: 600;
+line-height: 120%; /* 36px */
+letter-spacing: 0.3px;
+text-transform: lowercase;
+margin-top: 31px;
+}
+.description{
+    color: var(--Blacks-Base, #0C0C0C);
+text-align: justify;
+font-family: Montserrat;
+font-size: 1.11111111111vw;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */
+letter-spacing: 0.16px;
+margin-top: 20px;
+}

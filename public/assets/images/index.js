@@ -15,10 +15,16 @@ import infinity_doodle from "./infinity-doodle.png";
 import torn_paper_doodle from "./torn-paper-doodle.png";
 import bhaskar from "./bhaskar.png";
 import foundertags from "./foundertags.png";
+import featureimg from "./featureimg.png";
+import blogthumbnail from "./blogthumbnail.png";
+import tilethumbnail from "./tilethumbnail.png";
 export {
   logo,
+  featureimg,
   foundertags,
   bhaskar,
+  tilethumbnail,
+  blogthumbnail,
   thumbnail,
   hand_doodle,
   smallcircles,

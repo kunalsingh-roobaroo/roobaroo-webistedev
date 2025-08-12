@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    width: 100%;
+    padding: 51px 57px;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    justify-content: center;
+    overflow: hidden;
+     overflow-x: hidden;
+  position: relative;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    padding: 0px 7.05555555556vw;
+    flex-direction: column;
+    align-items: center;
+    gap: 112px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.heroimg {
+    width: 75.83333333333vw;
+    aspect-ratio: 1092/474;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.featuretxt {
+    color: #000;
+    font-family: "Simple Cakes";
+    font-size: 3.54166666667vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    /* 60.052px */
+    letter-spacing: 0.5px;
+    text-align: left;
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+
+.carousel {
+    width: 100%;
+}
+
