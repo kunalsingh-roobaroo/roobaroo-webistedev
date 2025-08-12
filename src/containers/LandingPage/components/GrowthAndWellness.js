@@ -4,18 +4,7 @@ import Container from "@/components/ui/container";
 
 // Define the pill data structure with border classes directly
 
-const pillData = [
-  { text: "Retreats", borderClass: "border-brand-secondary" },
-  { text: "1:1 Coaching", borderClass: "border-brand-primary" },
-  { text: "Actionable Tools", borderClass: "border-black" },
-  { text: "Masterclasses", borderClass: "border-brand-tertiary" },
-  { text: "Bootcamps", borderClass: "border-brand-secondary" },
-  { text: "Curated Cohorts", borderClass: "border-brand-primary" },
-  { text: "B2B Consulting", borderClass: "border-brand-tertiary" },
-];
 
-// Create seamless loop by duplicating the data
-const seamlessPillData = [...pillData, ...pillData];
 
 export default function GrowthAndWellness() {
   return (

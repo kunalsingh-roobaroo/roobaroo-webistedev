@@ -3,7 +3,7 @@ import classes from "./GrowSection.module.css";
 import GrowthWellnessSection from "./components/GrowthWellnessSection";
 const GrowSection = () => {
   return (
-    <div className={classes.container}>
+    <section className={classes.container}>
       <div className={classes.txtdiv}>
         <p className={classes.maintxt}>
           We help you <span className={classes.spantxt}>Grow</span>
@@ -11,7 +11,7 @@ const GrowSection = () => {
         <p className={classes.subtxt}>Without burning out!</p>
       </div>
       <GrowthWellnessSection />
-    </div>
+    </section>
   );
 };
 

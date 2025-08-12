@@ -1,0 +1,96 @@
+.hero {
+    width: 100%;
+    position: relative;
+    max-height: 792px;
+}
+
+.bigcircle {
+    position: absolute;
+    top: -7vw;
+    left: 0;
+    background-image: url("/assets/images/herocircles.png");
+    /* path relative to public/ folder */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    /* height: ; */
+    aspect-ratio: 1545/1526;
+    z-index: 0;
+    
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    overflow: hidden;
+}
+.circle {
+
+    background-image: url("/assets/images/smallcircles.png");
+    /* path relative to public/ folder */
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 82vw;
+    right: -8vw;
+    width: 35.375vw;
+    aspect-ratio: 1/1;
+    z-index: -1;
+    /* z-index: 99; */
+}
+.guding{
+    width: 100%;
+    position: relative;
+}
+.knowmore {
+    position: absolute;
+    top: 92vw;
+    right: 6vw;
+    z-index: 99;
+}
+.pinkbox,
+.blueBox {
+  border-radius: 16.47px;
+  overflow: hidden;
+  width: 10.22222222222vw;
+  position: absolute;
+  aspect-ratio: 1/1;
+  
+}
+
+.pinkbox {
+
+  top: 95vw;
+  right: 24vw;
+  animation: floatRandom 19s ease-in-out infinite;
+  
+}
+
+.blueBox {
+  top: 102vw;
+  right: 16vw;
+  animation: floatRandom 14s ease-in-out infinite;
+
+}
+@keyframes floatRandom {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  25% {
+    transform: translate(40px, -30px);
+  }
+
+  50% {
+    transform: translate(-30px, 10px);
+  }
+
+  75% {
+    transform: translate(20px, -40px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}

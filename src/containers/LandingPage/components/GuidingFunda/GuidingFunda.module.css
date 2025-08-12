@@ -1,0 +1,83 @@
+.container {
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.cake {
+    color: var(--Accent-Purple-Base, #815FAA);
+    text-align: center;
+    font-family: "Simple Cakes";
+    font-size: 8.05555555556vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 116px */
+    letter-spacing: 1.16px;
+}
+
+.subtop {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.txtdiv {
+    /* width: 611px; */
+    display: flex;
+    padding: 10.27777777778vw 9.30555555556vw 0px 14.93055555556vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.stroke {
+    width: 198.027px;
+    height: 4.166px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.central {
+
+    background-image: url("/assets/icons/grid.svg");
+    /* path relative to public/ folder */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    /* height: ; */
+    aspect-ratio: 1545/1526;
+    z-index: 0;
+
+}
+
+.matrix {
+
+    padding: 0px 9.30555555556vw 0px 14.93055555556vw;
+    width: 100%;
+}
+
+.box {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    /* background: white; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    /* border: 1px solid rgba(224, 224, 224, 1); */
+    font-family: 'Simple Cakes', cursive;
+    /* Handwritten font */
+}
+
+.central {
+    padding-top: 2.31944444444vw;
+    /* padding-bottom: 1.25vw; */
+    max-height:72vw;
+}

@@ -8,8 +8,8 @@
 
     /* or any height you want */
     /* background-color: red; */
-    height: 624px;
-    padding: 0px 64px 16px 64px;
+    /* height: 624px; */
+    padding: 0px 4.44444444444vw 16px 4.44444444444vw;
     z-index: 0;
     position: relative;
     display: flex;
@@ -17,6 +17,7 @@
     /* align-items: flex-end; */
     flex-direction: column;
     justify-content: flex-end;
+    aspect-ratio: 1373/624;
 
 }
 
@@ -44,16 +45,17 @@
 }
 
 .heart {
-    width: 53.652px;
-    height: 45px;
+    width: 3.75vw;
+    /* height: 45px; */
     flex-shrink: 0;
     position: relative;
+    aspect-ratio: 54/45;
 }
 
 .made {
     color: var(--Whites-Base, #FFF);
     font-family: "Simple Cakes";
-    font-size: 35px;
+    font-size: 2.43055555556vw;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
@@ -75,9 +77,10 @@
 }
 
 .whitelogo {
-    width: 306px;
-    height: 85px;
+    width: 19.30555555556vw;
+    /* height: 85px; */
     position: relative;
+    aspect-ratio: 278/63;
 }
 
 .gridSection {
@@ -90,17 +93,17 @@
 .gridItem {
     color: var(--Whites-Base, #FFF);
     font-family: Montserrat;
-    font-size: 18px;
+    font-size: 1.1111111111vw;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: -0.18px;
+    letter-spacing: -0.16px;
 }
 
 .headtxt {
     color: var(--Whites-Base, #FFF);
     font-family: "Simple Cakes";
-    font-size: 45px;
+    font-size: 3.125vw;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
@@ -246,6 +249,45 @@
     gap: 80px;
 }
 
+.purplebox {
+    width: 100%;
+    border-radius: 23px;
+    background: var(--Accent-Purple-Base, #815FAA);
+    /* height: 95px; */
+    aspect-ratio: 566/95;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+        padding: 20px 30px;
+}
+
+.txtdiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.sub {
+    color: var(--Whites-Base, #FFF);
+    font-family: Montserrat;
+    font-size: 1.38888888889vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.192px;
+}
+
+.small {
+    color: var(--Whites-Base, #FFF);
+    font-family: Montserrat;
+    font-size: 1.38888888889vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.192px;
+}
+
 @media (max-width:450px) {
 
     .footer,
@@ -347,22 +389,27 @@
         height: 27.926px !important;
         flex-shrink: 0;
     }
-    .midlhs{
+
+    .midlhs {
         display: flex;
         width: 100%;
         flex-direction: column;
-        gap: 4px; 
+        gap: 4px;
         align-items: center;
         justify-content: center;
         margin-top: 48px;
     }
-    .rule{
-        margin:12px 0px;
+
+    .rule {
+        margin: 12px 0px;
     }
-    .bottom{
+
+    .bottom {
         flex-direction: column;
     }
-    .coptxtx,.linkl{
-       font-size: 10.558px; 
+
+    .coptxtx,
+    .linkl {
+        font-size: 10.558px;
     }
 }

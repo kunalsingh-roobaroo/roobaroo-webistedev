@@ -28,10 +28,10 @@
 }
 
 .doodleimg {
-  width: 13.49534722222vw;
+  width: 15.34722222222vw;
   /* height: 98.544px; */
   position: relative;
-  aspect-ratio: 1.97/1;
+  aspect-ratio: 221/173;
 }
 
 .verticalLineWrapper {
@@ -39,7 +39,6 @@
   width: 6px;
   height: 100%;
   /* adjust as needed */
-  margin: 0 40px;
 }
 
 .verticalTrack {
@@ -80,29 +79,84 @@
 }
 
 .bkuebox,
-.purplebox,
-.pinkbox {
+.redbox {
   position: absolute;
   aspect-ratio: 1/1;
-border-radius: 59.883px !important;
-overflow: hidden;
+  border-radius: 59.883px !important;
+  overflow: hidden;
+  animation: floatRandom 19s ease-in-out infinite;
 }
 
 .bkuebox {
   width: 37.16666666667vw;
-  top: -217px;
-  left: -57%;
+  top: -20vw;
+  left: -35vw;
 
 
 }
+
 
 .purplebox {
-
+  position: absolute;
+  aspect-ratio: 1/1;
+  /* border-radius: 59.883px !important; */
+  overflow: hidden;
+  animation: floatRandom 19s ease-in-out infinite;
   width: 21.66666666667vw;
+  top: 34vw;
+  left: -33vw;
+  border-radius: 34.909px !important;
+
 
 }
 
-.pinkbox {
+.redbox {
 
   width: 33.22222222222vw;
+  top: 0vw;
+  right: -35vw;
+}
+
+.line {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.underline {
+  width: 13.81944444444vw;
+  aspect-ratio: 199/2;
+  position: relative;
+}
+
+.leftdoodleimg {
+  width: 13.54166666667vw;
+  aspect-ratio: 199/95;
+  position: relative;
+}
+
+@keyframes floatRandom {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  25% {
+    transform: translate(20px, -15px);
+  }
+
+  50% {
+    transform: translate(-15px, 10px);
+  }
+
+  75% {
+    transform: translate(10px, -20px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
 }

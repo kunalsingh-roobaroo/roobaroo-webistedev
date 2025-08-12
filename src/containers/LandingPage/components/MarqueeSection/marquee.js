@@ -94,31 +94,6 @@ const MarqueeSection = () => {
           })}
         </Marquee>
       </div>
-      <div className={classes.lostSection}>
-        <div className={classes.lostContainer}>
-          <div className={classes.lostxttxdiv}>
-            <h4 className={classes.subttx}>Silent Pains to Lost Dreams</h4>
-            <div>
-              <h2 className={classes.headtxt}>
-                This is the<span className={classes.span}> India </span> <br />
-                we refuse to ignore.
-              </h2>
-            </div>
-          </div>
-          <div className={classes.bigcircle}>
-            <div className={classes.bigcirclframe}>
-              <Image src={newcircle} fill alt={staticAlt} />
-            </div>
-          </div>
-          <KnowMore />
-        </div>
-        <div className={classes.pinkbox}>
-          <PinkBox />
-        </div>
-        <div className={classes.blueBox}>
-          <BlueBox />
-        </div>
-      </div>
     </>
   );
 };

@@ -16,6 +16,7 @@ import {
 import { wework, whitelogo } from "../../../public/assets/logos";
 import Link from "next/link";
 import NewsLetter from "./components/NewsLetter";
+import { ArrowUpRight } from "lucide-react";
 const Footer = () => {
   const gridItems = [
     { name: "The Problem Space", link: "/" },
@@ -93,7 +94,19 @@ const Footer = () => {
             <p className={classes.headtxt}>
               Helping your grow without burning out!
             </p>
-            <NewsLetter />
+            <div className={classes.purplebox}>
+              <div className={classes.txtdiv}>
+                <p className={classes.sub}>Check out where you stand</p>
+                <p className={classes.small}>
+                  Take our assessment to know more!
+                </p>
+              </div>
+              <ArrowUpRight
+                color="white"
+                size={28}
+                rotate={-45}
+              />
+            </div>
           </div>
         </div>
         <div className={classes.middle}>

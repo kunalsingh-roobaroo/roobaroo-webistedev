@@ -1,6 +1,6 @@
 .marquee {
   transform: rotate(-6deg) !important;
-  padding: 2rem;
+  /* padding: 0px 7px; */
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
@@ -10,19 +10,20 @@
 .marqueeWrapper {
   overflow: hidden;
   width: 100%;
-  padding: 109px 0px 54px 0px;
+  padding: 64px 0px 64px 0px;
   /* margin-bottom: 109px; */
 }
 
 .card {
   width: 35.83333333333vw;
-  margin: 0 0.75rem;
+  margin: 0 13px;
   aspect-ratio: 2.32/1;
   padding: 1rem;
   background-color: white;
   border-radius: 24.658px;
   border: 0.503px solid rgba(8, 81, 114, 0.18);
   background: var(--Whites-Base, #FFF);
+  box-shadow: 17.085px 11.959px 20.502px 0 rgba(0, 0, 0, 0.05);
 }
 
 .cardHeader {

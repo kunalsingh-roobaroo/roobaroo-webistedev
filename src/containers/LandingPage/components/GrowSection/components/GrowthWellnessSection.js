@@ -1,6 +1,6 @@
 "use client";
 
-import { staticAlt } from "@/lib/constants";
+import { responsiveImageSizes, staticAlt } from "@/lib/constants";
 import {
   hand_doodle,
   infinity_doodle,
@@ -12,6 +12,7 @@ import { useEffect } from "react";
 import BlueBox from "@/components/Boxes/BlueBox";
 import PurpleBox from "@/components/Boxes/PurpleBox";
 import PinkBox from "@/components/Boxes/PinkBox";
+import { underline } from "../../../../../../public/assets/icons";
 
 // ✅ Correct image imports (adjust path to match your actual folder structure)
 
@@ -45,38 +46,49 @@ export default function GrowthWellnessSection() {
           We&apos;ve been sold growth & wellness in isolation — but life
           isn&apos;t split like that. It&apos;s messy, layered and integrated.
         </p>
-        <div className={classes.doodleimg}>
+        <div className={classes.leftdoodleimg}>
           <Image src={infinity_doodle} fill alt={staticAlt} />
         </div>
         <p className={classes.mainntxt}>
-          We&apos;ve been sold growth & wellness in isolation — but life
-          isn&apos;t split like that. It&apos;s messy, layered and integrated.
+          We bridge this gap by integrating career growth and personal wellness
+          into one unified journey.
         </p>
       </div>
-      <div className={classes.verticalLineWrapper}>
-        <div className={classes.verticalTrack}></div>
-        <div className={classes.verticalFill} id="verticalFill"></div>
-        <div
-          className={classes.circle}
-          style={{ top: "0%", background: "#57C2F3" }}
-        ></div>
-        <div
-          className={classes.circle}
-          style={{ top: "33.33%", background: "#FFA6A6" }}
-        ></div>
-        <div
-          className={classes.circle}
-          style={{ top: "66.66%", background: "#9D7FC1" }}
-        ></div>
-        {/* <div className={classes.circle} style={{ top: "100%" }}></div> */}
+      <div className={classes.line}>
+        <div className={classes.verticalLineWrapper}>
+          <div className={classes.verticalTrack}></div>
+          <div className={classes.verticalFill} id="verticalFill"></div>
+          <div
+            className={classes.circle}
+            style={{ top: "0%", background: "#57C2F3" }}
+          ></div>
+          <div
+            className={classes.circle}
+            style={{ top: "33.33%", background: "#FFA6A6" }}
+          ></div>
+          <div
+            className={classes.circle}
+            style={{ top: "66.66%", background: "#9D7FC1" }}
+          ></div>
+          {/* <div className={classes.circle} style={{ top: "100%" }}></div> */}
+        </div>
+        <div className={classes.underline}>
+          <Image
+            src={underline}
+            fill
+            alt={staticAlt}
+            sizes={responsiveImageSizes}
+          />
+        </div>
       </div>
+
       <div className={classes.box}>
         <div className={classes.doodleimg}>
           <Image src={torn_paper_doodle} fill alt={staticAlt} />
         </div>
         <p className={classes.mainntxt}>
-          We&apos;ve been sold growth & wellness in isolation — but life
-          isn&apos;t split like that. It&apos;s messy, layered and integrated.
+          Roobaroo is about bringing balance back to the centre - where ambition
+          & inner stability grow together.
         </p>
         <div className={classes.doodleimg}>
           <Image src={hand_doodle} fill alt={staticAlt} />

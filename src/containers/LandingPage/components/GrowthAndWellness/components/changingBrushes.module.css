@@ -1,0 +1,57 @@
+.changingWrapper {
+  position: relative;
+  width: calc(400 / 1440 * 100vw); /* brush width */
+  height: calc(80 / 1440 * 100vw); /* brush height */
+  overflow: hidden;
+}
+
+.brushContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: var(--brush-initial);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position: left center;
+  animation: brushReveal 1s ease forwards;
+}
+
+.brushText {
+  position: absolute;
+  top: 50%;
+  left: calc(30 / 1440 * 100vw);
+  transform: translateY(-50%);
+  font-size: calc(28 / 1440 * 100vw);
+  font-weight: 500;
+  color: white;
+  white-space: nowrap;
+  opacity: 0;
+  animation: textFadeIn 0.6s ease forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes brushReveal {
+  0% {
+    background-size: 0% 100%;
+    background-image: var(--brush-initial);
+  }
+  70% {
+    background-size: 100% 100%;
+    background-image: var(--brush-initial);
+  }
+  100% {
+    background-size: 100% 100%;
+    background-image: var(--brush-rendered);
+  }
+}
+
+@keyframes textFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) translateX(calc(-10 / 1440 * 100vw));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+}

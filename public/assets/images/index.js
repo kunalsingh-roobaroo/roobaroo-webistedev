@@ -9,13 +9,19 @@ import bigpink from "./bigpink.png";
 import backgroundcircles from "./backgroundcircles.png";
 import newcircle from "./newcircle.png";
 import strip from "./strip.png";
+import smallcircles from "./smallcircles.png";
 import hand_doodle from "./hand-doodle.png";
 import infinity_doodle from "./infinity-doodle.png";
 import torn_paper_doodle from "./torn-paper-doodle.png";
+import bhaskar from "./bhaskar.png";
+import foundertags from "./foundertags.png";
 export {
   logo,
+  foundertags,
+  bhaskar,
   thumbnail,
   hand_doodle,
+  smallcircles,
   thumbnail2,
   thumbnail3,
   blue,

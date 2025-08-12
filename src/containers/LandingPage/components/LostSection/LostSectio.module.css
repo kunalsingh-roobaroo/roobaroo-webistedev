@@ -1,0 +1,126 @@
+
+
+.lostSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  /* padding: 109px 75px 106px 75px; */
+  /* box-sizing: content-box; */
+  padding: 0px 17.54166666667vw 56.89px 12.08333333333vw;
+
+}
+
+.lostContainer {
+  /* width: 69.375vw; */
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.highlightSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.lostxttxdiv {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.subttx {
+  color: #1E1E1E;
+  font-family: Montserrat;
+  font-size: 2.08333333333vw;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.3px;
+}
+
+.headtxt {
+  color: var(--blacks-80, #303437);
+  font-family: Montserrat;
+  font-size: 6.52777777778vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  /* 94px */
+  letter-spacing: 0.94px;
+}
+
+.span {
+  color: var(--Accent-Purple-Base, #815FAA);
+  font-family: Montserrat;
+  font-size: 6.52777777778vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  /* 94px */
+  letter-spacing: 0.94px;
+
+}
+
+.pinkbox,
+.blueBox {
+  border-radius: 16.47px;
+  overflow: hidden;
+  width: 10.22222222222vw;
+  position: absolute;
+  aspect-ratio: 1/1;
+  
+}
+
+.pinkbox {
+
+  top: 6vw;
+  right: 30vw;
+  animation: floatRandom 19s ease-in-out infinite;
+  
+}
+
+.blueBox {
+  top: 0vw;
+  right: 37vw;
+  animation: floatRandom 14s ease-in-out infinite;
+
+}
+
+@keyframes floatRandom {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  25% {
+    transform: translate(20px, -15px);
+  }
+
+  50% {
+    transform: translate(-15px, 10px);
+  }
+
+  75% {
+    transform: translate(10px, -20px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.bigcircle{
+  position: absolute;
+  right: -2vw;
+  top:  -7vw;
+}
+.bigcirclframe{
+  width: 39.33104166667vw;
+  aspect-ratio: 1/1
+}
+
