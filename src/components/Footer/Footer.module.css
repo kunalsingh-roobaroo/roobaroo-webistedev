@@ -1,5 +1,5 @@
 .footer {
-    background-image: url("/assets/icons/footerbg.svg");
+    background-image: url("/assets/images/footer.png");
     /* path relative to public/ folder */
     background-size: cover;
     background-position: center;
@@ -179,7 +179,7 @@
 .dertail {
     color: var(--Whites-Base, #FFF);
     font-family: Montserrat;
-    font-size: 16.288px;
+    font-size: 1.18055555556vw;
     font-style: normal;
     font-weight: 400;
     line-height: 91%;
@@ -218,7 +218,7 @@
 .linkl {
     color: var(--Whites-Base, #FFF);
     font-family: Montserrat;
-    font-size: 18px;
+    font-size: 1.25vw;
     font-style: normal;
     font-weight: 400;
     line-height: 31.767px;
@@ -228,7 +228,7 @@
 .coptxtx {
     color: var(--Whites-Base, #FFF);
     font-family: Montserrat;
-    font-size: 18px;
+    font-size: 1.25vw;
     font-style: normal;
     font-weight: 600;
     line-height: 31.767px;

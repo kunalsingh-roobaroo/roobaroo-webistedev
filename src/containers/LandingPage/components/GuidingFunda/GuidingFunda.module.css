@@ -24,7 +24,7 @@
 .subtop {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0px;
 }
 
 .txtdiv {
@@ -38,10 +38,11 @@
 }
 
 .stroke {
-    width: 198.027px;
-    height: 4.166px;
+    width: 13.81944444444vw;
+    /* height: 4.166px; */
     flex-shrink: 0;
     position: relative;
+    aspect-ratio: 199/5;
 }
 
 .central {
