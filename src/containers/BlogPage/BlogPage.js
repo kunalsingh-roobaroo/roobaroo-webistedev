@@ -14,24 +14,33 @@ const BlogPage = () => {
   return (
     <>
       <Navbar />
-      <div className={classes.box}>
-        <BlogHero />
-        <div className={classes.bluebox}>
-          <BlueBox />
-        </div>
-        <div className={classes.pinkbox}>
-          <PinkBox />
-        </div>
-      </div>
-      <div className={classes.blogcards}>
-        <BlogCards />
-        <div className={classes.blogbg}>
-          <div className={classes.blogbgframe}>
-            <Image src={blogtop} fill alt={staticAlt} />
+      <div className={classes.parent}>
+        <div className={classes.box}>
+          <BlogHero />
+          <div className={classes.bluebox}>
+            <BlueBox />
+          </div>
+          <div className={classes.pinkbox}>
+            <PinkBox />
           </div>
         </div>
+        <div className={classes.blogcards}>
+          <BlogCards />
+          <div className={classes.blogbg}>
+            <div className={classes.blogbgframe}>
+              <Image src={blogtop} fill alt={staticAlt} />
+            </div>
+          </div>
+          <div className={classes.newbluebox}>
+            <BlueBox />
+          </div>
+        </div>
+
+        <div className={classes.newpinkbox}>
+          <PinkBox />
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 };
