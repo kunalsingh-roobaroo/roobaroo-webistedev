@@ -48,10 +48,18 @@
     justify-content: space-between;
 }
 
+.blog:hover {
+    background: linear-gradient(181deg, #FFF -93.19%, #FFF 1506.62%);
+
+    box-shadow: 0 2.762px 4.603px 2.762px rgba(0, 0, 0, 0.13);
+}
+
 .thumbnail {
     width: 100%;
     aspect-ratio: 332/242;
     position: relative;
+    border-radius: 45px 45px 0 0;
+    overflow: hidden;
 }
 
 .txtdiv {
@@ -118,7 +126,7 @@
 }
 
 .tag:nth-child(1) {
-   border: 1.202px solid var(--Accent-Purple-Base, #815FAA);
+    border: 1.202px solid var(--Accent-Purple-Base, #815FAA);
     color: var(--accent-purple-110, #684C8A);
 }
 
@@ -128,30 +136,34 @@
 }
 
 .tag:nth-child(3) {
-border: 1.202px solid var(--Primary-Coral-Base, #FB7D7D);
+    border: 1.202px solid var(--Primary-Coral-Base, #FB7D7D);
     color: var(--primary-coral-110, #FF5656)
 }
 
 .customPagination .MuiPaginationItem-root {
-  font-weight: 600;
-  font-size: 1rem;
-  color: #7b5ca7; /* purple text for inactive */
+    font-weight: 600;
+    font-size: 1rem;
+    color: #7b5ca7;
+    /* purple text for inactive */
 }
 
 .customPagination .MuiPaginationItem-root.Mui-selected {
-  background-color: #7b5ca7; /* purple background for active */
-  color: white;
-  border-radius: 50%;
+    background-color: #7b5ca7;
+    /* purple background for active */
+    color: white;
+    border-radius: 50%;
 }
 
 .customPagination .MuiPaginationItem-root.Mui-selected:hover {
-  background-color: #6a4b94; /* slightly darker on hover */
+    background-color: #6a4b94;
+    /* slightly darker on hover */
 }
 
 .customPagination .MuiPaginationItem-root:hover {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 .customPagination .MuiPaginationItem-previousNext {
-  color: #7b5ca7; /* arrow color */
+    color: #7b5ca7;
+    /* arrow color */
 }

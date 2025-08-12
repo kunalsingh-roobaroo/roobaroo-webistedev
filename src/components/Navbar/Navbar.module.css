@@ -90,10 +90,11 @@
     display: flex;
 
 }
-.dropdown{
+
+.dropdown {
     position: absolute;
     display: flex;
-    width:13.88888888889vw;
+    width: 13.88888888889vw;
     height: auto;
     /* aspect-ratio: 1/1; */
     border-radius: 16px;
@@ -105,7 +106,7 @@
     gap: 8px;
     align-items: flex-start;
     justify-content: flex-start;
-    
+
 }
 
 @media (max-width:450px) {
@@ -116,6 +117,14 @@
         padding: 0;
 
         padding: 7px 17px;
+    }
+
+    .mobbtn {
+        font-size: 14.167px;
+
+
+        width: 137px;
+        height: 31.939px;
     }
 
     .links {
@@ -171,6 +180,12 @@
         justify-self: flex-start;
         align-self: flex-start;
         margin-top: 32px;
+    }
+
+    .icon {
+        width: 203px !important;
+        /* height: 45px; */
+        aspect-ratio: 203/45;
     }
 
 }
