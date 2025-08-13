@@ -44,10 +44,7 @@ export default function GrowthWellnessMatrix() {
               <Image src={fire} fill alt={staticAlt} />
             </div>
             <div className={classes.brushed}>
-              <p style={{
-                lineHeight:'80%',
-                textAlign:'center'
-              }} className={classes.label}>Out</p>
+              <p className={`${classes.label} ${classes.outtxt}`}>Out</p>
             </div>
           </div>
         </div>
@@ -107,35 +104,30 @@ export default function GrowthWellnessMatrix() {
         </div>
 
         {/* Inner quadrant details */}
-        <div
-          className={classes.text}
-          style={{ top: "30%", left: "20%", textAlign: "end" }}
-        >
+        <div className={`${classes.text} ${classes.workaholism}`}>
           Workaholism
         </div>
-        <div
-          className={classes.text}
-          style={{ top: "38%", left: "20%", textAlign: "end" }}
-        >
+        <div className={`${classes.text} ${classes.anxiety}`}>
           Anxiety despite <br /> Success
         </div>
-        <div className={classes.text} style={{ top: "62%", left: "20%" }}>
+        <div className={`${classes.text} ${classes.withdrawal}`}>
           Withdrawal
         </div>
-        <div className={classes.text} style={{ top: "70%", left: "20%" }}>
+        <div className={`${classes.text} ${classes.helplessness}`}>
           Helplessness
         </div>
 
-        <div className={classes.text} style={{ top: "55%", left: "60%" }}>
+        <div className={`${classes.text} ${classes.stagnation}`}>
           Stagnation
         </div>
-        <div className={classes.text} style={{ top: "63%", left: "60%" }}>
+        <div className={`${classes.text} ${classes.wellness}`}>
           Wellness without <br /> Direction
         </div>
-        <div className={classes.textPurple} style={{ top: "33%", left: "58%" }}>
+
+        <div className={`${classes.textPurple} ${classes.centered}`}>
           Centered
         </div>
-        <div className={classes.textPurple} style={{ top: "40%", left: "58%" }}>
+        <div className={`${classes.textPurple} ${classes.futureReady}`}>
           Future-ready
         </div>
 

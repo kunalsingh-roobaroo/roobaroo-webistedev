@@ -115,13 +115,15 @@ const KnowYourBuddy = () => {
       <div className={classes.heatop}>
         <h2 className={classes.headtxt}>Know your</h2>
         <h2 className={classes.cake}>Buddy</h2>
-        <div className={classes.arrow}>
-          <Image
-            src={arrow_down}
-            fill
-            alt={staticAlt}
-            sizes={responsiveImageSizes}
-          />
+        <div className={classes.arrowframe}>
+          <div className={classes.arrow}>
+            <Image
+              src={arrow_down}
+              fill
+              alt={staticAlt}
+              sizes={responsiveImageSizes}
+            />
+          </div>
         </div>
       </div>
       <div className={classes.central}>
@@ -138,6 +140,9 @@ const KnowYourBuddy = () => {
             </div>
             <div className={classes.purplebox}>
               <PurpleBox />
+            </div>
+            <div className={classes.name}>
+              Bhaskar Singhania
             </div>
             <div className={classes.tags}>
               <div className={classes.founderTags}>

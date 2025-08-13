@@ -35,7 +35,6 @@ const BlogPage = () => {
             <BlueBox />
           </div>
         </div>
-
         <div className={classes.newpinkbox}>
           <PinkBox />
         </div>

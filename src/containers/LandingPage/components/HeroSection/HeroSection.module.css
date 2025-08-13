@@ -306,3 +306,114 @@
 .purple {
     animation-delay: 3s;
 }
+
+@media (max-width:450px) {
+    .subcontainer {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-items: flex-start;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .container {
+        padding: 126px 17px 34px 17px;
+    }
+
+    .txtdiv {
+        gap: 44px;
+    }
+
+    .headttx {
+        font-size: 71.801px;
+    }
+
+    .subtxt {
+        font-size: 15px;
+        line-height: 21px;
+    }
+
+    .arrowframe {
+
+        top: -40px;
+        left: 0;
+        aspect-ratio: 67/55;
+    }
+
+    .arrow {
+        width: 66.899px;
+        height: 54.432px;
+
+        /* aspect-ratio: 67/55; */
+    }
+
+    .leaveframe {
+        width: 47.813px;
+        height: 78.752px;
+        transform: rotate(-49deg);
+        aspect-ratio: 48/79;
+    }
+
+    .leaves {
+        left: -11px;
+        top: 118px;
+    }
+
+    .txtnox {
+        top: 132px;
+        width: 224px;
+        height: 29px;
+        aspect-ratio: 224/29;
+        right: 0px;
+    }
+
+    .cakes {
+        font-size: 39.754px;
+        transform: rotate(0);
+    }
+
+    .bluebox {
+        width: 97.15px;
+        height: 97.15px;
+        aspect-ratio: 1/1;
+        padding: 15px;
+    }
+
+    .boxttx {
+        font-size: 12.535px;
+    }
+
+    .redbox {
+        width: 116.736px;
+        height: 97.15px;
+        padding: 15px;
+    }
+
+    .bluebox:hover,
+    .redbox:hover {
+        transform: none;
+        background: inherit;
+    }
+
+    .pinkbox {
+        width: 241px;
+        height: 241px;
+        flex-shrink: 0;
+        border-radius: 26.965px;
+    }
+
+    .bluebig {
+        width: 282.059px;
+        height: 282.059px;
+        flex-shrink: 0;
+        border-radius: 31.559px;
+        top: 160px;
+
+    }
+
+    .purple {
+        width: 168.7px;
+        height: 168.7px;
+        border-radius: 18.876px;
+    }
+}

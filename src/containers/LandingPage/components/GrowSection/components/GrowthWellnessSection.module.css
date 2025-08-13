@@ -160,3 +160,9 @@
     transform: translate(0px, 0px);
   }
 }
+
+@media (max-width:450px) {
+  .container{
+    display: none;
+  }
+}

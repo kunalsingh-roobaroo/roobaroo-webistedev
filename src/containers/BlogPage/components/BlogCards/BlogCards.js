@@ -5,6 +5,7 @@ import { tilethumbnail } from "../../../../../public/assets/images";
 import Image from "next/image";
 import { staticAlt } from "@/lib/constants";
 import { Pagination, Stack } from "@mui/material";
+import Link from "next/link";
 const BlogCards = () => {
   const blogData = [
     {
@@ -69,7 +70,7 @@ const BlogCards = () => {
       <p className={classes.headtxt}>All Blogs</p>
       <div className={classes.blogs}>
         {paginatedBlogs?.map((value, index) => (
-          <div key={index} className={classes.blog}>
+          <Link href={`/blogs/id`} key={index} className={classes.blog}>
             <div className={classes.thumbnail}>
               <Image src={value.thumbnail} fill alt={staticAlt} />
             </div>
@@ -86,7 +87,7 @@ const BlogCards = () => {
                 </span>
               ))}
             </div>
-          </div>
+          </Link>
         ))}
       </div>
       <Stack spacing={2} alignItems="center" alignSelf={'center'} marginTop={4}>

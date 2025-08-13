@@ -35,7 +35,9 @@ const LandingPage = () => {
             <BlueBox/>
           </div>
         </div>
+        <div className={classes.mobilestroke}></div>
         <GrowSection />
+        <div className={classes.mobilecircles}></div>
         <GrowthAndWellness/>
         <KnowYourBuddy/>
         <BuildingSection />

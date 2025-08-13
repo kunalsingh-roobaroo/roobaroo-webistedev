@@ -1,5 +1,5 @@
 .marquee {
-  transform: rotate(-6deg) !important;
+
   /* padding: 0px 7px; */
   width: 100%;
   max-width: 100%;
@@ -8,6 +8,7 @@
 }
 
 .marqueeWrapper {
+  transform: rotate(-6deg);
   overflow: hidden;
   width: 100%;
   padding: 64px 0px 64px 0px;
@@ -36,8 +37,11 @@
 .cardImage {
   width: 4.44444444444vw;
   aspect-ratio: 1/1;
-  border-radius: 50%;
-  border: 1px solid #D1D5DB;
+  /* border-radius: 50%; */
+  /* border: 1px solid #D1D5DB; */
+  border-radius: 64.126px;
+  border: 0.854px solid rgba(8, 81, 114, 0.18);
+  overflow: hidden;
 }
 
 .cardTitle {
@@ -91,6 +95,7 @@
 .cardText {
   font-style: italic;
   text-transform: capitalize;
+  font-size: 1.25vw;
 }
 
 .highlightSection {
@@ -177,7 +182,7 @@
   overflow: hidden;
   padding: 109px 75px 106px 75px;
   /* box-sizing: content-box; */
- 
+
 
 }
 
@@ -241,7 +246,7 @@
   width: 10.22222222222vw;
   position: absolute;
   aspect-ratio: 1/1;
-  
+
 }
 
 .pinkbox {
@@ -249,7 +254,7 @@
   top: 18vw;
   right: 30vw;
   animation: floatRandom 19s ease-in-out infinite;
-  
+
 }
 
 .blueBox {
@@ -281,12 +286,66 @@
   }
 }
 
-.bigcircle{
+.bigcircle {
   position: absolute;
   right: -2vw;
-  top:  -7vw;
+  top: -7vw;
 }
-.bigcirclframe{
+
+.bigcirclframe {
   width: 39.33104166667vw;
   aspect-ratio: 1/1
+}
+
+@media (max-width:450px) {
+
+
+  .card {
+    width: 304.158px;
+    height: 138.084px;
+    flex-shrink: 0;
+    aspect-ratio: 304.158/138.084;
+    justify-content: space-between;
+  }
+
+  .txtdiv {
+    margin-top: 0px;
+  }
+
+  .marqueeWrapper {
+    padding: 0px 0px 0px 0px;
+  }
+
+  .cardImage {
+    width: 39.876px;
+    height: 39.886px;
+    border-radius: 39.886px;
+    border: 0.531px solid rgba(8, 81, 114, 0.18);
+    overflow: hidden;
+  }
+
+  .cardTitle {
+    font-size: 16.902px;
+  }
+
+  .cardSubtitle {
+    font-size: 11.268px;
+  }
+
+  .cardHeading {
+    font-size: 12.752px;
+  }
+
+  .cardText {
+    font-size: 11.268px;
+    font-style: italic;
+  }
+
+  .src {
+    font-size: 11.893px;
+  }
+
+  .marquee {
+    padding: 10px 0px;
+  }
 }

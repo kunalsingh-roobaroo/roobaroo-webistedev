@@ -316,3 +316,233 @@ height: 96px; */
     aspect-ratio: 1/1;
     /* z-index: 99; */
 }
+
+.outtxt {
+    text-align: center;
+    line-height: 80%;
+}
+
+.workaholism {
+    top: 30%;
+    left: 20%;
+    text-align: end;
+    position: absolute;
+}
+
+.anxiety {
+    top: 38%;
+    left: 20%;
+    text-align: end;
+    position: absolute;
+}
+
+.withdrawal {
+    top: 62%;
+    left: 20%;
+    position: absolute;
+}
+
+.helplessness {
+    top: 70%;
+    left: 20%;
+    position: absolute;
+}
+
+.stagnation {
+    top: 55%;
+    left: 60%;
+    position: absolute;
+}
+
+.wellness {
+    top: 63%;
+    left: 60%;
+    position: absolute;
+}
+
+.centered {
+    top: 33%;
+    left: 58%;
+    position: absolute;
+}
+
+.futureReady {
+    top: 40%;
+    left: 58%;
+    position: absolute;
+}
+
+
+@media (max-width:450px) {
+    .parent {
+        padding: 0px 21px;
+        height: 334px;
+        width: 100%;
+    }
+
+    .label {
+        font-size: 25.306px;
+    }
+
+    .fire {
+        width: 28.517px;
+        height: 27.277px;
+        aspect-ratio: 1/1;
+    }
+
+    .flick {
+        width: 36px;
+        height: 45px;
+        aspect-ratio: 36/45;
+        top: -5px;
+        right: -13px;
+    }
+
+    .knowmore,
+    .circle {
+        display: none;
+    }
+
+    .growthLabel,
+    .wellnessLabel {
+        font-size: 16px;
+    }
+
+    .outtxt {
+        line-height: 65%;
+    }
+
+    .growthLabel {
+        top: 37px;
+        width: 8.559px;
+        height: 266.525px;
+        /* transform: rotate(1.739deg); */
+    }
+
+    /* .lineframe {
+    
+    } */
+    /* 
+    .verticalLine {
+        top: 60px;
+    } */
+
+    .thriving {
+        font-size: 28.471px !important;
+        line-height: 0% !important;
+
+
+    }
+
+    .nop {
+        padding: 3px 0px 6px 26px;
+        width: fit-content;
+        height: 41.866600036621094px;
+    }
+
+    .horizontalLine {
+
+
+        width: 279.676px;
+        height: 16.561px;
+    }
+
+    .txt,
+    .strokesec {
+        display: none;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .topRight,
+    .topLeft {
+        top: 0%;
+    }
+
+    .growthLabel {
+        top: -19px;
+        left: 44%;
+    }
+
+    .verticalLine {
+        height: 266.525px;
+        left: 48%;
+    }
+
+    .text,
+    .textPurple {
+        font-size: 12px;
+    }
+
+    .topLeft {
+        left: 30px;
+    }
+
+    .topRight {
+        right: 20px;
+    }
+
+    .workaholism,
+    .centered {
+        top: 20%;
+    }
+
+    .anxiety {
+        top: 27%;
+        left: 15%;
+    }
+
+    .futureReady {
+        top: 27%;
+    }
+
+    .horizontalLine {
+        top: 45%;
+        left: 15px;
+    }
+
+    .wellnessLabel {
+        top: 43%;
+        right: 0;
+    }
+
+    .knowmore {
+        display: none;
+    }
+
+    .withdrawal {
+        top: 52%;
+        left: 14%;
+    }
+
+    .helplessness {
+        top: 60%;
+        left: 14%;
+    }
+
+    .stagnation {
+        top: 52%;
+        left: 55%;
+    }
+
+    .wellness {
+        top: 58%;
+        left: 55%;
+    }
+
+    .struggleframe {
+        width: 28.916px;
+        height: 15.639px;
+        aspect-ratio: 28.916/15.639;
+    }
+    .bottomLeft{
+        bottom: 22%;
+    }
+    .bottomRight{
+        bottom: 20%;
+    }
+
+
+}

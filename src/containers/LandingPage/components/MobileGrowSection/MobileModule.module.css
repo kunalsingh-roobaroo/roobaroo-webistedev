@@ -1,0 +1,88 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 27px 0px 0px 0px;
+    gap: 100px;
+    position: relative;
+    height: 653px;
+}
+
+.right {
+    align-self: flex-end;
+    justify-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.image {
+    width: 112.473px;
+    height: 94.025px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.txt {
+    color: #1E1E1E;
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.13px;
+}
+
+.left {
+    align-self: flex-start;
+    justify-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.infinty {
+    width: 97px;
+    height: 53.674px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.handDooodle {
+    width: 124.797px;
+    height: 66.016px;
+    transform: rotate(21.784deg);
+    position: relative;
+    flex-shrink: 0;
+}
+.right{
+    width: 303px;
+}
+.left{
+    width: 289px;
+}
+.backgroundframe{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.background{
+    position: absolute;
+    width: 100%;
+    /* aspect-ratio: 390/653; */
+    height: 653px;
+    top: -31px;
+    z-index: -1;
+}
+.underline{
+  width: 198.924px;
+height: 1.385px;
+flex-shrink: 0;
+position: relative;
+}
+.lines{
+  position: absolute;
+    bottom: 48px;
+    left: 0vw;
+}

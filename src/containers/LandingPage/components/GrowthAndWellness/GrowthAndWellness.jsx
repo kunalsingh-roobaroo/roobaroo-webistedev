@@ -159,6 +159,28 @@ const GrowthAndWellness = () => {
         <div className={classes.leftgradient}></div>
         <div className={classes.rightgradient}></div>
       </div>
+      <div className={classes.mobmarqueewrapper}>
+        <Marquee
+          gradient={false}
+          speed={30}
+          className={classes.marquee}
+          pauseOnHover={false}
+           direction="right"
+        >
+          <div className={classes.pillContainer}>
+            {seamlessPillData.map(({ text, borderClass }, i) => (
+              <span
+                key={i}
+                className={`${classes.pill} ${classes[borderClass]}`}
+              >
+                {text}
+              </span>
+            ))}
+          </div>
+        </Marquee>
+        <div className={classes.leftgradient}></div>
+        <div className={classes.rightgradient}></div>
+      </div>
       <div className={classes.container}>
         <div className={classes.nomore}>so no more</div>
         <div className={classes.changif}>

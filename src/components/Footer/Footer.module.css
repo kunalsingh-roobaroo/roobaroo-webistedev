@@ -73,7 +73,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 482px;
+    width:33.47222222222vw;
 }
 
 .whitelogo {
@@ -123,7 +123,7 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
-    width: calc(100% - 482px);
+    width: calc(100% - 33.47222222222vw);
 }
 
 .part {

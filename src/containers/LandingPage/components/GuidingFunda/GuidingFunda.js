@@ -1,7 +1,11 @@
 import React from "react";
 import classes from "./GuidingFunda.module.css";
 import Image from "next/image";
-import { blackbrush, rightbrush } from "../../../../../public/assets/icons";
+import {
+  blackbrush,
+  flick,
+  rightbrush,
+} from "../../../../../public/assets/icons";
 import { responsiveImageSizes, staticAlt } from "@/lib/constants";
 import GrowthWellnessMatrix from "./Matrix/Matrix";
 import KnowMore from "@/components/KnowMore/KnowMore";
@@ -36,9 +40,28 @@ const GuidingFunda = () => {
         <div className={classes.matrix}>
           <GrowthWellnessMatrix />
         </div>
-        <MarqueeSection />
+
+        <div className={classes.marquee}>
+          <MarqueeSection />
+        </div>
       </div>
-      <LostSection/>
+      <div className={classes.bottom}>
+        <div className={classes.subbottom}>
+          <div className={classes.subbox}>
+            <p className={classes.thriving}>Thriving</p>
+            <div className={classes.flick}>
+              <Image src={flick} fill alt={staticAlt} />
+            </div>
+          </div>
+          <p className={classes.subtxt}>is where you wanna be</p>
+        </div>
+        <KnowMore />
+      </div>
+      <div className={classes.mobmarquee}>
+        <MarqueeSection />
+        <MarqueeSection reverse={true} />
+      </div>
+      <LostSection />
     </section>
   );
 };

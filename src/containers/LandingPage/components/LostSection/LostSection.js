@@ -14,14 +14,15 @@ export const LostSection = () => {
         <div className={classes.lostxttxdiv}>
           <h4 className={classes.subttx}>Silent Pains to Lost Dreams</h4>
 
-          <h2 className='subheading'>
+          <h2 className="subheading">
             This is the<span className={classes.span}> India</span> <br />
             we refuse to ignore.
           </h2>
         </div>
-        {/* <KnowMore /> */}
+        <div className={classes.knomore}>
+          <KnowMore />
+        </div>
       </div>
- 
     </section>
   );
 };

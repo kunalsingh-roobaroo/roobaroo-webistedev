@@ -34,10 +34,32 @@
     width: 10.41666666667vw;
     aspect-ratio: 150/146;
 }
+
 .bluebox:hover {
     transform: scale(1.1);
     /* Slight zoom */
 }
-.bluebox:hover{
-  background: var(--accent-purple-110, #684C8A)
+
+.bluebox:hover {
+    background: var(--accent-purple-110, #684C8A)
+}
+
+@media (max-width:450px) {
+    .bluebox {
+        width: 66.024px;
+        aspect-ratio: 1/1;
+        flex-shrink: 0;
+        padding: 8px;
+        border-radius: 10.226px;
+    }
+
+    .bluebox:hover {
+        transform: none;
+        /* 🚫 No scaling */
+        background: var(--accent-purple-110, #684C8A);
+    }
+
+    .boxttx {
+        font-size: 8.893px;
+    }
 }

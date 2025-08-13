@@ -1,54 +1,59 @@
 .hero {
-    width: 100%;
-    position: relative;
-    max-height: 792px;
+  width: 100%;
+  position: relative;
+  max-height: 792px;
 }
 
 .bigcircle {
-    position: absolute;
-    top: -13vw;
-    left: -5vw;
-    background-image: url("/assets/images/cc.png");
-    /* path relative to public/ folder */
-    background-size: contain;
-    background-position: center;
-    width: 100%;
-    /* height: ; */
-    aspect-ratio: 1075/876;
-    z-index: 0;
-    
+  position: absolute;
+  top: -13vw;
+  left: -5vw;
+  background-image: url("/assets/images/cc.png");
+  /* path relative to public/ folder */
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  /* height: ; */
+  aspect-ratio: 1075/876;
+  z-index: 0;
+
 }
-.container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 65px;
-    overflow: hidden;
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 65px;
+  overflow: hidden;
 }
+
 .circle {
 
-    background-image: url("/assets/images/smallcircles.png");
-    /* path relative to public/ folder */
-    background-size: contain;
-    background-position: center;
-    position: absolute;
-    top: 83vw;
-    right: -8vw;
-    width: 35.375vw;
-    aspect-ratio: 1/1;
-    z-index: -1;
-    /* z-index: 99; */
+  background-image: url("/assets/images/smallcircles.png");
+  /* path relative to public/ folder */
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  top: 83vw;
+  right: -8vw;
+  width: 35.375vw;
+  aspect-ratio: 1/1;
+  z-index: -1;
+  /* z-index: 99; */
 }
-.guding{
-    width: 100%;
-    position: relative;
+
+.guding {
+  width: 100%;
+  position: relative;
 }
+
 .knowmore {
-    position: absolute;
-    top: 95vw;
-    right: 6vw;
-    z-index: 99;
+  position: absolute;
+  top: 95vw;
+  right: 6vw;
+  z-index: 99;
 }
+
 .pinkbox,
 .blueBox {
   border-radius: 16.47px;
@@ -56,7 +61,7 @@
   width: 10.22222222222vw;
   position: absolute;
   aspect-ratio: 1/1;
-  
+
 }
 
 .pinkbox {
@@ -64,7 +69,7 @@
   top: 98vw;
   right: 24vw;
   animation: floatRandom 19s ease-in-out infinite;
-  
+
 }
 
 .blueBox {
@@ -73,6 +78,7 @@
   animation: floatRandom 14s ease-in-out infinite;
 
 }
+
 @keyframes floatRandom {
   0% {
     transform: translate(0px, 0px);
@@ -92,5 +98,71 @@
 
   100% {
     transform: translate(0px, 0px);
+  }
+}
+
+
+@media (max-width:450px) {
+  .bigcircle {
+    /* aspect-ratio: 390/652; */
+  }
+
+  .mobilecircles {
+    background-image: url("/assets/images/ellipse.png");
+    top: 2570px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    left: 0;
+    background-repeat: no-repeat;
+    /* transform: rotate(180deg); */
+    background-size: contain;
+    position: absolute;
+    z-index: -2;
+  }
+
+  .circle {
+    background-image: url("/assets/images/mobcircle.png");
+    top: 1000px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    left: 0;
+    background-repeat: no-repeat;
+    /* transform: rotate(180deg); */
+    background-size: contain;
+
+  }
+
+  .pinkbox {
+    top: 1100px;
+    width: 147px;
+  }
+
+  .blueBox {
+    width: 147px;
+    top: 1150px;
+  }
+
+  .container {
+    gap: 39px;
+  }
+
+  .knowmore {
+    display: none;
+  }
+
+  .mobilestroke {
+    width: 100%;
+    height: 21.5px;
+    background-image: url("/assets/icons/pagestroke.svg");
+    background-repeat: no-repeat;
+    /* transform: rotate(180deg); */
+    background-size: cover;
+
+  }
+}
+
+@media (min-width:451px) {
+  .mobilestroke {
+    display: none;
   }
 }

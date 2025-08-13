@@ -15,6 +15,15 @@
     justify-content: center;
 }
 
+.suntop {
+    width: fit-content;
+    align-items: center;
+    width: 100%;
+    gap: 31px;
+    /* justify-content: center; */
+}
+
+
 .headtxt {
     color: var(--blacks-80, #303437);
     font-family: Montserrat;
@@ -44,8 +53,14 @@
     letter-spacing: 1.533px;
 }
 
-.arrow {
+.arrowframe {
     width: 4.16666666667vw;
+    aspect-ratio: 60/85;
+    position: relative;
+}
+
+.arrow {
+    width: 100%;
     aspect-ratio: 60/85;
     position: relative;
 }
@@ -539,4 +554,121 @@
 
 .bluebox {
     animation: floatBlue 19s ease-in-out infinite;
+}
+
+@media (max-width:450px) {
+    .heatop {
+        /* flex-direction: column; */
+        align-items: flex-start;
+        gap: 0;
+        flex-direction: column;
+        position: relative;
+        width: 211px;
+        padding-left: 26px;
+    }
+
+    .container {
+        gap: 12px;
+    }
+
+    .headtxt {
+        font-size: 31px;
+    }
+
+    .cake {
+        font-size: 55.745px;
+    }
+
+    .top {
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    .arrowframe {
+        position: absolute;
+        bottom: 3px;
+        right: 14px;
+        width: 21.65px;
+        height: 30.853px;
+        transform: rotate(-52.14deg);
+        aspect-ratio: unset;
+    }
+
+    .toplhs {
+        width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-left: 8px;
+    }
+
+    .mainImage {
+        width: 260.898px;
+        height: 255.019px;
+        flex-shrink: 0;
+        aspect-ratio: 89/87;
+        border-radius: 29.453px;
+        overflow: hidden;
+    }
+
+    .central {
+        padding: 0;
+    }
+
+    .name {
+        color: var(--Whites-Base, #FFF);
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #815FAA;
+        font-family: Montserrat;
+        font-size: 37px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 100%;
+        /* 37px */
+        letter-spacing: 0.37px;
+        position: absolute;
+        z-index: 2;
+        width: 201px;
+        right: 26px;
+        top: 14px;
+
+    }
+
+    .container {
+        padding: 18px 0px 0px 0px;
+    }
+
+    .pinkbox {
+        width: 152.579px;
+        height: 152.579px;
+        flex-shrink: 0;
+        border-radius: 17.072px;
+        top: -10px;
+        left: 97px;
+    }
+
+    .bluebox {
+        width: 169.224px;
+        height: 169.224px;
+        flex-shrink: 0;
+        border-radius: 18.934px;
+        top: 78px;
+        left: 160px;
+        /* background: rgba(39, 170, 231, 0.24); */
+    }
+
+    .purplebox {
+        width: 143.35px;
+        height: 143.35px;
+        border-radius: 16.039px;
+        top: -43px;
+        left: 210px;
+        /* background: rgba(129, 95, 170, 0.33); */
+    }
+}
+
+@media (min-width:451px) {
+    .name {
+        display: none;
+    }
 }

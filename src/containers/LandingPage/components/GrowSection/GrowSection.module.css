@@ -25,23 +25,61 @@
 
 .spantxt {
     color: var(--Accent-Purple-Base, #815FAA);
+    font-style: italic;
 }
-.txtdiv{
+
+.txtdiv {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.subtxt{
+
+.subtxt {
     color: var(--blacks-80, #303437);
-font-family: "Simple Cakes";
-font-size: 6.94444444444vw;
-font-style: normal;
-font-weight: 400;
-line-height: 100%; /* 100px */
-letter-spacing: 1px;
+    font-family: "Simple Cakes";
+    font-size: 6.94444444444vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 100px */
+    letter-spacing: 1px;
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
     gap: 43px;
+}
+
+@media (max-width:450px) {
+    .container {
+        background: none;
+        padding: 20px 10px 0px 10px;
+        align-items: center;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .maintxt {
+        font-size: 31px;
+    }
+
+    .txtdiv {
+        gap: 6px;
+    }
+
+    .subtxt {
+        font-size: 35.834px;
+    }
+    .mobile{
+        width: 100%;
+    }
+}
+
+@media (min-width:451px) {
+    .mobile {
+        display: none;
+    }
 }

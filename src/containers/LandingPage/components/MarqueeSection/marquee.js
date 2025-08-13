@@ -8,10 +8,13 @@ import PinkBox from "@/components/Boxes/PinkBox";
 import BlueBox from "@/components/Boxes/BlueBox";
 import PurpleBox from "@/components/Boxes/PurpleBox";
 import KnowMore from "@/components/KnowMore/KnowMore";
-import { backgroundcircles, newcircle } from "../../../../../public/assets/images";
+import {
+  backgroundcircles,
+  newcircle,
+} from "../../../../../public/assets/images";
 import { staticAlt } from "@/lib/constants";
 
-const MarqueeSection = () => {
+const MarqueeSection = ({ reverse }) => {
   const marqueeItems = [
     {
       type: "card",
@@ -45,12 +48,18 @@ const MarqueeSection = () => {
       text: "76% of Indian professionals in desk jobs report chronic lower back pain.",
     },
   ];
-
+const repeatedItems = [...marqueeItems, ...marqueeItems, ...marqueeItems];
   return (
     <>
       <div className={classes.marqueeWrapper}>
-        <Marquee className={classes.marquee}>
-          {marqueeItems.map((item, idx) => {
+        <Marquee
+          direction={reverse ? "right" : "left"}
+          loop={0} // infinite
+          // autoFill // keeps filling to make it seamless
+          speed={40}
+          className={classes.marquee}
+        >
+          {repeatedItems.map((item, idx) => {
             if (item.type === "highlight") {
               return (
                 <div key={idx} className={classes.card}>

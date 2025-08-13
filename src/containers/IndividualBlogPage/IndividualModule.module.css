@@ -1,0 +1,76 @@
+.container {
+    padding-top: 120px;
+}
+
+.box {
+    padding: 35px 12.08333333333vw;
+    display: flex;
+    flex-direction: column;
+    gap:34px ;
+}
+
+.title {
+    color: var(--Blacks-Base, #0C0C0C);
+    font-family: Montserrat;
+    font-size: 3.47222222222vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    /* 50px */
+    letter-spacing: 0.5px;
+}
+
+.thumbnail {
+    width: 100%;
+    aspect-ratio: 1092/365;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.titlesection {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    width: 100%;
+}
+
+.subtop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.subttx{
+    color: var(--Blacks-Base, #0C0C0C);
+font-family: Montserrat;
+font-size: 1.11111111111vw;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */
+letter-spacing: 0.16px;
+}
+.back{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.backarrow{
+    width: 0.625vw;
+    aspect-ratio: 9/9;
+    position: relative;
+    min-width: 9px;
+    flex-shrink: 0;
+}
+.backbt{
+color: #000;
+text-align: right;
+
+/* Navigation Bar Desk */
+font-family: Montserrat;
+font-size: 1.25vw;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: -0.18px;
+}

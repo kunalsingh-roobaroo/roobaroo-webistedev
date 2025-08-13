@@ -1,0 +1,15 @@
+.btn {
+    width: fit-content;
+    color: var(--Whites-Base, #FFF);
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 1.11111111111vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 24px */
+    letter-spacing: 0.16px;
+    padding: 6px 12px;
+    border-radius: 17px;
+    background: #815FAA;
+}

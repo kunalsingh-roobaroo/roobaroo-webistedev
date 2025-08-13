@@ -35,3 +35,10 @@
   letter-spacing: 0.94px;
 }
 
+
+
+@media (max-width:450px) {
+  .subheading{
+    font-size: 31px;
+  }
+}

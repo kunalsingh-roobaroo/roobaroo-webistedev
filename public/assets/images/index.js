@@ -14,13 +14,17 @@ import hand_doodle from "./hand-doodle.png";
 import infinity_doodle from "./infinity-doodle.png";
 import torn_paper_doodle from "./torn-paper-doodle.png";
 import bhaskar from "./bhaskar.png";
+import mobline from "./mobline.png";
 import foundertags from "./foundertags.png";
 import featureimg from "./featureimg.png";
+import ellipse from "./ellipse.png";
 import blogthumbnail from "./blogthumbnail.png";
 import tilethumbnail from "./tilethumbnail.png";
 export {
   logo,
   featureimg,
+  mobline,
+  ellipse,
   foundertags,
   bhaskar,
   tilethumbnail,
