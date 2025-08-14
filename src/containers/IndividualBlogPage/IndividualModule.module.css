@@ -6,7 +6,7 @@
     padding: 35px 12.08333333333vw;
     display: flex;
     flex-direction: column;
-    gap:34px ;
+    gap: 34px;
 }
 
 .title {
@@ -41,36 +41,81 @@
     justify-content: space-between;
     width: 100%;
 }
-.subttx{
+
+.subttx {
     color: var(--Blacks-Base, #0C0C0C);
-font-family: Montserrat;
-font-size: 1.11111111111vw;
-font-style: normal;
-font-weight: 400;
-line-height: 150%; /* 24px */
-letter-spacing: 0.16px;
+    font-family: Montserrat;
+    font-size: 1.11111111111vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 24px */
+    letter-spacing: 0.16px;
 }
-.back{
+
+.back {
     display: flex;
     align-items: center;
     gap: 7px;
 }
-.backarrow{
+
+.backarrow {
     width: 0.625vw;
     aspect-ratio: 9/9;
     position: relative;
     min-width: 9px;
     flex-shrink: 0;
 }
-.backbt{
-color: #000;
-text-align: right;
 
-/* Navigation Bar Desk */
-font-family: Montserrat;
-font-size: 1.25vw;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-letter-spacing: -0.18px;
+.backbt {
+    color: #000;
+    text-align: right;
+
+    /* Navigation Bar Desk */
+    font-family: Montserrat;
+    font-size: 1.25vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.18px;
+}
+
+.otherarticles {
+    /* padding: 0px 60px; */
+    background: url('/assets/icons/relatedarticles.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.carousel {
+    width: 100%;
+    padding: 0px 4.16666666667vw;
+}
+
+.featuretxt {
+    font-size: 3.54166666667vw;
+    color: #000;
+    font-family: "Simple Cakes";
+    /* font-size: 50.043px; */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    /* 60.052px */
+    letter-spacing: 0.5px;
+    padding: 170px 12.15277777778vw 0px 12.15277777778vw;
+
+}
+.footer{
+    margin-top: 46px;
+}
+
+@media (max-width:450px) {
+    .container {
+        padding-top: 101px;
+    }
+
+    .box {}
 }

@@ -76,23 +76,54 @@
     flex-direction: column;
     padding: 10px 20px 20px 23px;
     justify-content: space-between;
+      transform-origin: left bottom; 
+}
+
+/* Hover in */
+@keyframes purpleSpringIn {
+  0%   { transform: scale(1) translate(0, 0); }
+  50%  { transform: scale(1.05) translate(6px, -5px); }
+  75%  { transform: scale(1.04) translate(5px, -4px); }
+  100% { transform: scale(1.05) translate(5px, -4px); }
+}
+
+/* Hover out */
+@keyframes purpleSpringOut {
+  0%   { transform: scale(1.05) translate(5px, -4px); }
+  40%  { transform: scale(1.055) translate(6px, -5px); }
+  70%  { transform: scale(0.995) translate(-1px, 1px); }
+  100% { transform: scale(1) translate(0, 0); }
 }
 
 .purplebox:hover {
-    /* border-radius: 24.631px; */
-    background: var(--accent-purple-110, #684C8A);
-    cursor: pointer;
+  animation: purpleSpringIn 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  background: var(--accent-purple-110, #684C8A);
+  cursor: pointer;
 }
 
-.purplebox {
+.purplebox:not(:hover) {
+  animation: purpleSpringOut 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Arrow tilt */
+.rotate {
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.purplebox:hover .rotate {
+  transform: rotate(45deg);
+}
+
+
+/* .purplebox {
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    /* cubic-bezier creates spring-like easing */
-}
+    cubic-bezier creates spring-like easing
+} */
 
-.purplebox:hover {
+/* .purplebox:hover {
     transform: scale(1.1);
-    /* Slight zoom */
-}
+    Slight zoom
+} */
 
 
 .boxttx {

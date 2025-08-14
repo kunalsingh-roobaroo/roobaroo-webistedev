@@ -39,13 +39,13 @@ const HeroSection = () => {
           <div className={classes.upperaction}>
             <div className={classes.bluebox}>
               <div className={classes.top}>
-                <ArrowUpRight color="white" size={28} rotate={-45} />
+                <ArrowUpRight color="white" size={28} rotate={-45}   strokeWidth={3} />
               </div>
               <h4 className={classes.boxttx}>Student Bootcamp</h4>
             </div>
             <div className={classes.redbox}>
               <div className={classes.top}>
-                <ArrowUpRight color="white" size={28} rotate={-45} />
+                <ArrowUpRight color="white" size={28} rotate={-45}   strokeWidth={3} />
               </div>
               <h4 className={classes.boxttx}>Organisation Consulting</h4>
             </div>

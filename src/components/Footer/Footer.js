@@ -105,6 +105,7 @@ const Footer = () => {
                 color="white"
                 size={28}
                 rotate={-45}
+                strokeWidth={3}
               />
             </div>
           </div>

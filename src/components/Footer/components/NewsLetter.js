@@ -15,8 +15,9 @@ const NewsLetter = ({ homepage }) => {
             <ArrowUpRight
               color="white"
               size={28}
-              rotate={-45}
+              // rotate={-45}
               className={classes.rotate}
+                strokeWidth={3}
             />
           </div>
           <h4

@@ -9,6 +9,7 @@ import { blogthumbnail } from "../../../public/assets/images";
 import CopyBtn from "@/components/CopyBtn/CopyBtn";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import BlogCarousel from "../BlogPage/components/BlogHero/Carousel/BlogCarousel";
 const IndividualBlogPage = () => {
   return (
     <>
@@ -37,7 +38,15 @@ const IndividualBlogPage = () => {
           </div>
         </div>
       </section>
-      <Footer />
+      <div className={classes.otherarticles}>
+        <p className={classes.featuretxt}>Check out other arcticles :</p>
+        <div className={classes.carousel}>
+          <BlogCarousel related={true} />
+        </div>
+        <div className={classes.footer}>
+          <Footer />
+        </div>
+      </div>
     </>
   );
 };

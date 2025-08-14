@@ -5,7 +5,7 @@ const KnowMore = () => {
   return (
     <div className={classes.bluebox}>
       <div className={classes.top}>
-        <ArrowUpRight color="white" size={22} rotate={-45} />
+        <ArrowUpRight color="white" size={22} rotate={-45}   strokeWidth={3} />
       </div>
       <h4 className={classes.boxttx}>Know More</h4>
     </div>

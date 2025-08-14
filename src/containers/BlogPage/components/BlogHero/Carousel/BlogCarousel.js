@@ -35,7 +35,7 @@ const PrevArrow = ({ onClick }) => {
   );
 };
 
-const BlogCarousel = () => {
+const BlogCarousel = ({related}) => {
   const settings = {
     dots: true,
     infinite: true,
