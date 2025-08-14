@@ -43,7 +43,7 @@ const IndividualBlogPage = () => {
           </div>
         </div>
         <div className={classes.bluebox}>
-          <BlueBox/>
+          <BlueBox />
         </div>
         <div className={classes.pinkbox}>
           <PinkBox />
@@ -60,6 +60,12 @@ const IndividualBlogPage = () => {
         <div className={classes.footer}>
           <Footer />
         </div>
+        {/* <div className={classes.bluebox}>
+          <BlueBox />
+        </div>
+        <div className={classes.pinkbox}>
+          <PinkBox />
+        </div> */}
       </div>
     </>
   );
