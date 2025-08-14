@@ -4,7 +4,7 @@
 
     padding: 20px 15px;
     justify-content: space-between;
-    transition: all 0.3s ease;
+    /* transition: all 0.3s ease; */
     /* Smooth animation */
     cursor: pointer;
     z-index: 1;
@@ -35,13 +35,34 @@
     aspect-ratio: 150/146;
 }
 
-.bluebox:hover {
-    transform: scale(1.1);
-    /* Slight zoom */
+.bluebox:hover,
+.redbox:hover,
+.purplebox:hover {
+  animation: springRightUpIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.bluebox:not(:hover),
+.redbox:not(:hover),
+.purplebox:not(:hover) {
+  animation: springRightUpOut 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .bluebox:hover {
     background: var(--accent-purple-110, #684C8A)
+}
+@keyframes springRightUpIn {
+  0% { transform: scale(1) translate(0, 0); }
+  60% { transform: scale(1.12) translate(8px, -6px); }
+  80% { transform: scale(1.08) translate(6px, -5px); }
+  100% { transform: scale(1.1) translate(6px, -5px); }
+}
+
+/* Hover out — retrace path back, with small bounce */
+@keyframes springRightUpOut {
+  0% { transform: scale(1.1) translate(6px, -5px); }
+  40% { transform: scale(1.12) translate(8px, -6px); } /* brief follow-through */
+  70% { transform: scale(0.98) translate(-2px, 2px); } /* bounce past origin */
+  100% { transform: scale(1) translate(0, 0); }
 }
 
 @media (max-width:450px) {
