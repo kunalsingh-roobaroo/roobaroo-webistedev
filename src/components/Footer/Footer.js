@@ -149,7 +149,7 @@ const Footer = () => {
             © 2025 Rooobaroo.ai All Rights Reserved.
           </p>
           <div className={classes.subbottom}>
-            <Link href={"/"} className={`${classes.linkl} link`}>
+            <Link href={"terms-of-service"} className={`${classes.linkl} link`}>
               Terms of Service
             </Link>
             <Link href={"/privacy-policy"} className={`${classes.linkl} link`}>
