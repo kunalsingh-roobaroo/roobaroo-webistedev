@@ -1,9 +1,10 @@
-.slick-dots{
+.slick-dots {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  bottom: -48px !important; 
+  bottom: -48px !important;
 }
+
 .slick-prev,
 .slick-next {
   background: none !important;
@@ -15,7 +16,8 @@
 
 .slick-prev:before,
 .slick-next:before {
-  display: none !important; /* Remove default arrow icons */
+  display: none !important;
+  /* Remove default arrow icons */
 }
 
 /* Position arrows */
@@ -28,17 +30,20 @@
 }
 
 .customPrev {
-  left:0px; /* Adjust as needed */
+  left: 0px;
+  /* Adjust as needed */
 }
 
 .customNext {
-  right:0px; /* Adjust as needed */
+  right: 0px;
+  /* Adjust as needed */
 }
 
 .slick-dots li {
   width: 10px !important;
   height: 10px !important;
-  margin: 0 4px !important; /* space between dots */
+  margin: 0 4px !important;
+  /* space between dots */
 }
 
 .slick-dots li button {
@@ -50,16 +55,29 @@
 .slick-dots li button:before {
   font-size: 10px !important;
   line-height: 10px !important;
-  color: #BC9CE2 !important; /* inactive dot color */
-  opacity: 1 !important; /* force full opacity */
+  color: #BC9CE2 !important;
+  /* inactive dot color */
+  opacity: 1 !important;
+  /* force full opacity */
 }
 
 .slick-dots li.slick-active button:before {
-  color: #684C8A !important; /* active dot color */
+  color: #684C8A !important;
+  /* active dot color */
 }
 
 /* Optional: remove extra outline on click */
 .slick-dots li button {
   border: none !important;
   outline: none !important;
+}
+
+@media (max-width:450px) {
+  .customArrow {
+    display: none;
+  }
+
+  .slick-dots {
+    bottom:-30px !important ;
+  }
 }

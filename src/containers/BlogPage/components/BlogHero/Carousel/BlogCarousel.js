@@ -29,7 +29,7 @@ const NextArrow = ({ onClick }) => {
 // Custom Prev Arrow Component
 const PrevArrow = ({ onClick }) => {
   return (
-    <div  className={`customArrow customPrev`} onClick={onClick}>
+    <div className={`customArrow customPrev`} onClick={onClick}>
       <Image src={leftarrow} alt="Previous" width={28} height={28} priority />
     </div>
   );
@@ -45,6 +45,20 @@ const BlogCarousel = () => {
     arrows: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 450, // at 450px and below
+        settings: {
+          arrows: false,
+          nextArrow: false,
+          prevArrow: false, // hide arrows
+          autoplay: true,
+          autoplaySpeed: 3000,
+          dots: true,
+          infinite: true,
+        },
+      },
+    ],
   };
 
   const blogData = [
@@ -79,12 +93,13 @@ const BlogCarousel = () => {
             <div className={classes.lhs}>
               <p className={classes.date}>{blog.date}</p>
               <h2 className={classes.title}>{blog.title}</h2>
+              <div className={classes.imagewrapper}>
+                <Image src={blog.thumbnail} alt={staticAlt} fill sizes="50vw" />
+              </div>
               <p className={classes.description}>{blog.description}</p>
             </div>
             <div className={classes.rhs}>
-              <div className={classes.imageWrapper}>
-                <Image src={blog.thumbnail} alt={staticAlt} fill sizes="50vw" />
-              </div>
+              <Image src={blog.thumbnail} alt={staticAlt} fill sizes="50vw" />
             </div>
           </div>
         ))}
