@@ -18,6 +18,7 @@ import {
   renderedPurple,
 } from "../../../../../public/assets/icons/brushes";
 import ChangingBrushes from "./components/changingBrushes";
+import { longstroke, smallstroke } from "../../../../../public/assets/images";
 const GrowthAndWellness = () => {
   const pillData = [
     { text: "Retreats", borderClass: "red" },
@@ -110,6 +111,26 @@ const GrowthAndWellness = () => {
             <div className={classes.ico}>
               <Image
                 src={bluestroke}
+                fill
+                alt={staticAlt}
+                sizes={responsiveImageSizes}
+              />
+            </div>
+          </div>
+          <div className={classes.longstroke}>
+            <div className={classes.ico}>
+              <Image
+                src={longstroke}
+                fill
+                alt={staticAlt}
+                sizes={responsiveImageSizes}
+              />
+            </div>
+          </div>
+          <div className={classes.smallstroke}>
+            <div className={classes.ico}>
+              <Image
+                src={smallstroke}
                 fill
                 alt={staticAlt}
                 sizes={responsiveImageSizes}

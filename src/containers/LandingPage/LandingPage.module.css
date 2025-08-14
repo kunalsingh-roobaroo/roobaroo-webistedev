@@ -68,38 +68,39 @@
 
   top: 98vw;
   right: 24vw;
-  animation: floatRandom 19s ease-in-out infinite;
+  animation: dvdSmooth 19s ease-in-out infinite;
 
 }
 
 .blueBox {
   top: 105vw;
   right: 16vw;
-  animation: floatRandom 14s ease-in-out infinite;
+  animation: dvdSmooth 14s ease-in-out infinite;
 
 }
 
-@keyframes floatRandom {
-  0% {
-    transform: translate(0px, 0px);
-  }
+@keyframes dvdSmooth {
+    0% {
+        transform: translate(0, 0);
+    }
 
-  25% {
-    transform: translate(40px, -30px);
-  }
+    25% {
+        transform: translate(30px, 20px);
+    }
 
-  50% {
-    transform: translate(-30px, 10px);
-  }
+    50% {
+        transform: translate(0, 40px);
+    }
 
-  75% {
-    transform: translate(20px, -40px);
-  }
+    75% {
+        transform: translate(-30px, 20px);
+    }
 
-  100% {
-    transform: translate(0px, 0px);
-  }
+    100% {
+        transform: translate(0, 0);
+    }
 }
+
 
 
 @media (max-width:450px) {

@@ -141,9 +141,7 @@ const KnowYourBuddy = () => {
             <div className={classes.purplebox}>
               <PurpleBox />
             </div>
-            <div className={classes.name}>
-              Bhaskar Singhania
-            </div>
+            <div className={classes.name}>Bhaskar Singhania</div>
             <div className={classes.tags}>
               <div className={classes.founderTags}>
                 <Image src={foundertags} fill alt={staticAlt} />
@@ -173,6 +171,26 @@ const KnowYourBuddy = () => {
                     alt={staticAlt}
                     sizes={responsiveImageSizes}
                   />
+                </div>
+              </div>
+              <div className={classes.mob}>
+                <div className={classes.mobbottomlhs}>
+                  <div className={classes.clgivo}>
+                    <Image
+                      src={iitkgp_black}
+                      fill
+                      alt={staticAlt}
+                      sizes={staticAlt}
+                    />
+                  </div>
+                  <div className={classes.rishiclgivo}>
+                    <Image
+                      src={rishihood}
+                      fill
+                      alt={staticAlt}
+                      sizes={staticAlt}
+                    />
+                  </div>
                 </div>
               </div>
             </div>

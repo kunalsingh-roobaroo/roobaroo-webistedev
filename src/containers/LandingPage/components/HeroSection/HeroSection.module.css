@@ -389,10 +389,15 @@
         padding: 15px;
     }
 
-    .bluebox:hover,
+
     .redbox:hover {
         transform: none;
-        background: inherit;
+        background: var(--Primary-Coral-Base, #FB7D7D);
+    }
+
+    .bluebox:hover {
+        background: var(--Primary-Blue-Base, #27AAE7);
+        transform: none;
     }
 
     .pinkbox {

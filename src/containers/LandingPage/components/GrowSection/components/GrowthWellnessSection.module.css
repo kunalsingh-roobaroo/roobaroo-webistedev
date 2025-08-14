@@ -84,7 +84,7 @@
   aspect-ratio: 1/1;
   border-radius: 59.883px !important;
   overflow: hidden;
-  animation: floatRandom 19s ease-in-out infinite;
+  animation: dvdSmooth 19s ease-in-out infinite;
 }
 
 .bkuebox {
@@ -101,7 +101,7 @@
   aspect-ratio: 1/1;
   /* border-radius: 59.883px !important; */
   overflow: hidden;
-  animation: floatRandom 19s ease-in-out infinite;
+  animation: dvdSmooth 19s ease-in-out infinite;
   width: 21.66666666667vw;
   top: 34vw;
   left: -33vw;
@@ -139,27 +139,28 @@
   position: relative;
 }
 
-@keyframes floatRandom {
-  0% {
-    transform: translate(0px, 0px);
-  }
+@keyframes dvdSmooth {
+    0% {
+        transform: translate(0, 0);
+    }
 
-  25% {
-    transform: translate(20px, -15px);
-  }
+    25% {
+        transform: translate(30px, 20px);
+    }
 
-  50% {
-    transform: translate(-15px, 10px);
-  }
+    50% {
+        transform: translate(0, 40px);
+    }
 
-  75% {
-    transform: translate(10px, -20px);
-  }
+    75% {
+        transform: translate(-30px, 20px);
+    }
 
-  100% {
-    transform: translate(0px, 0px);
-  }
+    100% {
+        transform: translate(0, 0);
+    }
 }
+
 
 @media (max-width:450px) {
   .container{

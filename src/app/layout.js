@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer/Footer";
+import '@acrool/react-vertical-marquee/dist/index.css';
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",

@@ -12,7 +12,7 @@
     position: absolute;
     aspect-ratio: 1/1;
     overflow: hidden;
-    animation: floatRandom 19s ease-in-out infinite;
+    animation: dvdSmooth 19s ease-in-out infinite;
     z-index: -1;
 }
 
@@ -45,27 +45,28 @@
     animation-delay: 0.5s;
 }
 
-@keyframes floatRandom {
+@keyframes dvdSmooth {
     0% {
-        transform: translate(0px, 0px);
+        transform: translate(0, 0);
     }
 
     25% {
-        transform: translate(40px, -30px);
+        transform: translate(30px, 20px);
     }
 
     50% {
-        transform: translate(-30px, 10px);
+        transform: translate(0, 40px);
     }
 
     75% {
-        transform: translate(20px, -40px);
+        transform: translate(-30px, 20px);
     }
 
     100% {
-        transform: translate(0px, 0px);
+        transform: translate(0, 0);
     }
 }
+
 
 .blogcards{
         padding: 0px 57px 72px 57px;

@@ -314,14 +314,15 @@
         font-size: 14.331px;
         width: 299px;
         justify-self: center;
+        line-height: 171%;
     }
 
     .bluestroke {
         width: 220.821px;
         /* height: 1.97px; */
-        top: 40px;
+        top: 44px;
         aspect-ratio: 95.821 / 1.97;
-        left: 61px;
+        left: 82px;
         /* left: 0px; */
 
     }
@@ -333,9 +334,9 @@
     .curvestroke {
         width: 160.821px;
         /* height: 1.97px; */
-        top: 60px;
+        top: 67px;
         aspect-ratio: 115.541 / 6.73;
-        left: 46px;
+        left: 68px;
     }
 
     .fluencyloop {
@@ -343,8 +344,8 @@
         height: 22.674px;
         transform: rotate(179.307deg);
         left: unset;
-        right: -15px;
-        top: 44px;
+        right: 1px;
+        top: 49px;
     }
 
     .pillContainer {
@@ -366,15 +367,38 @@
         height: 161px;
         aspect-ratio: unset;
     }
-    .leftgradient,.rightgradient{
+
+    .leftgradient,
+    .rightgradient {
         top: unset;
         bottom: 0px;
     }
-    
+
+    .smallstroke {
+        width: 51px;
+        height: 10px;
+        position: absolute;
+        top: 21px;
+        right: 4px;
+    }
+
+    .longstroke {
+        width: 47px;
+        height: 10px;
+        position: absolute;
+        top: 46px;
+        left: 4px;
+    }
+
 }
 
 @media (min-width:451px) {
     .mobmarqueewrapper {
+        display: none;
+    }
+
+    .longstroke,
+    .smallstroke {
         display: none;
     }
 }

@@ -149,7 +149,7 @@ const Footer = () => {
           </p>
           <div className={classes.subbottom}>
             <Link href={"/"} className={`${classes.linkl} link`}>
-              terms of service
+              Terms of Service
             </Link>
             <Link href={"/privacy-policy"} className={`${classes.linkl} link`}>
               Privacy Policy

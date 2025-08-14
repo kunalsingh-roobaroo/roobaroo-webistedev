@@ -47,7 +47,7 @@ const NewsLetter = ({ homepage }) => {
         <div className={classes.purplebox}>
         <div className={classes.successtop}>
         <p className={classes.sucsub}>Thank You!</p>
-        <Image src={success} width={29} height={29}/>
+        <Image src={success} width={29} height={29} alt={staticAlt}/>
         </div>
         <p className={classes.boxttx}>{`You’ll hear from us soon :)`}</p>
         </div>

@@ -128,7 +128,10 @@
     }
 
     .purplebox :hover {
-        transform: none;
-        background: inherit;
+        transform: none !important;
+        transition: none !important;
+        background: var(--Accent-Purple-Base, #815FAA) !important;
+        cursor: default;
     }
+ 
 }

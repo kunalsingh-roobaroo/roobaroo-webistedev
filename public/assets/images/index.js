@@ -20,9 +20,13 @@ import featureimg from "./featureimg.png";
 import ellipse from "./ellipse.png";
 import blogthumbnail from "./blogthumbnail.png";
 import tilethumbnail from "./tilethumbnail.png";
+import longstroke from "./longstroke.png";
+import smallstroke from "./smallstroke.png";
 export {
   logo,
   featureimg,
+  longstroke,
+  smallstroke,
   mobline,
   ellipse,
   foundertags,

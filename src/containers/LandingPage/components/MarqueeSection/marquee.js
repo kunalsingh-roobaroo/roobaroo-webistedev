@@ -57,6 +57,7 @@ const repeatedItems = [...marqueeItems, ...marqueeItems, ...marqueeItems];
           loop={0} // infinite
           // autoFill // keeps filling to make it seamless
           speed={40}
+            gradient={false}
           className={classes.marquee}
         >
           {repeatedItems.map((item, idx) => {

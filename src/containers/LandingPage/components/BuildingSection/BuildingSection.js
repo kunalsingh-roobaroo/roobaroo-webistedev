@@ -12,7 +12,7 @@ import {
 } from "../../../../../public/assets/team";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
-import { staticAlt } from "@/lib/constants";
+import { responsiveImageSizes, staticAlt } from "@/lib/constants";
 import {
   favcy,
   iitkgp_black,
@@ -34,8 +34,9 @@ const BuildingSection = () => {
     member6,
     member7,
   ];
-  const columns = useMemo(() => {
-    return Array.from({ length: 6 }, () => {
+  const [columns, setColumns] = React.useState([]);
+  React.useEffect(() => {
+    const newCols = Array.from({ length: 6 }, () => {
       const shuffled = [...members];
       for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -43,6 +44,7 @@ const BuildingSection = () => {
       }
       return shuffled;
     });
+    setColumns(newCols);
   }, []);
   const titles = [
     "Educators & Psychologists",
@@ -61,29 +63,56 @@ const BuildingSection = () => {
         </h3>
       </div>
       <div className={classes.central}>
-        <div className={classes.ext}>
-          <p className={classes.maintxt}>with a </p>{" "}
-          <p className={classes.span}>dream team</p>{" "}
-          <p className={classes.maintxt}>of</p>
-        </div>
+        <p className={classes.maintxt}>
+          with a <span className={classes.span}>dream team</span> of
+        </p>
         <div className={classes.marqueesection}>
           {columns.map((col, i) => (
-            <Marquee
+            <div
               key={i}
-              direction={i % 2 === 0 ? "up" : "down"}
-              speed={30}
-              gradient={false}
-              // pauseOnHover
-              className={classes.marqueeline}
+              className={`${classes.marqueeColumn} ${
+                i % 2 === 0 ? classes.scrollUp : classes.scrollDown
+              }`}
             >
-              {[...col, ...col].map((member, idx) => (
-                <div key={idx} className={classes.memberImage}>
-                  <Image src={member} alt={staticAlt} fill />
-                </div>
-              ))}
-            </Marquee>
+              <div className={classes.marqueeInner}>
+                {[...col, ...col].map((member, idx) => (
+                  <div key={idx} className={classes.memberImage}>
+                    <Image
+                      src={member}
+                      alt={staticAlt}
+                      fill
+                      sizes={responsiveImageSizes}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
+        <div className={classes.marqueesectionMobile}>
+          {columns.slice(0, 4).map((col, i) => (
+            <div
+              key={i}
+              className={`${classes.marqueeColumn} ${
+                i % 2 === 0 ? classes.scrollUp : classes.scrollDown
+              }`}
+            >
+              <div className={classes.marqueeInner}>
+                {[...col, ...col].map((member, idx) => (
+                  <div key={idx} className={classes.memberImage}>
+                    <Image
+                      src={member}
+                      alt={staticAlt}
+                      fill
+                      sizes={responsiveImageSizes}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
         <div className={classes.titles}>
           {titles.map((title, index) => (
             <div

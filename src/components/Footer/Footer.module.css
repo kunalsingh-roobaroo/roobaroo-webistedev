@@ -73,7 +73,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width:33.47222222222vw;
+    width: 33.47222222222vw;
 }
 
 .whitelogo {
@@ -197,7 +197,7 @@
 
 .contacts {
     display: flex;
-    width: 436px;
+    width: 32vw;
     justify-content: flex-end;
     align-items: center;
     align-content: center;
@@ -258,7 +258,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-        padding: 20px 30px;
+    padding: 20px 30px;
 }
 
 .txtdiv {
@@ -305,7 +305,7 @@
     }
 
     .footer {
-        padding: 52px 24px;
+        padding: 52px 41px;
         align-items: flex-start;
         justify-content: flex-start;
         height: auto;
@@ -370,10 +370,13 @@
 
     .detail {
         gap: 4.22px;
+        
     }
 
     .contacts {
         gap: 5px 11px;
+        justify-content: center;
+        align-items: center;
     }
 
     .icons {
@@ -411,5 +414,47 @@
     .coptxtx,
     .linkl {
         font-size: 10.558px;
+    }
+
+    .heart {
+        width: 44.7px;
+        height: 40.426px;
+        flex-shrink: 0;
+        aspect-ratio: unset;
+    }
+
+    .gridSection {
+        margin-top: 18px;
+        gap: 7px 44px;
+    }
+
+    .top {
+        gap: 62px;
+    }
+
+    .sub {
+        font-size: 18px;
+    }
+
+    .small {
+        font-size: 13px;
+    }
+    .middle{
+        padding-top: 60px;
+    }
+    .dertail{
+        font-size: 11.784px;
+    }
+    .icons{
+        margin-top: 39px;
+    }
+    .part{
+        font-size: 11.75px;
+    }
+    .coptxtx{
+        font-size: 10.558px;
+    }
+    .linkl{
+        
     }
 }
