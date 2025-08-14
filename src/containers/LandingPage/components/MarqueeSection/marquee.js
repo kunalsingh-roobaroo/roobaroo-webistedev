@@ -54,8 +54,8 @@ const repeatedItems = [...marqueeItems, ...marqueeItems, ...marqueeItems];
       <div className={classes.marqueeWrapper}>
         <Marquee
           direction={reverse ? "right" : "left"}
-          // loop={0} // infinite
-          autoFill // keeps filling to make it seamless
+          loop={0} // infinite
+          // autoFill // keeps filling to make it seamless
           speed={40}
             gradient={false}
           className={classes.marquee}
