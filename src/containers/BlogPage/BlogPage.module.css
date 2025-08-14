@@ -1,14 +1,18 @@
-.box{
+.box {
     padding-top: 89px;
     overflow: hidden;
     position: relative;
 }
-.parent{
+
+.parent {
     position: relative;
     overflow: hidden;
 }
+
 .pinkbox,
-.bluebox,.newpinkbox ,.newbluebox{
+.bluebox,
+.newpinkbox,
+.newbluebox {
     position: absolute;
     aspect-ratio: 1/1;
     overflow: hidden;
@@ -22,8 +26,9 @@
     top: -2vw;
     right: -12vw;
 }
-.newpinkbox{
-      width: 32.01388888889vw;
+
+.newpinkbox {
+    width: 32.01388888889vw;
     border-radius: 51.57px;
     bottom: 22vw;
     left: -12vw;
@@ -37,8 +42,9 @@
     animation-delay: 0.5s;
 
 }
-.newbluebox{
-       width: 32.01388888889vw;
+
+.newbluebox {
+    width: 32.01388888889vw;
     border-radius: 51.57px;
     top: 28vw;
     right: -15vw;
@@ -68,12 +74,13 @@
 }
 
 
-.blogcards{
-        padding: 0px 57px 72px 57px;
-        position: relative;
-        overflow: hidden;
+.blogcards {
+    padding: 0px 57px 72px 57px;
+    position: relative;
+    overflow: hidden;
 }
-.blogbg{
+
+.blogbg {
     position: absolute;
     top: 30px;
     left: 0;
@@ -81,20 +88,35 @@
     aspect-ratio: 1440/300;
     z-index: -1;
 }
-.blogbgframe{
+
+.blogbgframe {
     width: 100%;
     height: 100%;
     position: relative;
 }
 
 @media (max-width:450px) {
-    .box{
+    .box {
         padding-top: 101px;
     }
-    .blogbg{
+
+    .blogbg {
         display: none;
     }
-    .blogcards{
+
+    .blogcards {
         padding: 63px 27px 0px 27px;
+    }
+
+    .newbluebox,
+    .bluebox,
+    .pinkbox,
+    .newpinkbox {
+        width: 227px;
+        border-radius: 25.4px;
+    }
+    .newpinkbox{
+        bottom: 1038px;
+        left: -30px;
     }
 }

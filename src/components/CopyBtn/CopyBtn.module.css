@@ -13,3 +13,9 @@
     border-radius: 17px;
     background: #815FAA;
 }
+
+@media (max-width:450px) {
+    .btn {
+        font-size: 12.146px;
+    }
+}

@@ -40,6 +40,7 @@ import leftarrow from "./leftarrow.svg";
 import blogtop from "./blogtop.svg";
 import backarrow from "./backarrow.svg";
 import pagestroke from "./pagestroke.svg";
+import stroke from "./stroke.svg";
 import chart_y from "./chart-y.svg";
 import chart_x from "./chart-x.svg";
 import arrow_down from "./arrow-down.svg";
@@ -50,6 +51,7 @@ export {
   quotes,
   pagestroke,
   leftarrow,
+  stroke,
   brush_border,
   backarrow,
   flick,
