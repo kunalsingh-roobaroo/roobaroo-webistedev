@@ -41,6 +41,7 @@ import blogtop from "./blogtop.svg";
 import backarrow from "./backarrow.svg";
 import pagestroke from "./pagestroke.svg";
 import stroke from "./stroke.svg";
+import copy from "./copy.svg";
 import chart_y from "./chart-y.svg";
 import chart_x from "./chart-x.svg";
 import arrow_down from "./arrow-down.svg";
@@ -50,6 +51,7 @@ import brush_border from "./brush-border.svg";
 export {
   quotes,
   pagestroke,
+  copy,
   leftarrow,
   stroke,
   brush_border,
