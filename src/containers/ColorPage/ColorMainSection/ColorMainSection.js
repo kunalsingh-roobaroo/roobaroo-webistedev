@@ -5,11 +5,12 @@ import {
   blue,
   coral,
   purple,
+  verticalpallete,
   volume,
   white,
 } from "../../../../public/assets/BrandKit";
 import Image from "next/image";
-import { staticAlt } from "@/lib/constants";
+import { responsiveImageSizes, staticAlt } from "@/lib/constants";
 const ColorMainSection = () => {
   const data = [
     {
@@ -173,6 +174,14 @@ const ColorMainSection = () => {
               </>
             );
           })}
+        </div>
+        <div className={classes.palleteimg}>
+          <Image
+            src={verticalpallete}
+            fill
+            alt={staticAlt}
+            sizes={responsiveImageSizes}
+          />
         </div>
       </div>
       <div className={classes.boxes}>

@@ -17,6 +17,7 @@ import {
   title,
   typo,
   typodont,
+  typopphone,
   visual,
   visual2,
   visual3,
@@ -389,6 +390,7 @@ const GuideLinesMainSection = () => {
       </div>
       <div className={classes.typoframe}>
         <Image src={typo} fill alt={staticAlt} className={classes.desktypo} />
+        <Image src={typopphone} fill alt={staticAlt} className={classes.mobtypo} />
       </div>
       <div className={classes.marginmob}></div>
       <div className={classes.sec}>

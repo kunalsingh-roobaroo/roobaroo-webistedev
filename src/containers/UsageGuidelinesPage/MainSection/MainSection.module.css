@@ -602,33 +602,50 @@
         font-style: normal;
         font-weight: 600;
     }
-    .valtxtdiv{
+
+    .valtxtdiv {
         gap: 0px;
     }
-    .visualfirsimg{
+
+    .visualfirsimg {
         width: 100%;
         aspect-ratio: 339/350;
     }
-    .visualsecimg{
-               width: 100%;
+
+    .visualsecimg {
+        width: 100%;
         aspect-ratio: 338/348;
     }
-    .visualthirdimg{
+
+    .visualthirdimg {
         width: 100%;
         aspect-ratio: 336/371;
     }
-    .visualcontent{
+
+    .visualcontent {
         flex-direction: column;
         gap: 56px;
     }
-    .visualdontimg{
+
+    .visualdontimg {
         width: 100%;
         aspect-ratio: 336/459;
+    }
+
+    .desktypo {
+        display: none;
+    }
+    .li{
+        margin: 10px 0px;
+    }
+    .typoframe{
+        width: 100%;
+        aspect-ratio: 335/474;
     }
 }
 
 @media (min-width:451px) {
-    .marginmob {
+    .marginmob,.mobtypo {
         display: none;
     }
 }

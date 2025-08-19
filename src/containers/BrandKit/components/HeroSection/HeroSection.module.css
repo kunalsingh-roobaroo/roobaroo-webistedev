@@ -10,6 +10,17 @@
     z-index: 0;
 
 
+}.background {
+    background: url('/assets/icons/subtract.svg');
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1439/673;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 

@@ -38,11 +38,15 @@ import heading from "./heading.svg";
 import title from "./title.svg";
 import typodont from "./typodont.svg";
 import arrow from "./arrow.svg";
+import verticalpallete from "./verticalpallete.png";
+import typopphone from "./typopphone.png";
 
 export {
   title,
   arrow,
+  verticalpallete,
   heading,
+  typopphone,
   typohero,
   rulers,
   typo,
