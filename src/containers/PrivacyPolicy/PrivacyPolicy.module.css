@@ -9,6 +9,7 @@
     position: relative;
     overflow: hidden;
     min-height: 100vh;
+   
 }
 
 .section {
@@ -20,6 +21,8 @@
     align-items: flex-start;
     justify-content: center;
     gap: 16px;
+     justify-self: center;
+    align-self: center;
 }
 
 .headtxt {

@@ -20,7 +20,7 @@
 .boxttx {
     color: var(--Whites-Base, #FFF);
     font-family: Montserrat;
-    font-size: 16px;
+    font-size: 1.11111111111vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;

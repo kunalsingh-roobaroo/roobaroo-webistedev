@@ -1,0 +1,199 @@
+.container {
+    padding: 49px 6.11111111111vw;
+    margin-top: 97px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.blueTile {
+    background-color: #27AAE7;
+}
+
+.blueTile:hover {
+    background-color: #0091D5;
+}
+
+/* Red variant */
+.redTile {
+    background-color: #FB7D7D;
+}
+
+.redTile:hover {
+    background-color: #D95555;
+}
+
+.tile {
+    flex: 1;
+    aspect-ratio: 287/251;
+    border-radius: 40.5px;
+    padding: 36px 30px 43px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-color: none;
+
+}
+
+.heading {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 2.22222222222vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    /* 44.1px */
+}
+
+.subheading {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 1.04166666667vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 20.096px */
+}
+
+.gt {
+    color: rgba(255, 255, 255, 0.80);
+    font-family: Lusitana;
+    font-size: 1.04166666667vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 20.16px */
+}
+
+.tile:hover {
+    transform: scale(1.01);
+    /* zoom in slightly */
+}
+
+.ico {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.4s ease;
+
+}
+
+.robaroosub {
+    width: 3.33333333333vw;
+    /* height: 41.547px; */
+    position: absolute;
+    bottom: 3vw;
+    right: 0;
+    aspect-ratio: 1/1;
+
+}
+
+.robaroomain {
+    width: 11.52777777778vw;
+    aspect-ratio: 166/62;
+    position: absolute;
+    bottom: 0vw;
+    right: 0;
+
+}
+
+.rtpo {
+    width: 10.305556vw;
+    position: absolute;
+    bottom: 0vw;
+    right: 0;
+    aspect-ratio: 278 / 221;
+}
+
+.colors {
+    width: 14.180556vw;
+    position: absolute;
+    aspect-ratio: 234 / 161;
+    bottom: -1vw;
+    right: -0.5vw;
+}
+
+.dos {
+    width: 9.125vw;
+    position: absolute;
+    aspect-ratio: 117 / 73;
+    bottom: 0vw;
+    right: 1vw;
+
+}
+
+.tile:hover .ico {
+    transform: rotate(-8deg);
+    /* tilt a little to the left */
+}
+
+@media (max-width:450px) {
+    .container {
+
+        padding: 45.923077vw 28px 60px 28px;
+        flex-wrap: wrap;
+        margin-top: 0;
+        width: 100%;
+        justify-content: space-between;
+        gap: 24px 21px;
+
+    }
+
+    .tile {
+        width: 46%;
+        /* height: 133px; */
+        flex: none;
+        border-radius: 21.529px;
+        padding: 20px 16px 23px 19px;
+        aspect-ratio: 153/133;
+
+
+    }
+
+    .heading {
+        font-size: 16.745px;
+    }
+
+    .subheading,
+    .gt {
+        font-size: 7.655px;
+    }
+
+    .robaroomain {
+        width: 85px;
+        aspect-ratio: unset;
+        height: 23px;
+    }
+
+    .robaroosub {
+        width: 21.702px;
+        height: 14.277px;
+        transform: rotate(26.733deg);
+        aspect-ratio: unset;
+        flex-shrink: 0;
+        bottom: 28px;
+    }
+
+    .rtpo {
+        width: 75.267px;
+        aspect-ratio: unset;
+        height: 62px;
+
+    }
+
+    .colors {
+        aspect-ratio: unset;
+        width: 124px;
+        height: 61px;
+        bottom: -10px;
+        right: 0;
+    }
+}

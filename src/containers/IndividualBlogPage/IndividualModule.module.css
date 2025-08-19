@@ -2,6 +2,9 @@
     padding-top: 120px;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .box {
@@ -94,10 +97,16 @@
     gap: 24px;
     overflow: hidden;
 }
-
+.otherarticles {
+  overflow-x: hidden; /* ✅ kills horizontal scrollbars */
+}
 .carousel {
     width: 100%;
     padding: 0px 4.16666666667vw;
+   width: 100%;
+  overflow: hidden; /* Prevent horizontal scroll */
+  position: relative; /* Required if children use absolute positioning */
+   display: block; 
 }
 
 .featuretxt {

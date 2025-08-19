@@ -8,7 +8,7 @@ const BrandStoryHeroSection = () => {
     <div className={classes.container}>
       <h1 className={classes.headttx}>...where It All</h1>
       <h2 className={classes.subtxt}>
-        Discover who we are, what drives us & the problem we are solving
+        Discover who we are, what drives <br /> us & the problem we are solving
       </h2>
       <div className={classes.rocketframe}>
         <div className={classes.rocket}>

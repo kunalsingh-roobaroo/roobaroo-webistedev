@@ -22,11 +22,37 @@ import blogthumbnail from "./blogthumbnail.png";
 import tilethumbnail from "./tilethumbnail.png";
 import longstroke from "./longstroke.png";
 import smallstroke from "./smallstroke.png";
+import mobstrip from "./mobstrip.png";
+import colors from "./colors.png";
+import dos from "./dos.png";
+import heading from "./heading.png";
+import robaroosub from "./robaroosub.png";
+import robaroomain from "./robaroomain.png";
+import topmarkdark from "./topmarkdark.png";
+import primarylight from "./primarylight.png";
+import secarkdark from "./secarkdark.png";
+import secmarklight from "./secmarklight.png";
+import bilight from "./bilight.png";
+import biglight from "./biglight.png";
+import kit from "./kit.png";
 export {
   logo,
+  biglight,
+  topmarkdark,
+  kit,
+  secarkdark,
+  bilight,
+  secmarklight,
+  primarylight,
+  robaroomain,
   featureimg,
+  robaroosub,
+  heading,
+  colors,
+  mobstrip,
   longstroke,
   smallstroke,
+  dos,
   mobline,
   ellipse,
   foundertags,

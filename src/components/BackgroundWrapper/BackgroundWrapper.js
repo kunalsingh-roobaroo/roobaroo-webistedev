@@ -5,7 +5,7 @@ import PinkBox from "@/components/Boxes/PinkBox";
 import PurpleBox from "@/components/Boxes/PurpleBox";
 import BlueBox from "@/components/Boxes/BlueBox";
 
-export default function BackgroundBoxesWrapper({ children }) {
+export default function BackgroundBoxesWrapper({ children,invert }) {
   const [repeatCount, setRepeatCount] = useState(3);
   const boxRef = useRef(null);
 

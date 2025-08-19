@@ -7,6 +7,7 @@ import {
 } from "../../../../../public/assets/images";
 import Image from "next/image";
 import { staticAlt } from "@/lib/constants";
+import { Download } from "lucide-react";
 const Tiles = () => {
   const data = [
     {
@@ -35,10 +36,14 @@ const Tiles = () => {
           <div key={index} className={classes.tile}>
             <div className={classes.upper}>
               <Image src={value.thumbnail} fill alt={staticAlt} />
+              <div className={classes.gradient}></div>
             </div>
             <div className={classes.bottom}>
-              <p className={classes.headttx}>{value.title}</p>
-              <p className={classes.subttx}>{value.subtitle}</p>
+              <div className={classes.headWrapper}>
+                <p className={classes.headttx}>{value.title}</p>
+                <Download className={classes.downloadIcon} size={18} color="white" />
+              </div>
+              <p className={classes.subttx}>{value.subtitle}</p>  
             </div>
           </div>
         );

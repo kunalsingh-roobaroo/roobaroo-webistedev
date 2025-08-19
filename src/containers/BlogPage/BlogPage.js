@@ -9,37 +9,41 @@ import Image from "next/image";
 import { blogtop } from "../../../public/assets/icons";
 import { staticAlt } from "@/lib/constants";
 import Footer from "@/components/Footer/Footer";
+import BackgroundBoxesWrapper from "@/components/BackgroundWrapper/BackgroundWrapper";
 
 const BlogPage = () => {
   return (
     <>
       <Navbar />
-      <div className={classes.parent}>
-        <div className={classes.box}>
-          <BlogHero />
-          <div className={classes.bluebox}>
+      <BackgroundBoxesWrapper >
+        <div className={classes.parent}>
+          <div className={classes.box}>
+            <BlogHero />
+            {/* <div className={classes.bluebox}>
             <BlueBox />
           </div>
           <div className={classes.pinkbox}>
             <PinkBox />
+          </div> */}
           </div>
-        </div>
-        <div className={classes.blogcards}>
-          <BlogCards />
-          <div className={classes.blogbg}>
-            <div className={classes.blogbgframe}>
-              <Image src={blogtop} fill alt={staticAlt} />
+          <div className={classes.blogcards}>
+            <BlogCards />
+            <div className={classes.blogbg}>
+              <div className={classes.blogbgframe}>
+                <Image src={blogtop} fill alt={staticAlt} />
+              </div>
             </div>
-          </div>
-          <div className={classes.newbluebox}>
+            {/* <div className={classes.newbluebox}>
             <BlueBox />
+          </div> */}
           </div>
-        </div>
-        <div className={classes.newpinkbox}>
+          {/* <div className={classes.newpinkbox}>
           <PinkBox />
+        </div> */}
+
+          <Footer />
         </div>
-        <Footer />
-      </div>
+      </BackgroundBoxesWrapper>
     </>
   );
 };

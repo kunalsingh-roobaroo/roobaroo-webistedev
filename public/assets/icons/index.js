@@ -7,6 +7,7 @@ import upright from "./upright.svg";
 import linktree from "./linktree.svg";
 import instagram from "./instagram.svg";
 import x from "./x.svg";
+import brandhand from "./brandhand.svg";
 import linkedin from "./linkedin.svg";
 import mail from "./mail.svg";
 import call from "./call.svg";
@@ -41,6 +42,7 @@ import blogtop from "./blogtop.svg";
 import backarrow from "./backarrow.svg";
 import pagestroke from "./pagestroke.svg";
 import stroke from "./stroke.svg";
+import back from "./back.svg";
 import copy from "./copy.svg";
 import chart_y from "./chart-y.svg";
 import chart_x from "./chart-x.svg";
@@ -59,6 +61,7 @@ export {
   flick,
   blogtop,
   brush_border_2,
+  brandhand,
   arrow_down,
   arrowstroke,
   fluencyloop,
@@ -98,4 +101,5 @@ export {
   instagram,
   cross,
   x,
+  back,
 };

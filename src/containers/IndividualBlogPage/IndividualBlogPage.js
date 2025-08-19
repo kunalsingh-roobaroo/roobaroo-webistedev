@@ -12,10 +12,12 @@ import Footer from "@/components/Footer/Footer";
 import BlogCarousel from "../BlogPage/components/BlogHero/Carousel/BlogCarousel";
 import BlueBox from "@/components/Boxes/BlueBox";
 import PinkBox from "@/components/Boxes/PinkBox";
+import BackgroundBoxesWrapper from "@/components/BackgroundWrapper/BackgroundWrapper";
 const IndividualBlogPage = () => {
   return (
     <>
       <Navbar />
+      <BackgroundBoxesWrapper invert={true}>
       <section className={classes.container}>
         <div className={classes.box}>
           <Link className={classes.back} href={"/blogs"}>
@@ -42,13 +44,9 @@ const IndividualBlogPage = () => {
             </div>
           </div>
         </div>
-        <div className={classes.bluebox}>
-          <BlueBox />
-        </div>
-        <div className={classes.pinkbox}>
-          <PinkBox />
-        </div>
+ 
       </section>
+
       <div className={classes.stroke}>
         <Image src={stroke} fill alt={staticAlt} />
       </div>
@@ -67,6 +65,7 @@ const IndividualBlogPage = () => {
           <PinkBox />
         </div> */}
       </div>
+            </BackgroundBoxesWrapper>
     </>
   );
 };

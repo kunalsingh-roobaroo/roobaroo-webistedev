@@ -1,0 +1,33 @@
+.back {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.backarrow {
+    width: 0.625vw;
+    aspect-ratio: 9/9;
+    position: relative;
+    min-width: 9px;
+    flex-shrink: 0;
+        filter: brightness(0) invert(1);
+}
+
+.backbt {
+    color: white;
+    text-align: right;
+
+    /* Navigation Bar Desk */
+    font-family: Montserrat;
+    font-size: 1.25vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.18px;
+}
+
+@media (max-width:450px) {
+    .backbt{
+        font-size: 18px;
+    }
+}

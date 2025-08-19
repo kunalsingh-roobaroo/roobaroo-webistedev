@@ -5,10 +5,20 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: 50px;
-
-    padding: 0px 75px;
     box-sizing: border-box;
 }
+
+/* .gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    aspect-ratio: 395/160;
+    height: 80px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    pointer-events: none;
+    z-index: 2;
+} */
 
 .tile {
     width: 33%;
@@ -17,6 +27,16 @@
     flex-direction: column;
     border-radius: 20px;
     overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.headWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .upper {
@@ -24,12 +44,18 @@
     aspect-ratio: 395/160;
     position: relative;
     flex-shrink: 0;
+    border: 0.2px solid #000;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+.tile:hover .upper {
+  border: none;
 }
 
 .bottom {
     padding: 0px 22px;
     box-sizing: border-box;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     /* Take up the remaining space */
     overflow: hidden;
     display: flex;
@@ -37,6 +63,17 @@
     gap: 8px;
     align-items: flex-start;
     justify-content: center;
+    position: absolute;
+    /* add */
+    bottom: 0;
+    /* add */
+    left: 0;
+    /* add */
+    width: 100%;
+    /* add */
+    height: 50%;
+    /* add */
+    transition: height 0.4s ease;
 }
 
 .tile:nth-child(1) .bottom {
@@ -51,6 +88,18 @@
     background-color: #27AAE7;
 }
 
+.tile:hover .bottom {
+    height: 55%;
+    /* add */
+}
+.downloadIcon {
+  opacity: 0;                     /* hidden by default */
+  transition: opacity 0.4s ease;  /* smooth fade both ways */
+}
+
+.tile:hover .downloadIcon {
+  opacity: 1;                     /* fade in on hover */
+}
 
 .headttx {
     color: #FFF;
@@ -74,18 +123,21 @@
 }
 
 @media (max-width:450px) {
-    .container{
+    .container {
         padding: 16px;
         flex-direction: column;
         align-items: center;
     }
-    .tile{
+
+    .tile {
         width: 80%;
     }
-    .headttx{
+
+    .headttx {
         font-size: 13.843px;
     }
-    .subttx{
+
+    .subttx {
         font-size: 9.229px;
     }
 }

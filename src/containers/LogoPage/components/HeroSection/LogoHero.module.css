@@ -1,0 +1,116 @@
+.container {
+    background: var(--Primary-Blue-Base, #27AAE7);
+    aspect-ratio: 1440/461;
+    width: 100%;
+    padding: 177px 10.20833333333vw 0px 78px;
+    position: relative;
+    overflow: hidden;
+}
+
+.h1 {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 4.16666666667vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    /* 60px */
+    letter-spacing: 0.6px;
+    margin-top: 22px;
+}
+
+.h2 {
+    color: #F5F5F5;
+    font-family: Montserrat;
+    font-size: 1.52777777778vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 30.8px */
+    margin-top: 2px;
+    width: 39.65277777778vw;
+}
+
+.roobaroosub {
+    width: 8.95833333333vw;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 0vw;
+    right: 5vw;
+}
+
+.roobaroomain {
+    width: 49.16666666667vw;
+    aspect-ratio: 708/269;
+    position: absolute;
+    bottom: 3vw;
+    right: -2vw;
+    transform: rotate(-11.537deg);
+
+}
+
+.ico {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+@media (max-width:450px) {
+    .container {
+        aspect-ratio: 390/429;
+        padding: 114px 29px 0px 29px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: relative;
+        background: transparent;
+        z-index: 2;
+
+        /* aspect-ratio: ; */
+
+    }
+
+    .background {
+        background: url('/assets/icons/bluesubtract.svg');
+        background-color: none;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        aspect-ratio: 390/410;
+        max-height: 461px;
+        z-index: 0;
+    }
+
+    .h1 {
+        font-size: 34.971px;
+    }
+
+    .h2 {
+        margin-top: 21px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+
+    .roobaroosub {
+        display: none;
+    }
+
+    .roobaroomain {
+        width: 283.092px;
+        height: 67.242px;
+        aspect-ratio: unset;
+        transform: rotate(-12.537deg);
+      top: 96px;
+        right: -62px;
+    }
+}
+
+@media (min-width:451px) {
+    .background {
+        display: none;
+    }
+}
