@@ -123,23 +123,29 @@
     /* 19.5px */
     letter-spacing: 0.13px;
     padding: 4px;
+    border:1.202px solid ;
 }
 
-.tag:nth-child(1) {
-    border: 1.202px solid var(--Accent-Purple-Base, #815FAA);
-    color: var(--accent-purple-110, #684C8A);
+
+.color1 {
+    border-color: #6C7072;
+    color: #404446;
 }
 
-.tag:nth-child(2) {
-    border: 1.202px solid var(--Primary-Blue-Base, #27AAE7);
-    color: var(--primary-blue-110, #0091D5);
+.color2 {
+    border-color: #27AAE7;
+    color: #0091D5;
 }
 
-.tag:nth-child(3) {
-    border: 1.202px solid var(--Primary-Coral-Base, #FB7D7D);
-    color: var(--primary-coral-110, #FF5656)
+.color3 {
+    border-color: #815FAA;
+    color: #684C8A;
 }
 
+.color4 {
+    border-color: #FB7D7D;
+    color: #FF5656;
+}
 .customPagination .MuiPaginationItem-root {
     font-weight: 600;
     font-size: 1rem;

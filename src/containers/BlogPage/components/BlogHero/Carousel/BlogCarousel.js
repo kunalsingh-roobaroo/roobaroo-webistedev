@@ -5,8 +5,13 @@ import classes from "./BlogCarousel.module.css";
 import "./BlogCarousel.css";
 import { featureimg } from "../../../../../../public/assets/images";
 import Image from "next/image";
-import { staticAlt } from "@/lib/constants";
+import { baseUrl, formatDate, staticAlt } from "@/lib/constants";
 import { leftarrow } from "../../../../../../public/assets/icons";
+import useFetchData from "@/hooks/useFetchData";
+// import { api_Urls } from "@/lib/ApiUrls";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { api_Urls } from "@/lib/apiUrls";
 
 // Import your custom arrow images
 
@@ -35,7 +40,12 @@ const PrevArrow = ({ onClick }) => {
   );
 };
 
-const BlogCarousel = ({related}) => {
+const BlogCarousel = ({ related }) => {
+  const { data, loading, error } = useFetchData(
+    `${baseUrl}${api_Urls.GET_BLOG}?page=1&limit=3`
+  );
+
+  const router = useRouter();
   const settings = {
     dots: true,
     infinite: true,
@@ -61,45 +71,44 @@ const BlogCarousel = ({related}) => {
     ],
   };
 
-  const blogData = [
-    {
-      thumbnail: featureimg,
-      date: "JULY 10    |    FOUNDING TEAM    |    GROWTH",
-      title: "Why Young Voices Matter: we Build Safe Spaces for Expression",
-      description:
-        "At Roobaroo, we believe that growth begins with being heard. Here's how we’re creating platforms where young people feel seen, safe, and empowered.",
-    },
-    {
-      thumbnail: featureimg,
-      date: "AUGUST 14    |    COMMUNITY    |    CHANGE",
-      title: "Empowering Youth Through Conversation",
-      description:
-        "We’re building dialogue spaces that foster leadership and empathy among young changemakers.",
-    },
-    {
-      thumbnail: featureimg,
-      date: "SEPTEMBER 01    |    IMPACT    |    STORIES",
-      title: "From Ideas to Action: The Roobaroo Journey",
-      description:
-        "Discover how our programs turn young voices into real, impactful initiatives in their communities.",
-    },
-  ];
-
+  const handleRoute = (value) => {};
   return (
     <div className={classes.carouselWrapper}>
       <Slider {...settings}>
-        {blogData.map((blog, index) => (
+        {data?.map((blog, index) => (
           <div key={index} className={classes.slide}>
             <div className={classes.lhs}>
-              <p className={classes.date}>{blog.date}</p>
-              <h2 className={classes.title}>{blog.title}</h2>
+              <p className={classes.date}>
+                <span>{formatDate(blog?.blog_published_at)}</span>
+                <span className={classes.separator}>|</span>
+                <span>{blog?.category_name}</span>
+                <span className={classes.separator}>|</span>
+                <span>{blog?.sub_category_name}</span>
+              </p>
+
+              <Link
+                href={`/blogs/${blog?.blog_seo_title}`}
+                className={classes.title}
+              >
+                {blog?.blog_title}
+              </Link>
               <div className={classes.imagewrapper}>
-                <Image src={blog.thumbnail} alt={staticAlt} fill sizes="50vw" />
+                <Image
+                  src={blog?.blog_thumbnail_image}
+                  alt={staticAlt}
+                  fill
+                  sizes="50vw"
+                />
               </div>
-              <p className={classes.description}>{blog.description}</p>
+              <p className={classes.description}>{blog?.blog_summary}</p>
             </div>
             <div className={classes.rhs}>
-              <Image src={blog.thumbnail} alt={staticAlt} fill sizes="50vw" />
+              <Image
+                src={blog?.blog_thumbnail_image}
+                alt={staticAlt}
+                fill
+                sizes="50vw"
+              />
             </div>
           </div>
         ))}

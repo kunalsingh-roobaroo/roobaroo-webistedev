@@ -14,7 +14,6 @@ import PurpleBox from "@/components/Boxes/PurpleBox";
 import PinkBox from "@/components/Boxes/PinkBox";
 import { underline } from "../../../../../../public/assets/icons";
 
-// ✅ Correct image imports (adjust path to match your actual folder structure)
 
 export default function GrowthWellnessSection() {
   useEffect(() => {
@@ -28,7 +27,7 @@ export default function GrowthWellnessSection() {
       const windowHeight = window.innerHeight;
 
       const scrollProgress = Math.min(
-        Math.max((windowHeight - rect.top) / (rect.height + windowHeight), 0),
+        Math.max((windowHeight - rect.top+90) / (rect.height + windowHeight), 0),
         1
       );
 

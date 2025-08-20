@@ -39,11 +39,13 @@ import title from "./title.svg";
 import typodont from "./typodont.svg";
 import arrow from "./arrow.svg";
 import verticalpallete from "./verticalpallete.png";
+import carertslant from "./carertslant.svg";
 import typopphone from "./typopphone.png";
 
 export {
   title,
   arrow,
+  carertslant,
   verticalpallete,
   heading,
   typopphone,

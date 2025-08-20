@@ -1,9 +1,23 @@
 .mainsection {
     /* display: flex;
     flex-direction: column; */
-    padding: 87px 9.09722222222vw 67px 9.09722222222vw;
+    padding: 0px 9.09722222222vw 67px 9.09722222222vw;
     position: relative;
     width: 100%;
+}
+
+.backtotop {
+    position: sticky;
+    /* Make it sticky relative to the parent */
+    top: 16px;
+    /* Distance from the top when scrolling */
+    display: flex;
+    justify-content: flex-end;
+    /* Align to the right */
+    z-index: 10;
+    /* Ensure it stays on top */
+    margin-bottom: 16px;
+    /* Optional: some spacing below */
 }
 
 .title {
@@ -106,13 +120,33 @@
     text-transform: uppercase;
 }
 
+.typotxtdiv h3 {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 1.25vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
 .txtdiv,
-.valtxtdiv {
+.valtxtdiv,
+.typotxtdiv {
     display: flex;
     flex-direction: column;
 }
 
 .txtdiv h4 {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 1.59722222222vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.typotxtdiv h4 {
     color: #000;
     font-family: Montserrat;
     font-size: 1.59722222222vw;
@@ -396,7 +430,7 @@
 }
 
 .valtxtdiv {
-    gap: 20px;
+    gap: 4px;
 }
 
 .visualdontimg {
@@ -457,6 +491,11 @@
     }
 
     .txtdiv h3 {
+        font-size: 14px;
+    }
+
+    .typotxtdiv h3 {
+        font-weight: 600;
         font-size: 14px;
     }
 
@@ -635,17 +674,21 @@
     .desktypo {
         display: none;
     }
-    .li{
+
+    .li {
         margin: 10px 0px;
     }
-    .typoframe{
+
+    .typoframe {
         width: 100%;
         aspect-ratio: 335/474;
     }
 }
 
 @media (min-width:451px) {
-    .marginmob,.mobtypo {
+
+    .marginmob,
+    .mobtypo {
         display: none;
     }
 }

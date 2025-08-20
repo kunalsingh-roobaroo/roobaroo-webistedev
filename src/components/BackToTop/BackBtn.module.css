@@ -5,14 +5,20 @@
     width: fit-content;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .bactct{
     color: #000;
 text-align: center;
 font-family: Montserrat;
-font-size: 18.643px;
+font-size: 1.31944444444vw;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
 letter-spacing: -0.186px;
+}
+.box{
+    width: 3.40277777778vw;
+    aspect-ratio: 1/1;
+    position: relative;
 }

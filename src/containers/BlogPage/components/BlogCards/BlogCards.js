@@ -3,9 +3,11 @@ import React, { useState } from "react";
 import classes from "./BlogCards.module.css";
 import { tilethumbnail } from "../../../../../public/assets/images";
 import Image from "next/image";
-import { staticAlt } from "@/lib/constants";
+import { baseUrl, formatDate, staticAlt } from "@/lib/constants";
 import { Pagination, Stack } from "@mui/material";
 import Link from "next/link";
+import { api_Urls } from "@/lib/apiUrls";
+import useFetchData from "@/hooks/useFetchData";
 const BlogCards = () => {
   const blogData = [
     {
@@ -53,6 +55,16 @@ const BlogCards = () => {
   ];
   const itemsPerPage = 3; // Number of blogs per page
   const [page, setPage] = useState(1);
+  const { data, loading, error, count } = useFetchData(
+    `${baseUrl}${api_Urls.GET_BLOG}?page=${page}&limit=${itemsPerPage}`
+  );
+  const COLOR_CLASSES = ["color1", "color2", "color3", "color4"];
+
+  function getRandomColorClass(prevClass) {
+    const available = COLOR_CLASSES.filter((c) => c !== prevClass);
+    return available[Math.floor(Math.random() * available.length)];
+  }
+  // console.log('------data',data);
 
   // Handle page change
   const handleChange = (event, value) => {
@@ -64,59 +76,77 @@ const BlogCards = () => {
     (page - 1) * itemsPerPage,
     page * itemsPerPage
   );
-
+  const totalPages = Math.ceil(count / itemsPerPage);
   return (
     <div className={classes.container}>
-      <p className={classes.headtxt}>All Blogs</p>
+      <p className={classes.headtxt}>All Blogs :</p>
       <div className={classes.blogs}>
-        {paginatedBlogs?.map((value, index) => (
-          <Link href={`/blogs/id`} key={index} className={classes.blog}>
+        {data?.map((value, index) => (
+          <Link
+            href={`/blogs/${value?.blog_seo_title}`}
+            key={index}
+            className={classes.blog}
+          >
             <div className={classes.thumbnail}>
-              <Image src={value.thumbnail} fill alt={staticAlt} />
+              <Image src={value?.blog_thumbnail_image} fill alt={staticAlt} />
             </div>
             <div className={classes.txtdiv}>
-              <p className={classes.date}>{value.subtxt}</p>
-              <p className={classes.title}>{value.title}</p>
-              <p className={classes.subtite}>{value.subtitle}</p>
+              <p className={classes.date}>{`${formatDate(
+                value?.blog_published_at
+              )} | ${value?.category_name} | ${value?.sub_category_name}`}</p>
+              <p className={classes.title}> {value?.blog_title}</p>
+              <p className={classes.subtite}>{value?.blog_summary}</p>
             </div>
 
             <div className={classes.tags}>
-              {value.tags?.map((tag, idx) => (
-                <span key={idx} className={classes.tag}>
-                  {tag}
-                </span>
-              ))}
+              {(() => {
+                let prevClass = null; // track previous color class
+                return value?.blog_tags.map((tag, index) => {
+                  const colorClass = getRandomColorClass(prevClass);
+                  prevClass = colorClass; // update prevClass for next iteration
+
+                  return (
+                    <div
+                      key={index}
+                      className={`${classes.tag} ${classes[colorClass]}`}
+                    >
+                      {tag}
+                    </div>
+                  );
+                });
+              })()}
             </div>
           </Link>
         ))}
       </div>
-      <Stack spacing={2} alignItems="center" alignSelf={'center'} marginTop={4}>
-        <Pagination
-         count={Math.ceil(blogData.length / itemsPerPage)}
-  page={page}
-  onChange={handleChange}
-//   variant="outlined"
-  shape="rounded"
-    sx={{
-      "& .MuiPaginationItem-root": {
-        fontWeight: 600,
-        fontSize: "1rem",
-        color: "#7b5ca7", // purple text for inactive
-      },
-      "& .MuiPaginationItem-root.Mui-selected": {
-        backgroundColor: "#7b5ca7", // purple background
-        color: "#fff",
-        borderRadius: "50%",
-      },
-      "& .MuiPaginationItem-root.Mui-selected:hover": {
-        backgroundColor: "#6a4b94", // darker purple hover
-      },
-      "& .MuiPaginationItem-previousNext": {
-        color: "#7b5ca7", // arrow color
-      },
-    }}
-        />
-      </Stack>
+      {totalPages > 1 && (
+        <Stack spacing={2} alignItems="center" marginTop={4}>
+          <Pagination
+            count={totalPages}
+            page={page}
+            onChange={handleChange}
+            shape="rounded"
+            sx={{
+              "& .MuiPaginationItem-root": {
+                fontWeight: 600,
+                fontSize: "1rem",
+                color: "#7b5ca7",
+              },
+              "& .MuiPaginationItem-root.Mui-selected": {
+                backgroundColor: "#7b5ca7",
+                color: "#fff",
+                borderRadius: "50%",
+              },
+              "& .MuiPaginationItem-root.Mui-selected:hover": {
+                backgroundColor: "#6a4b94",
+              },
+              "& .MuiPaginationItem-previousNext": {
+                color: "#7b5ca7",
+              },
+            }}
+          />
+        </Stack>
+      )}
     </div>
   );
 };

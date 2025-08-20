@@ -25,6 +25,7 @@ import {
   windows,
 } from "../../../../public/assets/BrandKit";
 import { responsiveImageSizes, staticAlt } from "@/lib/constants";
+import BackToTopBtn from "@/components/BackToTop/BackToTopBtn";
 
 const GuideLinesMainSection = () => {
   const LogoDodata = [
@@ -232,7 +233,7 @@ const GuideLinesMainSection = () => {
       icon: color3,
     },
   ];
-   const VisualDonts = [
+  const VisualDonts = [
     {
       title: "Don’t mix multiple illustration styles – ",
       subtitle:
@@ -261,6 +262,7 @@ const GuideLinesMainSection = () => {
   ];
   return (
     <section className={classes.mainsection}>
+ 
       <h2 className={classes.title}>Logo</h2>
       <div className={classes.sec}>
         <p className={classes.subtitle}>Do&apos;s</p>
@@ -320,9 +322,7 @@ const GuideLinesMainSection = () => {
           );
         })}
       </div>
-      <div className={classes.marginmob}>
-
-      </div>
+      <div className={classes.marginmob}></div>
       <div className={classes.sec}>
         <p className={classes.subtitle}>Don&apos;ts</p>
         <div className={classes.ico}>
@@ -390,7 +390,12 @@ const GuideLinesMainSection = () => {
       </div>
       <div className={classes.typoframe}>
         <Image src={typo} fill alt={staticAlt} className={classes.desktypo} />
-        <Image src={typopphone} fill alt={staticAlt} className={classes.mobtypo} />
+        <Image
+          src={typopphone}
+          fill
+          alt={staticAlt}
+          className={classes.mobtypo}
+        />
       </div>
       <div className={classes.marginmob}></div>
       <div className={classes.sec}>
@@ -426,7 +431,7 @@ const GuideLinesMainSection = () => {
             )}
 
             {/* Text block */}
-            <div className={classes.txtdiv}>
+            <div className={classes.typotxtdiv}>
               <h3>{value.title}</h3>
               <h4>{value.subtitle}</h4>
               {value.description.map((desc, i) => (
@@ -522,7 +527,7 @@ const GuideLinesMainSection = () => {
           );
         })}
       </div>
-        <div className={classes.marginmob}></div>
+      <div className={classes.marginmob}></div>
       <div className={classes.sec}>
         <p className={classes.subtitle}>Don&apos;ts</p>
         <div className={classes.ico}>
@@ -615,8 +620,8 @@ const GuideLinesMainSection = () => {
           );
         })}
       </div>
-    <div className={classes.marginmob}></div>
-       <div className={classes.sec}>
+      <div className={classes.marginmob}></div>
+      <div className={classes.sec}>
         <p className={classes.subtitle}>Don&apos;ts</p>
         <div className={classes.ico}>
           <Image

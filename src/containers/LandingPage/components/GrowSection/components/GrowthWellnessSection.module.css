@@ -118,17 +118,17 @@
 }
 
 .line {
-  width: auto;
+  width: 13.75vw;
   display: flex;
   flex-direction: column;
   height: 100%;
-  margin: 0 40px;
+  margin: 0px 0px;
   align-items: center;
   justify-content: center;
 }
 
 .underline {
-  width: 13.81944444444vw;
+  width: 30.81944444444vw;
   aspect-ratio: 199/2;
   position: relative;
 }

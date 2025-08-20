@@ -190,6 +190,7 @@ const KnowYourBuddy = () => {
                       alt={staticAlt}
                       sizes={staticAlt}
                     />
+                    <div className={classes.mobatended}>Attended</div>
                   </div>
                 </div>
               </div>
@@ -234,6 +235,7 @@ const KnowYourBuddy = () => {
                       );
                     })}
                   </div>
+                   
                 </div>
               </div>
             </div>
@@ -361,6 +363,7 @@ const KnowYourBuddy = () => {
             </div>
           </div>
         </div>
+        <div className={classes.click}>Click Here</div>
       </div>
     </section>
   );

@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 170px 0px 72px 0px;
+    /* padding: 170px 0px 72px 0px; */
     position: relative;
     overflow: hidden;
     min-height: 100vh;
@@ -163,6 +163,9 @@
 
     .subtxt {
         font-size: 11px;
+    }
+    .container{
+        padding: 0px;
     }
 
 

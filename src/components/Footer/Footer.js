@@ -19,13 +19,14 @@ import NewsLetter from "./components/NewsLetter";
 import { ArrowUpRight } from "lucide-react";
 const Footer = () => {
   const gridItems = [
-    { name: "The Problem Space", link: "/" },
-    { name: "Book a Meeting", link: "/" },
-    { name: "Our Guiding Principle", link: "/" },
-    { name: "Company Brochure", link: "/" },
-    { name: "Who We Serve", link: "/" },
-    { name: "Our Dream Team", link: "/" },
-    { name: "The Future We See", link: "/" },
+    { name: "Our Brand Story", link: "/" },
+    { name: "Collaborate With Us", link: "/" },
+    { name: "Newsletter Archives", link: "/" },
+    { name: "Join Our Community", link: "/" },
+    { name: "Our Brand Identity", link: "/" },
+    { name: "Press & Media", link: "/" },
+    { name: "Read Our Blog", link: "/blogs" },
+    { name: "Talk To Us", link: "/" },
   ];
   const socials = [
     {
@@ -92,7 +93,7 @@ const Footer = () => {
           </div>
           <div className={classes.rhs}>
             <p className={classes.headtxt}>
-              Helping your grow without burning out!
+              Helping you grow without burning out!
             </p>
             <div className={classes.purplebox}>
               <div className={classes.txtdiv}>

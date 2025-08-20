@@ -9,6 +9,11 @@
   cursor: pointer;
   z-index: 1;
 }
+.ico{
+  width: 1.52777777778vw;
+  aspect-ratio: 1/1;
+  position: relative;
+}
 
 .top {
   width: 100%;

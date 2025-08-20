@@ -12,9 +12,10 @@
     padding: 6px 12px;
     border-radius: 17px;
     background: #815FAA;
-      display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
 }
 
 @media (max-width:450px) {

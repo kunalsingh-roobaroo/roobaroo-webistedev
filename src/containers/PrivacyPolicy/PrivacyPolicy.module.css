@@ -18,6 +18,7 @@
     gap: 40px;
     /* width: 100%; */
     width: 75.83333333333vw;
+      padding: 170px 0px 72px 0px;
     align-items: flex-start;
     justify-content: center;
     gap: 16px;
@@ -185,12 +186,16 @@
         left: -50%;
     }
 
+    .container{
+            padding: 89px 0px 10px 0px;
+    }
     .rhs {
         right: -50%;
     }
 
     .section {
         width: 336px;
+        padding: 0;
     }
 
     .container {

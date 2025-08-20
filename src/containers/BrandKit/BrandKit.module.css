@@ -69,7 +69,7 @@
 @media (max-width:450px) {
     .background {
         background: url('/assets/icons/mobsubtract.svg');
-        width: 100%;
+        width: 101%;
         aspect-ratio: 390/410;
         background-size: contain;
         background-repeat: no-repeat;
