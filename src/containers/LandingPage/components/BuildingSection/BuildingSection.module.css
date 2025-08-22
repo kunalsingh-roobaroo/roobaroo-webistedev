@@ -103,7 +103,7 @@
     width: 10.55555555556vw;
     aspect-ratio: 1/1;
     position: relative;
-    margin: 10px 10px ;
+    margin: 10px 10px;
     overflow: hidden;
     flex-shrink: 0;
     /* display: flex !important; */
@@ -321,46 +321,60 @@
         border-radius: 8.778px;
         overflow: hidden;
     }
-    .marqueesectionMobile{
+
+    .marqueesectionMobile {
         padding: 0px;
         margin: 0;
         aspect-ratio: unset;
         height: 154px;
     }
-    .memberImage{
+
+    .memberImage {
         width: 79px;
-        margin: 10px 0 !important    ;
+        margin: 10px 0 !important;
     }
-    .title{
-font-size: 10.4px;
-width:96px;
+
+    .title {
+        font-size: 10.4px;
+        width: 96px;
     }
-    .titles{
+
+    .titles {
         flex-wrap: wrap;
         gap: 22px;
         align-items: center;
         justify-content: center;
     }
-    .brand{
+
+    .brand {
         width: 66.672px;
-height: 37.351px;
-flex-shrink: 0;
-border-radius: 1.162px;
-overflow: hidden;
-aspect-ratio: unset;
+        height: 37.351px;
+        flex-shrink: 0;
+        border-radius: 1.162px;
+        overflow: hidden;
+        aspect-ratio: unset;
     }
-    .brands{
+
+    .brands {
         flex-wrap: wrap;
         justify-content: flex-start;
         gap: 41px;
     }
-    .from{
+
+    .from {
         top: -30px;
         left: -18px;
         border-radius: 4.424px;
         aspect-ratio: unset;
         height: 27.427px;
         font-size: 12.387px;
+    }
+
+    .bluebox,
+    .pinkbox {
+        width: 169px;
+        aspect-ratio: 1/1;
+        border-radius: 18.93px;
     }
 }
 

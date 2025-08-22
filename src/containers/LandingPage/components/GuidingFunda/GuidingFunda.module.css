@@ -190,6 +190,8 @@
 
     .mobmarquee {
         padding: 98px 0px 44px 0px;
+        width: 100%;
+        overflow: hidden;
     }
 }
 

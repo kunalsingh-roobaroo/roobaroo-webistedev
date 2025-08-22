@@ -6,6 +6,9 @@
   overflow-x: hidden;
   overflow-y: hidden;
 }
+.marqueeparent{
+  display: flex;
+}
 
 .marqueeWrapper {
   transform: rotate(-6deg);
