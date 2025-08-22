@@ -519,6 +519,27 @@
     aspect-ratio: 193/160;
     position: relative;
 }
+@keyframes dvdSmooth {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(30px, 20px);
+    }
+
+    50% {
+        transform: translate(0, 40px);
+    }
+
+    75% {
+        transform: translate(-30px, 20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
 
 /* Pink box movement */
 @keyframes floatPink {
@@ -594,15 +615,15 @@
 }
 
 .pinkbox {
-    animation: floatPink 17s ease-in-out infinite;
+    animation: dvdSmooth 8s ease-in-out infinite;
 }
 
 .purplebox {
-    animation: floatPurple 20s ease-in-out infinite;
+   animation: dvdSmooth 8s ease-in-out infinite;
 }
 
 .bluebox {
-    animation: floatBlue 19s ease-in-out infinite;
+    animation: dvdSmooth 8s ease-in-out infinite;
 }
 
 @media (max-width:450px) {
@@ -943,7 +964,7 @@
     }
 
     .box {
-        padding: 16px;
+        padding: 28px 18px;
         aspect-ratio: unset;
         width: 100%;
         height: 109px;

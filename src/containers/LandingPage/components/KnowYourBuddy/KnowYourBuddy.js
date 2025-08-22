@@ -50,7 +50,7 @@ const KnowYourBuddy = () => {
   const redBoxData = [
     {
       title: "Worked with:",
-      brands: [metadome, iitkgp_white, MoHUA, dron_study, cppr],
+      brands: [metadome, iitkgp_white, MoHUA, dron_study, cppr,],
     },
     {
       title: "Have Built For:",
