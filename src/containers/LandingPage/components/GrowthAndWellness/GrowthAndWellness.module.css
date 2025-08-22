@@ -201,14 +201,11 @@
 }
 
 .container {
-    background-image: url("/assets/icons/brush-border-2.svg");
-    /* path relative to public/ folder */
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+
     width: 100%;
     aspect-ratio: 1318/218;
     position: relative;
+
 }
 
 .nomore {
@@ -390,10 +387,22 @@
         left: 4px;
     }
 
+    .bannerdesk {
+        display: none;
+    }
+    .container{
+        padding: 10px 36px;
+        aspect-ratio: 343/129;
+        width: 90%;
+        align-self: center;
+    }
+
 }
 
 @media (min-width:451px) {
-    .mobmarqueewrapper {
+
+    .mobmarqueewrapper,
+    .bannermobile {
         display: none;
     }
 

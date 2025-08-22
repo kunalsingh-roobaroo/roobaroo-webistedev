@@ -48,7 +48,8 @@
     /* transform: rotate(-11.537deg); */
 
 }
-.ico{
+
+.ico {
     width: 100%;
     height: 100%;
     position: relative;
@@ -100,13 +101,14 @@
     }
 
     .roobaroomain {
-  width: 194.56px;
-height: 64.861px;
-transform: rotate(-7.749deg);
-flex-shrink: 0;
+        width: 50vw;
+        /* height: 64.861px; */
+        aspect-ratio: 195/65;
+        transform: rotate(-7.749deg);
+        flex-shrink: 0;
         aspect-ratio: unset;
         /* transform: rotate(-12.537deg); */
-      top: 96px;
+        top: -210px;
         right: -62px;
     }
 }

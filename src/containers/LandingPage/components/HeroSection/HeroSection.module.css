@@ -213,6 +213,7 @@
     /* height: ; */
     position: relative;
     aspect-ratio: 76/62;
+    flex-shrink: 0;
 }
 
 
@@ -228,7 +229,7 @@
     top: 19.7vw;
     right: -1vw;
     aspect-ratio: 282/36;
-    background-repeat: round;
+    background-repeat: no-repeat;
 
 }
 
@@ -257,7 +258,7 @@
     border-radius: 80px;
     background: rgba(255, 104, 104, 0.22);
     position: absolute;
-    top: -30px;
+    top: 100px;
     right: 17vw;
     z-index: 0;
     /* animation: floatRandom 14s ease-in-out infinite; */
@@ -367,11 +368,14 @@
         align-items: flex-start;
         justify-items: flex-start;
         gap: 16px;
-        width: 100%;
+        width: 356px;
     }
 
     .container {
-        padding: 126px 17px 34px 17px;
+        padding: 126px 4.35897435897vw 34px 4.35897435897vw;
+        margin-top: 43px;
+        align-items: center;
+        justify-content: center;
     }
 
     .txtdiv {
@@ -389,9 +393,10 @@
 
     .arrowframe {
 
-        top: -40px;
-        left: 0;
-        aspect-ratio: 67/55;
+        top: -17px;
+        right: 12px;
+
+        /* aspect-ratio: 67/55; */
     }
 
     .arrow {

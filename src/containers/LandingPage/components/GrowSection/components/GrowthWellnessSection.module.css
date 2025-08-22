@@ -27,11 +27,14 @@
   letter-spacing: 0.215px;
 }
 
+/* .doodleimg{
+  width: ;
+} */
 .doodleimg {
-  width: 15.34722222222vw;
+  width: 15.625vw;
   /* height: 98.544px; */
   position: relative;
-  aspect-ratio: 221/173;
+  aspect-ratio: 1/1;
 }
 
 .verticalLineWrapper {
@@ -85,6 +88,7 @@
   border-radius: 59.883px !important;
   overflow: hidden;
   animation: dvdSmooth 19s ease-in-out infinite;
+  z-index: 0;
 }
 
 .bkuebox {
@@ -140,30 +144,36 @@
 }
 
 @keyframes dvdSmooth {
-    0% {
-        transform: translate(0, 0);
-    }
+  0% {
+    transform: translate(0, 0);
+  }
 
-    25% {
-        transform: translate(30px, 20px);
-    }
+  25% {
+    transform: translate(30px, 20px);
+  }
 
-    50% {
-        transform: translate(0, 40px);
-    }
+  50% {
+    transform: translate(0, 40px);
+  }
 
-    75% {
-        transform: translate(-30px, 20px);
-    }
+  75% {
+    transform: translate(-30px, 20px);
+  }
 
-    100% {
-        transform: translate(0, 0);
-    }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 
 @media (max-width:450px) {
-  .container{
+  .container {
     display: none;
+  }
+}
+
+@media (min-width:451px) {
+  .margin{
+    margin-top: 61px;
   }
 }

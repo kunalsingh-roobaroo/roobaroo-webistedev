@@ -51,7 +51,7 @@ const SecondaryMark = () => {
         </div>
       </div>
       <div className={classes.bigicons}>
-        {secicons.map((value, index) => {
+        {mainsecicons.map((value, index) => {
           return (
             <div key={index} className={classes.bigico}>
               <Image

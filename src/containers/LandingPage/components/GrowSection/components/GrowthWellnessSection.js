@@ -41,11 +41,11 @@ export default function GrowthWellnessSection() {
   return (
     <section id="growthWellnessSection" className={classes.container}>
       <div className={classes.box}>
-        <p className={classes.mainntxt}>
+        <p className={`${classes.mainntxt} ${classes.margin}`}>
           We&apos;ve been sold growth & wellness in isolation — but life
           isn&apos;t split like that. It&apos;s messy, layered and integrated.
         </p>
-        <div className={classes.leftdoodleimg}>
+        <div className={classes.doodleimg}>
           <Image src={infinity_doodle} fill alt={staticAlt} />
         </div>
         <p className={classes.mainntxt}>

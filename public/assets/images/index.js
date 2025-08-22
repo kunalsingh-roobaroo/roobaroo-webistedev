@@ -35,9 +35,11 @@ import secmarklight from "./secmarklight.png";
 import bilight from "./bilight.png";
 import biglight from "./biglight.png";
 import kit from "./kit.png";
+import singh from './singh.png'
 export {
   logo,
   biglight,
+  singh,
   topmarkdark,
   kit,
   secarkdark,

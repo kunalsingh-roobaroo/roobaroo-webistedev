@@ -209,16 +209,17 @@
     /* 11.272px */
     letter-spacing: 0.619px;
     position: absolute;
-       top: -23px;
+    top: -23px;
     right: -14px;
     display: flex;
     align-items: center;
     padding: 12px 18px;
 
 }
-.click{
-       height: 27.427px;
-transform: rotate(-10deg);
+
+.click {
+    height: 27.427px;
+    transform: rotate(-10deg);
     align-self: stretch;
     border-radius: 4.424px;
     background: var(--Accent-Purple-Base, #815FAA);
@@ -231,8 +232,8 @@ transform: rotate(-10deg);
     /* 11.272px */
     letter-spacing: 0.619px;
     position: absolute;
-       bottom: 44%;
-      right: 12px;
+    bottom: 44%;
+    right: 12px;
 
     display: flex;
     align-items: center;
@@ -424,6 +425,7 @@ transform: rotate(-10deg);
     width: 9.16666666667vw;
     aspect-ratio: 132/68;
     position: relative;
+      filter: brightness(0) invert(1) !important;
 }
 
 .middlemidlhs {
@@ -676,10 +678,11 @@ transform: rotate(-10deg);
         letter-spacing: 0.37px;
         position: absolute;
         z-index: 2;
-        width: 201px;
-        right: 26px;
+        width: 51.53846153846vw;
+        /* right: clamp(16px, 6.9vw, 40px); */
+        right: 6.93333333333vw;
         top: 14px;
-
+        aspect-ratio: 201/74;
     }
 
     .container {
@@ -972,11 +975,16 @@ transform: rotate(-10deg);
 @media (min-width:451px) {
 
     .name,
-    .mobbottomlhsm,.click {
+    .mobbottomlhsm,
+    .click {
         display: none;
     }
 
     .mobatended {
+        display: none;
+    }
+
+    .mobbottomlhs {
         display: none;
     }
 }

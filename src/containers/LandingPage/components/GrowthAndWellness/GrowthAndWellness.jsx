@@ -19,6 +19,7 @@ import {
 } from "../../../../../public/assets/icons/brushes";
 import ChangingBrushes from "./components/changingBrushes";
 import { longstroke, smallstroke } from "../../../../../public/assets/images";
+import { bannerdesk, bannermobile } from "../../../../../public/assets/animations";
 const GrowthAndWellness = () => {
   const pillData = [
     { text: "Retreats", borderClass: "red" },
@@ -186,7 +187,7 @@ const GrowthAndWellness = () => {
           speed={30}
           className={classes.marquee}
           pauseOnHover={false}
-           direction="right"
+          direction="right"
         >
           <div className={classes.pillContainer}>
             {seamlessPillData.map(({ text, borderClass }, i) => (
@@ -203,10 +204,26 @@ const GrowthAndWellness = () => {
         <div className={classes.rightgradient}></div>
       </div>
       <div className={classes.container}>
-        <div className={classes.nomore}>so no more</div>
+        <Image
+          src={bannerdesk}
+          unoptimized
+          className={classes.bannerdesk}
+          fill
+          alt={staticAlt}
+          sizes={responsiveImageSizes}
+        />
+        <Image
+          src={bannermobile}
+          unoptimized
+          className={classes.bannermobile}
+          fill
+          alt={staticAlt}
+          sizes={responsiveImageSizes}
+        />
+        {/* <div className={classes.nomore}>so no more</div>
         <div className={classes.changif}>
           <ChangingBrushes changingdata={changingdata} />
-        </div>
+        </div> */}
       </div>
     </section>
   );

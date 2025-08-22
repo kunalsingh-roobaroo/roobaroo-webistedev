@@ -50,6 +50,9 @@
     line-height: normal;
     letter-spacing: -0.15px;
 }
+.navitems:hover{
+text-decoration-line: underline;
+}
 
 .links {
     display: flex;

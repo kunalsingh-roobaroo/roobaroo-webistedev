@@ -4,7 +4,7 @@
     /* flex-direction: column; */
     justify-content: flex-start;
     align-items: center;
-    padding: 210px 0px 85px 8.40277777778vw;
+    padding: 210px 8.40277777778vw 85px 8.40277777778vw;
     position: relative;
     overflow: hidden;
     z-index: 0;
@@ -67,10 +67,10 @@
 
 .frame {
     position: absolute;
-    width: 205px;
+    width: 14.236vw;
     aspect-ratio: 215/100;
     top: 14vw;
-    right: 38vw;
+    right: 40vw;
 }
 
 .img {

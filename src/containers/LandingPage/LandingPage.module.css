@@ -61,6 +61,7 @@
   width: 10.22222222222vw;
   position: absolute;
   aspect-ratio: 1/1;
+  z-index: -1;
 
 }
 

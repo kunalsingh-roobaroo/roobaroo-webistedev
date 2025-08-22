@@ -9,7 +9,7 @@ import {
   quotes,
 } from "../../../../../public/assets/icons";
 import { responsiveImageSizes, staticAlt } from "@/lib/constants";
-import { bhaskar, foundertags } from "../../../../../public/assets/images";
+import { bhaskar, foundertags, singh } from "../../../../../public/assets/images";
 import PinkBox from "@/components/Boxes/PinkBox";
 import BlueBox from "@/components/Boxes/BlueBox";
 import PurpleBox from "@/components/Boxes/PurpleBox";
@@ -141,7 +141,14 @@ const KnowYourBuddy = () => {
             <div className={classes.purplebox}>
               <PurpleBox />
             </div>
-            <div className={classes.name}>Bhaskar Singhania</div>
+            <div className={classes.name}>
+              <Image
+                src={singh}
+                fill
+                alt={staticAlt}
+                sizes={responsiveImageSizes}
+              />
+            </div>
             <div className={classes.tags}>
               <div className={classes.founderTags}>
                 <Image src={foundertags} fill alt={staticAlt} />
@@ -235,7 +242,6 @@ const KnowYourBuddy = () => {
                       );
                     })}
                   </div>
-                   
                 </div>
               </div>
             </div>

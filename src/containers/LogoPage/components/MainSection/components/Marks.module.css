@@ -62,11 +62,11 @@
     width: 100%;
     display: flex;
     align-items:center;
-    gap: 32px;
+    gap: 92px;
 }
 .bigico{
-    width: 36.80555555556vw;
-    aspect-ratio: 530/218;
+    width: 31.80555555556vw;
+    aspect-ratio: 458/214;
     position: relative;
     cursor: pointer;
 
