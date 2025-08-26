@@ -4,7 +4,7 @@ import BackBtn from "../Back/Back";
 import Image from "next/image";
 import { robaroomain, robaroosub } from "../../../../../public/assets/images";
 import { staticAlt } from "@/lib/constants";
-import { logohero, updatedlogo } from "../../../../../public/assets/BrandKit";
+import { logohero, newmain, updatedlogo } from "../../../../../public/assets/BrandKit";
 const LogoHero = () => {
   return (
     <>
@@ -24,7 +24,8 @@ const LogoHero = () => {
       </div>
       <div className={classes.roobaroomain}>
         <div className={classes.ico}>
-          <Image src={logohero} fill alt={staticAlt} sizes={staticAlt} />
+          <Image src={logohero} fill alt={staticAlt} sizes={staticAlt} className={classes.main} />
+          <Image src={newmain} fill alt={staticAlt} sizes={staticAlt} className={classes.newmain} />
         </div>
       </div>
     

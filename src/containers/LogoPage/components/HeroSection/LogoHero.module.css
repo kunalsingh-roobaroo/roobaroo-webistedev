@@ -100,17 +100,23 @@
     }
 
     .roobaroomain {
-        width: 283.092px;
-        height: 67.242px;
+        width:308.025px;
+        height: 127.636px;
         aspect-ratio: unset;
-        transform: rotate(-12.537deg);
-      top: 96px;
+        transform:unset;
+        top: 96px;
         right: -62px;
+    }
+
+    .main {
+        display: none;
     }
 }
 
 @media (min-width:451px) {
-    .background {
+
+    .background,
+    .newmain {
         display: none;
     }
 }

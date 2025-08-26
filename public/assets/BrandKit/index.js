@@ -41,12 +41,14 @@ import arrow from "./arrow.svg";
 import verticalpallete from "./verticalpallete.png";
 import carertslant from "./carertslant.svg";
 import typopphone from "./typopphone.png";
+import newmain from "./newmain.png";
 
 export {
   title,
   arrow,
   carertslant,
   verticalpallete,
+  newmain,
   heading,
   typopphone,
   typohero,

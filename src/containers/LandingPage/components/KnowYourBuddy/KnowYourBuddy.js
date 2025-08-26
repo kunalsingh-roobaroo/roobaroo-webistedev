@@ -40,6 +40,7 @@ import {
 } from "../../../../../public/assets/logos";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
+import { foundertag } from "../../../../../public/assets/animations";
 const KnowYourBuddy = () => {
   const links = [
     { icon: colorlinkedin, link: "https://linkedin.com/in/yourpage" },
@@ -151,7 +152,7 @@ const KnowYourBuddy = () => {
             </div>
             <div className={classes.tags}>
               <div className={classes.founderTags}>
-                <Image src={foundertags} fill alt={staticAlt} />
+                <Image src={foundertag} fill unoptimized alt={staticAlt} />
               </div>
             </div>
           </div>
