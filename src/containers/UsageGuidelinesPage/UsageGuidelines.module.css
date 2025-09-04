@@ -1,23 +1,19 @@
 .container {
     width: 100%;
     position: relative;
+    min-height: 100vh;
+    padding-top: 40px;
 }
 
 .backtotop {
-    position: sticky;
-    /* Make it sticky relative to the parent */
-    top: 100px;
-    /* Distance from the top when scrolling */
-    display: flex;
-    justify-content: flex-end;
-    /* Align to the right */
-    z-index: 10;
-    /* Ensure it stays on top */
-    margin: 49px;
-    width: auto;
-    right: 200px;
-    /* Optional: some spacing below */
+  position: fixed;
+  bottom: 20px;    /* stick to bottom of screen */
+  right: 20px;
+  z-index: 10;
+    /* spacing from right */
 }
+
+
 
 @media (max-width:450px) {
     .backtotop {

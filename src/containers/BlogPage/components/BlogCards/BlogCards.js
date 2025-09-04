@@ -72,10 +72,10 @@ const BlogCards = () => {
   };
 
   // Paginated data
-  const paginatedBlogs = blogData.slice(
-    (page - 1) * itemsPerPage,
-    page * itemsPerPage
-  );
+  // const paginatedBlogs = blogData.slice(
+  //   (page - 1) * itemsPerPage,
+  //   page * itemsPerPage
+  // );
   const totalPages = Math.ceil(count / itemsPerPage);
   return (
     <div className={classes.container}>
@@ -114,7 +114,7 @@ const BlogCards = () => {
                     </div>
                   );
                 });
-              })()}
+              })}
             </div>
           </Link>
         ))}

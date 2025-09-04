@@ -146,32 +146,30 @@ const ColorMainSection = () => {
               (c) => c.type !== "Base"
             ).length;
             return (
-              <>
-                <div key={index} className={classes.pallete}>
-                  <h4 className={classes.palletetxt}>{palette.title}</h4>
-                  <div className={classes.colorsRow}>
-                    {palette.colors.map((c, i) => {
-                      const isBase = c.type === "Base";
+              <div key={index} className={classes.pallete}>
+                <h4 className={classes.palletetxt}>{palette.title}</h4>
+                <div className={classes.colorsRow}>
+                  {palette.colors.map((c, i) => {
+                    const isBase = c.type === "Base";
 
-                      return (
-                        <div
-                          key={i}
-                          className={`${classes.colorBox} ${
-                            isBase ? classes.base : classes.fixed
-                          }`}
-                          style={{
-                            backgroundColor: `#${c.code}`,
-                            color: c.txtcolor,
-                          }}
-                        >
-                          <span className={classes.code}>{c.code}</span>
-                          <span className={classes.type}>{c.type}</span>
-                        </div>
-                      );
-                    })}
-                  </div>
+                    return (
+                      <div
+                        key={i}
+                        className={`${classes.colorBox} ${
+                          isBase ? classes.base : classes.fixed
+                        }`}
+                        style={{
+                          backgroundColor: `#${c.code}`,
+                          color: c.txtcolor,
+                        }}
+                      >
+                        <span className={classes.code}>{c.code}</span>
+                        <span className={classes.type}>{c.type}</span>
+                      </div>
+                    );
+                  })}
                 </div>
-              </>
+              </div>
             );
           })}
         </div>

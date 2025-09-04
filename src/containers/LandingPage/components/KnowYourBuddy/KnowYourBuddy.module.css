@@ -615,15 +615,17 @@
 }
 
 .pinkbox {
-    animation: dvdSmooth 8s ease-in-out infinite;
+    animation: dvdSmooth 15s ease-in-out infinite;
 }
 
 .purplebox {
-   animation: dvdSmooth 8s ease-in-out infinite;
+   animation: dvdSmooth 15s ease-in-out infinite;
+   animation-delay: 2s;
 }
 
 .bluebox {
-    animation: dvdSmooth 8s ease-in-out infinite;
+    animation: dvdSmooth 15s ease-in-out infinite;
+    animation-delay: 3s;
 }
 
 @media (max-width:450px) {

@@ -84,7 +84,7 @@ const Footer = () => {
                 <Link
                   key={index}
                   href={item.link}
-                  className={`${classes.gridItem} link`}
+                  className={`${classes.gridItem} `}
                 >
                   {item.name}
                 </Link>
@@ -107,6 +107,7 @@ const Footer = () => {
                 size={28}
                 rotate={-45}
                 strokeWidth={3}
+                className={classes.rotate}
               />
             </div>
           </div>

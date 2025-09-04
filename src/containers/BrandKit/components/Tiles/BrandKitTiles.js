@@ -2,10 +2,14 @@ import React from "react";
 import classes from "./BrandKitTiles.module.css";
 import Image from "next/image";
 import {
+  colornew,
   colors,
+  donew,
   dos,
   heading,
+  headingnew,
   robaroomain,
+  robaroomainnew,
   robaroosub,
 } from "../../../../../public/assets/images";
 import { icons } from "lucide-react";
@@ -18,28 +22,28 @@ const BrandKitTiles = () => {
       heading: "Logo",
       subheading: "Multiple formats with usage rules for consistent branding",
       colorClass: "blueTile",
-      icons: robaroomain,
+      icons: robaroomainnew,
       link: "logo",
     },
     {
       heading: "Typography",
       subheading: "Brand fonts with styles, usage rules, and download links.",
       colorClass: "redTile",
-      icons: heading,
+      icons: headingnew,
       link: "typography",
     },
     {
       heading: "Color",
       subheading: "Official palette with multiple codes and usage guidelines.",
       colorClass: "blueTile",
-      icons: colors,
+      icons: colornew,
       link: "color",
     },
     {
       heading: "Usage Guidelines",
       subheading: "Clear rules on how to use our brand assets",
       colorClass: "redTile",
-      icons: dos,
+      icons: donew,
       link: "usage-guidelines",
     },
   ];
@@ -48,7 +52,7 @@ const BrandKitTiles = () => {
     <section className={classes.container}>
       {tiles.map((value, index) => (
         <Link
-        href={`/brandkit/${value.link}`}
+          href={`/brandkit/${value.link}`}
           key={index}
           className={`${classes.tile} ${classes[value.colorClass]}`}
         >

@@ -1,6 +1,6 @@
 .container {
     padding: 49px 6.11111111111vw;
-    margin-top: 6.73611111111vh;
+    margin-top: 6.73611111111vw;
     width: 100%;
     display: flex;
     align-items: center;
@@ -97,28 +97,29 @@
 }
 
 .robaroomain {
-    width: 11.52777777778vw;
-    aspect-ratio: 166/62;
+    width: 11.972222vw;
+    aspect-ratio: 86 / 36;
     position: absolute;
-    bottom: 0vw;
-    right: 0;
+    bottom: -1vw;
+    right: -2vw;
 
 }
 
 .rtpo {
-    width: 10.305556vw;
+      width: 20.444444vw;
     position: absolute;
-    bottom: 0vw;
-    right: 0;
-    aspect-ratio: 278 / 221;
+    bottom: -1vw;
+    right: -10vw;
+    aspect-ratio: 136 / 69;
+    flex-shrink: 0;
 }
 
 .colors {
-    width: 14.180556vw;
+width: 18.180556vw;
     position: absolute;
     aspect-ratio: 234 / 161;
-    bottom: -1vw;
-    right: -0.5vw;
+    bottom: -4vw;
+    right: -6.5vw;
 }
 
 .dos {
@@ -126,7 +127,7 @@
     position: absolute;
     aspect-ratio: 117 / 73;
     bottom: 0vw;
-    right: 1vw;
+    right: 0vw;
 
 }
 
@@ -192,20 +193,22 @@
 
     .colors {
         aspect-ratio: unset;
-     aspect-ratio: unset;
+        aspect-ratio: unset;
         width: 58%;
         height: 61px;
         bottom: -3px;
         right: -4px;
     }
-    .dos{
+
+    .dos {
         /* height: 19px; */
         width: 42%;
         /* aspect-ratio: unset; */
         transform: rotate(-19.853deg);
         bottom: 1vw;
     }
-    .robaroosub{
+
+    .robaroosub {
         aspect-ratio: 1/1;
     }
 }

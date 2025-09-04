@@ -26,8 +26,12 @@ import mobstrip from "./mobstrip.png";
 import colors from "./colors.png";
 import dos from "./dos.png";
 import heading from "./heading.png";
-import robaroosub from "./robaroosub.png";
 import robaroomain from "./robaroomain.png";
+import colornew from "./colornew.png";
+import donew from "./donew.png";
+import headingnew from "./headingnew.png";
+import robaroomainnew from "./roobaroomainnew.png";
+import robaroosub from "./robaroosub.png";
 import topmarkdark from "./topmarkdark.png";
 import primarylight from "./primarylight.png";
 import secarkdark from "./secarkdark.png";
@@ -35,7 +39,7 @@ import secmarklight from "./secmarklight.png";
 import bilight from "./bilight.png";
 import biglight from "./biglight.png";
 import kit from "./kit.png";
-import singh from './singh.png'
+import singh from "./singh.png";
 export {
   logo,
   biglight,
@@ -47,6 +51,10 @@ export {
   secmarklight,
   primarylight,
   robaroomain,
+  colornew,
+  headingnew,
+  robaroomainnew,
+  donew,
   featureimg,
   robaroosub,
   heading,
