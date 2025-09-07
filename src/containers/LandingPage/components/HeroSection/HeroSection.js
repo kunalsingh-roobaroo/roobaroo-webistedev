@@ -55,7 +55,7 @@ const HeroSection = () => {
       </div>
       <div className={classes.pinkbox}></div>
       <div className={classes.bluebig}></div>
-      <div className={classes.purple}></div>
+      <div className={classes.purple}></div>   
     </section>
   );
 };

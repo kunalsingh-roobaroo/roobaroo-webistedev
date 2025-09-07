@@ -9,23 +9,30 @@ import {
   quotes,
 } from "../../../../../public/assets/icons";
 import { responsiveImageSizes, staticAlt } from "@/lib/constants";
-import { bhaskar, foundertags, singh } from "../../../../../public/assets/images";
+import {
+  bhaskar,
+  foundertags,
+  singh,
+} from "../../../../../public/assets/images";
 import PinkBox from "@/components/Boxes/PinkBox";
 import BlueBox from "@/components/Boxes/BlueBox";
 import PurpleBox from "@/components/Boxes/PurpleBox";
 import { motion, AnimatePresence } from "framer-motion";
 import {
+  amrita,
   colorinstagram,
   colorlinkedin,
   colorlinktree,
   cppr,
   dron_study,
+  favcy,
   google_for_startups,
   iitkgp_black,
   iitkgp_white,
   mesa,
   metadome,
   MoHUA,
+  niti,
   paytm,
   red,
   rishihood,
@@ -41,6 +48,27 @@ import {
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
 import { foundertag } from "../../../../../public/assets/animations";
+import {
+  amritanew,
+  atal,
+  cpr,
+  dron,
+  dubuddy,
+  favcynew,
+  iitkwhite,
+  mesanew,
+  metadomewhite,
+  ministry,
+  nitinew,
+  paytmnew,
+  set,
+  tanishqnew,
+  titaneyeplus,
+  titannew,
+  unilevernew,
+  zeptonew,
+} from "../../../../../public/assets/workwith";
+import { X } from "lucide-react";
 const KnowYourBuddy = () => {
   const links = [
     { icon: colorlinkedin, link: "https://linkedin.com/in/yourpage" },
@@ -51,15 +79,26 @@ const KnowYourBuddy = () => {
   const redBoxData = [
     {
       title: "Worked with:",
-      brands: [metadome, iitkgp_white, MoHUA, dron_study, cppr,],
-    },
-    {
-      title: "Have Built For:",
-      brands: [titan, zepto, tanishq, paytm, unilever, titaneye],
-    },
-    {
-      title: "Have Built For:",
-      brands: [mesa, , tanishq, paytm, unilever, titaneye],
+      brands: [
+        metadomewhite,
+        ministry,
+        titaneyeplus,
+        dron,
+        atal,
+        nitinew,
+        iitkwhite,
+        cpr,
+        unilevernew,
+        mesanew,
+        titannew,
+        set,
+        amritanew,
+        favcynew,
+        zeptonew,
+        dubuddy,
+        tanishqnew,
+        paytmnew,
+      ],
     },
   ];
 
@@ -256,13 +295,24 @@ const KnowYourBuddy = () => {
                 className={classes.box}
               >
                 <p className={classes.boxtxt}>{value.title}</p>
-                <div className={classes.brands}>
-                  <Marquee>
-                    {value.brands.map((brand, i) => (
-                      <div key={i} className={classes.brandframe}>
-                        <Image src={brand} fill alt={staticAlt} />
-                      </div>
-                    ))}
+                <div className={classes.brandsbox}>
+                  <Marquee speed={30}>
+                    <div className={classes.brandparent}>
+                      {[...value.brands, ...value.brands].map((brand, i) => (
+                        <div key={i} className={classes.brandframe}>
+                          <Image src={brand} fill alt={staticAlt} />
+                        </div>
+                      ))}
+                    </div>
+                  </Marquee>
+                  <Marquee speed={30} direction="right">
+                    <div className={classes.brandparent}>
+                      {[...value.brands, ...value.brands].map((brand, i) => (
+                        <div key={i} className={classes.brandframe}>
+                          <Image src={brand} fill alt={staticAlt} />
+                        </div>
+                      ))}
+                    </div>
                   </Marquee>
                 </div>
               </div>

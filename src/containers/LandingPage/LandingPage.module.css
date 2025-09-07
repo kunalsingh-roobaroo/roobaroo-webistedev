@@ -5,16 +5,16 @@
 }
 
 .bigcircle {
+  background-image: url("/assets/images/newcirclebg.png");
   position: absolute;
-  top: -13vw;
-  left: -5vw;
-  background-image: url("/assets/images/cc.png");
+    top: -1vw;
+    left: -2vw;
   /* path relative to public/ folder */
   background-size: contain;
   background-position: center;
   width: 100%;
   /* height: ; */
-  aspect-ratio: 1075/876;
+  aspect-ratio: 118/99;
   z-index: 0;
 
 }
@@ -34,7 +34,7 @@
   background-size: contain;
   background-position: center;
   position: absolute;
-  top: 83vw;
+top: 86vw;
   right: -8vw;
   width: 35.375vw;
   aspect-ratio: 1/1;

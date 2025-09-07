@@ -15,3 +15,14 @@ export function formatDate(dateString) {
   const options = { month: "long", day: "numeric" };
   return date.toLocaleDateString("en-US", options);
 }
+
+export function slugify(input) {
+  return input
+    .replace(/%20/g, " ")          // replace %20 with space
+    .replace(/’|‘|“|”/g, "")       // remove curly quotes
+    .replace(/[^a-zA-Z0-9\s-]/g, "") // keep letters, numbers, spaces, and hyphens
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "-")          // spaces → dashes
+    .replace(/-+/g, "-");          // collapse multiple dashes
+}

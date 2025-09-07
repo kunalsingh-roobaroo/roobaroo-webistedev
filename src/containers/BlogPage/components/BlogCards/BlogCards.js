@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import classes from "./BlogCards.module.css";
 import { tilethumbnail } from "../../../../../public/assets/images";
 import Image from "next/image";
-import { baseUrl, formatDate, staticAlt } from "@/lib/constants";
+import { baseUrl, formatDate, slugify, staticAlt } from "@/lib/constants";
 import { Pagination, Stack } from "@mui/material";
 import Link from "next/link";
 import { api_Urls } from "@/lib/apiUrls";
@@ -83,7 +83,7 @@ const BlogCards = () => {
       <div className={classes.blogs}>
         {data?.map((value, index) => (
           <Link
-            href={`/blogs/${value?.blog_seo_title}`}
+            href={`/blogs/${slugify(value?.blog_seo_title)}`}
             key={index}
             className={classes.blog}
           >
@@ -99,28 +99,38 @@ const BlogCards = () => {
             </div>
 
             <div className={classes.tags}>
-              {(() => {
-                let prevClass = null; // track previous color class
-                return value?.blog_tags.map((tag, index) => {
-                  const colorClass = getRandomColorClass(prevClass);
-                  prevClass = colorClass; // update prevClass for next iteration
+              {
+                value?.blog_tags?.reduce(
+                  (acc, tag, index) => {
+                    const prevColor = acc.lastColor; // only track the color
+                    const colorClass = getRandomColorClass(prevColor);
 
-                  return (
-                    <div
-                      key={index}
-                      className={`${classes.tag} ${classes[colorClass]}`}
-                    >
-                      {tag}
-                    </div>
-                  );
-                });
-              })}
+                    acc.elements.push(
+                      <div
+                        key={index}
+                        className={`${classes.tag} ${classes[colorClass]}`}
+                      >
+                        {tag}
+                      </div>
+                    );
+
+                    acc.lastColor = colorClass; // update last color
+                    return acc;
+                  },
+                  { elements: [], lastColor: null }
+                ).elements
+              }
             </div>
           </Link>
         ))}
       </div>
       {totalPages > 1 && (
-        <Stack spacing={2} alignItems="center" marginTop={4}>
+        <Stack
+          spacing={2}
+          alignItems="center"
+          alignSelf={"center"}
+          marginTop={4}
+        >
           <Pagination
             count={totalPages}
             page={page}

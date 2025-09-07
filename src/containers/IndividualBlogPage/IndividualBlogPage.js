@@ -22,8 +22,11 @@ function slugify(text) {
 }
 
 const IndividualBlogPage = ({ data }) => {
+  // console.log('----data',data);
+  
   const blog = data?.[0];
   const [updatedHtml, setUpdatedHtml] = useState(blog?.blog_content || "");
+  // console.log("----blog", blog);
 
   // ✅ Keep updatedHtml in sync with new blog content if data changes
   useEffect(() => {
@@ -57,7 +60,6 @@ const IndividualBlogPage = ({ data }) => {
     const available = COLOR_CLASSES.filter((c) => c !== prevClass);
     return available[Math.floor(Math.random() * available.length)];
   }
-
 
   // const cssAppliedContent = (body) => {
   //   return `
@@ -229,22 +231,27 @@ const IndividualBlogPage = ({ data }) => {
               <div className={` ${classes.customStyle}`}>{parsedContent}</div>
 
               <div className={classes.tags}>
-                {(() => {
-                  let prevClass = null; // track previous color class
-                  return blog?.blog_tags.map((tag, index) => {
-                    const colorClass = getRandomColorClass(prevClass);
-                    prevClass = colorClass; // update prevClass for next iteration
+                {
+                  blog?.blog_tags?.reduce(
+                    (acc, tag, index) => {
+                      const prevColor = acc.lastColor; // only track the color
+                      const colorClass = getRandomColorClass(prevColor);
 
-                    return (
-                      <div
-                        key={index}
-                        className={`${classes.tag} ${classes[colorClass]}`}
-                      >
-                        {tag}
-                      </div>
-                    );
-                  });
-                })()}
+                      acc.elements.push(
+                        <div
+                          key={index}
+                          className={`${classes.tag} ${classes[colorClass]}`}
+                        >
+                          {tag}
+                        </div>
+                      );
+
+                      acc.lastColor = colorClass; // update last color
+                      return acc;
+                    },
+                    { elements: [], lastColor: null }
+                  ).elements
+                }
               </div>
               <Share />
             </div>

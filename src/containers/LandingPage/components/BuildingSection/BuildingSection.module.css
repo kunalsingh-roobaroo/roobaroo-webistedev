@@ -11,6 +11,20 @@
 
 }
 
+.pillContainer {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.subbrand {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
 .txtdiv {
     display: flex;
     flex-direction: column;
@@ -18,6 +32,21 @@
     justify-content: center;
 }
 
+.biglogos {
+    width: 11.11111111111vw;
+    aspect-ratio: 160/90;
+    position: relative;
+}
+
+.smalllogos {
+    width: 7.63888888889vw;
+    aspect-ratio: 1/1;
+    position: relative;
+}
+
+.marquee{
+    width: 100%;
+}
 .headtxt {
     color: var(--Primary-Blue-Base, #27AAE7);
     text-align: center;
@@ -92,7 +121,7 @@
     border-radius: 30px;
     border: 1.525px solid var(--Accent-Purple-Base, #815FAA);
     background: #FFF;
-    aspect-ratio: 1085/257;
+    aspect-ratio: 1085/278;
     overflow: hidden;
     z-index: 1;
     padding: 0px 23px;

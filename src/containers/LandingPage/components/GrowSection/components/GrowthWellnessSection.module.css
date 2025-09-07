@@ -94,7 +94,7 @@
 .bkuebox {
   width: 37.16666666667vw;
   top: -20vw;
-  left: -35vw;
+  left: -42vw;
 
 
 }
@@ -117,8 +117,8 @@
 .redbox {
 
   width: 33.22222222222vw;
-  top: 0vw;
-  right: -35vw;
+  top: 15vw;
+  right: -37vw;
 }
 
 .line {
@@ -173,7 +173,7 @@
 }
 
 @media (min-width:451px) {
-  .margin{
+  .margin {
     margin-top: 61px;
   }
 }

@@ -47,8 +47,11 @@
 .sec {
     display: flex;
     align-items: center;
-    gap: 40px;
-    margin-top: 62px;
+    gap: 30px;
+    margin-top: 20px;
+}
+.secmag{
+    margin-top: 44px;
 }
 
 .ico {
@@ -69,7 +72,11 @@
 .content {
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 39px;
+    margin-top: 28px;
+}
+.marg1{
+    margin-top: 49px;
 }
 
 .card {
@@ -109,7 +116,21 @@
     line-height: normal;
     text-transform: uppercase;
 }
-
+.coloret{
+    margin-top: 37px;
+}
+.mag{
+    margin-top: 47px;
+}
+.marging1{
+    margin-top: 92px;
+}
+.mar{
+    margin-top: 28px;
+}
+.margin4{
+    margin-top: 68px;
+}
 .valtxtdiv h3 {
     color: #000;
     font-family: Montserrat;
@@ -174,12 +195,9 @@
     margin-top: 20px;
 }
 
-.content {
-    margin-top: 60px;
-}
 
 .dontcontent {
-    margin-top: 60px;
+    margin-top: 21px;
 }
 
 .li,
@@ -262,9 +280,15 @@
     /* 70px */
     letter-spacing: 0.7px;
 }
+.mrgtop{
+    margin-top: 21px;
+}
 
 .secsec {
-    margin-top: 126px;
+    margin-top:60px;
+}
+.secmarg{
+    margin-top: 36px;
 }
 
 .h4 {

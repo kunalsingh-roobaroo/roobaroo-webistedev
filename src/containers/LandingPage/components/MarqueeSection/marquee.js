@@ -51,7 +51,7 @@ const MarqueeSection = ({ reverse }) => {
 const repeatedItems = [...marqueeItems, ...marqueeItems, ...marqueeItems];
   return (
     <>
-      <div className={classes.marqueeWrapper}>
+      <div id="problem" className={classes.marqueeWrapper}>
         <Marquee
           direction={reverse ? "right" : "left"}
           loop={0} // infinite
@@ -63,15 +63,15 @@ const repeatedItems = [...marqueeItems, ...marqueeItems, ...marqueeItems];
           {repeatedItems.map((item, idx) => {
             if (item.type === "highlight") {
               return (
-                <div key={idx} className={classes.card}>
+                <div key={idx} className={classes.highlightcard}>
                   <div className={classes.highlightSection}>
                     <p
                       style={{ color: item.color }}
-                      className={classes.cardTitle}
+                      className={classes.highlightcardTitle}
                     >
                       {item.title}
                     </p>
-                    <p className={classes.cardText}>{item.text}</p>
+                    <p className={classes.highlightcardText}>{item.text}</p>
                     <p style={{ color: item.color }} className={classes.src}>
                       {item.source}
                     </p>

@@ -323,7 +323,7 @@ const GuideLinesMainSection = () => {
         })}
       </div>
       <div className={classes.marginmob}></div>
-      <div className={classes.sec}>
+      <div className={`${classes.sec} ${classes.marg1}`}>
         <p className={classes.subtitle}>Don&apos;ts</p>
         <div className={classes.ico}>
           <Image
@@ -398,13 +398,13 @@ const GuideLinesMainSection = () => {
         />
       </div>
       <div className={classes.marginmob}></div>
-      <div className={classes.sec}>
+      <div className={`${classes.sec} ${classes.secmarg}`}>
         <p className={classes.subtitle}>Do&apos;s</p>
         <div className={classes.ico}>
           <Image src={tick} fill alt={staticAlt} sizes={responsiveImageSizes} />
         </div>
       </div>
-      <div className={classes.content}>
+      <div className={`${classes.content} ${classes.mrgtop}`}>
         {TypoDodata.map((value, index) => (
           <div key={index} className={classes.typocard}>
             {/* Image rendering */}
@@ -444,7 +444,7 @@ const GuideLinesMainSection = () => {
         ))}
       </div>
       <div className={classes.marginmob}></div>
-      <div className={classes.sec}>
+      <div className={`${classes.sec} ${classes.secmag}`}>
         <p className={classes.subtitle}>Don&apos;ts</p>
         <div className={classes.ico}>
           <Image
@@ -477,7 +477,7 @@ const GuideLinesMainSection = () => {
       </div>
       <div className={classes.marging}></div>
       <h2 className={classes.title}>Colours</h2>
-      <div className={classes.sec}>
+      <div className={`${classes.sec} ${classes.coloret}`}>
         <p className={classes.subtitle}>Do&apos;s</p>
         <div className={classes.ico}>
           <Image src={tick} fill alt={staticAlt} sizes={responsiveImageSizes} />
@@ -528,7 +528,7 @@ const GuideLinesMainSection = () => {
         })}
       </div>
       <div className={classes.marginmob}></div>
-      <div className={classes.sec}>
+      <div className={`${classes.sec} ${classes.mag}`}>
         <p className={classes.subtitle}>Don&apos;ts</p>
         <div className={classes.ico}>
           <Image
@@ -559,12 +559,12 @@ const GuideLinesMainSection = () => {
           })}
         </ul>
       </div>
-      <div className={classes.marging}></div>
+      <div className={classes.marging1}></div>
       <div className={classes.marginmob}></div>
       <h2 className={classes.title}>Visual Elements</h2>
       <div className={classes.marginmob}></div>
-      <div className={classes.sec}>
-        <p className={classes.subtitle}>Don&apos;s</p>
+      <div className={`${classes.sec} ${classes.mar}`}>
+        <p className={classes.subtitle}>Do&apos;s</p>
         <div className={classes.ico}>
           <Image src={tick} fill alt={staticAlt} sizes={responsiveImageSizes} />
         </div>
@@ -621,7 +621,7 @@ const GuideLinesMainSection = () => {
         })}
       </div>
       <div className={classes.marginmob}></div>
-      <div className={classes.sec}>
+      <div className={`${classes.sec} ${classes.margin4}`}>
         <p className={classes.subtitle}>Don&apos;ts</p>
         <div className={classes.ico}>
           <Image

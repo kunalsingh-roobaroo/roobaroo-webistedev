@@ -28,9 +28,9 @@ import dos from "./dos.png";
 import heading from "./heading.png";
 import robaroomain from "./robaroomain.png";
 import colornew from "./colornew.png";
-import donew from "./donew.png";
-import headingnew from "./headingnew.png";
-import robaroomainnew from "./roobaroomainnew.png";
+import donew from "./donew.svg";
+import headingnew from "./headingnew.svg";
+import robaroomainnew from "./roobaroomain.svg";
 import robaroosub from "./robaroosub.png";
 import topmarkdark from "./topmarkdark.png";
 import primarylight from "./primarylight.png";
@@ -40,9 +40,11 @@ import bilight from "./bilight.png";
 import biglight from "./biglight.png";
 import kit from "./kit.png";
 import singh from "./singh.png";
+import roobaroomatrix from "./roobaroomatrix.png";
 export {
   logo,
   biglight,
+  roobaroomatrix,
   singh,
   topmarkdark,
   kit,

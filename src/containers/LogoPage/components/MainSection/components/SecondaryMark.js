@@ -16,7 +16,7 @@ const SecondaryMark = () => {
   const mainsecicons = [bilight, biglight];
   return (
     <div className={classes.lestsec}>
-      <div className={classes.subsrc}>
+      <div className={`${classes.subsrc} ${classes.mark}`}>
         <h2 className={classes.subtxt}>Primary Mark</h2>
         <div className={classes.smallicons}>
           {icons.map((value, index) => {
@@ -33,7 +33,7 @@ const SecondaryMark = () => {
           })}
         </div>
       </div>
-      <div className={classes.subsrc}>
+      <div className={`${classes.subsrc} ${classes.submark}`}>
         <h2 className={classes.subtxt}>Secondary Mark</h2>
         <div className={classes.smallicons}>
           {secicons.map((value, index) => {

@@ -11,32 +11,45 @@ import GrowthWellnessMatrix from "./Matrix/Matrix";
 import KnowMore from "@/components/KnowMore/KnowMore";
 import MarqueeSection from "../MarqueeSection/marquee";
 import { LostSection } from "../LostSection/LostSection";
+import { roobaroomatrix } from "../../../../../public/assets/images";
 const GuidingFunda = () => {
   return (
-    <section className={classes.container}>
-      <div className={classes.txtdiv}>
-        <h2 className="subheading">Our Guiding</h2>
-        <div className={classes.subtop}>
-          <div className={classes.stroke}>
-            <Image
-              src={blackbrush}
-              fill
-              sizes={responsiveImageSizes}
-              alt={staticAlt}
-            />
-          </div>
-          <h2 className={classes.cake}>Funda</h2>
-          <div className={classes.stroke}>
-            <Image
-              src={rightbrush}
-              fill
-              sizes={responsiveImageSizes}
-              alt={staticAlt}
-            />
+    <section id="framework" className={classes.container}>
+      <div className={classes.sub}>
+        <div className={classes.matrixlogo}>
+          <Image
+            src={roobaroomatrix}
+            fill
+            alt={staticAlt}
+            sizes={responsiveImageSizes}
+            className={classes.roobaroomatrix}
+          />
+        </div>
+        <div className={classes.txtdiv}>
+          <h2 className="subheading">Our Guiding</h2>
+          <div className={classes.subtop}>
+            <div className={`${classes.stroke} ${classes.leftstroke}`}>
+              <Image
+                src={blackbrush}
+                fill
+                sizes={responsiveImageSizes}
+                alt={staticAlt}
+              />
+            </div>
+
+            <h2 className={classes.cake}>Funda</h2>
+            <div className={classes.stroke}>
+              <Image
+                src={rightbrush}
+                fill
+                sizes={responsiveImageSizes}
+                alt={staticAlt}
+              />
+            </div>
           </div>
         </div>
       </div>
-      <div className={classes.central}>
+      <div className={classes.centralmain}>
         <div className={classes.matrix}>
           <GrowthWellnessMatrix />
         </div>
@@ -44,6 +57,7 @@ const GuidingFunda = () => {
         <div className={classes.marquee}>
           <MarqueeSection />
         </div>
+        <div className={classes.central}></div>
       </div>
       <div className={classes.bottom}>
         <div className={classes.subbottom}>

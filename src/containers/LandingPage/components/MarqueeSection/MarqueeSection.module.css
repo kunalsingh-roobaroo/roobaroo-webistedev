@@ -5,8 +5,10 @@
   max-width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
+  z-index: 1;
 }
-.marqueeparent{
+
+.marqueeparent {
   display: flex;
 }
 
@@ -14,27 +16,45 @@
   transform: rotate(-6deg);
   overflow: hidden;
   width: 100%;
-  padding: 64px 0px 64px 0px;
+  padding: 32px 0px 64px 0px;
   /* margin-bottom: 109px; */
 }
 
 .card {
   width: 35.83333333333vw;
-  margin: 7px 13px;
-  aspect-ratio: 2.32/1;
-  padding: 1rem;
-  background-color: white;
+  margin: 0px 13px;
+  aspect-ratio: 489/222;
+  padding: 25px 0px 34px 20px;
+  /* background-color: white; */
   border-radius: 24.658px;
   border: 0.503px solid rgba(8, 81, 114, 0.18);
   background: var(--Whites-Base, #FFF);
   box-shadow: 17.085px 11.959px 20.502px 7px rgba(0, 0, 0, 0.05);
 }
 
+.highlightcard {
+  width: 35.83333333333vw;
+  margin: 0px 13px;
+  aspect-ratio: 516/222;
+  padding: 45px 35px;
+  /* background-color: white; */
+  border-radius: 26.025px;
+  border: 0.531px solid rgba(8, 81, 114, 0.18);
+
+  background: var(--Whites-Base, #FFF);
+  box-shadow: 18.032px 12.623px 21.639px 0 rgba(0, 0, 0, 0.05);
+}
+
+.highlightcard,
+.card {
+  align-self: stretch;
+}
+
 .cardHeader {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 0.5rem;
+  /* margin-bottom: 0.5rem; */
 }
 
 .cardImage {
@@ -48,33 +68,55 @@
 }
 
 .cardTitle {
-  color: #18181B;
+color: #18181B;
+font-family: Montserrat;
+font-size: 1.94444444444vw;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: capitalize;
+}
+
+.highlightcardTitle {
+  color: var(--Primary-Coral-Base, #FB7D7D);
   font-family: Montserrat;
-  font-size: 1.88708333333vw;
+  font-size: 2.01388888889vw;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: normal;
   text-transform: capitalize;
 }
 
-.cardSubtitle {
-  color: #18181B;
+.highlightcardText {
+  color: var(--Blacks-Base, #0C0C0C);
   font-family: Montserrat;
-  font-size: 1.25805555556vw;
+  font-size: 1.38888888889vw;
   font-style: italic;
   font-weight: 500;
   line-height: normal;
+  text-transform: capitalize;
+  margin-top: 12px;
+}
+
+.cardSubtitle {
+color: #18181B;
+font-family: Montserrat;
+font-size: 1.31944444444vw;
+font-style: italic;
+font-weight: 500;
+line-height: normal;
 
 }
 
 .src {
-  color: var(--primary-coral-80, #FFC5C5);
-  font-family: Montserrat;
-  font-size: 1.32784722222vw;
-  font-style: italic;
-  font-weight: 500;
-  line-height: normal;
-  text-transform: capitalize;
+color: var(--primary-coral-80, #FFC5C5);
+font-family: Montserrat;
+font-size: 1.38888888889vw;
+font-style: italic;
+font-weight: 500;
+line-height: normal;
+text-transform: capitalize;
+margin-top: 16px;
 }
 
 .cardHeading {
@@ -90,15 +132,19 @@
 .txtdiv {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 11px;
   margin-top: 24px;
   width: 100%;
 }
 
 .cardText {
+  color: #18181B;
+  font-family: Montserrat;
+  font-size: 1.31944444444vw;
   font-style: italic;
+  font-weight: 500;
+  line-height: normal;
   text-transform: capitalize;
-  font-size: 1.25vw;
 }
 
 .highlightSection {
@@ -196,12 +242,6 @@
   justify-content: space-between;
 }
 
-.highlightSection {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  width: 100%;
-}
 
 .lostxttxdiv {
   display: flex;
@@ -268,25 +308,25 @@
 }
 
 @keyframes dvdSmooth {
-    0% {
-        transform: translate(0, 0);
-    }
+  0% {
+    transform: translate(0, 0);
+  }
 
-    25% {
-        transform: translate(30px, 20px);
-    }
+  25% {
+    transform: translate(30px, 20px);
+  }
 
-    50% {
-        transform: translate(0, 40px);
-    }
+  50% {
+    transform: translate(0, 40px);
+  }
 
-    75% {
-        transform: translate(-30px, 20px);
-    }
+  75% {
+    transform: translate(-30px, 20px);
+  }
 
-    100% {
-        transform: translate(0, 0);
-    }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 

@@ -14,6 +14,12 @@
     gap: 31px;
     justify-content: center;
 }
+.brandparent{
+    display: flex;
+    align-items: center;
+    gap: 33px;
+    width: 100%;
+}
 
 .suntop {
     width: fit-content;
@@ -171,10 +177,14 @@
     aspect-ratio: 237/60;
     position: relative;
 }
+.brandsbox{
+    display: flex;
+    flex-direction: column;
+}
 
 .atended {
     position: absolute;
-    top: -0.9vw;
+    top: -1.2vw;
     left: -1.5vw;
     transform: rotate(-10deg);
     border-radius: 4.95px;
@@ -245,6 +255,7 @@
     display: flex;
     align-items: center;
     gap: 23px;
+    /* flex-direction: column; */
 }
 
 .stanford {
@@ -406,7 +417,7 @@
 }
 
 .box {
-    padding: 40px 2.77777777778vw;
+    padding: 30px 0px 18px 0px ;
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -419,13 +430,13 @@
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+    text-align: center;
 }
 
 .brandframe {
-    width: 9.16666666667vw;
-    aspect-ratio: 132/68;
+    width: 9.02777777778vw;
+    aspect-ratio: 130/78;
     position: relative;
-      filter: brightness(0) invert(1) !important;
 }
 
 .middlemidlhs {

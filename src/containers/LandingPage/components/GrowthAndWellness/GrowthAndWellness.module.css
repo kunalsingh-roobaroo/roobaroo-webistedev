@@ -143,7 +143,7 @@
 
 /* Pill styles in vw based on 1440px viewport */
 .pill {
-    padding: 1.25vw;
+    padding: 16px 40px;
     /* dynamic font size */
     color: var(--Blacks-Base, #0C0C0C);
     font-family: Montserrat;
@@ -153,6 +153,7 @@
     letter-spacing: -0.14px;
     border: 3px solid;
     border-radius: 23px;
+    font-size: 0.97222222222vw;
 }
 
 /* Dynamic border colors from borderClass */

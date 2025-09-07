@@ -15,7 +15,7 @@
 }
 
 .parent {
-    width: 84%;
+    width: 55.11159722222vw;
     height: 41.38888888889vw;
     position: relative;
 
@@ -42,8 +42,8 @@
 
 .horizontalLine {
     position: absolute;
-    top: 50%;
-    left: 12vw;
+    top: 52%;
+    left: 7vw;
     /* height: 2.63888888889vw; */
     width: 43.47222222222vw;
     aspect-ratio: 626/38;
@@ -55,7 +55,7 @@
 /* Axis labels */
 .growthLabel {
     position: absolute;
-    top: -2.5vw;
+    top: -3vw;
     left: 50%;
     transform: translateX(-50%);
     color: #27AAE7;
@@ -64,8 +64,9 @@
 
 .wellnessLabel {
     position: absolute;
-    top: 47%;
-    right: 3vw;
+    top: 49%;
+    right: 0vw;
+
     transform: translateY(-50%);
     color: #FB7D7D;
     font-size: 2.09388888889vw;
@@ -108,14 +109,14 @@
 
 .topLeft {
     position: absolute;
-    top: 10%;
-    left: 0%;
+    top: 8%;
+    left: 6%;
 }
 
 .bottomLeft {
     position: absolute;
     bottom: 10%;
-    left: 0%;
+    left: 6%;
 }
 
 .bottomRight {
@@ -127,7 +128,7 @@
 .topRight {
     position: absolute;
     top: 5%;
-    right: 12%;
+    right: 9%;
 }
 
 .thriving {
@@ -142,6 +143,7 @@
     font-size: 1.31944444444vw;
     font-family: Montserrat;
     font-weight: 500;
+    color: var(--blacks-70, #404446);
 }
 
 .textPurple {
@@ -229,12 +231,13 @@ height: 96px; */
 .thriverame {
     background-image: url("/assets/icons/loop.svg");
     /* path relative to public/ folder */
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     /* width: 100%; */
-    padding: 0.48611111111vw 2.98611111111vw 0.48611111111vw 2.98611111111vw;
+    padding: 1.98611111111vw 1.98611111111vw;
     z-index: 1;
-    width: 20.625vw;
+    width: 14.23611111111vw;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -298,8 +301,8 @@ height: 96px; */
 
 .knowmore {
     position: absolute;
-    top: 8vw;
-    right: -15vw;
+    top: 9vw;
+    right: -19vw;
     z-index: 99;
 }
 
@@ -308,10 +311,11 @@ height: 96px; */
     background-image: url("/assets/images/smallcircles.png");
     /* path relative to public/ folder */
     background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
     position: absolute;
     top: -6vw;
-    right: -31vw;
+    right: -35vw;
     width: 35.375vw;
     aspect-ratio: 1/1;
     /* z-index: 99; */
@@ -324,14 +328,15 @@ height: 96px; */
 
 .workaholism {
     top: 30%;
-    left: 20%;
+    left: 25.8%;
     text-align: end;
     position: absolute;
 }
 
 .anxiety {
-    top: 38%;
-    left: 20%;
+    top: 37%;
+    left: 23%;
+
     text-align: end;
     position: absolute;
 }
@@ -349,26 +354,27 @@ height: 96px; */
 }
 
 .stagnation {
-    top: 55%;
+    top: 58%;
     left: 60%;
     position: absolute;
 }
 
 .wellness {
-    top: 63%;
+    top: 65%;
     left: 60%;
     position: absolute;
 }
 
 .centered {
     top: 33%;
-    left: 58%;
+    left: 67%;
+
     position: absolute;
 }
 
 .futureReady {
     top: 40%;
-    left: 58%;
+    left: 67%;
     position: absolute;
 }
 
@@ -537,10 +543,12 @@ height: 96px; */
         height: 15.639px;
         aspect-ratio: 28.916/15.639;
     }
-    .bottomLeft{
+
+    .bottomLeft {
         bottom: 22%;
     }
-    .bottomRight{
+
+    .bottomRight {
         bottom: 20%;
     }
 

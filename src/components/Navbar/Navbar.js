@@ -32,13 +32,13 @@ const Navbar = () => {
 
         {isOpen && (
           <div className={`${classes.menu} `}>
-            <Link href={"#"} className={`${classes.navitems} link`}>
+            <Link href={"#problem"} className={`${classes.navitems} link`}>
               Problem
             </Link>
-            <Link href={"#"} className={`${classes.navitems} link`}>
+            <Link href={"#framework"} className={`${classes.navitems} link`}>
               Framework
             </Link>
-            <Link href={"#"} className={`${classes.navitems} link`}>
+            <Link href={"#team"} className={`${classes.navitems} link`}>
               Team
             </Link>
             <Link href={"/story"} className={`${classes.navitems} link`}>
@@ -58,18 +58,24 @@ const Navbar = () => {
                 className={classes.caret}
               />
             </div>
-            <button className={classes.mobbtn}>Book a Meeting</button>
+            <Link
+              href={"https://calendly.com/bhaskar-roobaroo/30min"}
+              target="_blank"
+              className={`${classes.mobbtn} link`}
+            >
+              Book a Meeting
+            </Link>
           </div>
         )}
 
         <div className={classes.links}>
-          <Link href={"#"} className={`${classes.navitems} link`}>
+          <Link href={"#problem"} className={`${classes.navitems} link`}>
             Problem
           </Link>
-          <Link href={"#"} className={`${classes.navitems} link`}>
+          <Link href={"#framework"} className={`${classes.navitems} link`}>
             Framework
           </Link>
-          <Link href={"#"} className={`${classes.navitems} link`}>
+          <Link href={"#team"} className={`${classes.navitems} link`}>
             Team
           </Link>
           <Link href={"/story"} className={`${classes.navitems} link`}>
@@ -80,13 +86,15 @@ const Navbar = () => {
           </Link>
           <div
             onMouseEnter={() => setIsDropdownOpen(true)}
-     
             className={classes.resource}
           >
             <p className={classes.navitems}>Resources</p>
             <Image src={caret} width={8} height={4} alt={staticAlt} />
             {isDropdownOpen && (
-              <div        onMouseLeave={() => setIsDropdownOpen(false)} className={classes.dropdown}>
+              <div
+                onMouseLeave={() => setIsDropdownOpen(false)}
+                className={classes.dropdown}
+              >
                 <Link href="/" className={classes.navitems}>
                   Social Media
                 </Link>
@@ -94,7 +102,7 @@ const Navbar = () => {
                   Blogs
                 </Link>
                 <Link href="/" className={classes.navitems}>
-                 Newsletter
+                  Newsletter
                 </Link>
                 <Link href="/" className={classes.navitems}>
                   For Experts
@@ -109,7 +117,13 @@ const Navbar = () => {
             )}
           </div>
         </div>
-        <button className={classes.btn}>Book a Meeting</button>
+        <Link
+          href={"https://calendly.com/bhaskar-roobaroo/30min"}
+          target="_blank"
+          className={`${classes.btn} link`}
+        >
+          Book a Meeting
+        </Link>
       </nav>
     </div>
   );

@@ -5,19 +5,24 @@ import Image from "next/image";
 import { newsarrow, success, upright } from "../../../../public/assets/icons";
 import { staticAlt } from "@/lib/constants";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 const NewsLetter = ({ homepage }) => {
   const [step, setStep] = React.useState(1);
   return (
     <>
       {step === 1 ? (
-        <div className={classes.purplebox}>
+        <Link
+          target="_blank"
+          href={"https://www.instagram.com/roobaroo.ai/"}
+          className={classes.purplebox}
+        >
           <div className={classes.top}>
             <ArrowUpRight
               color="white"
               size={28}
               // rotate={-45}
               className={classes.rotate}
-                strokeWidth={3}
+              strokeWidth={3}
             />
           </div>
           <h4
@@ -28,9 +33,11 @@ const NewsLetter = ({ homepage }) => {
           >
             Join Our Community
           </h4>
-        </div>
+        </Link>
       ) : step === 2 ? (
-        <div className={`${classes.purplebox} ${homepage ? classes.homebox : ""}`}>
+        <div
+          className={`${classes.purplebox} ${homepage ? classes.homebox : ""}`}
+        >
           <div className={classes.inputwrapper}>
             <input
               type="email"
@@ -46,11 +53,11 @@ const NewsLetter = ({ homepage }) => {
         </div>
       ) : (
         <div className={classes.purplebox}>
-        <div className={classes.successtop}>
-        <p className={classes.sucsub}>Thank You!</p>
-        <Image src={success} width={29} height={29} alt={staticAlt}/>
-        </div>
-        <p className={classes.boxttx}>{`You’ll hear from us soon :)`}</p>
+          <div className={classes.successtop}>
+            <p className={classes.sucsub}>Thank You!</p>
+            <Image src={success} width={29} height={29} alt={staticAlt} />
+          </div>
+          <p className={classes.boxttx}>{`You’ll hear from us soon :)`}</p>
         </div>
       )}
     </>

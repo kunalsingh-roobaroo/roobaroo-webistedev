@@ -19,10 +19,13 @@ import NewsLetter from "./components/NewsLetter";
 import { ArrowUpRight } from "lucide-react";
 const Footer = () => {
   const gridItems = [
-    { name: "Our Brand Story", link: "/" },
+    { name: "Our Brand Story", link: "/brandstory" },
     { name: "Collaborate With Us", link: "/" },
     { name: "Newsletter Archives", link: "/" },
-    { name: "Join Our Community", link: "/" },
+    {
+      name: "Join Our Community",
+      link: "https://www.instagram.com/roobaroo.ai/",
+    },
     { name: "Our Brand Identity", link: "/" },
     { name: "Press & Media", link: "/" },
     { name: "Read Our Blog", link: "/blogs" },
@@ -31,19 +34,19 @@ const Footer = () => {
   const socials = [
     {
       icon: linktree,
-      link: "/",
+      link: "https://linktr.ee/roobaroo.ai",
     },
     {
       icon: instagram,
-      link: "/",
+      link: "https://www.instagram.com/roobaroo.ai/",
     },
     {
       icon: linkedin,
-      link: "/",
+      link: "https://www.linkedin.com/company/roobaroo-ai",
     },
     {
       icon: x,
-      link: "/",
+      link: "https://x.com/roobaroo_ai",
     },
   ];
   const contacts = [
@@ -123,6 +126,7 @@ const Footer = () => {
             {socials.map((value, index) => {
               return (
                 <Link
+                  target="_blank"
                   key={index}
                   className={`${classes.socialicons} link`}
                   href={value.link}

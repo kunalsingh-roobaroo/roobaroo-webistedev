@@ -24,6 +24,43 @@ import {
 import BlueBox from "@/components/Boxes/BlueBox";
 import PinkBox from "@/components/Boxes/PinkBox";
 import PurpleBox from "@/components/Boxes/PurpleBox";
+import {
+  amazon,
+  azim,
+  bbc,
+  deloitte,
+  edbrand,
+  justdial,
+  nus,
+  pratham,
+  pwc,
+  qualcomm,
+  sebi,
+  sharechat,
+  tedx,
+} from "../../../../../public/assets/two-one";
+import {
+  birla,
+  calc,
+  du,
+  ey,
+  iima,
+  iitblue,
+  kiit,
+  kv,
+  kvd,
+  metadomeblue,
+  nift,
+  police,
+  pragya,
+  pw,
+  stanford,
+  tiss,
+  ugc,
+  unacademy,
+  vedanta,
+  wipro,
+} from "../../../../../public/assets/one-one";
 const BuildingSection = () => {
   const members = [
     member1,
@@ -53,9 +90,45 @@ const BuildingSection = () => {
     "Exam Toppers & Career Coaches",
     "Startup Founders & Design Thinkers",
   ];
-  const brands = [iitkgp_black, favcy, techbillion, metadome, istart, master];
+  const brands = [
+    amazon,
+    azim,
+    bbc,
+    deloitte,
+    edbrand,
+    justdial,
+    nus,
+    pratham,
+    pwc,
+    qualcomm,
+    sebi,
+    sharechat,
+    tedx,
+  ];
+  const onebrand = [
+    birla,
+    calc,
+    du,
+    ey,
+    iima,
+    iitblue,
+    kiit,
+    kv,
+    kvd,
+    metadomeblue,
+    nift,
+    police,
+    pragya,
+    pw,
+    stanford,
+    tiss,
+    ugc,
+    unacademy,
+    vedanta,
+    wipro,
+  ];
   return (
-    <section className={classes.container}>
+    <section id="team" className={classes.container}>
       <div className={classes.txtdiv}>
         <h2 className={classes.headtxt}>Now building Roobaroo</h2>
         <h3 className={classes.subheading}>
@@ -125,20 +198,51 @@ const BuildingSection = () => {
             </div>
           ))}
         </div>
+
         <div className={classes.brands}>
-          {brands.map((value, index) => {
-            return (
-              <div key={index} className={classes.brand}>
-                <Image
-                  src={value}
-                  alt={staticAlt}
-                  fill
-                  sizes="(max-width: 768px) 50vw, (min-width: 769px) 33vw"
-                  className={classes.filterBlack}
-                />
+          <div className={classes.subbrand}>
+            <Marquee
+              gradient={false}
+              speed={30}
+              className={classes.marquee}
+              pauseOnHover={false}
+              direction="right"
+            >
+              <div className={classes.pillContainer}>
+                {[...brands,...brands].map((value, index) => (
+                  <div key={index} className={classes.biglogos}>
+                    <Image
+                      src={value}
+                      fill
+                      alt={staticAlt}
+                      sizes={responsiveImageSizes}
+                    />
+                  </div>
+                ))}
               </div>
-            );
-          })}
+            </Marquee>
+            <Marquee
+              gradient={false}
+              speed={30}
+              className={classes.marquee}
+              pauseOnHover={false}
+              direction="left"
+            >
+              <div className={classes.pillContainer}>
+                {[...onebrand,...onebrand].map((value, index) => (
+                  <div key={index} className={classes.smalllogos}>
+                    <Image
+                      src={value}
+                      fill
+                      alt={staticAlt}
+                      sizes={responsiveImageSizes}
+                    />
+                  </div>
+                ))}
+              </div>
+            </Marquee>
+          </div>
+
           <div className={classes.from}>from</div>
         </div>
       </div>

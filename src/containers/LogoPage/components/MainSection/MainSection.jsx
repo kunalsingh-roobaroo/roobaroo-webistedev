@@ -13,8 +13,9 @@ const MainSection = () => {
         <h2 className={classes.subtxt}>Logo Types</h2>
         <DownloadBtn />
       </div>
+         <SecondaryMark />
       <div className={classes.grid}>
-      <SecondaryMark />
+   
 
       </div>
 

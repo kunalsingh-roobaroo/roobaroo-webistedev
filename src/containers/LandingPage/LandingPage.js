@@ -19,10 +19,10 @@ const LandingPage = () => {
       <Navbar />
       <div className={classes.container}>
         <div className={classes.hero}>
-          <HeroSection />
           <div className={classes.bigcircle}></div>
+          <HeroSection />
         </div>
-        <div className={classes.guding}>
+        <div  className={classes.guding}>
           <GuidingFunda />
           <div className={classes.knowmore}>
             <KnowMore />
@@ -32,14 +32,14 @@ const LandingPage = () => {
             <PinkBox />
           </div>
           <div className={classes.blueBox}>
-            <BlueBox/>
+            <BlueBox />
           </div>
         </div>
         <div className={classes.mobilestroke}></div>
         <GrowSection />
         <div className={classes.mobilecircles}></div>
-        <GrowthAndWellness/>
-        <KnowYourBuddy/>
+        <GrowthAndWellness />
+        <KnowYourBuddy />
         <BuildingSection />
       </div>
       <Footer />
