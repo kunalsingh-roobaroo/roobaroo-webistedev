@@ -6,7 +6,7 @@ import { newsarrow, success, upright } from "../../../../public/assets/icons";
 import { staticAlt } from "@/lib/constants";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-const NewsLetter = ({ homepage }) => {
+const NewsLetter = ({ homepage, label }) => {
   const [step, setStep] = React.useState(1);
   return (
     <>
@@ -30,8 +30,9 @@ const NewsLetter = ({ homepage }) => {
               width: "98px",
             }}
             className={classes.boxttx}
+            id="newsletter"
           >
-            Join Our Community
+            {label ? "Register Interest" : "Join Our Community"}
           </h4>
         </Link>
       ) : step === 2 ? (

@@ -1,0 +1,58 @@
+.carouselwrapper {
+    width: 24.65277777778vw;
+
+    aspect-ratio: 355/198;
+    align-self: stretch;
+    position: relative;
+}
+
+.tile {
+    width: 100%;
+    align-self: stretch;
+    /* aspect-ratio: 355/198; */
+    position: relative;
+    height: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.carouselwrapper :global(.carousel .slide) {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    width: 100%;
+    height: 100%;
+    padding: 0 !important;
+    /* aspect-ratio: 355/210 !important; */
+    aspect-ratio: 355/198 !important;
+    /* removes react-carousel inline padding */
+}
+
+@media (max-width:450px) {
+    .desktop {
+        display: none;
+    }
+
+    .tile {
+        border-radius: 17.076px;
+    }
+
+    .carouselwrapper {
+
+        width: 100%;
+        height: 187px;
+        aspect-ratio: unset;
+    }
+
+    .carouselwrapper :global(.carousel .slide) {
+        aspect-ratio: unset !important;
+        width: 50%;
+        height: 187px;
+    }
+}
+
+@media (min-width:451px) {
+    .mobile {
+        display: none;
+    }
+}

@@ -15,8 +15,9 @@
 .cont {
     display: flex;
     flex-direction: column;
-    width: fit-content;
+    /* width: fit-content; */
     gap: 39px;
+      width: 54.236vw;
 }
 
 .box {
@@ -33,13 +34,11 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 11.45833333333vw;
+    gap: 45px;
     padding: 24px 0px;
+    position: relative;
 }
 
-.content {
-    width: 46.66666666667vw;
-}
 
 .title {
     color: var(--Blacks-Base, #0C0C0C);
@@ -155,6 +154,7 @@
 
 .footer {
     margin-top: 46px;
+    z-index: 1;
 }
 
 .pinkbox,
@@ -372,7 +372,7 @@
     /* border-radius: 50%; */
     background: #27AAE7;
     /* flex-shrink: 0; */
-    height: 75%;
+     height: 75%;
     position: absolute;
     right: 0.3vw;
     top: 10%;
@@ -380,7 +380,7 @@
 
 .toc {
     position: relative;
-    /* width:13.05555555556vw ; */
+    width:16.05555555556vw ;
 }
 
 .tags {
@@ -406,6 +406,7 @@
     line-height: 150%;
     /* 22.5px */
     letter-spacing: 0.15px;
+    padding: 6px 13px;
 }
 
 .color1 {

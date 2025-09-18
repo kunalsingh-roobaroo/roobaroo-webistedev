@@ -2,7 +2,7 @@
     background: var(--Primary-Blue-Base, #FB7D7D);
     aspect-ratio: 1440/461;
     width: 100%;
-    padding: 177px 10.20833333333vw 0px 78px;
+    padding: 177px 9.208333vw 0px 9.208333vw;
     position: relative;
     overflow: hidden;
 }

@@ -5,18 +5,34 @@
 }
 
 .bigcircle {
-  background-image: url("/assets/images/newcirclebg.png");
+  background-image: url("/assets/images/deskcircle.svg");
   position: absolute;
-    top: -1vw;
-    left: -2vw;
+  top: -1vw;
+  left: -2vw;
   /* path relative to public/ folder */
   background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
   /* height: ; */
   aspect-ratio: 118/99;
   z-index: 0;
 
+}
+
+.bootcampcircle {
+  background-image: url("/assets/BootCamp/bgcircles.svg");
+  position: absolute;
+  top: 231vw;
+  left: -4vw;
+  /* path relative to public/ folder */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  /* height: ; */
+  aspect-ratio: 1398/1380;
+  z-index: -1;
 }
 
 .container {
@@ -34,7 +50,7 @@
   background-size: contain;
   background-position: center;
   position: absolute;
-top: 86vw;
+  top: 86vw;
   right: -8vw;
   width: 35.375vw;
   aspect-ratio: 1/1;
@@ -49,8 +65,8 @@ top: 86vw;
 
 .knowmore {
   position: absolute;
-  top: 95vw;
-  right: 6vw;
+  top: 87vw;
+  right: 9vw;
   z-index: 99;
 }
 
@@ -81,32 +97,34 @@ top: 86vw;
 }
 
 @keyframes dvdSmooth {
-    0% {
-        transform: translate(0, 0);
-    }
+  0% {
+    transform: translate(0, 0);
+  }
 
-    25% {
-        transform: translate(30px, 20px);
-    }
+  25% {
+    transform: translate(30px, 20px);
+  }
 
-    50% {
-        transform: translate(0, 40px);
-    }
+  50% {
+    transform: translate(0, 40px);
+  }
 
-    75% {
-        transform: translate(-30px, 20px);
-    }
+  75% {
+    transform: translate(-30px, 20px);
+  }
 
-    100% {
-        transform: translate(0, 0);
-    }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 
 
 @media (max-width:450px) {
   .bigcircle {
-    /* aspect-ratio: 390/652; */
+    aspect-ratio: 390/765;
+    background-image: url("/assets/icons/circlemob.svg");
+    top: -22vw;
   }
 
   .mobilecircles {
@@ -161,6 +179,17 @@ top: 86vw;
     background-size: cover;
 
   }
+
+  .bootcampcircle {
+    width: 399.34px;
+    height: 399.34px;
+    top: 2872px;
+    left: -54px;
+
+    background-image: url("/assets/BootCamp/phonebg.svg");
+  }
+
+ 
 }
 
 @media (min-width:451px) {

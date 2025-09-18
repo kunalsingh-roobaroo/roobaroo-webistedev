@@ -30,6 +30,7 @@
   border: 0.503px solid rgba(8, 81, 114, 0.18);
   background: var(--Whites-Base, #FFF);
   box-shadow: 17.085px 11.959px 20.502px 7px rgba(0, 0, 0, 0.05);
+  align-self: stretch;
 }
 
 .highlightcard {
@@ -43,12 +44,9 @@
 
   background: var(--Whites-Base, #FFF);
   box-shadow: 18.032px 12.623px 21.639px 0 rgba(0, 0, 0, 0.05);
-}
-
-.highlightcard,
-.card {
   align-self: stretch;
 }
+
 
 .cardHeader {
   display: flex;
@@ -68,13 +66,13 @@
 }
 
 .cardTitle {
-color: #18181B;
-font-family: Montserrat;
-font-size: 1.94444444444vw;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-text-transform: capitalize;
+  color: #18181B;
+  font-family: Montserrat;
+  font-size: 1.94444444444vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
 }
 
 .highlightcardTitle {
@@ -99,24 +97,24 @@ text-transform: capitalize;
 }
 
 .cardSubtitle {
-color: #18181B;
-font-family: Montserrat;
-font-size: 1.31944444444vw;
-font-style: italic;
-font-weight: 500;
-line-height: normal;
+  color: #18181B;
+  font-family: Montserrat;
+  font-size: 1.31944444444vw;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
 
 }
 
 .src {
-color: var(--primary-coral-80, #FFC5C5);
-font-family: Montserrat;
-font-size: 1.38888888889vw;
-font-style: italic;
-font-weight: 500;
-line-height: normal;
-text-transform: capitalize;
-margin-top: 16px;
+  color: var(--primary-coral-80, #FFC5C5);
+  font-family: Montserrat;
+  font-size: 1.38888888889vw;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-top: 16px;
 }
 
 .cardHeading {
@@ -349,16 +347,35 @@ margin-top: 16px;
     height: 138.084px;
     flex-shrink: 0;
     aspect-ratio: 304.158/138.084;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    box-shadow: 10.627px 7.439px 12.752px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  .highlightcard {
+    width: 320.952px;
+    height: 138.084px;
+    flex-shrink: 0;
+    box-shadow: 11.216px 7.851px 13.459px 0 rgba(0, 0, 0, 0.05);
+    aspect-ratio: unset;
+    padding: 30px;
   }
 
   .txtdiv {
     margin-top: 0px;
   }
 
+  .highlightcardTitle {
+    font-size: 17.84px;
+  }
+
   .marqueeWrapper {
     padding: 0px 0px 0px 0px;
   }
+
+  .highlightcardText {
+    font-size: 11.893px;
+  }
+
 
   .cardImage {
     width: 39.876px;

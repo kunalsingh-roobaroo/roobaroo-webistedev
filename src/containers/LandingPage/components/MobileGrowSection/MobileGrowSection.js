@@ -3,8 +3,12 @@ import classes from "./MobileModule.module.css";
 import Image from "next/image";
 import {
   hand_doodle,
+  handsmob,
   infinity_doodle,
+  infinitymob,
   mobline,
+  mobpipe,
+  papermob,
   torn_paper_doodle,
 } from "../../../../../public/assets/images";
 import { responsiveImageSizes, staticAlt } from "@/lib/constants";
@@ -18,12 +22,12 @@ const MobileGrowSection = () => {
           isn&apos;t split like that. It&apos;s messy layered and integrated.
         </p>
         <div className={classes.image}>
-          <Image src={torn_paper_doodle} fill alt={staticAlt} />
+          <Image src={papermob} fill alt={staticAlt} />
         </div>
       </div>
       <div className={classes.left}>
         <div className={classes.infinty}>
-          <Image src={infinity_doodle} fill alt={staticAlt} />
+          <Image src={infinitymob} fill alt={staticAlt} />
         </div>
         <p
           style={{
@@ -41,12 +45,12 @@ const MobileGrowSection = () => {
           isn&apos;t split like that. It&apos;s messy layered and integrated.
         </p>
         <div className={classes.handDooodle}>
-          <Image src={hand_doodle} fill alt={staticAlt} />
+          <Image src={handsmob} fill alt={staticAlt} />
         </div>
       </div>
       <div className={classes.background}>
         <div className={classes.backgroundframe}>
-          <Image src={mobline} fill alt={staticAlt} />
+          <Image src={mobpipe} fill alt={staticAlt} />
         </div>
       </div>
       {/* <div className={classes.lines}>

@@ -14,10 +14,11 @@ const BlogHero = () => {
         <div className={classes.heroimg}>
           <Image src={blogthumbnail} fill alt={staticAlt} />
         </div>
-        <p className={classes.featuretxt}>Featured:</p>
       </div>
-      <BlogCarousel />
-        
+      <div className={classes.op}>
+        <p className={classes.featuretxt}>Featured :</p>
+        <BlogCarousel />
+      </div>
     </section>
   );
 };

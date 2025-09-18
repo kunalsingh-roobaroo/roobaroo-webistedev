@@ -29,6 +29,7 @@ import heading from "./heading.png";
 import robaroomain from "./robaroomain.png";
 import colornew from "./colornew.png";
 import donew from "./donew.svg";
+import mobpipe from "./mobpipe.svg";
 import headingnew from "./headingnew.svg";
 import robaroomainnew from "./roobaroomain.svg";
 import robaroosub from "./robaroosub.png";
@@ -41,9 +42,17 @@ import biglight from "./biglight.png";
 import kit from "./kit.png";
 import singh from "./singh.png";
 import roobaroomatrix from "./roobaroomatrix.png";
+import deskcircle from "./deskcircle.png";
+import infinitymob from "./infinitymob.png";
+import papermob from "./papermob.png";
+import handsmob from "./handsmob.png";
 export {
   logo,
   biglight,
+  infinitymob,
+  deskcircle,
+  handsmob,
+  papermob,
   roobaroomatrix,
   singh,
   topmarkdark,
@@ -71,6 +80,7 @@ export {
   bhaskar,
   tilethumbnail,
   blogthumbnail,
+  mobpipe,
   thumbnail,
   hand_doodle,
   smallcircles,

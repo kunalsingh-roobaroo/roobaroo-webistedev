@@ -4,6 +4,7 @@
     flex-direction: column;
     gap: 66px;
     /* align-items: center; */
+    width: 100%;
     /* justify-content: center; */
 }
 
@@ -176,6 +177,7 @@
 .marqueewrapper,
 .mobmarqueewrapper {
     position: relative;
+    width: 100%;
 }
 
 .leftgradient,
@@ -391,7 +393,8 @@
     .bannerdesk {
         display: none;
     }
-    .container{
+
+    .container {
         padding: 10px 36px;
         aspect-ratio: 343/129;
         width: 90%;

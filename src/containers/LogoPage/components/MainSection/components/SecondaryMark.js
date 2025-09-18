@@ -10,10 +10,11 @@ import {
 } from "../../../../../../public/assets/images";
 import Image from "next/image";
 import { responsiveImageSizes, staticAlt } from "@/lib/constants";
+import { secdark, secmark } from "../../../../../../public/assets/BrandKit";
 const SecondaryMark = () => {
   const icons = [primarylight, topmarkdark];
   const secicons = [secmarklight, secarkdark];
-  const mainsecicons = [bilight, biglight];
+  const mainsecicons = [secmark, secdark];
   return (
     <div className={classes.lestsec}>
       <div className={`${classes.subsrc} ${classes.mark}`}>

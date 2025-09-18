@@ -42,9 +42,13 @@ import verticalpallete from "./verticalpallete.png";
 import carertslant from "./carertslant.svg";
 import typopphone from "./typopphone.png";
 import newmain from "./newmain.png";
+import secmark from "./secmark.png";
+import secdark from "./secdark.png";
 
 export {
   title,
+  secmark,
+  secdark,
   arrow,
   carertslant,
   verticalpallete,

@@ -30,12 +30,12 @@
 }
 
 .customPrev {
-  left: 0px;
+  left: -75px;
   /* Adjust as needed */
 }
 
 .customNext {
-  right: 0px;
+  right: -75px;
   /* Adjust as needed */
 }
 

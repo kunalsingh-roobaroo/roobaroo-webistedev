@@ -9,22 +9,46 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 441px;
+  /* gap: 441px; */
 
 }
 
-.tiles {
-  background-image: url("/assets/images/grid.png");
-  /* path relative to public/ folder */
-  background-size: cover;
-  background-position: center;
+.marquee {
   width: 100%;
-  height: auto;
+}
+
+.tiles {
+  /* background-image: url("/assets/images/grid.png"); */
+  /* path relative to public/ folder */
+  /* background-size: cover;
+  background-position: center; */
+  width: 100%;
+  /* height: auto; */
   /* or any height you want */
   /* background-color: red; */
 
   /* z-index: 0; */
-padding: 29px 6.25vw;
+  padding: 29px 6.25vw;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.read {
+  color: #000;
+
+  /* Heading 2 Desk */
+  font-family: "Simple Cakes";
+  font-size: 8.05555555556vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  /* 116px */
+  letter-spacing: 1.16px;
+}
+
+.here {
+  color: var(--Accent-Purple-Base, #815FAA);
 }
 
 .imagecontianer,
@@ -35,6 +59,15 @@ padding: 29px 6.25vw;
   position: absolute;
   z-index: 0;
 
+}
+
+.grow {
+  padding-top: 90px 0px;
+}
+
+.boxes {
+  margin-top: 441px;
+  z-index: 1;
 }
 
 .image {
@@ -86,56 +119,28 @@ padding: 29px 6.25vw;
   z-index: 1;
 }
 
-@media (max-width:450px) {
-  .circle {
-    display: none;
-  }
-
-  .ribbon {
-    display: none;
-  }
-
-  .tiles {
-    padding: 0px 0px;
-  }
-
-  .imagecontianer,
-  .blueimagecontianer {
-  width: 150.15px;
-height: 150.15px;
-border-radius: 16.8px;
-aspect-ratio: unset;
-  }
-
-  .imagecontianer {
-
-    top: 0px;
-    right: 0px;
-  }
-
-  .container {
-    gap: 118px;
-  }
-
-  .blueimagecontianer {
-    top: -1.111111vw;
-    right: -20.472222vw;
-  }
-
-  .ribbonframe {
-    aspect-ratio: unset;
-    width: 100%;
-    height: 137.841px;
-    top: 240px;
-  }
+.over {
+  width: 100%;
 
 }
 
-@media (min-width:451px) {
-  .mobribbon {
-    display: none;
-  }
+.circlenew {
+
+  background-image: url("/assets/images/smallcircles.png");
+  /* path relative to public/ folder */
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  top: 72vw;
+  right: -5vw;
+  width: 35.375vw;
+  aspect-ratio: 1/1;
+  background-repeat: no-repeat;
+  z-index: 0;
+  /* z-index: 99; */
 }
+
+
 
 @keyframes dvdSmooth {
   0% {
@@ -170,4 +175,149 @@ aspect-ratio: unset;
 
 .blueimagecontianer {
   animation-delay: 4s;
+}
+
+.pinkbox {
+
+  top: 88vw;
+  right: 30vw;
+  animation: dvdSmooth 19s ease-in-out infinite;
+
+}
+
+.blueBox {
+  top: 95vw;
+  right: 24vw;
+  animation: dvdSmooth 14s ease-in-out infinite;
+  animation-delay: 0.2s;
+
+}
+
+.knowmore {
+  position: absolute;
+  top: 87vw;
+  right: 10vw;
+  z-index: 99;
+}
+
+.pinkbox,
+.blueBox {
+  border-radius: 16.47px;
+  overflow: hidden;
+  width: 10.22222222222vw;
+  position: absolute;
+  aspect-ratio: 1/1;
+  z-index: 0;
+
+}
+
+
+@media (max-width:450px) {
+
+  .circle,
+  .marquee {
+    display: none;
+  }
+
+  .ribbon {
+    display: none;
+  }
+
+  .knowmore {
+    display: none;
+  }
+
+  .tiles {
+    padding: 0px 0px;
+  }
+
+  .imagecontianer,
+  .blueimagecontianer {
+    width: 150.15px;
+    height: 150.15px;
+    border-radius: 16.8px;
+    aspect-ratio: unset;
+  }
+
+  .imagecontianer {
+
+    top: 0px;
+    right: 0px;
+  }
+
+  .grow {
+    margin-top: 98px;
+  }
+
+  .container {
+    gap: 20px;
+  }
+
+  .blueimagecontianer {
+    top: -1.111111vw;
+    right: -20.472222vw;
+  }
+
+  .ribbonframe {
+    aspect-ratio: unset;
+    width: 100%;
+    height: 137.841px;
+    top: 240px;
+  }
+
+  .mobilestroke {
+    width: 100%;
+    height: 21.5px;
+    background-image: url("/assets/icons/pagestroke.svg");
+    background-repeat: no-repeat;
+    /* transform: rotate(180deg); */
+    background-size: cover;
+
+  }
+
+  .boxes {
+    margin-top: 101px;
+  }
+
+  .circlenew {
+    background-image: url("/assets/images/mobcircle.png");
+    top: 643px;
+    width: 400px;
+    aspect-ratio: 1/1;
+    left: -50px;
+    background-repeat: no-repeat;
+    /* transform: rotate(180deg); */
+    background-size: cover;
+    /* background: red; */
+
+  }
+
+  .pinkbox {
+    top: 793px;
+    width: 147px;
+  }
+
+  .blueBox {
+    width: 147px;
+    top: 843px;
+  }
+
+  .tiles {
+    align-items: center;
+    gap: 13px;
+    margin-top: 100px;
+  }
+
+  .read {
+    font-size: 36px;
+  }
+}
+
+@media (min-width:451px) {
+
+  .mobribbon,
+  .mobilestroke,
+  .mobmarquee {
+    display: none;
+  }
 }

@@ -12,6 +12,7 @@ import useFetchData from "@/hooks/useFetchData";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { api_Urls } from "@/lib/apiUrls";
+import { ArrowUp, ArrowUpRight } from "lucide-react";
 
 // Import your custom arrow images
 
@@ -71,7 +72,6 @@ const BlogCarousel = ({ related }) => {
     ],
   };
 
-  const handleRoute = (value) => {};
   return (
     <div className={classes.carouselWrapper}>
       <Slider {...settings}>
@@ -102,13 +102,30 @@ const BlogCarousel = ({ related }) => {
               </div>
               <p className={classes.description}>{blog?.blog_summary}</p>
             </div>
-            <div className={classes.rhs}>
+            <div
+              onClick={() => {
+                router.push(`/blogs/${blog?.blog_seo_title}`);
+              }}
+              className={classes.rhs}
+            >
               <Image
                 src={blog?.blog_thumbnail_image}
                 alt={staticAlt}
                 fill
                 sizes="50vw"
               />
+              <div className={classes.overlay}>
+                <p className={classes.readmore}>Read More </p>{" "}
+                <ArrowUpRight
+                  color="white"
+                  size={28}
+                  rotate={-45}
+                  strokeWidth={3}
+                />
+              </div>
+              {/* <div className={classes.boxshadow}>
+                
+              </div> */}
             </div>
           </div>
         ))}

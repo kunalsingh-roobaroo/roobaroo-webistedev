@@ -203,7 +203,7 @@ const GrowthAndWellness = () => {
         <div className={classes.leftgradient}></div>
         <div className={classes.rightgradient}></div>
       </div>
-      <div className={classes.container}>
+      {/* <div className={classes.container}>
         <Image
           src={bannerdesk}
           unoptimized
@@ -220,11 +220,7 @@ const GrowthAndWellness = () => {
           alt={staticAlt}
           sizes={responsiveImageSizes}
         />
-        {/* <div className={classes.nomore}>so no more</div>
-        <div className={classes.changif}>
-          <ChangingBrushes changingdata={changingdata} />
-        </div> */}
-      </div>
+      </div> */}
     </section>
   );
 };

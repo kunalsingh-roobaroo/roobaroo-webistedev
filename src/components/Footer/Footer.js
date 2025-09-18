@@ -19,17 +19,25 @@ import NewsLetter from "./components/NewsLetter";
 import { ArrowUpRight } from "lucide-react";
 const Footer = () => {
   const gridItems = [
-    { name: "Our Brand Story", link: "/brandstory" },
-    { name: "Collaborate With Us", link: "/" },
-    { name: "Newsletter Archives", link: "/" },
+    { name: "Organisation Consulting", link: "#" },
     {
-      name: "Join Our Community",
+      name: "What’s Roobaroo.ai?",
+      link: "https://drive.google.com/file/d/1Il8CZBei-JceUYO33BKW-qhptZtFD2ME/view",
+    },
+    { name: "Student Bootcamp", link: "#bootcamp" },
+    {
+      name: "The Problem",
       link: "https://www.instagram.com/roobaroo.ai/",
     },
-    { name: "Our Brand Identity", link: "/" },
-    { name: "Press & Media", link: "/" },
-    { name: "Read Our Blog", link: "/blogs" },
-    { name: "Talk To Us", link: "/" },
+    { name: "Our Brand Story", link: "/story" },
+    {
+      name: "Guiding Principle",
+      link: "https://drive.google.com/file/d/1Bn1KPr1FO64-J5Auld-D70FpD-bRypXU/view?usp=drive_link",
+    },
+    { name: "Know the Team", link: "#team" },
+    { name: "Brand Identity", link: "/" },
+    { name: "Talk to Us", link: "https://calendly.com/bhaskar-roobaroo/30min" },
+    { name: "Read our Blog", link: "/blogs" },
   ];
   const socials = [
     {
@@ -56,7 +64,7 @@ const Footer = () => {
     },
     {
       icon: call,
-      detail: "+91 90399 74840",
+      detail: "9211611614",
     },
     {
       icon: location,
@@ -100,9 +108,10 @@ const Footer = () => {
             </p>
             <div className={classes.purplebox}>
               <div className={classes.txtdiv}>
-                <p className={classes.sub}>Check out where you stand</p>
+                <p className={classes.sub}>The 21st Century Bootcamp</p>
                 <p className={classes.small}>
-                  Take our assessment to know more!
+                  Your child&apos;s gateway to become future-ready in an
+                  evolving AI world
                 </p>
               </div>
               <ArrowUpRight
@@ -111,6 +120,9 @@ const Footer = () => {
                 rotate={-45}
                 strokeWidth={3}
                 className={classes.rotate}
+                style={{
+                  flexShrink: 0,
+                }}
               />
             </div>
           </div>

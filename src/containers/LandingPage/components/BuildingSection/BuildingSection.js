@@ -9,6 +9,20 @@ import {
   member5,
   member6,
   member7,
+  member8,
+  member9,
+  member10,
+  member11,
+  member12,
+  member13,
+  member14,
+  member15,
+  member16,
+  member17,
+  member18,
+  member19,
+  member20,
+  member21,
 } from "../../../../../public/assets/team";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
@@ -61,6 +75,7 @@ import {
   vedanta,
   wipro,
 } from "../../../../../public/assets/one-one";
+import { logo } from "../../../../../public/assets/images";
 const BuildingSection = () => {
   const members = [
     member1,
@@ -70,6 +85,20 @@ const BuildingSection = () => {
     member5,
     member6,
     member7,
+    member8,
+    member9,
+    member10,
+    member11,
+    member12,
+    member13,
+    member14,
+    member15,
+    member16,
+    member17,
+    member18,
+    member19,
+    member20,
+    member21,
   ];
   const [columns, setColumns] = React.useState([]);
   React.useEffect(() => {
@@ -84,11 +113,11 @@ const BuildingSection = () => {
     setColumns(newCols);
   }, []);
   const titles = [
-    "Educators & Psychologists",
-    "Tech & Product Experts",
-    "Creators & Top 1% Professionals",
-    "Exam Toppers & Career Coaches",
-    "Startup Founders & Design Thinkers",
+    "Startup Founders & Career Coach",
+    "Clinical Psychologists & Parenting Coach",
+    "AI Experts & Product Leaders",
+    "Educators & Life Skills Coach",
+    "Digital Wellbeing & Mindfulness Experts",
   ];
   const brands = [
     amazon,
@@ -128,16 +157,27 @@ const BuildingSection = () => {
     wipro,
   ];
   return (
-    <section id="team" className={classes.container}>
+    <section className={classes.container}>
       <div className={classes.txtdiv}>
-        <h2 className={classes.headtxt}>Now building Roobaroo</h2>
+        <div className={classes.subtop}>
+          <h2 className={classes.headtxt}>Now building </h2>
+          <div className={classes.logo}>
+            <Image
+              src={logo}
+              fill
+              alt={staticAlt}
+              sizes={responsiveImageSizes}
+            />
+          </div>
+        </div>
+
         <h3 className={classes.subheading}>
           to help you grow without burning out
         </h3>
       </div>
       <div className={classes.central}>
         <p className={classes.maintxt}>
-          with a <span className={classes.span}>dream team</span> of
+          with a <span className={classes.span}> dream team </span> of
         </p>
         <div className={classes.marqueesection}>
           {columns.map((col, i) => (
@@ -209,7 +249,7 @@ const BuildingSection = () => {
               direction="right"
             >
               <div className={classes.pillContainer}>
-                {[...brands,...brands].map((value, index) => (
+                {[...brands, ...brands].map((value, index) => (
                   <div key={index} className={classes.biglogos}>
                     <Image
                       src={value}
@@ -229,7 +269,7 @@ const BuildingSection = () => {
               direction="left"
             >
               <div className={classes.pillContainer}>
-                {[...onebrand,...onebrand].map((value, index) => (
+                {[...onebrand, ...onebrand].map((value, index) => (
                   <div key={index} className={classes.smalllogos}>
                     <Image
                       src={value}

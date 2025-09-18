@@ -13,12 +13,8 @@ const MainSection = () => {
         <h2 className={classes.subtxt}>Logo Types</h2>
         <DownloadBtn />
       </div>
-         <SecondaryMark />
-      <div className={classes.grid}>
-   
-
-      </div>
-
+      <SecondaryMark />
+      <div className={classes.grid}></div>
       <Submark />
       <div className={classes.typo}>
         <div className={classes.sec}>

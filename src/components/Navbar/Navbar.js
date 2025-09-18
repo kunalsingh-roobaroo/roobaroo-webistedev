@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./Navbar.module.css";
 import Image from "next/image";
 import { caret, cross, hamburger } from "../../../public/assets/icons";
@@ -9,8 +9,44 @@ import { logo } from "../../../public/assets/images";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth > 450) return; // ✅ only run on mobile
+
+    let lastScrollY = window.scrollY;
+    let timeout;
+
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        setHidden(true); // scrolling down → hide
+      } else {
+        setHidden(false); // scrolling up → show
+      }
+      lastScrollY = window.scrollY;
+
+      clearTimeout(timeout);
+      timeout = setTimeout(() => setHidden(false), 200); // stop scrolling → show
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(timeout);
+    };
+  }, []);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
+
   return (
-    <div className={classes.topwrapper}>
+    <div
+      className={`${classes.topwrapper} ${
+        hidden && typeof window !== "undefined" && window.innerWidth <= 450
+          ? classes.hidden
+          : ""
+      }`}
+    >
       <nav className={`${classes.nav} ${isOpen ? classes.navopn : ""} `}>
         <div className={classes.topper}>
           <Link href={"/"} className={classes.icon}>
@@ -47,17 +83,43 @@ const Navbar = () => {
             <Link href={"#"} className={`${classes.navitems} link`}>
               Community
             </Link>
-            <div className={classes.resource}>
-              <p className={classes.navitems}>Resources</p>
-
-              <Image
-                src={caret}
-                width={8}
-                height={4}
-                alt={staticAlt}
-                className={classes.caret}
-              />
+            <div className={classes.respara}>
+              <div className={classes.resource}>
+                <p className={classes.navitems}>Resources</p>
+                <Image
+                  src={caret}
+                  width={8}
+                  height={4}
+                  alt={staticAlt}
+                  onClick={() => {
+                    setIsDropdownOpen(!isDropdownOpen);
+                  }}
+                />
+              </div>
+              {isDropdownOpen && (
+                <div className={classes.dropdown}>
+                  <Link href="#bootcamp" className={classes.navitems}>
+                    Bootcamp{" "}
+                  </Link>
+                  <Link href="#newsletter" className={classes.navitems}>
+                    Consulting
+                  </Link>
+                  <Link href="#team" className={classes.navitems}>
+                    Team
+                  </Link>
+                  <Link href={"/story"} className={`${classes.navitems} `}>
+                    Story
+                  </Link>
+                  <Link href="/brandkit" className={classes.navitems}>
+                    Community
+                  </Link>
+                  <Link href="/blogs" className={classes.navitems}>
+                    Blogs
+                  </Link>
+                </div>
+              )}
             </div>
+
             <Link
               href={"https://calendly.com/bhaskar-roobaroo/30min"}
               target="_blank"
@@ -95,23 +157,23 @@ const Navbar = () => {
                 onMouseLeave={() => setIsDropdownOpen(false)}
                 className={classes.dropdown}
               >
-                <Link href="/" className={classes.navitems}>
-                  Social Media
+                <Link href="#bootcamp" className={classes.navitems}>
+                  Bootcamp{" "}
+                </Link>
+                <Link href="#newsletter" className={classes.navitems}>
+                  Consulting
+                </Link>
+                <Link href="#team" className={classes.navitems}>
+                  Team
+                </Link>
+                <Link href={"/story"} className={`${classes.navitems} `}>
+                  Story
+                </Link>
+                <Link href="/brandkit" className={classes.navitems}>
+                  Community
                 </Link>
                 <Link href="/blogs" className={classes.navitems}>
                   Blogs
-                </Link>
-                <Link href="/" className={classes.navitems}>
-                  Newsletter
-                </Link>
-                <Link href="/" className={classes.navitems}>
-                  For Experts
-                </Link>
-                <Link href="/" className={classes.navitems}>
-                  For Influencers
-                </Link>
-                <Link href="/" className={classes.navitems}>
-                  For Press
                 </Link>
               </div>
             )}

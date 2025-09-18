@@ -13,6 +13,8 @@ import BlueBox from "@/components/Boxes/BlueBox";
 import GrowthAndWellness from "./components/GrowthAndWellness/GrowthAndWellness";
 import KnowYourBuddy from "./components/KnowYourBuddy/KnowYourBuddy";
 import BuildingSection from "./components/BuildingSection/BuildingSection";
+import CurriculumSection from "./components/CurriculumSection/CurriculumSection";
+import BootCamp from "./components/BootCamp/BootCamp";
 const LandingPage = () => {
   return (
     <>
@@ -22,23 +24,16 @@ const LandingPage = () => {
           <div className={classes.bigcircle}></div>
           <HeroSection />
         </div>
-        <div  className={classes.guding}>
+        <div className={classes.guding}>
           <GuidingFunda />
-          <div className={classes.knowmore}>
-            <KnowMore />
-          </div>
-          <div className={classes.circle}></div>
-          <div className={classes.pinkbox}>
-            <PinkBox />
-          </div>
-          <div className={classes.blueBox}>
-            <BlueBox />
-          </div>
         </div>
-        <div className={classes.mobilestroke}></div>
-        <GrowSection />
-        <div className={classes.mobilecircles}></div>
-        <GrowthAndWellness />
+        <CurriculumSection />
+        <BootCamp />
+        <div className={classes.bootcampcircle}></div>
+        {/* <div className={classes.mobilestroke}></div>
+        <GrowSection /> */}
+        {/* <div className={classes.mobilecircles}></div> */}
+        {/* <GrowthAndWellness /> */}
         <KnowYourBuddy />
         <BuildingSection />
       </div>

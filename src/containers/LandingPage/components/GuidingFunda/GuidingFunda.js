@@ -12,6 +12,7 @@ import KnowMore from "@/components/KnowMore/KnowMore";
 import MarqueeSection from "../MarqueeSection/marquee";
 import { LostSection } from "../LostSection/LostSection";
 import { roobaroomatrix } from "../../../../../public/assets/images";
+import GrowthAndWellness from "../GrowthAndWellness/GrowthAndWellness";
 const GuidingFunda = () => {
   return (
     <section id="framework" className={classes.container}>
@@ -54,9 +55,9 @@ const GuidingFunda = () => {
           <GrowthWellnessMatrix />
         </div>
 
-        <div className={classes.marquee}>
+        {/* <div className={classes.marquee}>
           <MarqueeSection />
-        </div>
+        </div> */}
         <div className={classes.central}></div>
       </div>
       <div className={classes.bottom}>
@@ -71,11 +72,13 @@ const GuidingFunda = () => {
         </div>
         <KnowMore />
       </div>
-      <div className={classes.mobmarquee}>
+      <div className={classes.margin}></div>
+      <GrowthAndWellness />
+      {/* <div className={classes.mobmarquee}>
         <MarqueeSection />
         <MarqueeSection reverse={true} />
-      </div>
-      <LostSection />
+      </div> */}
+  
     </section>
   );
 };

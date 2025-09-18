@@ -104,12 +104,7 @@ const KnowYourBuddy = () => {
 
   const [activeIndex, setActiveIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % redBoxData.length);
-    }, 3000); // change every 3s
-    return () => clearInterval(interval);
-  }, [redBoxData.length]);
+
   const value = redBoxData[0];
 
   const testimonialData = [
@@ -149,12 +144,19 @@ const KnowYourBuddy = () => {
       designation: "College Student",
     },
   ];
+    useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % testimonialData.length);
+    }, 3000); // change every 3s
+    return () => clearInterval(interval);
+  }, [testimonialData.length]);
 
   return (
-    <section className={classes.container}>
+    <section id="team" className={classes.container}>
       <div className={classes.heatop}>
-        <h2 className={classes.headtxt}>Know your</h2>
-        <h2 className={classes.cake}>Buddy</h2>
+        <h2 className={classes.headtxt}>
+          Know your <span className={classes.cake}>Founder</span>
+        </h2>
         <div className={classes.arrowframe}>
           <div className={classes.arrow}>
             <Image
@@ -164,6 +166,16 @@ const KnowYourBuddy = () => {
               sizes={responsiveImageSizes}
             />
           </div>
+        </div>
+      </div>
+      <div className={classes.mobarrowframe}>
+        <div className={classes.arrow}>
+          <Image
+            src={arrow_down}
+            fill
+            alt={staticAlt}
+            sizes={responsiveImageSizes}
+          />
         </div>
       </div>
       <div className={classes.central}>
@@ -189,55 +201,63 @@ const KnowYourBuddy = () => {
                 sizes={responsiveImageSizes}
               />
             </div>
-            <div className={classes.tags}>
+            {/* <div className={classes.tags}>
               <div className={classes.founderTags}>
                 <Image src={foundertag} fill unoptimized alt={staticAlt} />
               </div>
-            </div>
+            </div> */}
           </div>
           <div className={classes.toprhs}>
             <div className={classes.subtop}>
-              <h3 className={classes.title}>
-                Bhaskar <br />
-                Singhania
-              </h3>
-              <div className={classes.brands}>
-                <div className={classes.google}>
-                  <Image
-                    src={google_for_startups}
-                    fill
-                    alt={staticAlt}
-                    sizes={responsiveImageSizes}
-                  />
-                  <div className={classes.atended}>Attended</div>
-                </div>
-                <div className={classes.stanford}>
-                  <Image
-                    src={stanford_seed}
-                    fill
-                    alt={staticAlt}
-                    sizes={responsiveImageSizes}
-                  />
-                </div>
+              <div className={classes.subtopdiv}>
+                <h3 className={classes.title}>
+                  Bhaskar <br />
+                  Singhania
+                </h3>
+                <h4 className={classes.subtxt}>
+                  Entrepreneur | Ex-Chief of Staff | Startup Advisor |
+                  Consultant | Career Coach
+                </h4>
               </div>
-              <div className={classes.mob}>
-                <div className={classes.mobbottomlhs}>
-                  <div className={classes.clgivo}>
+              <div className={classes.brandwrapper}>
+                <div className={classes.brands}>
+                  <div className={classes.google}>
                     <Image
-                      src={iitkgp_black}
+                      src={google_for_startups}
                       fill
                       alt={staticAlt}
-                      sizes={staticAlt}
+                      sizes={responsiveImageSizes}
+                    />
+                    <div className={classes.atended}>Attended</div>
+                  </div>
+                  <div className={classes.stanford}>
+                    <Image
+                      src={stanford_seed}
+                      fill
+                      alt={staticAlt}
+                      sizes={responsiveImageSizes}
                     />
                   </div>
-                  <div className={classes.rishiclgivo}>
-                    <Image
-                      src={rishihood}
-                      fill
-                      alt={staticAlt}
-                      sizes={staticAlt}
-                    />
-                    <div className={classes.mobatended}>Attended</div>
+                </div>
+                <div className={classes.mob}>
+                  <div className={classes.mobbottomlhs}>
+                    <div className={classes.clgivo}>
+                      <Image
+                        src={iitkgp_black}
+                        fill
+                        alt={staticAlt}
+                        sizes={staticAlt}
+                      />
+                    </div>
+                    <div className={classes.rishiclgivo}>
+                      <Image
+                        src={rishihood}
+                        fill
+                        alt={staticAlt}
+                        sizes={staticAlt}
+                      />
+                      <div className={classes.mobatended}>Attended</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -262,7 +282,7 @@ const KnowYourBuddy = () => {
                     />
                   </div>
                 </div>
-                <div className={classes.sociallinks}>
+                <div id="socialmedia" className={classes.sociallinks}>
                   <p className={classes.knotxt}>Know more</p>
                   <div className={classes.links}>
                     {links.map((value, index) => {
@@ -282,6 +302,7 @@ const KnowYourBuddy = () => {
                       );
                     })}
                   </div>
+                  <div className={classes.clickhere}>Click here</div>
                 </div>
               </div>
             </div>

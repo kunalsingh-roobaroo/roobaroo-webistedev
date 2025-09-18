@@ -40,7 +40,6 @@ const BlogPage = () => {
           {/* <div className={classes.newpinkbox}>
           <PinkBox />
         </div> */}
-
           <Footer />
         </div>
       </BackgroundBoxesWrapper>

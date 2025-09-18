@@ -8,13 +8,18 @@ import BlueBox from "@/components/Boxes/BlueBox";
 export default function BackgroundBoxesWrapper({ children,invert }) {
   const [repeatCount, setRepeatCount] = useState(3);
   const boxRef = useRef(null);
+   const contentRef = useRef(null);
 
   useEffect(() => {
     const updateBoxCount = () => {
-      if (!boxRef.current) return;
+      if (!boxRef.current || !contentRef.current) return;
+
       const boxHeight = boxRef.current.offsetHeight;
-      setRepeatCount(Math.ceil(window.innerHeight / boxHeight) + 1);
+      const contentHeight = contentRef.current.scrollHeight; // total height of children
+
+      setRepeatCount(Math.ceil(contentHeight / boxHeight) + 1);
     };
+
     updateBoxCount();
     window.addEventListener("resize", updateBoxCount);
     return () => window.removeEventListener("resize", updateBoxCount);
@@ -40,7 +45,7 @@ export default function BackgroundBoxesWrapper({ children,invert }) {
     <section className={classes.container}>
       <div className={classes.lhs}>{leftBoxes}</div>
       <div className={classes.rhs}>{rightBoxes}</div>
-      <div className={classes.content}>{children}</div>
+      <div className={classes.content} ref={contentRef}>{children}</div>
     </section>
   );
 }

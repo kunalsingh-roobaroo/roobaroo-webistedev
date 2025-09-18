@@ -18,6 +18,7 @@
     flex-direction: column;
     justify-content: flex-end;
     aspect-ratio: 1373/624;
+    z-index: 1;
 
 }
 
@@ -196,7 +197,7 @@
 .detail {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     justify-content: flex-end;
 }
 
@@ -206,7 +207,7 @@
     justify-content: flex-end;
     align-items: center;
     align-content: center;
-    gap: 16px 3px;
+    gap: 16px 11px;
     flex-wrap: wrap;
 
 
@@ -283,14 +284,51 @@
   100% { transform: scale(1) translate(0, 0); }
 }
 
+@keyframes springRightUpInnew {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    /* 60% {
+        transform: scale(1.05) translate(4px, -3px);
+    }
+
+    80% {
+        transform: scale(1.05) translate(3px, -2.5px);
+    } */
+
+    100% {
+        transform: scale(1.05) translate(3px, -2.5px);
+    }
+}
+
+@keyframes springRightUpOutnew {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    50% {
+        transform: scale(0.99) translate(-1px, 1px);
+        /* less left shift */
+    }
+
+    80% {
+        transform: scale(0.995) translate(-1px, 1px);
+        /* gentler offset */
+    }
+
+    100% {
+        transform: scale(1) translate(0, 0);
+    }
+}
 .purplebox:hover {
-  animation: purpleSpringIn 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation: springRightUpInnew 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   background: var(--accent-purple-110, #684C8A);
   cursor: pointer;
 }
 
 .purplebox:not(:hover) {
-  animation: purpleSpringOut 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation: springRightUpOutnew 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 /* Arrow tilt */

@@ -44,25 +44,30 @@
     position: relative;
 }
 
-.marquee{
+.marquee {
     width: 100%;
 }
+
 .headtxt {
-    color: var(--Primary-Blue-Base, #27AAE7);
-    text-align: center;
-    font-family: "Simple Cakes";
-    font-size: 4.58333333333vw;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%;
-    /* 65.385px */
-    letter-spacing: 0.654px;
+ color: var(--Blacks-Base, #0C0C0C);
+text-align: center;
+font-family: "Simple Cakes";
+font-size: 4.514vw;
+font-style: normal;
+font-weight: 400;
+line-height: 100%; /* 65.385px */
+letter-spacing: 0.654px;
+}
+.subtop{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .subheading {
-    color: var(--Primary-Coral-Base, #FB7D7D);
-    font-family: Montserrat;
-    font-size: 2.77777777778vw;
+color: var(--Blacks-Base, #0C0C0C);
+font-family: Montserrat;
+    font-size: 2.778vw;
     font-style: normal;
     font-weight: 400;
     line-height: 130%;
@@ -87,7 +92,7 @@
 }
 
 .span {
-    color: var(--blacks-80, #303437);
+    color: var(--blacks-80, #815FAA);
     font-family: "Simple Cakes";
     font-size: 6.25vw;
     font-style: normal;
@@ -110,6 +115,7 @@
     display: flex;
     flex-direction: column;
     gap: 18px;
+    width: 75.34722222222vw;
 }
 
 .marqueesection,
@@ -164,6 +170,7 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.4px;
+    padding-right: 30px;
 }
 
 .border {
@@ -256,11 +263,17 @@
 }
 
 .scrollUp .marqueeInner {
-    animation: scrollUp 20s linear infinite;
+    animation: scrollUp 70s linear infinite;
 }
 
 .scrollDown .marqueeInner {
-    animation: scrollDown 20s linear infinite;
+    animation: scrollDown 70s linear infinite;
+}
+
+.logo {
+    width: 14.236vw;
+    aspect-ratio: 265/56;
+    position: relative;
 }
 
 @keyframes scrollUp {
@@ -309,7 +322,7 @@
 
 @media (max-width:450px) {
     .container {
-        padding: 3px 27px;
+        padding: 3px 6.92307692308vw;
         gap: 32px;
     }
 
@@ -332,10 +345,21 @@
 
     .maintxt {
         font-size: 29.964px;
+        gap: 0px;
+        display: inline-flex;
+        /* keep items in one line */
+        align-items: center;
+        /* align baseline nicely */
+        gap: 0;
     }
+
 
     .span {
         font-size: 47.312px;
+        margin: 0px 12px;
+        display: inline;
+        /* or inline-block if you need */
+        white-space: nowrap;
     }
 
     .marqueesection {
@@ -365,7 +389,9 @@
 
     .title {
         font-size: 10.4px;
-        width: 96px;
+        width: 93px;
+        padding-right: 22px;
+        
     }
 
     .titles {
@@ -404,6 +430,21 @@
         width: 169px;
         aspect-ratio: 1/1;
         border-radius: 18.93px;
+    }
+
+    .central {
+        width: 100%;
+    }
+    .biglogos{
+        width: 97.395px;
+height: 54.785px;
+aspect-ratio: unset;
+    }
+    .smalllogos{
+        width: 66.959px;
+    }
+    .pillContainer{
+        gap: 31px;
     }
 }
 

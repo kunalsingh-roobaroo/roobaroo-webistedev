@@ -23,7 +23,7 @@ function slugify(text) {
 
 const IndividualBlogPage = ({ data }) => {
   // console.log('----data',data);
-  
+
   const blog = data?.[0];
   const [updatedHtml, setUpdatedHtml] = useState(blog?.blog_content || "");
   // console.log("----blog", blog);
@@ -55,10 +55,14 @@ const IndividualBlogPage = ({ data }) => {
 
   const [selectedId, setSelectedId] = useState("");
   const COLOR_CLASSES = ["color1", "color2", "color3", "color4"];
+  function getDeterministicColor(tag, prevClass) {
+    // Simple hash based on string
+    const hash = [...tag].reduce((acc, ch) => acc + ch.charCodeAt(0), 0);
 
-  function getRandomColorClass(prevClass) {
+    // Ensure we don’t repeat previous class
     const available = COLOR_CLASSES.filter((c) => c !== prevClass);
-    return available[Math.floor(Math.random() * available.length)];
+
+    return available[hash % available.length];
   }
 
   // const cssAppliedContent = (body) => {
@@ -234,8 +238,10 @@ const IndividualBlogPage = ({ data }) => {
                 {
                   blog?.blog_tags?.reduce(
                     (acc, tag, index) => {
-                      const prevColor = acc.lastColor; // only track the color
-                      const colorClass = getRandomColorClass(prevColor);
+                      const colorClass = getDeterministicColor(
+                        tag,
+                        acc.lastColor
+                      );
 
                       acc.elements.push(
                         <div
@@ -246,7 +252,7 @@ const IndividualBlogPage = ({ data }) => {
                         </div>
                       );
 
-                      acc.lastColor = colorClass; // update last color
+                      acc.lastColor = colorClass;
                       return acc;
                     },
                     { elements: [], lastColor: null }

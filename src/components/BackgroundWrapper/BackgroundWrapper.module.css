@@ -43,6 +43,7 @@
     justify-content: flex-start;
     /* auto space adjusts with height */
     pointer-events: none;
+    z-index: 0;
 }
 
 .lhs {
