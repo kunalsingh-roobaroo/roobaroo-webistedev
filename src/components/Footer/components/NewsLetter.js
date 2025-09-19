@@ -6,14 +6,18 @@ import { newsarrow, success, upright } from "../../../../public/assets/icons";
 import { staticAlt } from "@/lib/constants";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-const NewsLetter = ({ homepage, label }) => {
+const NewsLetter = ({ homepage, label, register }) => {
   const [step, setStep] = React.useState(1);
   return (
     <>
       {step === 1 ? (
         <Link
           target="_blank"
-          href={"https://www.instagram.com/roobaroo.ai/"}
+          href={
+            register
+              ? "https://forms.gle/gf4BcnFZ7Vq9Y9DW7"
+              : "https://www.instagram.com/roobaroo.ai/"
+          }
           className={classes.purplebox}
         >
           <div className={classes.top}>

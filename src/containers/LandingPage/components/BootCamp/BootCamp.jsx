@@ -16,6 +16,7 @@ import {
 } from "../../../../../public/assets/BootCamp";
 import Image from "next/image";
 import { responsiveImageSizes, staticAlt } from "@/lib/constants";
+import Link from "next/link";
 const BootCamp = () => {
   const tiles = [
     {
@@ -62,7 +63,7 @@ const BootCamp = () => {
     },
   ];
   return (
-    <section  id="bootcamp" className={classes.container}>
+    <section id="bootcamp" className={classes.container}>
       <div className={classes.op}>
         <div className={classes.boxtop}>
           <div className={classes.toplhs}>
@@ -87,7 +88,18 @@ const BootCamp = () => {
                       strokeWidth={3}
                     />
                   </div>
-                  <h4 className={classes.boxttx}>Message Us</h4>
+                  <Link
+                    href={
+                      "https://api.whatsapp.com/send/?phone=919211611614&text&type=phone_number&app_absent=0"
+                    }
+                    target="_blank"
+                    className={classes.boxttx}
+                    style={{
+                      textDecorationLine: "none",
+                    }}
+                  >
+                    Message Us
+                  </Link>
                 </div>
                 <div className={classes.redbox}>
                   <div className={classes.top}>
@@ -101,7 +113,7 @@ const BootCamp = () => {
                   <h4 className={classes.boxttx}>Book a Meeting</h4>
                 </div>
               </div>
-              <NewsLetter label={"Register Interest"} homepage={true} />
+              <NewsLetter label={"Register Interest"} register={true} homepage={true} />
             </div>
             <p className={classes.txt}>
               Your child&apos;s gateway to become future-ready in an evolving AI

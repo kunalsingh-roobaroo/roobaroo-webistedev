@@ -71,9 +71,9 @@ import {
 import { X } from "lucide-react";
 const KnowYourBuddy = () => {
   const links = [
-    { icon: colorlinkedin, link: "https://linkedin.com/in/yourpage" },
-    { icon: colorinstagram, link: "https://instagram.com/yourpage" },
-    { icon: colorlinktree, link: "https://linktr.ee/yourpage" },
+    { icon: colorlinkedin, link: "https://linktr.ee/roobaroo.ai" },
+    { icon: colorinstagram, link: "https://www.instagram.com/roobaroo.ai/" },
+    { icon: colorlinktree, link: "https://linktr.ee/roobaroo.ai" },
   ];
 
   const redBoxData = [
