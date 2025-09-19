@@ -79,7 +79,12 @@ const BootCamp = () => {
           <div className={classes.toprhs}>
             <div className={classes.actions}>
               <div className={classes.upperaction}>
-                <div className={classes.bluebox}>
+                <Link
+                  href="https://api.whatsapp.com/send/?phone=919211611614&text&type=phone_number&app_absent=0"
+                  target="_blank"
+                  style={{ textDecoration: "none" }}
+                  className={classes.bluebox} // Move the box class here
+                >
                   <div className={classes.top}>
                     <ArrowUpRight
                       color="white"
@@ -88,20 +93,14 @@ const BootCamp = () => {
                       strokeWidth={3}
                     />
                   </div>
-                  <Link
-                    href={
-                      "https://api.whatsapp.com/send/?phone=919211611614&text&type=phone_number&app_absent=0"
-                    }
-                    target="_blank"
-                    className={classes.boxttx}
-                    style={{
-                      textDecorationLine: "none",
-                    }}
-                  >
-                    Message Us
-                  </Link>
-                </div>
-                <div className={classes.redbox}>
+                  <p className={classes.boxttx}>Message Us</p>
+                </Link>
+                <Link
+                  href="https://calendly.com/bhaskar-roobaroo/30min"
+                  target="_blank"
+                  style={{ textDecoration: "none" }}
+                  className={classes.redbox}
+                >
                   <div className={classes.top}>
                     <ArrowUpRight
                       color="white"
@@ -111,9 +110,13 @@ const BootCamp = () => {
                     />
                   </div>
                   <h4 className={classes.boxttx}>Book a Meeting</h4>
-                </div>
+                </Link>
               </div>
-              <NewsLetter label={"Register Interest"} register={true} homepage={true} />
+              <NewsLetter
+                label={"Register Interest"}
+                register={true}
+                homepage={true}
+              />
             </div>
             <p className={classes.txt}>
               Your child&apos;s gateway to become future-ready in an evolving AI

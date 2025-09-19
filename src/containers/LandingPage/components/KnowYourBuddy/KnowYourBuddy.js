@@ -73,7 +73,7 @@ const KnowYourBuddy = () => {
   const links = [
     { icon: colorlinkedin, link: "https://linktr.ee/roobaroo.ai" },
     { icon: colorinstagram, link: "https://www.instagram.com/roobaroo.ai/" },
-    { icon: colorlinktree, link: "https://linktr.ee/roobaroo.ai" },
+    { icon: colorlinktree, link: "https://www.linkedin.com/company/roobaroo-ai" },
   ];
 
   const redBoxData = [

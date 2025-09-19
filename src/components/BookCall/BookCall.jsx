@@ -1,6 +1,7 @@
 import React from "react";
-import { ArrowUpRight, Link } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import classes from "./BookCall.module.css";
+import Link from "next/link";
 const BookCall = () => {
   return (
     <Link
