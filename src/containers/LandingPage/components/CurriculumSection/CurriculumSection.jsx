@@ -74,7 +74,7 @@ const CurriculumSection = () => {
     <section id="b2b" className={classes.container}>
       <div className={classes.top}>
         <h2 className={classes.headtxt}>
-          What&apos;s missing
+          WHAT&apos;S MISSING
           <br />
           <span className={classes.span}>in your curriculum today?</span>
         </h2>

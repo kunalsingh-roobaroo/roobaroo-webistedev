@@ -36,6 +36,8 @@ const TileCarousel = () => {
         showThumbs={false}
         infiniteLoop={true}
         autoPlay={true}
+        interval={3000} // 5 seconds per slide
+        // transitionTime={1000}
       >
         {data.map((value, index) => {
           return (
@@ -62,7 +64,7 @@ const TileCarousel = () => {
                 >
                   +{" "}
                 </span>
-                 {value.subpara}
+                {value.subpara}
               </p>
             </div>
           );
