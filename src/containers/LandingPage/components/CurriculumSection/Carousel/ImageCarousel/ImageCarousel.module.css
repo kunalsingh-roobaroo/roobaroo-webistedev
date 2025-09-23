@@ -27,7 +27,13 @@
     aspect-ratio: 355/198 !important;
     /* removes react-carousel inline padding */
 }
+.carouselwrapper :global(.slick-slide > div) {
+  margin: 0 5px;
+}
 
+.carouselwrapper :global(.slick-list) {
+  margin: 0 -5px;
+}
 @media (max-width:450px) {
     .desktop {
         display: none;
