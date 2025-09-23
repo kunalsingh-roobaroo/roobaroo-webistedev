@@ -3,6 +3,8 @@ import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import classes from "./TileCarousel.module.css";
+import Slider from "react-slick";
+import "./carousel.css";
 const TileCarousel = () => {
   const data = [
     {
@@ -27,26 +29,28 @@ const TileCarousel = () => {
       background: "#815FAA",
     },
   ];
+  var settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    lazyLoad: true,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 4000,
+    arrows: false,
+    cssEase: "linear",
+    
+  };
   return (
     <div className={classes.carouselwrapper}>
-      <Carousel
-        showArrows={false}
-        showStatus={false}
-        showIndicators={false}
-        showThumbs={false}
-        infiniteLoop={true}
-        autoPlay={true}
-        interval={3000} // 5 seconds per slide
-        // transitionTime={1000}
-      >
+      <Slider {...settings}>
         {data.map((value, index) => {
           return (
             <div
               key={index}
-              style={{
-                background: value.background,
-              }}
-              className={classes.tile}
+              className={`${classes.tile} ${classes[`tile${index + 1}`]}`}
             >
               <div className={classes.top}>
                 <p className={classes.headtxt}>
@@ -69,7 +73,7 @@ const TileCarousel = () => {
             </div>
           );
         })}
-      </Carousel>
+      </Slider>
     </div>
   );
 };

@@ -19,7 +19,7 @@ import Image from "next/image";
 import { responsiveImageSizes, staticAlt } from "@/lib/constants";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import "./carousel.css";
+import Slider from "react-slick";
 
 const ImageCarousel = () => {
   const images = [
@@ -30,17 +30,31 @@ const ImageCarousel = () => {
     { desktop: car5, mobile: mob5 },
     { desktop: car6, mobile: mob6 },
   ];
+  var settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    lazyLoad: true,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 2000,
+    arrows: false,
+    cssEase:'linear'
+  };
   return (
     <div className={classes.carouselwrapper}>
-      <Carousel
-        showArrows={false}
-        showStatus={false}
-        showIndicators={false}
-        showThumbs={false}
-        infiniteLoop={true}
-        autoPlay={true}
+      <Slider
+        {...settings}
+        // showArrows={false}
+        // showStatus={false}
+        // showIndicators={false}
+        // showThumbs={false}
+        // infiniteLoop={true}
+        // autoPlay={true}
       >
-        {images.map((value, index) => {
+        {[...images].map((value, index) => {
           return (
             <div key={index} className={classes.tile}>
               <Image
@@ -51,7 +65,7 @@ const ImageCarousel = () => {
                 className={classes.desktop}
               />
               <Image
-                src={value.desktop}
+                src={value.mobile}
                 fill
                 alt={staticAlt}
                 sizes={responsiveImageSizes}
@@ -60,7 +74,7 @@ const ImageCarousel = () => {
             </div>
           );
         })}
-      </Carousel>
+      </Slider>
     </div>
   );
 };

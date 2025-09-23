@@ -1,7 +1,7 @@
 .carouselwrapper {
     width: 24.65277777778vw;
 
-    aspect-ratio: 355/198;
+    /* aspect-ratio: 355/198; */
     align-self: stretch;
     position: relative;
 }
@@ -9,7 +9,7 @@
 .tile {
     width: 100%;
     align-self: stretch;
-    /* aspect-ratio: 355/198; */
+    aspect-ratio: 355/198;
     position: relative;
     height: 100%;
     border-radius: 18px;
@@ -35,6 +35,9 @@
 
     .tile {
         border-radius: 17.076px;
+        height: 187px !important;
+        aspect-ratio: unset;
+        width: 100%;
     }
 
     .carouselwrapper {

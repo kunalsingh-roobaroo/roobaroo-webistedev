@@ -212,6 +212,9 @@
         width: 100%;
     }
 
+    .mobcarouselimg{
+        width: 50%;
+    }
     .headtxt {
 
         font-size: 36.392px;
@@ -230,6 +233,7 @@
     .subtxt {
         font-size: 13.479px;
         margin-top: 0px;
+        width: auto;
     }
 
     .top {
@@ -351,7 +355,7 @@
 }
 
 @media (min-width:451px) {
-    .mobcarousel {
+    .mobcarousel,.mobcarouselimg {
         display: none;
     }
 }

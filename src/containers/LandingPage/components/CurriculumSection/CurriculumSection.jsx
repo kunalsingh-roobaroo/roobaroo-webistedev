@@ -158,7 +158,7 @@ const CurriculumSection = () => {
             </div>
           </div>
           <div className={classes.boxes}>
-            <div className={classes.mobcarousel}>
+            <div className={classes.mobcarouselimg}>
               <ImageCarousel />
             </div>
             <div className={classes.purplebox}>
