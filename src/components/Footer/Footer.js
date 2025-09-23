@@ -35,7 +35,7 @@ const Footer = () => {
       link: "https://drive.google.com/file/d/1Bn1KPr1FO64-J5Auld-D70FpD-bRypXU/view?usp=drive_link",
     },
     { name: "Know the Team", link: "#team" },
-    { name: "Brand Identity", link: "/" },
+    { name: "Brand Identity", link: "/brandkit" },
     { name: "Talk to Us", link: "https://calendly.com/bhaskar-roobaroo/30min" },
     { name: "Read our Blog", link: "/blogs" },
   ];

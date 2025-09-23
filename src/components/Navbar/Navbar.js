@@ -68,22 +68,25 @@ const Navbar = () => {
 
         {isOpen && (
           <div className={`${classes.menu} `}>
-            <Link href={"#problem"} className={`${classes.navitems} link`}>
-              Problem
+            <Link href="#bootcamp" className={classes.navitems}>
+              Bootcamp{" "}
             </Link>
-            <Link href={"#framework"} className={`${classes.navitems} link`}>
-              Framework
+            <Link href="#newsletter" className={classes.navitems}>
+              Consulting
             </Link>
-            <Link href={"#team"} className={`${classes.navitems} link`}>
+            <Link href="#team" className={classes.navitems}>
               Team
             </Link>
-            <Link href={"/story"} className={`${classes.navitems} link`}>
+            <Link href={"/story"} className={`${classes.navitems} `}>
               Story
             </Link>
-            <Link href={"#"} className={`${classes.navitems} link`}>
+            <Link href="/brandkit" className={classes.navitems}>
               Community
             </Link>
-            <div className={classes.respara}>
+            <Link href="/blogs" className={classes.navitems}>
+              Blogs
+            </Link>
+            {/* <div className={classes.respara}>
               <div className={classes.resource}>
                 <p className={classes.navitems}>Resources</p>
                 <Image
@@ -118,7 +121,7 @@ const Navbar = () => {
                   </Link>
                 </div>
               )}
-            </div>
+            </div> */}
 
             <Link
               href={"https://calendly.com/bhaskar-roobaroo/30min"}
@@ -131,22 +134,25 @@ const Navbar = () => {
         )}
 
         <div className={classes.links}>
-          <Link href={"#problem"} className={`${classes.navitems} link`}>
-            Problem
+          <Link href="#bootcamp" className={classes.navitems}>
+            Bootcamp{" "}
           </Link>
-          <Link href={"#framework"} className={`${classes.navitems} link`}>
-            Framework
+          <Link href="https://www.instagram.com/roobaroo.ai/" className={classes.navitems}>
+            Consulting
           </Link>
-          <Link href={"#team"} className={`${classes.navitems} link`}>
+          <Link href="#team" className={classes.navitems}>
             Team
           </Link>
-          <Link href={"/story"} className={`${classes.navitems} link`}>
+          <Link href={"/story"} className={`${classes.navitems} `}>
             Story
           </Link>
-          <Link href={"#"} className={`${classes.navitems} link`}>
+          <Link href="#" className={classes.navitems}>
             Community
           </Link>
-          <div
+          <Link href="/blogs" className={classes.navitems}>
+            Blogs
+          </Link>
+          {/* <div
             onMouseEnter={() => setIsDropdownOpen(true)}
             className={classes.resource}
           >
@@ -177,7 +183,7 @@ const Navbar = () => {
                 </Link>
               </div>
             )}
-          </div>
+          </div> */}
         </div>
         <Link
           href={"https://calendly.com/bhaskar-roobaroo/30min"}

@@ -76,6 +76,7 @@ import {
   wipro,
 } from "../../../../../public/assets/one-one";
 import { logo } from "../../../../../public/assets/images";
+import { useMediaQuery } from "react-responsive";
 const BuildingSection = () => {
   const members = [
     member1,
@@ -112,6 +113,7 @@ const BuildingSection = () => {
     });
     setColumns(newCols);
   }, []);
+  const isMobile = useMediaQuery({ maxWidth: 450 });
   const titles = [
     "Startup Founders & Career Coach",
     "Clinical Psychologists & Parenting Coach",
@@ -227,16 +229,21 @@ const BuildingSection = () => {
         </div>
 
         <div className={classes.titles}>
-          {titles.map((title, index) => (
-            <div
-              key={index}
-              className={`${classes.title} ${
-                index !== titles.length - 1 ? classes.border : ""
-              }`}
-            >
-              {title}
-            </div>
-          ))}
+          {titles.map((title, index) => {
+            const isLast = index === titles.length - 1;
+            const isThird = index === 2; // 3rd element (0-based index)
+
+            return (
+              <div
+                key={index}
+                className={`${classes.title} ${
+                  !isLast && !(isMobile && isThird) ? classes.border : ""
+                }`}
+              >
+                {title}
+              </div>
+            );
+          })}
         </div>
 
         <div className={classes.brands}>
