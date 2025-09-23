@@ -18,10 +18,12 @@ import classes from "./ImageCarousel.module.css";
 import Image from "next/image";
 import { responsiveImageSizes, staticAlt } from "@/lib/constants";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
 import Slider from "react-slick";
+import { useMediaQuery } from "react-responsive";
 
 const ImageCarousel = () => {
+  const isMobile = useMediaQuery({ maxWidth: 450 });
+
   const images = [
     { desktop: car1, mobile: mob1 },
     { desktop: car2, mobile: mob2 },
@@ -30,10 +32,10 @@ const ImageCarousel = () => {
     { desktop: car5, mobile: mob5 },
     { desktop: car6, mobile: mob6 },
   ];
-  var settings = {
+
+  const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     lazyLoad: true,
@@ -41,39 +43,23 @@ const ImageCarousel = () => {
     speed: 1000,
     autoplaySpeed: 2000,
     arrows: false,
-    cssEase:'linear'
+    cssEase: "linear",
   };
+
   return (
     <div className={classes.carouselwrapper}>
-      <Slider
-        {...settings}
-        // showArrows={false}
-        // showStatus={false}
-        // showIndicators={false}
-        // showThumbs={false}
-        // infiniteLoop={true}
-        // autoPlay={true}
-      >
-        {[...images].map((value, index) => {
-          return (
-            <div key={index} className={classes.tile}>
-              <Image
-                src={value.desktop}
-                fill
-                alt={staticAlt}
-                sizes={responsiveImageSizes}
-                className={classes.desktop}
-              />
-              <Image
-                src={value.mobile}
-                fill
-                alt={staticAlt}
-                sizes={responsiveImageSizes}
-                className={classes.mobile}
-              />
-            </div>
-          );
-        })}
+      <Slider {...settings}>
+        {images.map((value, index) => (
+          <div key={index} className={classes.tile}>
+            <Image
+              src={isMobile ? value.mobile : value.desktop}
+              fill
+              alt={staticAlt}
+              sizes={responsiveImageSizes}
+              className={isMobile ? classes.mobile : classes.desktop}
+            />
+          </div>
+        ))}
       </Slider>
     </div>
   );
