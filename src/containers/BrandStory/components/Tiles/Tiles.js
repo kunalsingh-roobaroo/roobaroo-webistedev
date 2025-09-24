@@ -16,7 +16,7 @@ const Tiles = () => {
       subtitle:
         "The Growth–Wellness Balance Matrix is a simple but powerful tool to diagnose where you are — or where your team, institution or workplace sits.",
       thumbnail: thumbnail,
-      link: "https://drive.google.com/file/d/1Bn1KPr1FO64-J5Auld-D70FpD-bRypXU/view",
+      link: "https://drive.google.com/file/d/1gAGl-xI4nm7g7nM5fFLuHStKjo6O6gEA/view?usp=drive_link",
     },
     {
       title: "Problem We Are Solving",

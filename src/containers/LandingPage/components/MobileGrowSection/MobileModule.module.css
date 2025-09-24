@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 100%;
     padding: 27px 0px 0px 0px;
-    gap: 100px;
+    gap: 85px;
     position: relative;
     height: auto;
 }
@@ -59,16 +59,19 @@
 
 .right {
     width: 303px;
+    z-index: 1;
 }
 
 .left {
     width: 289px;
+    z-index: 1;
 }
 
 .backgroundframe {
     width: 100%;
     height: 100%;
     position: relative;
+    z-index: 0;
 }
 
 .background {

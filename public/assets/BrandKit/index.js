@@ -10,6 +10,8 @@ import visual3 from "./visual3.png";
 import visualdont from "./visualdont.png";
 import white from "./white.png";
 import black from "./black.png";
+import newlight from "./newlight.png";
+import newdark from "./newdark.png";
 import purple from "./purple.png";
 import logohero from "./logohero.png";
 import updatedlogo from "./updatedlogo.svg";
@@ -63,6 +65,8 @@ export {
   print,
   ellipse,
   coral,
+  newdark,
+  newlight,
   guidelinehero,
   sub4,
   sub3,

@@ -5,6 +5,7 @@ import Image from "next/image";
 import {
   arrow_down,
   brush_border,
+  knowmoreborder,
   linktree,
   quotes,
 } from "../../../../../public/assets/icons";
@@ -73,7 +74,10 @@ const KnowYourBuddy = () => {
   const links = [
     { icon: colorlinkedin, link: "https://linktr.ee/roobaroo.ai" },
     { icon: colorinstagram, link: "https://www.instagram.com/roobaroo.ai/" },
-    { icon: colorlinktree, link: "https://www.linkedin.com/company/roobaroo-ai" },
+    {
+      icon: colorlinktree,
+      link: "https://www.linkedin.com/company/roobaroo-ai",
+    },
   ];
 
   const redBoxData = [
@@ -103,7 +107,6 @@ const KnowYourBuddy = () => {
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
-
 
   const value = redBoxData[0];
 
@@ -144,7 +147,7 @@ const KnowYourBuddy = () => {
       designation: "College Student",
     },
   ];
-    useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % testimonialData.length);
     }, 3000); // change every 3s
@@ -303,6 +306,16 @@ const KnowYourBuddy = () => {
                     })}
                   </div>
                   <div className={classes.clickhere}>Click here</div>
+                  <div className={classes.knomorebg}>
+                    <div className={classes.knomoreframe}>
+                      <Image
+                        src={knowmoreborder}
+                        fill
+                        alt={staticAlt}
+                        sizes={responsiveImageSizes}
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

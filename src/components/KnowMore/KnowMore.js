@@ -1,9 +1,20 @@
+"use client";
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 import classes from "./KnowMore.module.css";
+
 const KnowMore = () => {
+  const handleClick = () => {
+    window.open(
+      "https://drive.google.com/file/d/1gAGl-xI4nm7g7nM5fFLuHStKjo6O6gEA/view?usp=drive_link"
+    ); // opens in a new tab
+  };
   return (
-    <div className={classes.bluebox}>
+    <div
+      onClick={handleClick}
+      style={{ cursor: "pointer" }}
+      className={classes.bluebox}
+    >
       <div className={classes.top}>
         <ArrowUpRight color="white" size={28} rotate={-45} strokeWidth={3} />
       </div>

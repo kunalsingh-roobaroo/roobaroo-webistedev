@@ -446,6 +446,11 @@ aspect-ratio: unset;
     .pillContainer{
         gap: 31px;
     }
+    .logo{
+        width: 101.718px;
+height: 21.546px;
+aspect-ratio: unset;
+    }
 }
 
 @media (min-width:451px) {

@@ -169,10 +169,20 @@ letter-spacing: -0.2px;
     .carouselWrapper{
         height: 410px;
     }
+    
+
+    
 }
 
 @media (min-width:451px) {
     .imagewrapper {
         display: none;
     }
+}
+.carouselWrapper :global(.slick-slide) {
+  padding: 0 5px;
+}
+
+.carouselWrapper :global(.slick-list) {
+  margin: 0 -5px;
 }

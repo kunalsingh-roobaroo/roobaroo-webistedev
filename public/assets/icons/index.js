@@ -11,6 +11,7 @@ import brandhand from "./brandhand.svg";
 import linkedin from "./linkedin.svg";
 import mail from "./mail.svg";
 import call from "./call.svg";
+import knowmoreborder from "./knowmoreborder.svg";
 import location from "./location.svg";
 import fire from "./fire.svg";
 import crispbg from "./crispbg.svg";
@@ -80,6 +81,7 @@ export {
   purplearrow,
   purplestroke,
   strugglestroke,
+  knowmoreborder,
   blackbrush,
   comfortstroke,
   brush,

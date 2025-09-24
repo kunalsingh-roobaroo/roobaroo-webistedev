@@ -78,6 +78,15 @@
   }
 
   .slick-dots {
-    bottom:-30px !important ;
+    bottom: -30px !important;
   }
+
+
 }
+  .carouselwrapper :global(.slick-slide > .slide) {
+    margin: 0 5px;
+  }
+
+  .carouselwrapper :global(.slick-list) {
+    margin: 0 -5px;
+  }

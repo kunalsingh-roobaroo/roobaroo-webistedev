@@ -19,7 +19,7 @@ import NewsLetter from "./components/NewsLetter";
 import { ArrowUpRight } from "lucide-react";
 const Footer = () => {
   const gridItems = [
-    { name: "Organisation Consulting", link: "#" },
+    { name: "Organisation Consulting", link: "#b2b" },
     {
       name: "What’s Roobaroo.ai?",
       link: "https://drive.google.com/file/d/1Il8CZBei-JceUYO33BKW-qhptZtFD2ME/view",
@@ -27,12 +27,12 @@ const Footer = () => {
     { name: "Student Bootcamp", link: "#bootcamp" },
     {
       name: "The Problem",
-      link: "https://www.instagram.com/roobaroo.ai/",
+      link: "https://drive.google.com/file/d/1mXr9Y2P323s2yCePFlZPHPMg8T0X0qJY/view?usp=drive_link",
     },
     { name: "Our Brand Story", link: "/story" },
     {
       name: "Guiding Principle",
-      link: "https://drive.google.com/file/d/1Bn1KPr1FO64-J5Auld-D70FpD-bRypXU/view?usp=drive_link",
+      link: "https://drive.google.com/file/d/1gAGl-xI4nm7g7nM5fFLuHStKjo6O6gEA/view?usp=drive_link",
     },
     { name: "Know the Team", link: "#team" },
     { name: "Brand Identity", link: "/brandkit" },
@@ -87,9 +87,9 @@ const Footer = () => {
                 <Image src={heart} fill alt={staticAlt} />
               </div>
             </div>
-            <div className={classes.whitelogo}>
+            <Link href={"/"} className={classes.whitelogo}>
               <Image src={whitelogo} fill alt={staticAlt} />
-            </div>
+            </Link>
             <div className={classes.gridSection}>
               {gridItems.map((item, index) => (
                 <Link
@@ -102,7 +102,7 @@ const Footer = () => {
               ))}
             </div>
           </div>
-          <div className={classes.rhs}>
+          <Link href={'#bootcamp'} className={classes.rhs}>
             <p className={classes.headtxt}>
               Helping you grow without burning out!
             </p>
@@ -110,8 +110,7 @@ const Footer = () => {
               <div className={classes.txtdiv}>
                 <p className={classes.sub}>The 21st Century Bootcamp</p>
                 <p className={classes.small}>
-                  Your child&apos;s gateway to become future-ready in an
-                  evolving AI world
+                 Your gateway to become future-ready in an AI-first world
                 </p>
               </div>
               <ArrowUpRight
@@ -125,7 +124,7 @@ const Footer = () => {
                 }}
               />
             </div>
-          </div>
+          </Link>
         </div>
         <div className={classes.middle}>
           <div className={classes.midlhs}>

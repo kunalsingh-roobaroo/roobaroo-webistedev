@@ -8,6 +8,7 @@ import {
 } from "../../../../../../public/assets/BrandKit";
 import Image from "next/image";
 import { responsiveImageSizes, staticAlt } from "@/lib/constants";
+import Link from "next/link";
 const Submark = () => {
   const icons = [sub1, sub2, sub3, sub4];
   return (
@@ -16,14 +17,14 @@ const Submark = () => {
       <div className={classes.icons}>
         {icons.map((value, index) => {
           return (
-            <div key={index} className={classes.ico}>
+            <Link href={value.src} download key={index} className={classes.ico}>
               <Image
                 src={value}
                 fill
                 alt={staticAlt}
                 sizes={responsiveImageSizes}
               />
-            </div>
+            </Link>
           );
         })}
       </div>

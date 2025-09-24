@@ -39,9 +39,9 @@ const ImageCarousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     lazyLoad: true,
-    autoplay: true,
+    autoplay: false,
     speed: 1000,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     arrows: false,
     cssEase: "linear",
   };

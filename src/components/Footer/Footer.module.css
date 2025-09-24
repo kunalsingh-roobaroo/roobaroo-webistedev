@@ -413,11 +413,7 @@
         height: 72px;
     }
 
-    .gridSection {
-        gap: 12px 44px;
-        /* justify-content: space-between; */
-        margin-top: 48px;
-    }
+
 
     .gridItem {
         font-size: 13.64px;
@@ -502,7 +498,7 @@
 
     .gridSection {
         margin-top: 18px;
-        gap: 7px 44px;
+        gap: 7px 59px;
     }
 
     .top {

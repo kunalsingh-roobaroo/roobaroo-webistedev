@@ -17,6 +17,7 @@ import {
 import Image from "next/image";
 import { responsiveImageSizes, staticAlt } from "@/lib/constants";
 import Link from "next/link";
+import { bootcamplogo } from "../../../../../public/assets/images";
 const BootCamp = () => {
   const tiles = [
     {
@@ -67,14 +68,7 @@ const BootCamp = () => {
       <div className={classes.op}>
         <div className={classes.boxtop}>
           <div className={classes.toplhs}>
-            <div className={classes.lhstop}>
-              <h2 className={classes.headtxt}>The 21</h2>
-              <h2 className={classes.st}>ST</h2>
-            </div>
-            <div className={classes.lhsbottom}>
-              <h2 className={classes.century}>Century</h2>
-              <h2 className={classes.bootcamp}>Bootcamp</h2>
-            </div>
+          <Image src={bootcamplogo} fill alt={staticAlt} sizes={responsiveImageSizes}/>
           </div>
           <div className={classes.toprhs}>
             <div className={classes.actions}>
@@ -119,8 +113,7 @@ const BootCamp = () => {
               />
             </div>
             <p className={classes.txt}>
-              Your child&apos;s gateway to become future-ready in an evolving AI
-              world
+              Your gateway to become future-ready in an AI-first world
             </p>
           </div>
         </div>

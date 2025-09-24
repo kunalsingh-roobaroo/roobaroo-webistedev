@@ -46,13 +46,17 @@ import deskcircle from "./deskcircle.png";
 import infinitymob from "./infinitymob.png";
 import papermob from "./papermob.png";
 import handsmob from "./handsmob.png";
+import linkbg from "./linkbg.png";
+import bootcamplogo from "./bootcamplogo.png";
 export {
   logo,
   biglight,
   infinitymob,
   deskcircle,
   handsmob,
+  linkbg,
   papermob,
+  bootcamplogo,
   roobaroomatrix,
   singh,
   topmarkdark,

@@ -137,7 +137,7 @@ const Navbar = () => {
           <Link href="#bootcamp" className={classes.navitems}>
             Bootcamp{" "}
           </Link>
-          <Link href="https://www.instagram.com/roobaroo.ai/" className={classes.navitems}>
+          <Link href="#b2b" className={classes.navitems}>
             Consulting
           </Link>
           <Link href="#team" className={classes.navitems}>
@@ -146,7 +146,7 @@ const Navbar = () => {
           <Link href={"/story"} className={`${classes.navitems} `}>
             Story
           </Link>
-          <Link href="#" className={classes.navitems}>
+          <Link href="https://www.instagram.com/roobaroo.ai/" className={classes.navitems}>
             Community
           </Link>
           <Link href="/blogs" className={classes.navitems}>

@@ -1,13 +1,17 @@
 import React from "react";
 import classes from "./DownloadBtn.module.css";
-import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-// import { carertslant } from "../../../public/assets/BrandKit";
 import { responsiveImageSizes, staticAlt } from "@/lib/constants";
 import { carertslant } from "../../../public/assets/BrandKit";
+import Link from "next/link";
+
 const DownloadBtn = () => {
   return (
-    <div className={classes.bluebox}>
+    <Link
+      href="https://drive.google.com/drive/u/2/folders/1J3DmOVk4UbNXydPSIrd3juzZ4jw8Poz1" // <-- replace with your file path or link
+      download // forces download instead of opening
+      className={classes.bluebox}
+    >
       <div className={classes.top}>
         <div className={classes.ico}>
           <Image
@@ -20,7 +24,7 @@ const DownloadBtn = () => {
         </div>
       </div>
       <h4 className={classes.boxttx}>Download Logo Assets</h4>
-    </div>
+    </Link>
   );
 };
 

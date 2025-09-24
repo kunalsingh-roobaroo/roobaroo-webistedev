@@ -30,6 +30,9 @@
     display: flex;
     flex-direction: column;
     gap: 26px;
+    aspect-ratio: 517/338;
+    width: 35.90277777778vw;
+    position: relative;
 }
 
 .headtxt {
@@ -458,6 +461,11 @@
         aspect-ratio: unset;
         padding: 13px 11px;
         border-radius: 17.484px;
+    }
+    .toplhs{
+        width: 310px;
+        aspect-ratio: unset;
+        height: 206px;
     }
 
     .redbox {

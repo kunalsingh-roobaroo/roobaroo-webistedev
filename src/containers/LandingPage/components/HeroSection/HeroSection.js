@@ -6,6 +6,7 @@ import NewsLetter from "@/components/Footer/components/NewsLetter";
 import { heroarrow, leaves } from "../../../../../public/assets/icons";
 import { responsiveImageSizes, staticAlt } from "@/lib/constants";
 import { bigpink } from "../../../../../public/assets/images";
+import Link from "next/link";
 const HeroSection = () => {
   return (
     <section className={classes.container}>
@@ -37,18 +38,18 @@ const HeroSection = () => {
         </div>
         <div className={classes.actions}>
           <div className={classes.upperaction}>
-            <div className={classes.bluebox}>
+            <Link href={'#bootcamp'} className={classes.bluebox}>
               <div className={classes.top}>
                 <ArrowUpRight color="white" size={28} rotate={-45}   strokeWidth={3} />
               </div>
               <h4 className={classes.boxttx}>Student Bootcamp</h4>
-            </div>
-            <div className={classes.redbox}>
+            </Link>
+            <Link href={'#b2b'} className={classes.redbox}>
               <div className={classes.top}>
                 <ArrowUpRight color="white" size={28} rotate={-45}   strokeWidth={3} />
               </div>
               <h4 className={classes.boxttx}>Organisation Consulting</h4>
-            </div>
+            </Link>
           </div>
           <NewsLetter homepage={true} />
         </div>
