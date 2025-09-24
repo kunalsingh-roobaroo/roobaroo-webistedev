@@ -39,7 +39,7 @@ const ImageCarousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     lazyLoad: true,
-    autoplay: false,
+    autoplay: true,
     speed: 1000,
     autoplaySpeed: 3000,
     arrows: false,
