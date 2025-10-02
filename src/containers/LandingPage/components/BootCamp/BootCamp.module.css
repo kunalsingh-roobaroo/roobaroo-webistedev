@@ -389,6 +389,7 @@
         width: 100%;
         flex-direction: column;
         padding: 0px 27px;
+        align-items: center;
     }
 
     .op {

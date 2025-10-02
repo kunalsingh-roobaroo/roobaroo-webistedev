@@ -40,7 +40,7 @@
     background: linear-gradient(181deg, rgba(255, 255, 255, 0.00) 20.51%, #FFF 139.37%);
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.13);
     width: 25.34722222222vw;
-    aspect-ratio: 365/488;
+    aspect-ratio: 365/405;
     padding: 19px 16px 32px 17px;
     cursor: pointer;
     display: flex;
@@ -57,7 +57,7 @@
 
 .thumbnail {
     width: 100%;
-    aspect-ratio: 332/242;
+ aspect-ratio: 332.49/174.40;
     position: relative;
     border-radius: 45px 45px 0px 0px;
     overflow: hidden;
@@ -92,6 +92,12 @@
     letter-spacing: 0.19px;
     text-transform: lowercase;
     margin-top: 7px;
+
+      display: -webkit-box;
+  -webkit-line-clamp: 2;   /* limit to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .subtite {
@@ -186,7 +192,9 @@
         padding: 0;
         font-size: 37px;
     }
-
+.thumbnail{
+    aspect-ratio: 305.62/160.31;
+}
     .blogs {
         margin-top: 35px;
         flex-direction: column;

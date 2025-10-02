@@ -60,6 +60,10 @@
         gap: 63px;
     }
 
+    .video {
+        display: none;
+    }
+
     .header {
         padding: 0;
 
@@ -75,5 +79,11 @@
 
     .featuretxt {
         font-size: 37px;
+    }
+}
+
+@media (min-width:451px) {
+    .mobvideo {
+        display: none;
     }
 }

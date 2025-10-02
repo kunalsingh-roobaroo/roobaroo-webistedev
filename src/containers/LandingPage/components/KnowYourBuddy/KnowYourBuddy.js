@@ -70,7 +70,9 @@ import {
   zeptonew,
 } from "../../../../../public/assets/workwith";
 import { X } from "lucide-react";
+import { useMediaQuery } from "react-responsive";
 const KnowYourBuddy = () => {
+  const isMobile = useMediaQuery({ maxWidth: 450 });
   const links = [
     { icon: colorlinkedin, link: "https://linktr.ee/roobaroo.ai" },
     { icon: colorinstagram, link: "https://www.instagram.com/roobaroo.ai/" },
@@ -339,7 +341,13 @@ const KnowYourBuddy = () => {
                       ))}
                     </div>
                   </Marquee>
-                  <Marquee speed={30} direction="right">
+                  <Marquee
+                    style={{
+                      display: isMobile ? "none" : "",
+                    }}
+                    speed={30}
+                    direction="right"
+                  >
                     <div className={classes.brandparent}>
                       {[...value.brands, ...value.brands].map((brand, i) => (
                         <div key={i} className={classes.brandframe}>

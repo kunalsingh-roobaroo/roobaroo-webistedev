@@ -68,7 +68,7 @@ const CurriculumSection = () => {
     "Online Workshops",
     "Consulting Projects",
     "On-Campus Seminars",
-    "Faculty Training Programs",
+    "Faculty Training\n Programs",
   ];
   return (
     <section id="b2b" className={classes.container}>

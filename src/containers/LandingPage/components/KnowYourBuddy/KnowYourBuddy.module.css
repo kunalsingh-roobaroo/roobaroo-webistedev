@@ -776,6 +776,9 @@
         padding: 0;
         position: relative;
     }
+    .brandparent{
+        gap: 23.47px;
+    }
 
     .name {
         color: var(--Whites-Base, #FFF);
@@ -880,14 +883,9 @@
     }
 
     .subtxt {
-        color: var(--Primary-Coral-Base, #FB7D7D);
-        font-family: Montserrat;
+
         font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 100%;
-        /* 16px */
-        letter-spacing: -0.64px;
+        margin-top: 9.98px;
     }
 
     .clgivo {
@@ -1091,7 +1089,7 @@
     }
 
     .box {
-        padding: 12px;
+        padding: 19px 17px 28px 17.6px;
         aspect-ratio: unset;
         width: 100%;
         height: 109px;
@@ -1112,6 +1110,7 @@
 
     .boxtxt {
         font-size: 11.119px;
+        text-align: left;
     }
 
     .click {
@@ -1139,17 +1138,19 @@
     }
 
     .brandframe {
-        width: 57.686px;
-        height: 29.533px;
-        aspect-ratio: 57.686/ 29.533;
+       width: 92.455px;
+height: 49.783px;
+        aspect-ratio: unset;
     }
+    
 }
 
 @media (min-width:451px) {
 
     .name,
     .mobbottomlhsm,
-    .click,.knomorebg {
+    .click,
+    .knomorebg {
         display: none;
     }
 

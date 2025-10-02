@@ -48,12 +48,12 @@
 
 .lhs {
     top: 0;
-    left: -10%;
+    left: -23.01388888889vw;
     animation-delay: 0s;
 }
 
 .rhs {
-    right: -10%;
+    right: -23.01388888889vw;
     top: 200px;
     animation-delay: 0.5s;
 }
@@ -141,12 +141,12 @@
     }
 
     .lhs {
-        left: -50%;
+        left: -264px;
         gap: 296px;
     }
 
     .rhs {
-        right: -50%;
+        right: -264px;
         gap: 296px;
     }
 

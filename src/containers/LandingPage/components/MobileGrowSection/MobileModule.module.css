@@ -2,10 +2,11 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 27px 0px 0px 0px;
-    gap: 85px;
+    padding: 0px 0px 0px 0px;
+    /* gap: 85px; */
     position: relative;
     height: auto;
+       min-height: 662px;
 }
 
 .right {
@@ -17,8 +18,8 @@
 }
 
 .image {
-    width: 112.473px;
-    height: 94.025px;
+ width: 115.709px;
+height: 115.709px;
     flex-shrink: 0;
     position: relative;
 }
@@ -43,27 +44,27 @@
 }
 
 .infinty {
-    width: 97px;
-    height: 53.674px;
+width: 115.709px;
+height: 115.709px;
     position: relative;
     flex-shrink: 0;
 }
 
 .handDooodle {
-    width: 124.797px;
-    height: 66.016px;
-    transform: rotate(21.784deg);
+width: 115.709px;
+height: 115.709px;
+    /* transform: rotate(21.784deg); */
     position: relative;
-    flex-shrink: 0;
+    flex-shrink: 0; 
 }
 
 .right {
-    width: 303px;
+    width: 290px;
     z-index: 1;
 }
 
 .left {
-    width: 289px;
+    width: 290px;
     z-index: 1;
 }
 
@@ -78,9 +79,10 @@
     left: -7px;
     position: absolute;
     width: 100%;
-    aspect-ratio: 390 / 653;
-    min-height: 653px;
+    /* aspect-ratio: 390 / 653; */
+    /* min-height: 653px; */
     top: -49px;
+    height: 573px;
 }
 
 .underline {
@@ -94,4 +96,13 @@
     position: absolute;
     bottom: 48px;
     left: 0vw;
+}
+.right{
+    margin-right: 13px;
+}
+.img{
+    /* width: 390px; */
+height: 662px;
+width: 100%;
+position: relative;
 }

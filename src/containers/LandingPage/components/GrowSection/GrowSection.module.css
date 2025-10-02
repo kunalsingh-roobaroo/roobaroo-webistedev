@@ -55,8 +55,9 @@
 @media (max-width:450px) {
     .container {
         background: none;
-        padding: 20px 10px 0px 10px;
+        padding: 89px 10px 0px 10px;
         align-items: center;
+        gap: 39px;
     }
 
     .desktop {

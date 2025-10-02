@@ -349,6 +349,7 @@
     aspect-ratio: 304.158/138.084;
     /* justify-content: space-between; */
     box-shadow: 10.627px 7.439px 12.752px 0 rgba(0, 0, 0, 0.05);
+     padding: 15px 25px 14px 13px;
   }
 
   .highlightcard {
@@ -357,11 +358,12 @@
     flex-shrink: 0;
     box-shadow: 11.216px 7.851px 13.459px 0 rgba(0, 0, 0, 0.05);
     aspect-ratio: unset;
-    padding: 30px;
+   padding: 30px;
   }
 
   .txtdiv {
-    margin-top: 0px;
+    margin-top: 12px;
+    gap: 3px;
   }
 
   .highlightcardTitle {

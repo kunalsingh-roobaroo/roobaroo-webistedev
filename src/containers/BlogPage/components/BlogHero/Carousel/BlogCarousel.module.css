@@ -131,9 +131,10 @@ letter-spacing: -0.2px;
 
     .imagewrapper {
         width: 100%;
-        height: 176.242px;
+        /* height: 176.242px; */
         flex-shrink: 0;
         position: relative;
+        aspect-ratio: 336.00/176.24;
     }
 
     .date {

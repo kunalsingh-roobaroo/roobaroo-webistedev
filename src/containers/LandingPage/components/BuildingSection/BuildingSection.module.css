@@ -263,11 +263,11 @@ font-family: Montserrat;
 }
 
 .scrollUp .marqueeInner {
-    animation: scrollUp 250s linear infinite;
+    animation: scrollUp 100s linear infinite;
 }
 
 .scrollDown .marqueeInner {
-    animation: scrollDown 250s linear infinite;
+    animation: scrollDown 100s linear infinite;
 }
 
 .logo {

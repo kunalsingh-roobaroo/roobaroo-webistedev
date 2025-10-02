@@ -57,20 +57,24 @@ const Footer = () => {
       link: "https://x.com/roobaroo_ai",
     },
   ];
-  const contacts = [
-    {
-      icon: mail,
-      detail: "contact@roobaroo.ai",
-    },
-    {
-      icon: call,
-      detail: "9211611614",
-    },
-    {
-      icon: location,
-      detail: "WeWork, DLF 2 Horizon Centre, Gurgaon- 122002",
-    },
-  ];
+const contacts = [
+  {
+    icon: mail,
+    detail: "contact@roobaroo.ai",
+    link: "mailto:contact@roobaroo.ai",
+  },
+  {
+    icon: call,
+    detail: "9211611614",
+    link: "tel:9211611614",
+  },
+  {
+    icon: location,
+    detail: "WeWork, DLF 2 Horizon Centre, Gurgaon- 122002",
+    link: "#",
+  },
+];
+
   return (
     <div className={classes.container}>
       <footer className={classes.footer}>
@@ -147,18 +151,24 @@ const Footer = () => {
               );
             })}
           </div>
-          <div className={classes.contacts}>
-            {contacts.map((value, index) => {
-              return (
-                <div key={index} className={classes.detail}>
-                  <div className={classes.ico}>
-                    <Image src={value.icon} fill alt={staticAlt} />
-                  </div>
-                  <p className={classes.dertail}>{value.detail}</p>
-                </div>
-              );
-            })}
-          </div>
+    <div className={classes.contacts}>
+  {contacts.map((value, index) => {
+    return (
+      <Link
+        key={index}
+        href={value.link}
+        target={value.link.startsWith("http") ? "_blank" : "_self"}
+        className={classes.detail}
+      >
+        <div className={classes.ico}>
+          <Image src={value.icon} fill alt={staticAlt} />
+        </div>
+        <p className={classes.dertail}>{value.detail}</p>
+      </Link>
+    );
+  })}
+</div>
+
         </div>
         <hr className={classes.rule} />
         <div className={classes.bottom}>

@@ -72,15 +72,11 @@ const BrandStory = () => {
         </div>
 
         <div className={classes.imagecontianer}>
-          {/* <div className={classes.image}>
-            <Image src={pink} fill alt={staticAlt} />
-          </div> */}
+      
           <PinkBox />
         </div>
         <div className={classes.blueimagecontianer}>
-          {/* <div className={classes.image}>
-            <Image src={blue} fill alt={staticAlt} />
-          </div> */}
+      
           <BlueBox />
         </div>
       </div>

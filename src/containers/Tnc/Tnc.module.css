@@ -191,8 +191,8 @@
     }
 
     .section {
-        width: 336px;
-        padding: 0;
+        width: 100%;
+   padding: 89px 27px 27px 27px;       
     }
 
     .container {

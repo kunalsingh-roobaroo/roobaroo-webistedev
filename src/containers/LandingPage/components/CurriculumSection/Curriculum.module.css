@@ -324,7 +324,7 @@
         width: 144px;
         height: 187px;
         padding: 13px;
-        gap: 9.493px;
+        gap: 6px;
         border-radius: 17.088px;
         aspect-ratio: unset;
     }
@@ -332,7 +332,8 @@
     .chip {
         font-size: 9px;
         text-align: center;
-        padding: 6px 0px;
+        padding: 7px 5px;
+         white-space: pre-line; 
     }
 
     .box {

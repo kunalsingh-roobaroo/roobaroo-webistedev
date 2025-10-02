@@ -23,6 +23,8 @@ import {
   member19,
   member20,
   member21,
+  member22,
+  member23,
 } from "../../../../../public/assets/team";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
@@ -78,42 +80,57 @@ import {
 import { logo } from "../../../../../public/assets/images";
 import { useMediaQuery } from "react-responsive";
 const BuildingSection = () => {
-  const members = [
-    member1,
-    member2,
-    member3,
-    member4,
-    member5,
-    member6,
-    member7,
-    member8,
-    member9,
-    member10,
-    member11,
-    member12,
-    member13,
-    member14,
-    member15,
-    member16,
-    member17,
-    member18,
-    member19,
-    member20,
-    member21,
-  ];
-  const [columns, setColumns] = React.useState([]);
-  React.useEffect(() => {
-    const newCols = Array.from({ length: 6 }, () => {
-      const shuffled = [...members];
-      for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-      }
-      return shuffled;
-    });
-    setColumns(newCols);
-  }, []);
   const isMobile = useMediaQuery({ maxWidth: 450 });
+  // const members = [
+  //   member1,
+  //   member2,
+  //   member3,
+  //   member4,
+  //   member5,
+  //   member6,
+  //   member7,
+  //   member8,
+  //   member9,
+  //   member10,
+  //   member11,
+  //   member12,
+  //   member13,
+  //   member14,
+  //   member15,
+  //   member16,
+  //   member17,
+  //   member18,
+  //   member19,
+  //   member20,
+  //   member21,
+  // ];
+  // const [columns, setColumns] = React.useState([]);
+  // React.useEffect(() => {
+  //   const newCols = Array.from({ length: 6 }, () => {
+  //     const shuffled = [...members];
+  //     for (let i = shuffled.length - 1; i > 0; i--) {
+  //       const j = Math.floor(Math.random() * (i + 1));
+  //       [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  //     }
+  //     return shuffled;
+  //   });
+  //   setColumns(newCols);
+  // }, []);.
+
+  const column1 = [member1, member2, member5, member3];
+  const column2 = [member22, member4, member7, member6];
+  const column3 = [member9, member10, member13, member19];
+  const column4 = [member11, member16, member17, member12];
+  const column5 = [member14, member20, member8, member23];
+  const mobcolumn1 = [member1, member2, member5, member3, member14];
+  const mobcolumn2 = [member22, member4, member7, member6, member20];
+  const mobcolumn3 = [member9, member10, member13, member19, member8];
+  const mobcolumn4 = [member11, member16, member17, member12, member23];
+
+const columns = isMobile
+  ? [mobcolumn1, mobcolumn2, mobcolumn3, mobcolumn4]
+  : [column1, column2, column3, column4, column5];
+
   const titles = [
     "Startup Founders & Career Coach",
     "Clinical Psychologists & Parenting Coach",
@@ -205,7 +222,7 @@ const BuildingSection = () => {
           ))}
         </div>
         <div className={classes.marqueesectionMobile}>
-          {columns.slice(0, 4).map((col, i) => (
+          {columns.map((col, i) => (
             <div
               key={i}
               className={`${classes.marqueeColumn} ${
@@ -231,13 +248,16 @@ const BuildingSection = () => {
         <div className={classes.titles}>
           {titles.map((title, index) => {
             const isLast = index === titles.length - 1;
-            const isThird = index === 2; // 3rd element (0-based index)
+            const isThird = index === 2;
+
+            // condition: no border on last (always), no border on 3rd (only on mobile)
+            const shouldHaveBorder = !isLast && !(isMobile && isThird);
 
             return (
               <div
                 key={index}
                 className={`${classes.title} ${
-                  !isLast && !(isMobile && isThird) ? classes.border : ""
+                  shouldHaveBorder ? classes.border : ""
                 }`}
               >
                 {title}

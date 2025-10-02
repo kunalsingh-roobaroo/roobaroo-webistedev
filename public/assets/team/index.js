@@ -19,10 +19,13 @@ import member18 from "./member18.png";
 import member19 from "./member19.png";
 import member20 from "./member20.png";
 import member21 from "./member21.png";
+import member22 from "./member22.png";
+import member23 from "./member23.png";
 
 export {
   member1,
   member2,
+  member22,
   member3,
   member4,
   member5,
@@ -35,6 +38,7 @@ export {
   member12,
   member13,
   member14,
+  member23,
   member15,
   member16,
   member17,

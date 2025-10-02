@@ -219,7 +219,7 @@ const Tnc = () => {
                     >
                       Email:
                       <Link
-                        href={`mailto:${info.email}`}
+                        href={`mailto:${info.Email}`}
                         className={classes.emailLink}
                       >
                         {info.Email}

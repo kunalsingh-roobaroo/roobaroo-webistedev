@@ -46,12 +46,20 @@ import deskcircle from "./deskcircle.png";
 import infinitymob from "./infinitymob.png";
 import papermob from "./papermob.png";
 import handsmob from "./handsmob.png";
+import infinity from "./infinity.png";
+import paper from "./paper.png";
+import hands from "./hands.png";
 import linkbg from "./linkbg.png";
 import bootcamplogo from "./bootcamplogo.png";
+import grow from "./grow.png";
 export {
   logo,
   biglight,
+  grow,
   infinitymob,
+  infinity,
+  hands,
+  paper,
   deskcircle,
   handsmob,
   linkbg,

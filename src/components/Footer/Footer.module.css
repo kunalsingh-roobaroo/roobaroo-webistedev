@@ -421,10 +421,12 @@
 
     .rhs {
         width: 100%;
+        gap: 37px;
     }
 
     .headtxt {
         font-size: 26.853px;
+        text-align: center;
     }
 
     .middle {
