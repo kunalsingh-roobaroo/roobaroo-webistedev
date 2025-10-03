@@ -268,7 +268,7 @@
 
   .mobilestroke {
     width: 100%;
-    height: 21.5px;
+    height: 27.5px;
     background-image: url("/assets/icons/pagestroke.svg");
     background-repeat: no-repeat;
     /* transform: rotate(180deg); */
@@ -282,11 +282,11 @@
   }
 
   .circlenew {
-    background-image: url("/assets/images/mobcircle.png");
-    top: 734px;
+    background-image: url("/assets/images/newbg.png");
+    top: 762px;
     width: 400px;
-    aspect-ratio: 1/1;
-    left: -50px;
+    aspect-ratio: 1 / 1;
+    left: -70px;
     background-repeat: no-repeat;
     /* transform: rotate(180deg); */
     background-size: cover;
@@ -296,13 +296,17 @@
   }
 
   .pinkbox {
-    top: 793px;
-    width: 147px;
+    top: 824px;
+    border-radius: 8.836px;
+    width: 78.967px;
+    right: 27.25641vw;
   }
 
   .blueBox {
-    width: 147px;
-    top: 843px;
+    width: 87.582px;
+    border-radius: 8.836px;
+    top: 877px;
+        right: 12.25641vw;
   }
 
   .tiles {

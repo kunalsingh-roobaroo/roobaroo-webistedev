@@ -74,11 +74,14 @@ import { useMediaQuery } from "react-responsive";
 const KnowYourBuddy = () => {
   const isMobile = useMediaQuery({ maxWidth: 450 });
   const links = [
-    { icon: colorlinkedin, link: "https://linktr.ee/roobaroo.ai" },
+    {
+      icon: colorlinkedin,
+      link: "https://www.linkedin.com/company/roobaroo-ai",
+    },
     { icon: colorinstagram, link: "https://www.instagram.com/roobaroo.ai/" },
     {
       icon: colorlinktree,
-      link: "https://www.linkedin.com/company/roobaroo-ai",
+      link: "https://linktr.ee/roobaroo.ai",
     },
   ];
 
