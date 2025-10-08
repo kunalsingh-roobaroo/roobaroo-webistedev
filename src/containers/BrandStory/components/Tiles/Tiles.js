@@ -19,8 +19,8 @@ const Tiles = () => {
         "The Growth–Wellness Balance Matrix is a simple but powerful tool to diagnose where you are — or where your team, institution or workplace sits.",
       thumbnail: thumbnail,
       link: "https://drive.google.com/file/d/1gAGl-xI4nm7g7nM5fFLuHStKjo6O6gEA/view?usp=drive_link",
-      label: "About Article",
-      analvalue: "brandatory_about",
+      label: "Matrix Article",
+      analvalue: "brandstory_matrix",
     },
     {
       title: "Problem We Are Solving",
@@ -28,8 +28,8 @@ const Tiles = () => {
         "The Growth–Wellness Balance Matrix is a simple but powerful tool to diagnose where you are — or where your team, institution or workplace sits.",
       thumbnail: thumbnail2,
       link: "https://drive.google.com/file/d/1mXr9Y2P323s2yCePFlZPHPMg8T0X0qJY/view?usp=drive_link",
-      label: "Matrix Article",
-      analvalue: "brandstory_matrix",
+      label: "PS Article",
+      analvalue: "brandstory_ps",
     },
     {
       title: "What is Roobaroo.ai?",
@@ -37,8 +37,8 @@ const Tiles = () => {
         "The Growth–Wellness Balance Matrix is a simple but powerful tool to diagnose where you are — or where your team, institution or workplace sits.",
       thumbnail: thumbnail3,
       link: "https://drive.google.com/file/d/1Il8CZBei-JceUYO33BKW-qhptZtFD2ME/view?usp=drive_link",
-      label: "PS Article",
-      analvalue: "brandstory_ps",
+      label: "About Article",
+      analvalue: "brandatory_about",
     },
   ];
   return (
