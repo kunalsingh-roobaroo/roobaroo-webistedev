@@ -44,7 +44,7 @@ const PrevArrow = ({ onClick }) => {
 
 const BlogCarousel = ({ related }) => {
   const { data, loading, error } = useFetchData(
-    `${baseUrl}${api_Urls.GET_BLOG}?page=1&limit=100 ${
+    `${baseUrl}${api_Urls.GET_BLOG}?page=1&limit=${related ? 5 : 10000} ${
       related ? "" : "&featured=true"
     }`
   );

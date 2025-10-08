@@ -11,6 +11,7 @@ export async function generateMetadata() {
   // read route params
 
   return {
+      metadataBase: new URL("https://www.roobaroo.ai/"),
     title: "Terms of Service",
     description:
       "Review our Terms of Service that outline the use of our platform, programs, and services",
@@ -29,7 +30,7 @@ export async function generateMetadata() {
       type: "website",
       images: [
         {
-          url: "/assets/images/metalogo.png", // ✅ relative path to public folder
+          url: "/assets/opengraph/metatermsofservice.png", // ✅ relative path to public folder
            width: 450, // recommended
         height: 118,
           alt: "Roobaroo.ai | Terms of Service",

@@ -36,9 +36,9 @@ export async function generateMetadata({ params }) {
       type: "article",
       images: [
         {
-          url: "/assets/images/metalogo.png", // ✅ relative path to public folder
-          width: 450, // recommended
-          height: 118,
+          url: blog?.blog_thumbnail_image, // ✅ relative path to public folder
+          width: 530, // recommended
+          height: 278,
           alt: blog?.blog_page_title,
           type: "image/png",
         },

@@ -365,7 +365,7 @@ aspect-ratio: 1092.00/572.78;
 .tocitem {
     margin: 44px 0px !important;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: flex-end;
     gap: 3.61111111111vw;
     /* flex-direction: column; */
@@ -388,7 +388,8 @@ aspect-ratio: 1092.00/572.78;
      height: 70%;
     position: absolute;
     right: 0.3vw;
-    top: 14%;
+    top: 0;
+    margin-top: 28%;
 }
 
 .toc {

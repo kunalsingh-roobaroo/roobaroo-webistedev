@@ -29,7 +29,7 @@ export async function generateMetadata() {
       type: "article",
       images: [
         {
-          url: "/assets/images/metalogo.png", // ✅ relative path to public folder
+          url: "/assets/opengraph/metastory.png", // ✅ relative path to public folder
           width: 450, // recommended
           height: 118,
           alt: "Roobaroo.ai | Our Story",

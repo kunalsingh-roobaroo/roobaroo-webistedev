@@ -37,17 +37,40 @@ const IndividualBlogPage = ({ data }) => {
 
   const options = {
     replace: (domNode) => {
+      // ✅ Check if it's a heading (h1–h4)
       if (domNode.name && ["h1", "h2", "h3", "h4"].includes(domNode.name)) {
-        const textContent = domToReact(domNode.children); // children = text inside heading
+        // Convert children (may include <strong>)
+        const textContent = domToReact(domNode.children);
+
+        // Extract plain text (including text inside <strong>)
         const plainText = domNode.children
-          .map((c) => c.data || "")
+          .map((c) => {
+            if (c.type === "text") return c.data;
+            if (c.name === "strong" && c.children) {
+              return c.children.map((cc) => cc.data || "").join(" ");
+            }
+            return "";
+          })
           .join(" ")
           .trim();
 
-        const id = slugify(plainText || "section"); // fallback if empty
+        const id = slugify(plainText || "section");
         headings.push({ id, text: plainText, level: domNode.name });
 
-        return React.createElement(domNode.name, { id }, textContent);
+        // ✅ Now also style/handle <strong> tags inside headings
+        const updatedChildren = domToReact(domNode.children, {
+          replace: (childNode) => {
+            if (childNode.name === "strong") {
+              return (
+                <strong style={{ color: "#d4af37" }}>
+                  {domToReact(childNode.children)}
+                </strong>
+              );
+            }
+          },
+        });
+
+        return React.createElement(domNode.name, { id }, updatedChildren);
       }
     },
   };
@@ -89,7 +112,6 @@ const IndividualBlogPage = ({ data }) => {
 
     setTimelineStyle({ top, height });
   }, [headings.length]);
-  console.log("---headings", headings);
 
   return (
     <>
