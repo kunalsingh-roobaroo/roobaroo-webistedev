@@ -214,7 +214,7 @@ const IndividualBlogPage = ({ data }) => {
                   ).elements
                 }
               </div>
-              <Share />
+              <Share title={blog?.blog_title} />
             </div>
           </div>
         </section>
