@@ -49,7 +49,7 @@ const BrandStory = () => {
         </div>
         <div className={classes.circlenew}></div>
         <div className={classes.knowmore}>
-          <KnowMore />
+          <KnowMore story={true} />
         </div>
         <div className={classes.circle}></div>
         <div className={classes.pinkbox}>

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import classes from "./BootCamp.module.css";
 import { ArrowUpRight } from "lucide-react";
@@ -18,6 +19,7 @@ import Image from "next/image";
 import { responsiveImageSizes, staticAlt } from "@/lib/constants";
 import Link from "next/link";
 import { bootcamplogo } from "../../../../../public/assets/images";
+import { trackEvent } from "@/utils/ga4";
 const BootCamp = () => {
   const tiles = [
     {
@@ -68,7 +70,12 @@ const BootCamp = () => {
       <div className={classes.op}>
         <div className={classes.boxtop}>
           <div className={classes.toplhs}>
-          <Image src={bootcamplogo} fill alt={staticAlt} sizes={responsiveImageSizes}/>
+            <Image
+              src={bootcamplogo}
+              fill
+              alt={staticAlt}
+              sizes={responsiveImageSizes}
+            />
           </div>
           <div className={classes.toprhs}>
             <div className={classes.actions}>
@@ -78,6 +85,14 @@ const BootCamp = () => {
                   target="_blank"
                   style={{ textDecoration: "none" }}
                   className={classes.bluebox} // Move the box class here
+                  onClick={() =>
+                    trackEvent({
+                      category: "Bootcamp",
+                      action: "On_click",
+                      label: "Message Us",
+                      value: "bootcamp_whatsapp",
+                    })
+                  }
                 >
                   <div className={classes.top}>
                     <ArrowUpRight
@@ -94,6 +109,14 @@ const BootCamp = () => {
                   target="_blank"
                   style={{ textDecoration: "none" }}
                   className={classes.redbox}
+                  onClick={() =>
+                    trackEvent({
+                      category: "Bootcamp",
+                      action: "On_click",
+                      label: "Book Meeting",
+                      value: "bootcamp_calendly",
+                    })
+                  }
                 >
                   <div className={classes.top}>
                     <ArrowUpRight

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import classes from "./BrandKitTiles.module.css";
 import Image from "next/image";
@@ -15,6 +16,7 @@ import {
 import { icons } from "lucide-react";
 import { responsiveImageSizes, staticAlt } from "@/lib/constants";
 import Link from "next/link";
+import { trackEvent } from "@/utils/ga4";
 
 const BrandKitTiles = () => {
   const tiles = [
@@ -24,6 +26,8 @@ const BrandKitTiles = () => {
       colorClass: "blueTile",
       icons: robaroomainnew,
       link: "logo",
+      label: "Logos",
+      analvalue: "brandidentity_logos",
     },
     {
       heading: "Typography",
@@ -31,6 +35,8 @@ const BrandKitTiles = () => {
       colorClass: "redTile",
       icons: headingnew,
       link: "typography",
+      label: "Typography",
+      analvalue: "brandidentity_typography",
     },
     {
       heading: "Color",
@@ -38,6 +44,8 @@ const BrandKitTiles = () => {
       colorClass: "blueTile",
       icons: colornew,
       link: "color",
+      label: "Color",
+      analvalue: "brandidentity_color",
     },
     {
       heading: "Usage Guidelines",
@@ -45,6 +53,8 @@ const BrandKitTiles = () => {
       colorClass: "redTile",
       icons: donew,
       link: "usage-guidelines",
+      label: "Usage Guidelines",
+      analvalue: "brandidentity_usage",
     },
   ];
 
@@ -52,9 +62,17 @@ const BrandKitTiles = () => {
     <section className={classes.container}>
       {tiles.map((value, index) => (
         <Link
-          href={`/brandkit/${value.link}`}
+          href={`/brand-assets/${value.link}`}
           key={index}
           className={`${classes.tile} ${classes[value.colorClass]}`}
+          onClick={() =>
+            trackEvent({
+              category: "Brand Identity",
+              action: "On_click",
+              label: value?.label,
+              value: value?.analvalue,
+            })
+          }
         >
           <h3 className={classes.heading}>{value.heading}</h3>
           <p className={classes.subheading}>{value.subheading}</p>

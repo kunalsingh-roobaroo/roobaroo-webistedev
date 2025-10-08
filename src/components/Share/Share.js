@@ -20,6 +20,7 @@ import {
   twitter,
 } from "../../../public/assets/icons";
 import { responsiveImageSizes, staticAlt } from "@/lib/constants";
+import { trackEvent } from "@/utils/ga4";
 
 const Share = ({ title }) => {
   const pathname = usePathname();
@@ -40,7 +41,17 @@ const Share = ({ title }) => {
       <p className={styles.share}>Share:</p>
       <div className={styles.buttons}>
         <EmailShareButton url={url} subject={title}>
-          <div className={styles.imgcontainer}>
+          <div
+            onClick={() =>
+              trackEvent({
+                category: "Blog",
+                action: "On_click",
+                label: "Share Blog",
+                value: `Blog shared ${title}`,
+              })
+            }
+            className={styles.imgcontainer}
+          >
             <Image
               src={email}
               fill
@@ -50,7 +61,17 @@ const Share = ({ title }) => {
           </div>
         </EmailShareButton>
         <FacebookShareButton url={url} quote={title}>
-          <div className={styles.imgcontainer}>
+          <div
+            onClick={() =>
+              trackEvent({
+                category: "Blog",
+                action: "On_click",
+                label: "Share Blog",
+                value: `Blog shared ${title}`,
+              })
+            }
+            className={styles.imgcontainer}
+          >
             <Image
               src={facebook}
               fill
@@ -60,7 +81,17 @@ const Share = ({ title }) => {
           </div>
         </FacebookShareButton>
         <TwitterShareButton url={url} title={title}>
-          <div className={styles.imgcontainer}>
+          <div
+            onClick={() =>
+              trackEvent({
+                category: "Blog",
+                action: "On_click",
+                label: "Share Blog",
+                value: `Blog shared ${title}`,
+              })
+            }
+            className={styles.imgcontainer}
+          >
             <Image
               src={twitter}
               fill
@@ -70,7 +101,17 @@ const Share = ({ title }) => {
           </div>
         </TwitterShareButton>
         <LinkedinShareButton url={url}>
-          <div className={styles.imgcontainer}>
+          <div
+            onClick={() =>
+              trackEvent({
+                category: "Blog",
+                action: "On_click",
+                label: "Share Blog",
+                value: `Blog shared ${title}`,
+              })
+            }
+            className={styles.imgcontainer}
+          >
             <Image
               src={linkedinshare}
               fill

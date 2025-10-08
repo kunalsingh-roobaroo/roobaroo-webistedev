@@ -8,6 +8,7 @@ import { Pagination, Stack } from "@mui/material";
 import Link from "next/link";
 import { api_Urls } from "@/lib/apiUrls";
 import useFetchData from "@/hooks/useFetchData";
+import { trackEvent } from "@/utils/ga4";
 const BlogCards = () => {
   const blogData = [
     {
@@ -83,9 +84,17 @@ const BlogCards = () => {
       <div className={classes.blogs}>
         {data?.map((value, index) => (
           <Link
-            href={`/blogs/${slugify(value?.blog_seo_title)}`}
+            href={`/blog/${slugify(value?.blog_seo_title)}`}
             key={index}
             className={classes.blog}
+            onClick={() =>
+              trackEvent({
+                category: "Blog",
+                action: "On_click",
+                label: "Blog Opened",
+                value: `Blog opened : ${value?.blog_title}`,
+              })
+            }
           >
             <div className={classes.thumbnail}>
               <Image src={value?.blog_thumbnail_image} fill alt={staticAlt} />

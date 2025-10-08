@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
@@ -7,6 +8,7 @@ import { heroarrow, leaves } from "../../../../../public/assets/icons";
 import { responsiveImageSizes, staticAlt } from "@/lib/constants";
 import { bigpink } from "../../../../../public/assets/images";
 import Link from "next/link";
+import { trackEvent } from "@/utils/ga4";
 const HeroSection = () => {
   return (
     <section className={classes.container}>
@@ -38,17 +40,49 @@ const HeroSection = () => {
         </div>
         <div className={classes.actions}>
           <div className={classes.upperaction}>
-            <Link href={'#bootcamp'} className={classes.bluebox}>
+            <Link
+              onClick={() =>
+                trackEvent({
+                  category: "Hero Banner",
+                  action: "On_click",
+                  label: "Bootcamp",
+                  value: "hero_bootcamp",
+                })
+              }
+              href={"#bootcamp"}
+              className={classes.bluebox}
+            >
               <div className={classes.top}>
-                <ArrowUpRight color="white" size={28} rotate={-45}   strokeWidth={3} />
+                <ArrowUpRight
+                  color="white"
+                  size={28}
+                  rotate={-45}
+                  strokeWidth={3}
+                />
               </div>
               <h4 className={classes.boxttx}>Student Bootcamp</h4>
             </Link>
-            <Link href={'#b2b'} className={classes.redbox}>
+            <Link
+              onClick={() =>
+                trackEvent({
+                  category: "Hero Banner",
+                  action: "On_click",
+                  label: "Consulting",
+                  value: "hero_consulting",
+                })
+              }
+              href={"#b2b"}
+              className={classes.redbox}
+            >
               <div className={classes.top}>
-                <ArrowUpRight color="white" size={28} rotate={-45}   strokeWidth={3} />
+                <ArrowUpRight
+                  color="white"
+                  size={28}
+                  rotate={-45}
+                  strokeWidth={3}
+                />
               </div>
-              <h4 className={classes.boxttx}>Organisation Consulting</h4>
+              <h4 className={classes.boxttx}>Consulting</h4>
             </Link>
           </div>
           <NewsLetter homepage={true} />
@@ -56,7 +90,7 @@ const HeroSection = () => {
       </div>
       <div className={classes.pinkbox}></div>
       <div className={classes.bluebig}></div>
-      <div className={classes.purple}></div>   
+      <div className={classes.purple}></div>
     </section>
   );
 };

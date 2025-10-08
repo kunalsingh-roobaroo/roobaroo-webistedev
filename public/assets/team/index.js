@@ -21,9 +21,21 @@ import member20 from "./member20.png";
 import member21 from "./member21.png";
 import member22 from "./member22.png";
 import member23 from "./member23.png";
+import member24 from "./member24.png";
+import member25 from "./member25.png";
+import member26 from "./member26.png";
+import member27 from "./member27.png";
+import member28 from "./member28.png";
+import member29 from "./member29.png";
 
 export {
   member1,
+  member24,
+  member25,
+  member26,
+  member27,
+  member28,
+  member29,
   member2,
   member22,
   member3,

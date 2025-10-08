@@ -6,6 +6,8 @@ import { caret, cross, hamburger } from "../../../public/assets/icons";
 import { staticAlt } from "@/lib/constants";
 import Link from "next/link";
 import { logo } from "../../../public/assets/images";
+import HashLink from "@/lib/HashLink";
+import { trackEvent } from "@/utils/ga4";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -41,11 +43,14 @@ const Navbar = () => {
 
   return (
     <div
+      onClick={() => {
+        if (isOpen) setIsOpen(false);
+      }}
       className={`${classes.topwrapper} ${
         hidden && typeof window !== "undefined" && window.innerWidth <= 450
           ? classes.hidden
           : ""
-      }`}
+      } ${isOpen === true ? classes.height : ""}`}
     >
       <nav className={`${classes.nav} ${isOpen ? classes.navopn : ""} `}>
         <div className={classes.topper}>
@@ -68,65 +73,40 @@ const Navbar = () => {
 
         {isOpen && (
           <div className={`${classes.menu} `}>
-            <Link href="#bootcamp" className={classes.navitems}>
+            <HashLink hash="#bootcamp" className={classes.navitems}>
               Bootcamp{" "}
-            </Link>
-            <Link href="#newsletter" className={classes.navitems}>
+            </HashLink>
+            <HashLink hash="#b2b" className={classes.navitems}>
               Consulting
-            </Link>
-            <Link href="#team" className={classes.navitems}>
+            </HashLink>
+            <HashLink hash="#team" className={classes.navitems}>
               Team
-            </Link>
-            <Link href={"/story"} className={`${classes.navitems} `}>
+            </HashLink>
+            <Link href={"/our-story"} className={`${classes.navitems} `}>
               Story
             </Link>
-            <Link href="/brandkit" className={classes.navitems}>
+            <Link
+              href="https://www.instagram.com/roobaroo.ai/"
+              className={classes.navitems}
+            >
               Community
             </Link>
-            <Link href="/blogs" className={classes.navitems}>
+            <Link href="/blog" className={classes.navitems}>
               Blogs
             </Link>
-            {/* <div className={classes.respara}>
-              <div className={classes.resource}>
-                <p className={classes.navitems}>Resources</p>
-                <Image
-                  src={caret}
-                  width={8}
-                  height={4}
-                  alt={staticAlt}
-                  onClick={() => {
-                    setIsDropdownOpen(!isDropdownOpen);
-                  }}
-                />
-              </div>
-              {isDropdownOpen && (
-                <div className={classes.dropdown}>
-                  <Link href="#bootcamp" className={classes.navitems}>
-                    Bootcamp{" "}
-                  </Link>
-                  <Link href="#newsletter" className={classes.navitems}>
-                    Consulting
-                  </Link>
-                  <Link href="#team" className={classes.navitems}>
-                    Team
-                  </Link>
-                  <Link href={"/story"} className={`${classes.navitems} `}>
-                    Story
-                  </Link>
-                  <Link href="/brandkit" className={classes.navitems}>
-                    Community
-                  </Link>
-                  <Link href="/blogs" className={classes.navitems}>
-                    Blogs
-                  </Link>
-                </div>
-              )}
-            </div> */}
 
             <Link
               href={"https://calendly.com/bhaskar-roobaroo/30min"}
               target="_blank"
               className={`${classes.mobbtn} link`}
+              onClick={() =>
+                trackEvent({
+                  category: "Navigation",
+                  action: "On_click",
+                  label: "Book Meeting",
+                  value: "bookameet_calendly",
+                })
+              }
             >
               Book a Meeting
             </Link>
@@ -134,22 +114,25 @@ const Navbar = () => {
         )}
 
         <div className={classes.links}>
-          <Link href="#bootcamp" className={classes.navitems}>
+          <HashLink hash="#bootcamp" className={classes.navitems}>
             Bootcamp{" "}
-          </Link>
-          <Link href="#b2b" className={classes.navitems}>
+          </HashLink>
+          <HashLink hash="#b2b" className={classes.navitems}>
             Consulting
-          </Link>
-          <Link href="#team" className={classes.navitems}>
+          </HashLink>
+          <HashLink hash="#team" className={classes.navitems}>
             Team
-          </Link>
-          <Link href={"/story"} className={`${classes.navitems} `}>
+          </HashLink>
+          <Link href={"/our-story"} className={`${classes.navitems} `}>
             Story
           </Link>
-          <Link href="https://www.instagram.com/roobaroo.ai/" className={classes.navitems}>
+          <Link
+            href="https://www.instagram.com/roobaroo.ai/"
+            className={classes.navitems}
+          >
             Community
           </Link>
-          <Link href="/blogs" className={classes.navitems}>
+          <Link href="/blog" className={classes.navitems}>
             Blogs
           </Link>
           {/* <div
@@ -189,6 +172,14 @@ const Navbar = () => {
           href={"https://calendly.com/bhaskar-roobaroo/30min"}
           target="_blank"
           className={`${classes.btn} link`}
+          onClick={() =>
+            trackEvent({
+              category: "Navigation",
+              action: "On_click",
+              label: "Book Meeting",
+              value: "bookameet_calendly",
+            })
+          }
         >
           Book a Meeting
         </Link>

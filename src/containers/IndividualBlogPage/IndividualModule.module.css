@@ -342,6 +342,19 @@ aspect-ratio: 1092.00/572.78;
     /* show ellipsis (...) */
     word-break: break-word;
 }
+.tocitem a{
+        display: -webkit-box;
+    /* needed for line-clamp */
+    -webkit-box-orient: vertical;
+    /* vertical orientation */
+    -webkit-line-clamp: 2;
+    /* max 2 lines */
+    overflow: hidden;
+    /* hide overflow text */
+    text-overflow: ellipsis;
+    /* show ellipsis (...) */
+    word-break: break-word;
+}
 
 .activeToc a {
     font-weight: 700;
@@ -372,10 +385,10 @@ aspect-ratio: 1092.00/572.78;
     /* border-radius: 50%; */
     background: #27AAE7;
     /* flex-shrink: 0; */
-     height: 75%;
+     height: 70%;
     position: absolute;
     right: 0.3vw;
-    top: 10%;
+    top: 14%;
 }
 
 .toc {

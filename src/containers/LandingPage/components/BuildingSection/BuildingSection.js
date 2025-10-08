@@ -25,6 +25,12 @@ import {
   member21,
   member22,
   member23,
+  member25,
+  member26,
+  member27,
+  member28,
+  member29,
+  member24,
 } from "../../../../../public/assets/team";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
@@ -117,19 +123,27 @@ const BuildingSection = () => {
   //   setColumns(newCols);
   // }, []);.
 
-  const column1 = [member1, member2, member5, member3];
-  const column2 = [member22, member4, member7, member6];
-  const column3 = [member9, member10, member13, member19];
-  const column4 = [member11, member16, member17, member12];
-  const column5 = [member14, member20, member8, member23];
-  const mobcolumn1 = [member1, member2, member5, member3, member14];
-  const mobcolumn2 = [member22, member4, member7, member6, member20];
-  const mobcolumn3 = [member9, member10, member13, member19, member8];
-  const mobcolumn4 = [member11, member16, member17, member12, member23];
+  const column1 = [member1, member2, member5, member3, member25];
+  const column2 = [member22, member4, member7, member6, member26];
+  const column3 = [member9, member10, member13, member19, member27];
+  const column4 = [member11, member24, member17, member12, member28];
+  const column5 = [member14, member20, member8, member23, member29];
+  const mobcolumn1 = [member1, member2, member5, member3, member14, member25];
+  const mobcolumn2 = [member22, member4, member7, member6, member20, member26];
+  const mobcolumn3 = [member9, member10, member13, member19, member8, member27];
+  const mobcolumn4 = [
+    member11,
+    member24,
+    member17,
+    member12,
+    member23,
+    member28,
+    member29,
+  ];
 
-const columns = isMobile
-  ? [mobcolumn1, mobcolumn2, mobcolumn3, mobcolumn4]
-  : [column1, column2, column3, column4, column5];
+  const columns = isMobile
+    ? [mobcolumn1, mobcolumn2, mobcolumn3, mobcolumn4]
+    : [column1, column2, column3, column4, column5];
 
   const titles = [
     "Startup Founders & Career Coach",

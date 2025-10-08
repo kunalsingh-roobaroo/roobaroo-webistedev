@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import classes from "./IndividualModule.module.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -23,7 +23,8 @@ function slugify(text) {
 
 const IndividualBlogPage = ({ data }) => {
   // console.log('----data',data);
-
+  const [timelineStyle, setTimelineStyle] = useState({ top: 0, height: 0 });
+  const tocRef = useRef(null);
   const blog = data?.[0];
   const [updatedHtml, setUpdatedHtml] = useState(blog?.blog_content || "");
   // console.log("----blog", blog);
@@ -64,98 +65,31 @@ const IndividualBlogPage = ({ data }) => {
 
     return available[hash % available.length];
   }
+  useEffect(() => {
+    if (!tocRef.current) return;
 
-  // const cssAppliedContent = (body) => {
-  //   return `
-  //     <div class="custom-style" style="width: 100%;">
-  //       <style>
-  //         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+    const listItems = tocRef.current.querySelectorAll("li");
+    if (listItems.length === 0) return;
 
-  //         .custom-style {
-  //           font-family: 'Montserrat', sans-serif;
-  //           padding: 0;
-  //           margin-top: 10px;
-  //           color: #000;
-  //         }
-  //         .custom-style a {
-  //           color: #000;
-  //           font-family: 'Montserrat', sans-serif;
-  //           font-size: 1.38888888889vw;
-  //           font-weight: 300;
-  //           line-height: 147%;
-  //           text-align: left;
-  //           margin-bottom: 16px;
-  //           text-decoration: underline;
-  //         }
-  //         .custom-style table {
-  //           margin: 0 auto 16px auto;
-  //           border-collapse: collapse;
-  //           width: 100%;
-  //           font-size: 16px;
-  //           text-align: center;
-  //         }
-  //         .custom-style th,
-  //         .custom-style td {
-  //           border: 1px solid black;
-  //           padding: 8px;
-  //           text-align: center;
-  //           vertical-align: middle;
-  //         }
-  //         .custom-style img {
-  //           display: block;
-  //           max-width: 100%;
-  //           height: auto;
-  //           width: 100%;
-  //           object-fit: cover;
-  //           margin-bottom: 16px;
-  //         }
-  //         .custom-style p {
-  //           color: #000;
-  //           font-family: 'Montserrat', sans-serif;
-  //           font-size: 1.38888888889vw;
-  //           font-weight: 300;
-  //           line-height: 147%;
-  //           text-align: left;
-  //           margin-bottom: 16px;
-  //         }
-  //         .custom-style h1,
-  //         .custom-style h2,
-  //         .custom-style h3,
-  //         .custom-style h4,
-  //         .custom-style h5,
-  //         .custom-style h6 {
-  //           color: #000 !important;
-  //           font-family: 'Montserrat', sans-serif;
-  //           font-size: 1.38888888889vw;
-  //           font-weight: 700;
-  //           line-height: 32.965px;
-  //           text-align: left;
-  //           margin-bottom: 16px;
-  //         }
-  //         .custom-style ul,
-  //         .custom-style ol {
-  //           text-align: left;
-  //           font-family: 'Montserrat', sans-serif;
-  //           color: #000;
-  //           margin-bottom: 16px;
-  //           padding-left: 20px;
-  //         }
-  //         .custom-style li {
-  //           margin-bottom: 5px;
-  //           list-style-position: inside;
-  //           word-wrap: break-word;
-  //           overflow-wrap: break-word;
-  //         }
-  //         .custom-style li p {
-  //           display: inline;
-  //           margin: 0;
-  //           padding: 0;
-  //         }
-  //       </style>
-  //       ${body}
-  //     </div>
-  //   `;
-  // };
+    const firstItem = listItems[0];
+    const lastItem = listItems[listItems.length - 1];
+
+    // Get the dot elements if they exist
+    const firstDot = firstItem.querySelector(`.${classes.dots}`);
+    const lastDot = lastItem.querySelector(`.${classes.dots}`);
+
+    if (!firstDot || !lastDot) return;
+
+    const tocRect = tocRef.current.getBoundingClientRect();
+    const firstDotRect = firstDot.getBoundingClientRect();
+    const lastDotRect = lastDot.getBoundingClientRect();
+
+    const top = firstDotRect.top - tocRect.top;
+    const height = lastDotRect.top - firstDotRect.top;
+
+    setTimelineStyle({ top, height });
+  }, [headings.length]);
+  console.log("---headings", headings);
 
   return (
     <>
@@ -163,7 +97,7 @@ const IndividualBlogPage = ({ data }) => {
       <BackgroundBoxesWrapper invert={true}>
         <section className={classes.container}>
           <div className={classes.box}>
-            <Link className={classes.back} href={"/blogs"}>
+            <Link className={classes.back} href={"/blog"}>
               <div className={classes.backarrow}>
                 <Image src={backarrow} fill alt={staticAlt} />
               </div>
@@ -193,7 +127,7 @@ const IndividualBlogPage = ({ data }) => {
                   <span className={classes.separator}>|</span>
                   <span>{blog?.sub_category_name}</span>
                 </p>
-                <CopyBtn />
+                <CopyBtn data={blog} />
               </div>
             </div>
           </div>
@@ -201,14 +135,7 @@ const IndividualBlogPage = ({ data }) => {
           <div className={classes.parent}>
             {/* ✅ TOC injects heading IDs + sends updated HTML */}
 
-            <div className={classes.toc}>
-              <h2 className={classes.tocitem}>
-                Overview{" "}
-                <span>
-                  {" "}
-                  <div className={classes.dots}></div>
-                </span>
-              </h2>
+            <div className={classes.toc} ref={tocRef}>
               {headings.length > 0 ? (
                 <ul className={classes.list}>
                   {headings
@@ -229,7 +156,13 @@ const IndividualBlogPage = ({ data }) => {
               ) : (
                 <p className={classes.noHeadings}>No sections available</p>
               )}
-              <div className={classes.timeline}></div>
+              <div
+                style={{
+                  top: `${timelineStyle.to + 1}px`,
+                  height: `${timelineStyle.height}px`,
+                }}
+                className={classes.timeline}
+              ></div>
             </div>
             <div className={classes.cont}>
               <div className={` ${classes.customStyle}`}>{parsedContent}</div>

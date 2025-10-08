@@ -76,12 +76,12 @@ const KnowYourBuddy = () => {
   const links = [
     {
       icon: colorlinkedin,
-      link: "https://www.linkedin.com/company/roobaroo-ai",
+      link: " https://www.linkedin.com/in/bhaskar-singhania-85ab95162/",
     },
-    { icon: colorinstagram, link: "https://www.instagram.com/roobaroo.ai/" },
+    { icon: colorinstagram, link: "https://www.instagram.com/bhaskarsinghania/#" },
     {
       icon: colorlinktree,
-      link: "https://linktr.ee/roobaroo.ai",
+      link: "https://linktr.ee/bhaskarsinghania",
     },
   ];
 
@@ -163,7 +163,7 @@ const KnowYourBuddy = () => {
     <section id="team" className={classes.container}>
       <div className={classes.heatop}>
         <h2 className={classes.headtxt}>
-          Know your <span className={classes.cake}>Founder</span>
+          Know the <span className={classes.cake}>Founder</span>
         </h2>
         <div className={classes.arrowframe}>
           <div className={classes.arrow}>

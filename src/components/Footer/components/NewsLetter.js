@@ -6,12 +6,21 @@ import { newsarrow, success, upright } from "../../../../public/assets/icons";
 import { staticAlt } from "@/lib/constants";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { trackEvent } from "@/utils/ga4";
 const NewsLetter = ({ homepage, label, register }) => {
   const [step, setStep] = React.useState(1);
   return (
     <>
       {step === 1 ? (
         <Link
+          onClick={() =>
+            trackEvent({
+              category: register ? "Bootcamp" : "Hero Banner",
+              action: "On_click",
+              label: register ? "Register Interest" : "Community",
+              value: register ? "bootcamp_googleform" : "hero_instagram",
+            })
+          }
           target="_blank"
           href={
             register

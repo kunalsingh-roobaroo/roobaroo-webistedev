@@ -20,7 +20,7 @@ export const LostSection = () => {
           </h2>
         </div>
         <div className={classes.knomore}>
-          <KnowMore />
+          <KnowMore story={true} />
         </div>
       </div>
     </section>

@@ -13,6 +13,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { api_Urls } from "@/lib/apiUrls";
 import { ArrowUp, ArrowUpRight } from "lucide-react";
+import { trackEvent } from "@/utils/ga4";
 
 // Import your custom arrow images
 
@@ -43,7 +44,9 @@ const PrevArrow = ({ onClick }) => {
 
 const BlogCarousel = ({ related }) => {
   const { data, loading, error } = useFetchData(
-    `${baseUrl}${api_Urls.GET_BLOG}?page=1&limit=3`
+    `${baseUrl}${api_Urls.GET_BLOG}?page=1&limit=100 ${
+      related ? "" : "&featured=true"
+    }`
   );
 
   const router = useRouter();
@@ -87,8 +90,16 @@ const BlogCarousel = ({ related }) => {
               </p>
 
               <Link
-                href={`/blogs/${blog?.blog_seo_title}`}
+                href={`/blog/${blog?.blog_seo_title}`}
                 className={classes.title}
+                onClick={() =>
+                  trackEvent({
+                    category: "Blog",
+                    action: "On_click",
+                    label: "Blog Opened",
+                    value: `Blog opened : ${blog?.blog_title}`,
+                  })
+                }
               >
                 {blog?.blog_title}
               </Link>
@@ -104,7 +115,7 @@ const BlogCarousel = ({ related }) => {
             </div>
             <div
               onClick={() => {
-                router.push(`/blogs/${blog?.blog_seo_title}`);
+                router.push(`/blog/${blog?.blog_seo_title}`);
               }}
               className={classes.rhs}
             >

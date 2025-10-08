@@ -36,6 +36,9 @@
   letter-spacing: 0.94px;
 }
 
+.hash-link:hover{
+    text-decoration-line: underline;
+}
 
 
 @media (max-width:450px) {
