@@ -28,7 +28,7 @@ export async function generateMetadata({ params }) {
       )}`,
     },
     openGraph: {
-      title: blog?.blog_page_title,
+      title: `Roobaroo.ai | Blog – ${blog?.blog_page_title}`,
       description: blog?.blog_meta_description,
       url: `https://www.roobaroo.ai/blog/${slugify(blog?.blog_seo_title)}`,
       siteName: "Roobaroo.ai",

@@ -22,7 +22,7 @@ export async function generateMetadata() {
     openGraph: {
       title: "Roobaroo.ai | Brand Usage Guidelines",
       description:
-        "Access Roobaroo’s official logos, colors, fonts, and usage guidelines.",
+        "Learn how to use Roobaroo.ai’s logos, colors, and fonts correctly.",
       url: "https://www.roobaroo.ai/brand-assets/usage-guidelines",
       siteName: "Roobaroo.ai",
       locale: "en_US",
