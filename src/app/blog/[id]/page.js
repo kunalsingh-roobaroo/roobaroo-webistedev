@@ -21,7 +21,7 @@ export async function generateMetadata({ params }) {
   return {
     title: blog?.blog_page_title,
     description: blog?.blog_meta_description,
-    keywords: blog?.blog_meta_keywords,
+    keywords: `Roobaroo.ai blog, holistic education, youth development, career clarity, school innovation, personal growth, Roobaroo insights,${blog?.blog_meta_keywords}`,
     alternates: {
       canonical: `https://www.roobaroo.ai/blog/${slugify(
         blog?.blog_seo_title
