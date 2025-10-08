@@ -1,9 +1,9 @@
 export const trackEvent = ({ category, action, label, value }) => {
-  console.log("📊 GA4 Event Triggered:");
-  console.log("➡️ Category:", category);
-  console.log("➡️ Action:", action);
-  console.log("➡️ Label:", label);
-  console.log("➡️ Value:", value);
+  // console.log("📊 GA4 Event Triggered:");
+  // console.log("➡️ Category:", category);
+  // console.log("➡️ Action:", action);
+  // console.log("➡️ Label:", label);
+  // console.log("➡️ Value:", value);
 
   if (typeof window.gtag !== "undefined") {
     window.gtag("event", action, {
