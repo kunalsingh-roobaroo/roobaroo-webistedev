@@ -27,7 +27,7 @@ const IndividualBlogPage = ({ data }) => {
   const tocRef = useRef(null);
   const blog = data?.[0];
   const [updatedHtml, setUpdatedHtml] = useState(blog?.blog_content || "");
-  // console.log("----blog", blog);
+  console.log("----blog", blog);
 
   // ✅ Keep updatedHtml in sync with new blog content if data changes
   useEffect(() => {
@@ -226,7 +226,7 @@ const IndividualBlogPage = ({ data }) => {
         <div className={classes.otherarticles}>
           <p className={classes.featuretxt}>Check out other articles :</p>
           <div className={classes.carousel}>
-            <BlogCarousel related={true} />
+            <BlogCarousel related={true} category_id={blog?.category_id} />
           </div>
           <div className={classes.footer}>
             <Footer />

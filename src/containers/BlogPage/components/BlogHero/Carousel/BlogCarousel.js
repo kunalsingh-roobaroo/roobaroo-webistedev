@@ -42,10 +42,10 @@ const PrevArrow = ({ onClick }) => {
   );
 };
 
-const BlogCarousel = ({ related }) => {
+const BlogCarousel = ({ related,category_id }) => {
   const { data, loading, error } = useFetchData(
-    `${baseUrl}${api_Urls.GET_BLOG}?page=1&limit=${related ? 5 : 10000} ${
-      related ? "" : "&featured=true"
+    `${baseUrl}${api_Urls.GET_BLOG}?page=1&limit=10000${
+      related ? `&category_id=${category_id}` : "&featured=true"
     }`
   );
 
