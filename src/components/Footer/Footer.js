@@ -19,6 +19,8 @@ import Link from "next/link";
 import NewsLetter from "./components/NewsLetter";
 import { ArrowUpRight } from "lucide-react";
 import { trackEvent } from "@/utils/ga4";
+import HashLink from "@/lib/HashLink";
+import FooterHashLink from "@/lib/FooterHashLink";
 const Footer = () => {
   const gridItems = [
     {
@@ -146,30 +148,55 @@ const Footer = () => {
               <Image src={whitelogo} fill alt={staticAlt} />
             </Link>
             <div className={classes.gridSection}>
-              {gridItems.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.link}
-                  className={`${classes.gridItem} `}
-                  onClick={() =>
-                    trackEvent({
-                      category: "Footer",
-                      action: "On_click",
-                      label: item?.label,
-                      value: item?.analvalue,
-                    })
-                  }
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {gridItems.map((item, index) => {
+                const isHashLink = item.link.startsWith("#");
+
+                if (isHashLink) {
+                  return (
+                    <FooterHashLink
+                      key={index}
+                      hash={item.link}
+                      className={classes.gridItem}
+                      onClick={() =>
+                        trackEvent({
+                          category: "Footer",
+                          action: "On_click",
+                          label: item?.label,
+                          value: item?.analvalue,
+                        })
+                      }
+                    >
+                      {item.name}
+                    </FooterHashLink>
+                  );
+                }
+
+                return (
+                  <Link
+                    key={index}
+                    href={item.link}
+                    target={item.link.startsWith("http") ? "_blank" : "_self"}
+                    className={classes.gridItem}
+                    onClick={() =>
+                      trackEvent({
+                        category: "Footer",
+                        action: "On_click",
+                        label: item?.label,
+                        value: item?.analvalue,
+                      })
+                    }
+                  >
+                    {item.name}
+                  </Link>
+                );
+              })}
             </div>
           </div>
-          <Link href={"#bootcamp"} className={classes.rhs}>
+          <div className={classes.rhs}>
             <p className={classes.headtxt}>
               Helping you grow without burning out!
             </p>
-            <div
+            <FooterHashLink
               onClick={() =>
                 trackEvent({
                   category: "Footer",
@@ -178,6 +205,7 @@ const Footer = () => {
                   value: "footer_bootcamp",
                 })
               }
+              hash={"#bootcamp"}
               className={classes.purplebox}
             >
               <div className={classes.txtdiv}>
@@ -196,8 +224,8 @@ const Footer = () => {
                   flexShrink: 0,
                 }}
               />
-            </div>
-          </Link>
+            </FooterHashLink>
+          </div>
         </div>
         <div className={classes.middle}>
           <div className={classes.midlhs}>
