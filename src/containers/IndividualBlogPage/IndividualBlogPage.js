@@ -27,7 +27,6 @@ const IndividualBlogPage = ({ data }) => {
   const tocRef = useRef(null);
   const blog = data?.[0];
   const [updatedHtml, setUpdatedHtml] = useState(blog?.blog_content || "");
-  console.log("----blog", blog);
 
   // ✅ Keep updatedHtml in sync with new blog content if data changes
   useEffect(() => {
