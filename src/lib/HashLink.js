@@ -1,7 +1,7 @@
 "use client";
 import { useRouter, usePathname } from "next/navigation";
 
-export default function HashLink({ hash, children }) {
+export default function HashLink({ hash, children,className }) {
   const router = useRouter();
   const pathname = usePathname();
 
@@ -18,7 +18,7 @@ export default function HashLink({ hash, children }) {
   };
 
   return (
-    <a href={hash} onClick={handleClick} className="hash-link">
+    <a href={hash} onClick={handleClick} className={className}>
       {children}
     </a>
   );

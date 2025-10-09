@@ -25,7 +25,7 @@ const Tiles = () => {
     {
       title: "Problem We Are Solving",
       subtitle:
-        "The Growth–Wellness Balance Matrix is a simple but powerful tool to diagnose where you are — or where your team, institution or workplace sits.",
+        "Growth without wellness is unfulfilling & wellness without direction is unsustainable. The current ecosystems treat growth & wellness as separate silos.",
       thumbnail: thumbnail2,
       link: "https://drive.google.com/file/d/1mXr9Y2P323s2yCePFlZPHPMg8T0X0qJY/view?usp=drive_link",
       label: "PS Article",
@@ -34,7 +34,7 @@ const Tiles = () => {
     {
       title: "What is Roobaroo.ai?",
       subtitle:
-        "The Growth–Wellness Balance Matrix is a simple but powerful tool to diagnose where you are — or where your team, institution or workplace sits.",
+        "We have been sold growth and Wellness in isolation. But life is not split like that. Roobaroo.ai exists to repair that split",
       thumbnail: thumbnail3,
       link: "https://drive.google.com/file/d/1Il8CZBei-JceUYO33BKW-qhptZtFD2ME/view?usp=drive_link",
       label: "About Article",
