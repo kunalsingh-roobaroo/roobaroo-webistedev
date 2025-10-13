@@ -1,0 +1,108 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 63.54166666667vw;
+  align-self: center;
+  justify-self: center;
+  position: relative;
+}
+
+.box {
+  width: 24.86111111111vw;
+  display: flex;
+  flex-direction: column;
+  gap: 126px;
+  align-items: center;
+}
+
+.mainntxt {
+  color: #1E1E1E;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 1.49333333333vw;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.215px;
+}
+
+.doodleimg {
+  width: 13.49534722222vw;
+  /* height: 98.544px; */
+  position: relative;
+  aspect-ratio: 1.97/1;
+}
+
+.verticalLineWrapper {
+  position: relative;
+  width: 6px;
+  height: 100%;
+  /* adjust as needed */
+  margin: 0 40px;
+}
+
+.verticalTrack {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: #303437;
+  z-index: 0;
+}
+
+.verticalFill {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 0;
+  background: linear-gradient(to bottom,
+      rgba(39, 170, 231, 1),
+      rgba(129, 95, 170, 1),
+      rgba(251, 125, 125, 1));
+  z-index: 1;
+  transition: height 0.3s ease-out;
+}
+
+.circle {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background-color: #f4b400;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.bkuebox,
+.purplebox,
+.pinkbox {
+  position: absolute;
+  aspect-ratio: 1/1;
+border-radius: 59.883px !important;
+overflow: hidden;
+}
+
+.bkuebox {
+  width: 37.16666666667vw;
+  top: -217px;
+  left: -57%;
+
+
+}
+
+.purplebox {
+
+  width: 21.66666666667vw;
+
+}
+
+.pinkbox {
+
+  width: 33.22222222222vw;
+}

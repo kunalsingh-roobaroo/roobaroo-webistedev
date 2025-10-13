@@ -1,0 +1,234 @@
+.container {
+    background-image: url("/assets/images/backgroundcircles.png");
+    /* path relative to public/ folder */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    /* height: 100dvh; */
+    /* or any height you want */
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:14.44444444444vw 75px 28.33333333333vw 75px;
+
+}
+
+.subcontainer {
+    width: 77.63888888889vw;
+    max-width: 1118px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 69px;
+    z-index: 1;
+
+}
+
+.headttx {
+    color: var(--blacks-80, #303437);
+    font-feature-settings: 'dlig' on;
+    font-family: Montserrat;
+    font-size: 7.98611111111vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    /* 155px */
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.upperaction {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.bluebox,
+.redbox {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px 15px;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    /* Smooth animation */
+    cursor: pointer;
+}
+
+.top {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.boxttx {
+    color: var(--Whites-Base, #FFF);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.16px;
+    text-align: left;
+}
+
+.bluebox {
+    border-radius: 23px;
+    background: var(--Primary-Blue-Base, #27AAE7);
+    width: 8.61111111111vw;
+    aspect-ratio: 1/1;
+}
+
+.redbox {
+    border-radius: 23px;
+    background: var(--Primary-Coral-Base, #FB7D7D);
+    width: 10.34722222222vw;
+    aspect-ratio: 1.2/1;
+}
+
+.txtdiv {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.bluebox:hover,
+.redbox:hover {
+    transform: scale(1.1);
+    /* Slight zoom */
+}
+.bluebox:hover{
+    background: var(--primary-blue-110, #0091D5);
+}
+.redbox:hover{
+    background: var(--primary-coral-110, #D95555);
+}
+
+.subtxt {
+    color: var(--Blacks-Base, #0C0C0C);
+    text-align: justify;
+    font-family: Montserrat;
+    font-size: 1.73611111111vw;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 32.965px;
+    /* 131.861% */
+}
+
+.arrow {
+    width: 75.849px;
+    height: 61.715px;
+    position: relative;
+}
+
+.arrowframe {
+    /* position: absolute;
+    top: 0;
+    right: 9%; */
+    width: 75.849px;
+    height: 61.715px;
+    position: relative;
+}
+
+.txtnox {
+    background-image: url("/assets/images/white-stroke.png");
+    /* path relative to public/ folder */
+    background-size: cover;
+    background-position: center;
+    width: 282px;
+    height: 36px;
+    position: absolute;
+    top: 35vh;
+    right: 0;
+}
+
+.cakes {
+    color: var(--Accent-Purple-Base, #815FAA);
+    text-align: justify;
+    font-family: "Simple Cakes";
+    font-size: 50px;
+    transform: rotate(-3.138deg);
+    font-style: normal;
+    font-weight: 400;
+
+    line-height: 35.349px;
+    /* 70.698% */
+
+}
+
+.pinkbox {
+    width: 49.65277777778vw;
+    aspect-ratio: 1/1;
+    border-radius: 80px;
+    background: rgba(255, 104, 104, 0.22);
+    position: absolute;
+    top: -100px;
+    right: 17vw;
+    z-index: 0;
+    animation: floatRandom 14s ease-in-out infinite;
+    animation-delay: 0s;
+}
+
+.bluebig {
+    width: 49.65277777778vw;
+    aspect-ratio: 1/1;
+    border-radius: 80px;
+    background: rgba(39, 170, 231, 0.24);
+    position: absolute;
+    top: 200px;
+    right: -100px;
+    z-index: 0;
+    animation: floatRandom 17s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.headbox {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.purple {
+    border-radius: 34.909px;
+    background: rgba(129, 95, 170, 0.33);
+    width: 21.66666666667vw;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    animation: floatRandom 19s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes floatRandom {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    25% {
+        transform: translate(20px, -15px);
+    }
+
+    50% {
+        transform: translate(-15px, 10px);
+    }
+
+    75% {
+        transform: translate(10px, -20px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}

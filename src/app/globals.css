@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+    scrollbar-width: thin;
+  scrollbar-color: #999 transparent;
+}
+
+@font-face {
+  font-family: "Simple Cakes";
+  src: url("/assets/fonts/simple-cakes/simple_cakes.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.link {
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-style: none;
+}
