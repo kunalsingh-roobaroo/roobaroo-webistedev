@@ -1,0 +1,559 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* background: white;
+    background-image: repeating-linear-gradient(0deg,
+            transparent,
+            transparent 48px,
+            rgba(0, 0, 0, 0.05) 49px),
+        repeating-linear-gradient(90deg,
+            transparent,
+            transparent 48px,
+            rgba(0, 0, 0, 0.05) 49px); */
+    font-family: 'Simple Cakes', cursive;
+}
+
+.parent {
+    width: 55.11159722222vw;
+    height: 41.38888888889vw;
+    position: relative;
+
+}
+
+/* Axes */
+.verticalLine {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    /* background: url('/assets/icons/chart-y.svg');
+    background-position: center;
+    background-size: cover; */
+    transform: translateX(-50%);
+}
+
+.lineframe {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.horizontalLine {
+    position: absolute;
+    top: 52%;
+    left: 7vw;
+    /* height: 2.63888888889vw; */
+    width: 43.47222222222vw;
+    aspect-ratio: 626/38;
+    /* background: #f06292; */
+    transform: translateY(-50%);
+}
+
+
+/* Axis labels */
+.growthLabel {
+    position: absolute;
+    top: -3vw;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #27AAE7;
+    font-size: 2.09388888889vw;
+}
+
+.wellnessLabel {
+    position: absolute;
+    top: 49%;
+    right: 0vw;
+
+    transform: translateY(-50%);
+    color: #FB7D7D;
+    font-size: 2.09388888889vw;
+}
+
+/* Quadrant main labels */
+.label {
+    color: var(--Blacks-Base, #0C0C0C);
+    font-family: "Simple Cakes";
+    font-size: 3.22138888889vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 70%;
+    /* 0 */
+    letter-spacing: 0.464px;
+}
+
+.gip,
+.reversegip {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.reversegip {
+    align-items: flex-end;
+}
+
+.struggleframe {
+    width: 3.68055555556vw;
+    aspect-ratio: 53/29;
+    position: relative;
+}
+
+.strokeframe {
+    width: 100%;
+    aspect-ratio: 151/14;
+    position: relative;
+}
+
+.topLeft {
+    position: absolute;
+    top: 8%;
+    left: 6%;
+}
+
+.bottomLeft {
+    position: absolute;
+    bottom: 10%;
+    left: 6%;
+}
+
+.bottomRight {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+}
+
+.topRight {
+    position: absolute;
+    top: 5%;
+    right: 9%;
+}
+
+.thriving {
+    color: #684C8A;
+    /* line-height: 186%; */
+
+}
+
+/* Inner quadrant details */
+.text {
+    position: absolute;
+    font-size: 1.31944444444vw;
+    font-family: Montserrat;
+    font-weight: 500;
+    color: var(--blacks-70, #404446);
+}
+
+.textPurple {
+    position: absolute;
+    font-size: 1.31944444444vw;
+    font-family: Montserrat;
+    color: #815FAA;
+    font-weight: 500;
+}
+
+.textBlue {
+    position: absolute;
+    font-size: 1.31944444444vw;
+    font-family: Montserrat;
+    color: #3b82f6;
+    font-weight: 500;
+}
+
+/* Note styling */
+.note {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 1.1rem;
+    font-family: 'Simple Cakes', cursive;
+}
+
+/* Know More button */
+.knowMoreWrapper {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.knowMoreBtn {
+    background-color: #815FAA;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+}
+
+.brushed {
+    background-image: url("/assets/icons/brush.svg");
+    /* path relative to public/ folder */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: 0px 0.97222222222vw 0.97222222222vw 0.76388888889vw;
+}
+
+.flexed {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+    width: auto;
+    min-width: 11.80555555556vw;
+    /* width: 163px;
+height: 96px; */
+
+    /* width: 143px; */
+}
+
+.fire {
+    width: 3.68055555556vw;
+    aspect-ratio: 53/50;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.sublabel {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    /* margin-top: 6px; */
+}
+
+.thriverame {
+    background-image: url("/assets/icons/loop.svg");
+    /* path relative to public/ folder */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* width: 100%; */
+    padding: 1.98611111111vw 1.98611111111vw;
+    z-index: 1;
+    width: 14.23611111111vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    aspect-ratio: 205/69;
+
+}
+
+.flick {
+    width: 4.375vw;
+    aspect-ratio: 63/78;
+    position: absolute;
+    top: -2vw;
+    right: -2vw;
+}
+
+.flickframe {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.nop {
+    position: relative;
+
+}
+
+.arrow {
+    width: 7.63888888889vw;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: -1vw;
+    right: -8vw;
+}
+
+.txt {
+    color: var(--Blacks-Base, #0C0C0C);
+    text-align: center;
+    font-family: "Simple Cakes";
+    font-size: 3.95833333333vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 57px */
+    letter-spacing: 0.57px;
+    position: absolute;
+    width: 24.51388888889vw;
+    top: -4vw;
+    right: -28vw;
+}
+
+
+
+.strokesec {
+    width: 7.43055555556vw;
+    aspect-ratio: 107/8;
+    top: 0vw;
+    position: absolute;
+    right: -12vw;
+
+}
+
+.knowmore {
+    position: absolute;
+    top: 9vw;
+    right: -19vw;
+    z-index: 99;
+}
+
+.circle {
+
+    background-image: url("/assets/images/smallcircles.png");
+    /* path relative to public/ folder */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: -6vw;
+    right: -35vw;
+    width: 35.375vw;
+    aspect-ratio: 1/1;
+    /* z-index: 99; */
+}
+
+.outtxt {
+    text-align: center;
+    line-height: 80%;
+}
+
+.workaholism {
+    top: 30%;
+    left: 25.8%;
+    text-align: end;
+    position: absolute;
+}
+
+.anxiety {
+    top: 37%;
+    left: 23%;
+
+    text-align: end;
+    position: absolute;
+}
+
+.withdrawal {
+    top: 62%;
+    left: 20%;
+    position: absolute;
+}
+
+.helplessness {
+    top: 70%;
+    left: 20%;
+    position: absolute;
+}
+
+.stagnation {
+    top: 58%;
+    left: 60%;
+    position: absolute;
+}
+
+.wellness {
+    top: 65%;
+    left: 60%;
+    position: absolute;
+}
+
+.centered {
+    top: 33%;
+    left: 67%;
+
+    position: absolute;
+}
+
+.futureReady {
+    top: 40%;
+    left: 67%;
+    position: absolute;
+}
+
+
+@media (max-width:450px) {
+    .parent {
+        padding: 0px 21px;
+        height: 334px;
+        width: 100%;
+    }
+
+    .label {
+        font-size: 25.306px;
+    }
+
+    .fire {
+        width: 28.517px;
+        height: 27.277px;
+        aspect-ratio: 1/1;
+    }
+
+    .flick {
+        width: 36px;
+        height: 45px;
+        aspect-ratio: 36/45;
+        top: -5px;
+        right: -13px;
+    }
+
+    .knowmore,
+    .circle {
+        display: none;
+    }
+
+    .growthLabel,
+    .wellnessLabel {
+        font-size: 16px;
+    }
+
+    .outtxt {
+        line-height: 65%;
+    }
+
+    .growthLabel {
+        top: 37px;
+        width: 8.559px;
+        height: 266.525px;
+        /* transform: rotate(1.739deg); */
+    }
+
+    /* .lineframe {
+    
+    } */
+    /* 
+    .verticalLine {
+        top: 60px;
+    } */
+
+    .thriving {
+        font-size: 28.471px !important;
+        line-height: 0% !important;
+
+
+    }
+
+    .nop {
+        padding: 3px 0px 6px 26px;
+        width: fit-content;
+        height: 41.866600036621094px;
+    }
+
+    .horizontalLine {
+
+
+        width: 279.676px;
+        height: 16.561px;
+    }
+
+    .txt,
+    .strokesec {
+        display: none;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .topRight,
+    .topLeft {
+        top: 0%;
+    }
+
+    .growthLabel {
+        top: -19px;
+        left: 44%;
+    }
+
+    .verticalLine {
+        height: 266.525px;
+        left: 48%;
+    }
+
+    .text,
+    .textPurple {
+        font-size: 12px;
+    }
+
+    .topLeft {
+        left: 30px;
+    }
+
+    .topRight {
+        right: 20px;
+    }
+
+    .workaholism,
+    .centered {
+        top: 20%;
+    }
+    .workaholism{
+        left: 18% ;
+    }
+
+    .anxiety {
+        top: 27%;
+        left: 15%;
+    }
+
+    .futureReady {
+        top: 27%;
+    }
+
+    .horizontalLine {
+        top: 45%;
+        left: 15px;
+    }
+
+    .wellnessLabel {
+        top: 43%;
+        right: 0;
+    }
+
+    .knowmore {
+        display: none;
+    }
+
+    .withdrawal {
+        top: 52%;
+        left: 14%;
+    }
+
+    .helplessness {
+        top: 60%;
+        left: 14%;
+    }
+
+    .stagnation {
+        top: 52%;
+        left: 55%;
+    }
+
+    .wellness {
+        top: 58%;
+        left: 55%;
+    }
+
+    .struggleframe {
+        width: 28.916px;
+        height: 15.639px;
+        aspect-ratio: 28.916/15.639;
+    }
+
+    .bottomLeft {
+        bottom: 22%;
+    }
+
+    .bottomRight {
+        bottom: 20%;
+    }
+
+
+}

@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
+    padding-top: 40px;
+}
+
+.backtotop {
+  position: fixed;
+  bottom: 20px;    /* stick to bottom of screen */
+  right: 20px;
+  z-index: 10;
+    /* spacing from right */
+}
+
+
+
+@media (max-width:450px) {
+    .backtotop {
+        display: none;
+    }
+}

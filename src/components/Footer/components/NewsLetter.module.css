@@ -9,8 +9,9 @@
     flex-direction: column;
     gap: 10px;
 }
-.homebox{
-    padding: 10px 18px ;
+
+.homebox {
+    padding: 10px 18px;
 }
 
 .inputwrapper {
@@ -37,6 +38,7 @@
     border: none;
     outline: none;
     background: transparent;
+
 }
 
 .input::placeholder,
@@ -44,9 +46,9 @@
 
     color: var(--blacks-50, #828689);
     font-family: Montserrat;
-    font-size: 14px;
+    font-size: 1.04166666667vw;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
     line-height: normal;
 }
 
@@ -54,12 +56,173 @@
     outline: none;
     border: none;
 }
-.subs{
+
+.subs {
     color: var(--Whites-Base, #FFF);
-font-family: Montserrat;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-letter-spacing: -0.16px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.16px;
+}
+
+.purplebox {
+    width: 19.58333333333vw;
+    aspect-ratio: 282/105;
+    border-radius: 23px;
+    background: var(--Accent-Purple-Base, #815FAA);
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 20px 23px;
+    justify-content: space-between;
+    transform-origin: left bottom;
+    text-decoration-line: none;
+}
+
+/* Hover in */
+@keyframes purpleSpringIn {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    50% {
+        transform: scale(1.05) translate(6px, -5px);
+    }
+
+    75% {
+        transform: scale(1.04) translate(5px, -4px);
+    }
+
+    100% {
+        transform: scale(1.05) translate(5px, -4px);
+    }
+}
+
+/* Hover out */
+@keyframes purpleSpringOut {
+    0% {
+        transform: scale(1.05) translate(5px, -4px);
+    }
+
+    40% {
+        transform: scale(1.055) translate(6px, -5px);
+    }
+
+    70% {
+        transform: scale(0.995) translate(-1px, 1px);
+    }
+
+    100% {
+        transform: scale(1) translate(0, 0);
+    }
+}
+
+.purplebox:hover {
+    animation: springRightUpInnew 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    background: var(--accent-purple-110, #684C8A);
+    cursor: pointer;
+}
+
+.purplebox:not(:hover) {
+    animation: springRightUpOutnew 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Arrow tilt */
+.rotate {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.purplebox:hover .rotate {
+    transform: rotate(45deg);
+}
+
+@keyframes springRightUpInnew {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    /* 60% {
+        transform: scale(1.05) translate(4px, -3px);
+    }
+
+    80% {
+        transform: scale(1.05) translate(3px, -2.5px);
+    } */
+
+    100% {
+        transform: scale(1.05) translate(3px, -2.5px);
+    }
+}
+
+@keyframes springRightUpOutnew {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    50% {
+        transform: scale(0.99) translate(-1px, 1px);
+        /* less left shift */
+    }
+
+    80% {
+        transform: scale(0.995) translate(-1px, 1px);
+        /* gentler offset */
+    }
+
+    100% {
+        transform: scale(1) translate(0, 0);
+    }
+}
+
+/* .purplebox {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    cubic-bezier creates spring-like easing
+} */
+
+/* .purplebox:hover {
+    transform: scale(1.1);
+    Slight zoom
+} */
+
+
+.boxttx {
+    color: var(--Whites-Base, #FFF);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.16px;
+    text-align: left;
+}
+
+.top {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+
+@media (max-width:450px) {
+    .purplebox {
+        padding: 15px;
+        width: 222px;
+        height: 86.212px;
+        aspect-ratio: 222/86.212;
+
+    }
+
+    .boxttx {
+        font-size: 12.864px;
+    }
+
+    .purplebox :hover {
+        transform: none !important;
+        transition: none !important;
+        background: var(--Accent-Purple-Base, #815FAA) !important;
+        cursor: default;
+    }
+
 }

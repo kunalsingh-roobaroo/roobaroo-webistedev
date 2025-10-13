@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import classes from "./Tiles.module.css";
 import {
@@ -7,6 +8,9 @@ import {
 } from "../../../../../public/assets/images";
 import Image from "next/image";
 import { staticAlt } from "@/lib/constants";
+import { Download } from "lucide-react";
+import Link from "next/link";
+import { trackEvent } from "@/utils/ga4";
 const Tiles = () => {
   const data = [
     {
@@ -14,33 +18,63 @@ const Tiles = () => {
       subtitle:
         "The Growth–Wellness Balance Matrix is a simple but powerful tool to diagnose where you are — or where your team, institution or workplace sits.",
       thumbnail: thumbnail,
+      link: "https://drive.google.com/file/d/1gAGl-xI4nm7g7nM5fFLuHStKjo6O6gEA/view?usp=drive_link",
+      label: "Matrix Article",
+      analvalue: "brandstory_matrix",
     },
     {
       title: "Problem We Are Solving",
       subtitle:
-        "The Growth–Wellness Balance Matrix is a simple but powerful tool to diagnose where you are — or where your team, institution or workplace sits.",
+        "Growth without wellness is unfulfilling & wellness without direction is unsustainable. The current ecosystems treat growth & wellness as separate silos.",
       thumbnail: thumbnail2,
+      link: "https://drive.google.com/file/d/1mXr9Y2P323s2yCePFlZPHPMg8T0X0qJY/view?usp=drive_link",
+      label: "PS Article",
+      analvalue: "brandstory_ps",
     },
     {
       title: "What is Roobaroo.ai?",
       subtitle:
-        "The Growth–Wellness Balance Matrix is a simple but powerful tool to diagnose where you are — or where your team, institution or workplace sits.",
+        "We have been sold growth and Wellness in isolation. But life is not split like that. Roobaroo.ai exists to repair that split",
       thumbnail: thumbnail3,
+      link: "https://drive.google.com/file/d/1Il8CZBei-JceUYO33BKW-qhptZtFD2ME/view?usp=drive_link",
+      label: "About Article",
+      analvalue: "brandatory_about",
     },
   ];
   return (
     <div className={classes.container}>
       {data.map((value, index) => {
         return (
-          <div key={index} className={classes.tile}>
+          <Link
+            target="_blank"
+            href={value.link}
+            key={index}
+            className={classes.tile}
+            onClick={() =>
+              trackEvent({
+                category: "Brand Story",
+                action: "On_click",
+                label: value.label,
+                value: value.analvalue,
+              })
+            }
+          >
             <div className={classes.upper}>
               <Image src={value.thumbnail} fill alt={staticAlt} />
+              <div className={classes.gradient}></div>
             </div>
             <div className={classes.bottom}>
-              <p className={classes.headttx}>{value.title}</p>
+              <div className={classes.headWrapper}>
+                <p className={classes.headttx}>{value.title}</p>
+                <Download
+                  className={classes.downloadIcon}
+                  size={18}
+                  color="white"
+                />
+              </div>
               <p className={classes.subttx}>{value.subtitle}</p>
             </div>
-          </div>
+          </Link>
         );
       })}
     </div>

@@ -1,0 +1,460 @@
+.container {
+    width: 100%;
+    display: flex;
+    padding: 16px 6.59722222222vw 77px 6.59722222222vw;
+    align-items: center;
+    justify-content: center;
+    gap: 71px;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.pillContainer {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.subbrand {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.txtdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.biglogos {
+    width: 11.11111111111vw;
+    aspect-ratio: 160/90;
+    position: relative;
+}
+
+.smalllogos {
+    width: 7.63888888889vw;
+    aspect-ratio: 1/1;
+    position: relative;
+}
+
+.marquee {
+    width: 100%;
+}
+
+.headtxt {
+ color: var(--Blacks-Base, #0C0C0C);
+text-align: center;
+font-family: "Simple Cakes";
+font-size: 4.514vw;
+font-style: normal;
+font-weight: 400;
+line-height: 100%; /* 65.385px */
+letter-spacing: 0.654px;
+}
+.subtop{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.subheading {
+color: var(--Blacks-Base, #0C0C0C);
+font-family: Montserrat;
+    font-size: 2.778vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+.maintxt {
+    display: flex;
+    align-items: center;
+    /* vertical centering */
+    justify-content: center;
+    /* horizontal centering */
+    gap: 0.5em;
+    /* optional */
+    color: var(--blacks-80, #303437);
+    font-family: Montserrat;
+    font-size: 3.95833333333vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.57px;
+    text-align: center;
+}
+
+.span {
+    color: var(--blacks-80, #815FAA);
+    font-family: "Simple Cakes";
+    font-size: 6.25vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 90px */
+    letter-spacing: 0.9px;
+    display: inline-block;
+}
+
+.ext {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+}
+
+.central {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 75.34722222222vw;
+}
+
+.marqueesection,
+.marqueesectionMobile {
+    margin: 10px;
+    display: flex;
+    align-items: flex-start;
+    /* overflow: hidden; */
+    border-radius: 30px;
+    border: 1.525px solid var(--Accent-Purple-Base, #815FAA);
+    background: #FFF;
+    aspect-ratio: 1085/278;
+    overflow: hidden;
+    z-index: 1;
+    padding: 0px 23px;
+    justify-content: space-between;
+}
+
+.memberImage {
+    width: 10.55555555556vw;
+    aspect-ratio: 1/1;
+    position: relative;
+    margin: 10px 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    /* display: flex !important; */
+}
+
+.marqueeline {
+    width: auto !important;
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    height: 100% !important;
+
+}
+
+
+.titles {
+    width: 100%;
+    align-items: center;
+    gap: 31px;
+    display: flex;
+    margin-top: 30px;
+}
+
+.title {
+    color: #1E1E1E;
+    font-family: Montserrat;
+    font-size: 1.38888888889vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.4px;
+    padding-right: 30px;
+}
+
+.border {
+    border-right: 1px solid #B5B5B5;
+}
+
+.brands {
+    /* margin-top: 6px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 52px 10px 10px 10px;
+    position: relative;
+}
+
+.brand {
+    aspect-ratio: 134/74;
+    width: 9.30555555556vw;
+    position: relative;
+}
+
+.filterBlack {
+    filter: brightness(0) saturate(100%);
+}
+
+.from {
+    position: absolute;
+    display: flex;
+    transform: rotate(-19.479deg);
+    padding: 10px 20px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5.493px;
+    background: var(--Accent-Purple-Base, #815FAA);
+    color: var(--Whites-Base, #FFF);
+    font-family: Montserrat;
+    font-size: 1.11111111111vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 91%;
+    /* 13.997px */
+    letter-spacing: 0.769px;
+    top: -2vw;
+    left: -1vw;
+}
+
+.bluebox,
+.pinkbox,
+.purplebox {
+    position: absolute;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+
+.bluebox {
+    width: 37.22222222222vw;
+    top: 0vw;
+    left: -15vw;
+    border-radius: 59.883px;
+    z-index: 0;
+    animation: dvdSmooth 19s ease-in-out infinite;
+}
+
+.pinkbox {
+    width: 33.26388888889vw;
+    top: 20;
+    right: -15vw;
+    border-radius: 53.527px;
+    animation: dvdSmooth 19s ease-in-out infinite;
+}
+
+.purplebox {
+    width: 15.20833333333vw;
+    border-radius: 24.436px;
+    top: 43vw;
+    left: -12vw;
+    animation: dvdSmooth 19s ease-in-out infinite;
+}
+
+.marqueeColumn {
+    overflow: hidden;
+    /* flex: 1; */
+    height: 100%;
+    position: relative;
+}
+
+.marqueeInner {
+    display: flex;
+    flex-direction: column;
+}
+
+.scrollUp .marqueeInner {
+    animation: scrollUp 100s linear infinite;
+}
+
+.scrollDown .marqueeInner {
+    animation: scrollDown 100s linear infinite;
+}
+
+.logo {
+    width: 14.236vw;
+    aspect-ratio: 265/56;
+    position: relative;
+}
+
+@keyframes scrollUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes scrollDown {
+    0% {
+        transform: translateY(-50%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes dvdSmooth {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(30px, 20px);
+    }
+
+    50% {
+        transform: translate(0, 40px);
+    }
+
+    75% {
+        transform: translate(-30px, 20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+@media (max-width:450px) {
+    .container {
+        padding: 3px 6.92307692308vw;
+        gap: 32px;
+    }
+
+    .headtxt {
+        color: var(--blacks-80, #303437);
+        text-align: center;
+        font-family: "Simple Cakes";
+        font-size: 27px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        /* 27px */
+        letter-spacing: 0.27px;
+    }
+
+    .subheading {
+        font-size: 14px;
+        color: var(--blacks-80, #303437);
+    }
+
+    .maintxt {
+        font-size: 29.964px;
+        gap: 0px;
+        display: inline-flex;
+        /* keep items in one line */
+        align-items: center;
+        /* align baseline nicely */
+        gap: 0;
+    }
+
+
+    .span {
+        font-size: 47.312px;
+        margin: 0px 12px;
+        display: inline;
+        /* or inline-block if you need */
+        white-space: nowrap;
+    }
+
+    .marqueesection {
+        /* height: 154px; */
+        /* aspect-ratio: unset;
+        height: auto; */
+        display: none;
+    }
+
+    .memberImage {
+        /* width: 79px; */
+        border-radius: 8.778px;
+        overflow: hidden;
+    }
+
+    .marqueesectionMobile {
+        padding: 0px;
+        margin: 0;
+        aspect-ratio: unset;
+        height: 154px;
+    }
+
+    .memberImage {
+        width: 79px;
+        margin: 10px 0 !important;
+    }
+
+    .title {
+        font-size: 10.4px;
+        width: 93px;
+        padding-right: 22px;
+        
+    }
+
+    .titles {
+        flex-wrap: wrap;
+        gap: 22px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .brand {
+        width: 66.672px;
+        height: 37.351px;
+        flex-shrink: 0;
+        border-radius: 1.162px;
+        overflow: hidden;
+        aspect-ratio: unset;
+    }
+
+    .brands {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 41px;
+    }
+
+    .from {
+        top: -30px;
+        left: -18px;
+        border-radius: 4.424px;
+        aspect-ratio: unset;
+        height: 27.427px;
+        font-size: 12.387px;
+    }
+
+    .bluebox,
+    .pinkbox {
+        width: 169px;
+        aspect-ratio: 1/1;
+        border-radius: 18.93px;
+    }
+
+    .central {
+        width: 100%;
+    }
+    .biglogos{
+        width: 97.395px;
+height: 54.785px;
+aspect-ratio: unset;
+    }
+    .smalllogos{
+        width: 66.959px;
+    }
+    .pillContainer{
+        gap: 31px;
+    }
+    .logo{
+        width: 101.718px;
+height: 21.546px;
+aspect-ratio: unset;
+    }
+}
+
+@media (min-width:451px) {
+    .marqueesectionMobile {
+        display: none;
+    }
+}

@@ -5,8 +5,9 @@
   margin: 0;
   box-sizing: border-box;
   /* overflow-x: hidden; */
-    scrollbar-width: thin;
+  scrollbar-width: thin;
   scrollbar-color: #999 transparent;
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -20,4 +21,28 @@
   text-decoration: none;
   text-decoration-line: none;
   text-decoration-style: none;
+}
+
+
+.subheading {
+  font-size: 6.52777777778vw;
+  color: var(--blacks-80, #303437);
+  font-family: Montserrat;
+  /* font-size: 94px; */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  /* 94px */
+  letter-spacing: 0.94px;
+}
+
+.hash-link:hover{
+    text-decoration-line: underline;
+}
+
+
+@media (max-width:450px) {
+  .subheading{
+    font-size: 31px;
+  }
 }

@@ -1,0 +1,84 @@
+.parent {
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.background {
+    background: url('/assets/icons/subtract.svg');
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1439/673;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* max-height: 512px; */
+}
+
+.purplemain,
+.secpurplemain {
+    position: absolute;
+    border-radius: 34.37px;
+    overflow: hidden;
+    z-index: 1;
+    aspect-ratio: 1/1;
+    animation: dvdSmooth 8s ease-in-out infinite;
+    background: rgba(104, 76, 138, 0.45);
+
+}
+
+.secpurplemain {
+    width: 19.86111111111vw;
+    top: 0vw;
+    right: -5vw;
+    animation-delay: 0s
+}
+
+.purplemain {
+    width: 21.38888888889vw;
+    top: -5vw;
+    right: 10vw;
+    animation-delay: 500ms
+}
+
+@keyframes dvdSmooth {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(30px, 20px);
+    }
+
+    50% {
+        transform: translate(0, 40px);
+    }
+
+    75% {
+        transform: translate(-30px, 20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@media (max-width:450px) {
+    .background {
+        background: url('/assets/icons/mobsubtract.svg');
+        width: 101%;
+        aspect-ratio: 390/410;
+        background-size: contain;
+        background-repeat: no-repeat;
+        max-height: 461px;
+    }
+
+    .purplemain,
+    .secpurplemain {
+        display: none;
+    }
+}

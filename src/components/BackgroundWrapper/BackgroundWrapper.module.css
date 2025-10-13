@@ -1,0 +1,173 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    /* gap: 40px; */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* padding: 170px 0px 72px 0px; */
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /* width: 100%; */
+    width: 75.83333333333vw;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.headtxt {
+    color: var(--Blacks-Base, #0C0C0C);
+    font-family: Montserrat;
+    font-size: 6.52777777778vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.94px;
+}
+
+.lhs,
+.rhs {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 775px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* auto space adjusts with height */
+    pointer-events: none;
+    z-index: 0;
+}
+
+.lhs {
+    top: 0;
+    left: -23.01388888889vw;
+    animation-delay: 0s;
+}
+
+.rhs {
+    right: -23.01388888889vw;
+    top: 200px;
+    animation-delay: 0.5s;
+}
+
+.pinkbox,
+.righpurplebox,
+.purplebox,
+.blubox {
+    width: 32.00736111111vw;
+    aspect-ratio: 1/1;
+    border-radius: 51.57px !important;
+    overflow: hidden;
+    animation: dvdSmooth 8s ease-in-out infinite;
+
+}
+
+.boxWrapper {
+    width: 32.00736111111vw;
+    aspect-ratio: 1/1;
+    border-radius: 51.57px !important;
+    overflow: hidden;
+    animation: dvdSmooth 8s ease-in-out infinite;
+}
+
+.subtxt {
+    color: var(--Blacks-Base, #0C0C0C);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.18px;
+}
+
+.content {
+    width: 100%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; */
+}
+
+/* .pinkbox {
+  animation-delay: 0s;
+}
+
+.righpurplebox {
+  animation-delay: 2s;
+}
+
+.purplebox {
+  animation-delay: 4s;
+}
+
+.blubox {
+  animation-delay: 6s;
+} */
+@keyframes dvdSmooth {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(30px, 20px);
+    }
+
+    50% {
+        transform: translate(0, 40px);
+    }
+
+    75% {
+        transform: translate(-30px, 20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@media (max-width:450px) {
+
+    .boxWrapper {
+        border-radius: 34.03px;
+        width: 304.148px;
+    }
+
+    .lhs {
+        left: -264px;
+        gap: 296px;
+    }
+
+    .rhs {
+        right: -264px;
+        gap: 296px;
+    }
+
+    .section {
+        width: 336px;
+    }
+
+    .container {
+        padding-top: 89px;
+    }
+
+    .headtxt {
+        font-size: 60px;
+    }
+
+    .subtxt {
+        font-size: 11px;
+    }
+    .container{
+        padding: 0px;
+    }
+
+
+}

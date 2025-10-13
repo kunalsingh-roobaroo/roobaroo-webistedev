@@ -1,6 +1,6 @@
 .container {
-    padding: 150px 0px 0px 75px;
-    width: 891px;
+    padding: 150px 0px 0px 5.20833333333vw;
+    width: 61.875vw;
     position: relative;
     box-sizing: border-box;
 
@@ -23,7 +23,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: 140%;
-    width: 438px;
+    width: 30.41666666667vw;
     /* 35px */
 }
 
@@ -52,24 +52,26 @@
 }
 
 .rocketframe {
-    top: 40%;
-    right: 7%;
+    top: 12vw;
+    right: 2vw;
 }
 
 .began {
-    top: 60%;
-    right: 9%;
+      top: 16.5vw;
+    right: 3vw;
+
     transform: rotate(-9.204deg);
 }
 
 @media (max-width:450px) {
     .container {
-        padding: 16px 16px 0px 16px;
-        width: 100%;
+        padding: 0px 0px 0px 52.43px;
+        /* width: 100%; */
         gap: 44px;
         display: flex;
         flex-direction: column;
-        margin-top: 142px;
+        margin-top: 172.04px;
+        width: 309.576px;
     }
 
     .headttx {
@@ -82,13 +84,13 @@
     }
 
     .rocketframe {
-        top: 10px;
-        right: 100px;
+               top: -11px;
+        right: -12px;
     }
 
     .began {
-        top: 30px;
-        right: 100px;
+       top: 14px;
+        right: -4px;
     }
 
     .rocket {

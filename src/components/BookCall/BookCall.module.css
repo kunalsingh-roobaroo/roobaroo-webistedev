@@ -1,0 +1,152 @@
+.bluebox {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px 15px;
+    justify-content: space-between;
+    /* transition: all 0.3s ease; */
+    /* Smooth animation */
+    cursor: pointer;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.top {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.boxttx {
+    color: var(--Whites-Base, #FFF);
+    font-family: Montserrat;
+    font-size: 1.38888888889vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.16px;
+    text-align: left;
+}
+
+.bluebox {
+    border-radius: 23px;
+    background: var(--Accent-Purple-Base, #815FAA);
+    width: 16.73611111111vw;
+    aspect-ratio: 241/90;
+}
+
+.bluebox:hover,
+.redbox:hover,
+.purplebox:hover {
+    animation: springRightUpInnew 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.bluebox:not(:hover),
+.redbox:not(:hover),
+.purplebox:not(:hover) {
+    animation: springRightUpOutnew 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.bluebox:hover {
+    background: var(--accent-purple-110, #684C8A)
+}
+
+@keyframes springRightUpIn {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    60% {
+        transform: scale(1.12) translate(8px, -6px);
+    }
+
+    80% {
+        transform: scale(1.08) translate(6px, -5px);
+    }
+
+    100% {
+        transform: scale(1.1) translate(6px, -5px);
+    }
+}
+
+/* Hover out — retrace path back, with small bounce */
+@keyframes springRightUpOut {
+    0% {
+        transform: scale(1.1) translate(6px, -5px);
+    }
+
+    40% {
+        transform: scale(1.12) translate(8px, -6px);
+    }
+
+    /* brief follow-through */
+    70% {
+        transform: scale(0.98) translate(-2px, 2px);
+    }
+
+    /* bounce past origin */
+    100% {
+        transform: scale(1) translate(0, 0);
+    }
+}
+
+@keyframes springRightUpInnew {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    /* 60% {
+        transform: scale(1.05) translate(4px, -3px);
+    }
+
+    80% {
+        transform: scale(1.05) translate(3px, -2.5px);
+    } */
+
+    100% {
+        transform: scale(1.05) translate(3px, -2.5px);
+    }
+}
+
+@keyframes springRightUpOutnew {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    50% {
+        transform: scale(0.99) translate(-1px, 1px);
+        /* less left shift */
+    }
+
+    80% {
+        transform: scale(0.995) translate(-1px, 1px);
+        /* gentler offset */
+    }
+
+    100% {
+        transform: scale(1) translate(0, 0);
+    }
+}
+
+
+@media (max-width:450px) {
+    .bluebox {
+        width: 138.986px;
+        height: 67.083px;
+        flex-shrink: 0;
+        flex-shrink: 0;
+        padding: 8px;
+        border-radius: 10.226px;
+    }
+
+    .bluebox:hover {
+        transform: none;
+        /* 🚫 No scaling */
+        background: var(--accent-purple-110, #684C8A);
+    }
+
+    .boxttx {
+        font-size: 10.89px;
+    }
+}

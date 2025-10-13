@@ -1,0 +1,152 @@
+"use client";
+import React from "react";
+import classes from "./BrandKitTiles.module.css";
+import Image from "next/image";
+import {
+  colornew,
+  colors,
+  donew,
+  dos,
+  heading,
+  headingnew,
+  robaroomain,
+  robaroomainnew,
+  robaroosub,
+} from "../../../../../public/assets/images";
+import { icons } from "lucide-react";
+import { responsiveImageSizes, staticAlt } from "@/lib/constants";
+import Link from "next/link";
+import { trackEvent } from "@/utils/ga4";
+
+const BrandKitTiles = () => {
+  const tiles = [
+    {
+      heading: "Logo",
+      subheading: "Multiple formats with usage rules for consistent branding",
+      colorClass: "blueTile",
+      icons: robaroomainnew,
+      link: "logo",
+      label: "Logos",
+      analvalue: "brandidentity_logos",
+    },
+    {
+      heading: "Typography",
+      subheading: "Brand fonts with styles, usage rules, and download links.",
+      colorClass: "redTile",
+      icons: headingnew,
+      link: "typography",
+      label: "Typography",
+      analvalue: "brandidentity_typography",
+    },
+    {
+      heading: "Color",
+      subheading: "Official palette with multiple codes and usage guidelines.",
+      colorClass: "blueTile",
+      icons: colornew,
+      link: "color",
+      label: "Color",
+      analvalue: "brandidentity_color",
+    },
+    {
+      heading: "Usage Guidelines",
+      subheading: "Clear rules on how to use our brand assets",
+      colorClass: "redTile",
+      icons: donew,
+      link: "usage-guidelines",
+      label: "Usage Guidelines",
+      analvalue: "brandidentity_usage",
+    },
+  ];
+
+  return (
+    <section className={classes.container}>
+      {tiles.map((value, index) => (
+        <Link
+          href={`/brand-assets/${value.link}`}
+          key={index}
+          className={`${classes.tile} ${classes[value.colorClass]}`}
+          onClick={() =>
+            trackEvent({
+              category: "Brand Identity",
+              action: "On_click",
+              label: value?.label,
+              value: value?.analvalue,
+            })
+          }
+        >
+          <h3 className={classes.heading}>{value.heading}</h3>
+          <p className={classes.subheading}>{value.subheading}</p>
+          <p className={classes.subheading}>
+            View Guide <span className={classes.gt}>&gt;</span>
+          </p>
+
+          {/* Bottom section */}
+
+          {index === 0 && (
+            <>
+              <div className={classes.robaroosub}>
+                <div className={classes.ico}>
+                  <Image
+                    src={robaroosub}
+                    fill
+                    alt={staticAlt}
+                    sizes={responsiveImageSizes}
+                  />
+                </div>
+              </div>
+
+              <div className={classes.robaroomain}>
+                <div className={classes.ico}>
+                  <Image
+                    src={value.icons}
+                    fill
+                    alt={staticAlt}
+                    sizes={responsiveImageSizes}
+                  />
+                </div>
+              </div>
+            </>
+          )}
+          {index === 1 && (
+            <div className={classes.rtpo}>
+              <div className={classes.ico}>
+                <Image
+                  src={value.icons}
+                  fill
+                  alt={staticAlt}
+                  sizes={responsiveImageSizes}
+                />
+              </div>
+            </div>
+          )}
+          {index === 2 && (
+            <div className={classes.colors}>
+              <div className={classes.ico}>
+                <Image
+                  src={value.icons}
+                  fill
+                  alt={staticAlt}
+                  sizes={responsiveImageSizes}
+                />
+              </div>
+            </div>
+          )}
+          {index === 3 && (
+            <div className={classes.dos}>
+              <div className={classes.ico}>
+                <Image
+                  src={value.icons}
+                  fill
+                  alt={staticAlt}
+                  sizes={responsiveImageSizes}
+                />
+              </div>
+            </div>
+          )}
+        </Link>
+      ))}
+    </section>
+  );
+};
+
+export default BrandKitTiles;

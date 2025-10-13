@@ -27,11 +27,14 @@
   letter-spacing: 0.215px;
 }
 
+/* .doodleimg{
+  width: ;
+} */
 .doodleimg {
-  width: 13.49534722222vw;
+  width: 15.625vw;
   /* height: 98.544px; */
   position: relative;
-  aspect-ratio: 1.97/1;
+  aspect-ratio: 1/1;
 }
 
 .verticalLineWrapper {
@@ -39,7 +42,6 @@
   width: 6px;
   height: 100%;
   /* adjust as needed */
-  margin: 0 40px;
 }
 
 .verticalTrack {
@@ -47,7 +49,7 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 2px;
+  width: 5px;
   height: 100%;
   background-color: #303437;
   z-index: 0;
@@ -58,7 +60,7 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 2px;
+  width: 5px;
   height: 0;
   background: linear-gradient(to bottom,
       rgba(39, 170, 231, 1),
@@ -80,29 +82,98 @@
 }
 
 .bkuebox,
-.purplebox,
-.pinkbox {
+.redbox {
   position: absolute;
   aspect-ratio: 1/1;
-border-radius: 59.883px !important;
-overflow: hidden;
+  border-radius: 59.883px !important;
+  overflow: hidden;
+  animation: dvdSmooth 19s ease-in-out infinite;
+  z-index: 0;
 }
 
 .bkuebox {
   width: 37.16666666667vw;
-  top: -217px;
-  left: -57%;
+  top: -20vw;
+  left: -42vw;
 
 
 }
+
 
 .purplebox {
-
+  position: absolute;
+  aspect-ratio: 1/1;
+  /* border-radius: 59.883px !important; */
+  overflow: hidden;
+  animation: dvdSmooth 19s ease-in-out infinite;
   width: 21.66666666667vw;
+  top: 34vw;
+  left: -33vw;
+  border-radius: 34.909px !important;
+
 
 }
 
-.pinkbox {
+.redbox {
 
   width: 33.22222222222vw;
+  top: 15vw;
+  right: -37vw;
+}
+
+.line {
+  width: 13.75vw;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0px 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+.underline {
+  width: 30.81944444444vw;
+  aspect-ratio: 199/2;
+  position: relative;
+}
+
+.leftdoodleimg {
+  width: 13.54166666667vw;
+  aspect-ratio: 199/95;
+  position: relative;
+}
+
+@keyframes dvdSmooth {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(30px, 20px);
+  }
+
+  50% {
+    transform: translate(0, 40px);
+  }
+
+  75% {
+    transform: translate(-30px, 20px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
+@media (max-width:450px) {
+  .container {
+    display: none;
+  }
+}
+
+@media (min-width:451px) {
+  .margin {
+    margin-top: 61px;
+  }
 }

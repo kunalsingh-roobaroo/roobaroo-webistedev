@@ -1,0 +1,133 @@
+.sec {
+    display: flex;
+    flex-direction: column;
+    gap: 112px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 63px;
+}
+
+.lhs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+.headtxt {
+    color: #18181B;
+    font-family: Montserrat;
+    font-size: 2.08333333333vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 42px */
+    font-variant: all-small-caps;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+}
+
+.title {
+    color: #18181B;
+    text-align: justify;
+    font-family: Montserrat;
+    font-size: 2.43055555556vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    /* 44.301px */
+}
+
+.subtitle {
+    color: #18181B;
+    font-family: Montserrat;
+    font-size: 1.66666666667vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+.rhs {
+    flex: 1;
+    aspect-ratio: 558/336;
+    position: relative;
+    cursor: pointer;
+}
+
+.caketitle {
+    color: #18181B;
+    text-align: justify;
+    font-family: "Simple Cakes";
+    font-size: 4.16666666667vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    /* 78px */
+}
+
+.quicltitle {
+    color: #18181B;
+    text-align: justify;
+    font-family: Quicksand;
+    font-size: 2.77777777778vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    /* 52px */
+}
+
+.span {
+
+    font-weight: 700;
+}
+
+@media (max-width:450px) {
+    .headtxt {
+        font-size: 18px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .lhs {
+        gap: 4px;
+    }
+
+    .bottom {
+        gap: 20px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+    .rhs{
+        flex: unset;
+        width: 100%;
+        aspect-ratio: 334/202;
+    }
+    .container{
+        gap: 35px;
+    }
+    .sec{
+        gap: 57px;
+    }
+    .caketitle{
+        font-size: 36px;
+    }
+    .quicltitle{
+        font-size: 23px;
+    }
+}

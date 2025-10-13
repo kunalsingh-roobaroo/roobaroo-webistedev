@@ -1,0 +1,718 @@
+.mainsection {
+    /* display: flex;
+    flex-direction: column; */
+    padding: 0px 9.09722222222vw 67px 9.09722222222vw;
+    position: relative;
+    width: 100%;
+}
+
+.backtotop {
+    position: sticky;
+    /* Make it sticky relative to the parent */
+    top: 16px;
+    /* Distance from the top when scrolling */
+    display: flex;
+    justify-content: flex-end;
+    /* Align to the right */
+    z-index: 10;
+    /* Ensure it stays on top */
+    margin-bottom: 16px;
+    /* Optional: some spacing below */
+}
+
+.title {
+    color: #18181B;
+
+    /* Heading 2 Desk */
+    font-family: Montserrat;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    /* 70px */
+    letter-spacing: 0.7px;
+}
+
+.subtitle {
+    color: #18181B;
+    font-family: Montserrat;
+    font-size: 2.91666666667vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    /* 41.272px */
+    letter-spacing: 0.413px;
+}
+
+.sec {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+.secmag{
+    margin-top: 44px;
+}
+
+.ico {
+    width: 5.55555555556vw;
+    /* height: 80px; */
+    flex-shrink: 0;
+    position: relative;
+    aspect-ratio: 1/1;
+}
+
+/* .backtotop {
+  position: fixed;
+  top: 23vw;
+  right: 34vw;       
+  width: fit-content;
+  z-index: 10;      
+} */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 39px;
+    margin-top: 28px;
+}
+.marg1{
+    margin-top: 49px;
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.sameImage {
+    aspect-ratio: 492/188;
+    width: 34.16666666667vw;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.imageTwo {
+    width: 34.16666666667vw;
+    position: relative;
+    aspect-ratio: 492/408;
+    flex-shrink: 0;
+}
+
+.imageThree {
+    width: 34.16666666667vw;
+    position: relative;
+    flex-shrink: 0;
+    aspect-ratio: 492/326;
+}
+
+.txtdiv h3 {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 1.25vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+.coloret{
+    margin-top: 37px;
+}
+.mag{
+    margin-top: 47px;
+}
+.marging1{
+    margin-top: 92px;
+}
+.mar{
+    margin-top: 28px;
+}
+.margin4{
+    margin-top: 68px;
+}
+.valtxtdiv h3 {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 1.25vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.typotxtdiv h3 {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 1.25vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.txtdiv,
+.valtxtdiv,
+.typotxtdiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.txtdiv h4 {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 1.59722222222vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.typotxtdiv h4 {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 1.59722222222vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.valtxtdiv h4 {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 1.59722222222vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.desc {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 1.31944444444vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 20px;
+}
+
+
+.dontcontent {
+    margin-top: 21px;
+}
+
+.li,
+.typeli {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 1.45833333333vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29.48px;
+    /* 142.857% */
+    margin: 20px 0px 20px 0px;
+    position: relative;
+    list-style: none;
+    /* padding-left: 11px; */
+    display: flex;
+    gap: 11px;
+    align-items: baseline;
+    /* list-style-image: url('/assets/BrandKit/cancel.svg'); */
+}
+
+/* .li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1.59722222222vw;   
+
+  transform: translateY(-50%);
+  background-image: url('/assets/BrandKit/cancel.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  aspect-ratio: 1/1;
+} */
+
+/* .list {
+    list-style: none;
+  
+    padding-left: 24px;
+
+} */
+
+.icoframe {
+    width: 1.59722222222vw;
+    height: 1.59722222222vw;
+    flex-shrink: 0;
+    transform: translateY(0.3vw);
+    position: relative;
+
+}
+
+.dontimg {
+    aspect-ratio: 709/735;
+    position: relative;
+    width: 49.23611111111vw;
+    flex-shrink: 0;
+
+
+}
+
+.dontcontent {
+    display: flex;
+    align-items: flex-start;
+    gap: 23px;
+}
+
+.list {
+    margin-top: 24px;
+}
+
+.majkorsubtitle {
+    color: #18181B;
+
+    /* Heading 2 Desk */
+    font-family: Montserrat;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    /* 70px */
+    letter-spacing: 0.7px;
+}
+.mrgtop{
+    margin-top: 21px;
+}
+
+.secsec {
+    margin-top:60px;
+}
+.secmarg{
+    margin-top: 36px;
+}
+
+.h4 {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 1.31944444444vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.boldh4 {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 1.31944444444vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+.tpofdiv {
+    margin-top: 40px;
+}
+
+.typolist {
+    list-style: disc;
+    padding-left: 1.58888888889vw;
+    /* margin-left:; */
+    margin: 40px 0px 40px 1.58888888889vw;
+}
+
+.item {
+    margin: 2px 0px;
+    color: #18181B;
+    text-align: justify;
+    font-family: Montserrat;
+    font-size: 1.31944444444vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    /* 24.527px */
+}
+
+.typoframe {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1164/531;
+}
+
+.sametypoImage {
+    width: 31.59722222222vw;
+    aspect-ratio: 455/382;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.typocard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 113px;
+}
+
+.imagetypoTwo {
+    width: 33.68055555556vw;
+    aspect-ratio: 484/461;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.listspan {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 1.45833333333vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 29.48px;
+    /* 142.857% */
+}
+
+.typodontimg {
+    width: 47.15277777778vw;
+    aspect-ratio: 679/512;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.typeli {
+    margin: 10px 0px 10px 0px;
+}
+
+.colorcard {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    gap: 27px;
+}
+
+.firsimg,
+.secimg,
+.thirdimg {
+    position: relative;
+    flex-shrink: 0;
+    width: 30.83333333333vw;
+}
+
+.visualfirsimg,
+.visualsecimg,
+.visualthirdimg {
+    position: relative;
+    flex-shrink: 0;
+    width: 32.56944444444vw;
+}
+
+.firsimg {
+    aspect-ratio: 444/478;
+
+}
+
+.secimg {
+    aspect-ratio: 444/349;
+}
+
+.thirdimg {
+    aspect-ratio: 444/344;
+}
+
+.visualfirsimg {
+    aspect-ratio: 469/485;
+
+}
+
+.visualsecimg {
+    aspect-ratio: 469/485;
+}
+
+.visualthirdimg {
+    aspect-ratio: 469/518;
+}
+
+.colordontimg {
+    width: 31.73611111111vw;
+    aspect-ratio: 457/351;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.marging {
+    margin-top: 80px;
+}
+
+.colorcontent {
+    display: flex;
+    align-items: center;
+    gap: 71px;
+    margin-top: 31px;
+}
+
+.valelist {
+    margin-top: 47pc;
+}
+
+.valtxtdiv {
+    gap: 4px;
+}
+
+.visualdontimg {
+    width: 32.56944444444vw;
+    aspect-ratio: 469/640;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.visualcontent {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-top: 25px;
+}
+
+
+@media (max-width:450px) {
+    .mainsection {
+        width: 100%;
+        padding: 0px 7.17948717949vw 75px 7.17948717949vw;
+    }
+
+    .title {
+        font-size: 31px;
+    }
+
+    .sec {
+        margin-top: 8px;
+        gap: 10px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    .ico {
+        width: 22px;
+        height: 22px;
+    }
+
+    .content {
+        margin-top: 16px;
+        gap: 27px;
+    }
+
+    .card {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .sameImage {
+        /* width: 325.074px; */
+        /* height: 124.098px; */
+        width: 100%;
+        /* aspect-ratio: unset; */
+        aspect-ratio: 326/125;
+    }
+
+    .txtdiv h3 {
+        font-size: 14px;
+    }
+
+    .typotxtdiv h3 {
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .txtdiv h4 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .txtdiv {
+        width: 100%;
+    }
+
+    .desc {
+        font-size: 14px;
+        line-height: normal;
+    }
+
+    .imageTwo {
+        width: 100%;
+        aspect-ratio: 329/273;
+    }
+
+    .imageThree {
+        width: 100%;
+        aspect-ratio: 334/222;
+    }
+
+    .marginmob {
+        margin-top: 28px;
+    }
+
+    .dontcontent {
+        margin-top: 19px;
+        flex-direction: column;
+        gap: 38px;
+    }
+
+    .dontimg {
+        width: 100%;
+        aspect-ratio: 331/344;
+    }
+
+    .li {
+        align-items: baseline;
+        font-size: 14px;
+
+    }
+
+    .list {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .icoframe {
+        width: 18.502px;
+        aspect-ratio: 1/1;
+        height: unset;
+        transform: translateY(5px);
+    }
+
+    .secsec {
+        margin-top: 64px;
+    }
+
+    .tpofdiv {
+        margin-top: 20px;
+    }
+
+    .h4 {
+        font-size: 14px;
+    }
+
+    .boldh4,
+    .item {
+        font-size: 14px;
+    }
+
+    .typocard {
+        flex-direction: column;
+        gap: 41px;
+    }
+
+    .sametypoImage {
+        width: 100%;
+        aspect-ratio: 333/248;
+    }
+
+    .imagetypoTwo {
+        width: 100%;
+        aspect-ratio: 335/295;
+    }
+
+    .typodontimg {
+        width: 100%;
+        aspect-ratio: 336/255;
+    }
+
+    .typeli p,
+    .listspan {
+        font-size: 14px;
+    }
+
+    .dontcontent {
+        gap: 19px;
+    }
+
+    .colorcard {
+        flex-direction: column;
+    }
+
+    .firsimg {
+        width: 100%;
+        aspect-ratio: 336/368;
+    }
+
+    .secimg {
+        width: 100%;
+        aspect-ratio: 332/262;
+    }
+
+    .thirdimg {
+        width: 100%;
+        aspect-ratio: 337/261;
+    }
+
+    .marging {
+        display: none;
+    }
+
+    .colorcontent {
+        flex-direction: column;
+        margin-top: 38px;
+        gap: 47px;
+    }
+
+    .colordontimg {
+        width: 100%;
+        aspect-ratio: 330/254;
+    }
+
+    .valtxtdiv h3 {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+    }
+
+    .valtxtdiv {
+        gap: 0px;
+    }
+
+    .visualfirsimg {
+        width: 100%;
+        aspect-ratio: 339/350;
+    }
+
+    .visualsecimg {
+        width: 100%;
+        aspect-ratio: 338/348;
+    }
+
+    .visualthirdimg {
+        width: 100%;
+        aspect-ratio: 336/371;
+    }
+
+    .visualcontent {
+        flex-direction: column;
+        gap: 56px;
+    }
+
+    .visualdontimg {
+        width: 100%;
+        aspect-ratio: 336/459;
+    }
+
+    .desktypo {
+        display: none;
+    }
+
+    .li {
+        margin: 10px 0px;
+    }
+
+    .typoframe {
+        width: 100%;
+        aspect-ratio: 335/474;
+    }
+}
+
+@media (min-width:451px) {
+
+    .marginmob,
+    .mobtypo {
+        display: none;
+    }
+}

@@ -1,0 +1,35 @@
+.container,
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.imgcontainer {
+    width: 2.63888888889vw;
+    aspect-ratio: 1/1;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.share {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 1.38888888889vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32.965px;
+    /* 164.826% */
+}
+
+@media (max-width:450px) {
+    .share {
+        font-size: 14.107px;
+    }
+
+    .imgcontainer {
+        width: 26.588px;
+        /* height: 26.588px; */
+        flex-shrink: 0;
+    }
+}

@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./HeroSection.module.css";
 import Image from "next/image";
 import { rocket } from "../../../../../public/assets/icons";
-import { staticAlt } from "@/lib/constants";
+import { responsiveImageSizes, staticAlt } from "@/lib/constants";
 const BrandStoryHeroSection = () => {
   return (
     <div className={classes.container}>
@@ -16,7 +16,7 @@ const BrandStoryHeroSection = () => {
             src={rocket}
             fill
             alt={staticAlt}
-            sizes="(max-width: 768px) 47.526px, (max-width: 1200px) 144.024px, 144.024px"
+            sizes={responsiveImageSizes}
           />
         </div>
       </div>

@@ -8,10 +8,13 @@ import PinkBox from "@/components/Boxes/PinkBox";
 import BlueBox from "@/components/Boxes/BlueBox";
 import PurpleBox from "@/components/Boxes/PurpleBox";
 import KnowMore from "@/components/KnowMore/KnowMore";
-import { backgroundcircles, newcircle } from "../../../../../public/assets/images";
+import {
+  backgroundcircles,
+  newcircle,
+} from "../../../../../public/assets/images";
 import { staticAlt } from "@/lib/constants";
 
-const MarqueeSection = () => {
+const MarqueeSection = ({ reverse }) => {
   const marqueeItems = [
     {
       type: "card",
@@ -45,23 +48,30 @@ const MarqueeSection = () => {
       text: "76% of Indian professionals in desk jobs report chronic lower back pain.",
     },
   ];
-
+const repeatedItems = [...marqueeItems, ...marqueeItems, ...marqueeItems];
   return (
     <>
-      <div className={classes.marqueeWrapper}>
-        <Marquee className={classes.marquee}>
-          {marqueeItems.map((item, idx) => {
+      <div id="problem" className={classes.marqueeWrapper}>
+        <Marquee
+          direction={reverse ? "right" : "left"}
+          loop={0} // infinite
+          // autoFill // keeps filling to make it seamless
+          speed={40}
+            gradient={false}
+          className={classes.marquee}
+        >
+          {repeatedItems.map((item, idx) => {
             if (item.type === "highlight") {
               return (
-                <div key={idx} className={classes.card}>
+                <div key={idx} className={classes.highlightcard}>
                   <div className={classes.highlightSection}>
                     <p
                       style={{ color: item.color }}
-                      className={classes.cardTitle}
+                      className={classes.highlightcardTitle}
                     >
                       {item.title}
                     </p>
-                    <p className={classes.cardText}>{item.text}</p>
+                    <p className={classes.highlightcardText}>{item.text}</p>
                     <p style={{ color: item.color }} className={classes.src}>
                       {item.source}
                     </p>
@@ -93,31 +103,6 @@ const MarqueeSection = () => {
             );
           })}
         </Marquee>
-      </div>
-      <div className={classes.lostSection}>
-        <div className={classes.lostContainer}>
-          <div className={classes.lostxttxdiv}>
-            <h4 className={classes.subttx}>Silent Pains to Lost Dreams</h4>
-            <div>
-              <h2 className={classes.headtxt}>
-                This is the<span className={classes.span}> India </span> <br />
-                we refuse to ignore.
-              </h2>
-            </div>
-          </div>
-          <div className={classes.bigcircle}>
-            <div className={classes.bigcirclframe}>
-              <Image src={newcircle} fill alt={staticAlt} />
-            </div>
-          </div>
-          <KnowMore />
-        </div>
-        <div className={classes.pinkbox}>
-          <PinkBox />
-        </div>
-        <div className={classes.blueBox}>
-          <BlueBox />
-        </div>
       </div>
     </>
   );

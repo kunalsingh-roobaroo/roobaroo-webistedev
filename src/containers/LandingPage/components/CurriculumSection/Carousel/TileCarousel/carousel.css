@@ -1,0 +1,30 @@
+.slick-slide:nth-child(1) .tile {
+  background: #27AAE7 !important;
+}
+
+/* Second slide background */
+.slick-slide:nth-child(2) .tile {
+  background: #FB7D7D !important;
+}
+
+/* Third slide background */
+.slick-slide:nth-child(3) .tile {
+  background: #815FAA !important;
+}
+
+.carouselwrapper .slick-slide > div {
+  margin: 0 5px; /* left and right 5px = 10px gap total */
+}
+
+.carouselwrapper .slick-list {
+  margin: 0 -5px; /* compensate so content aligns correctly */
+}
+
+
+.carouselwrapper :global(.slick-slide > div) {
+  margin: 0 5px;
+}
+
+.carouselwrapper :global(.slick-list) {
+  margin: 0 -5px;
+}

@@ -1,0 +1,122 @@
+.sec {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    margin-top: 42px;
+}
+
+.lestsec {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 38px;
+    margin-top: 35px;
+
+}
+
+.subsrc {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    /* gap: 16px; */
+}
+
+.mark{
+    gap: 11px;
+}
+.submark{
+    gap: 19px;
+}
+.subtxt {
+    color: #18181B;
+    font-family: Montserrat;
+    font-size: 2.08333333333vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 42px */
+}
+
+.icons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 41px;
+}
+
+.ico {
+    flex: 1;
+    aspect-ratio: 242/246;
+    position: relative;
+    cursor: pointer;
+}
+
+.smallicons {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.smallico {
+    width: 36.80555555556vw;
+    aspect-ratio: 530/161;
+    position: relative;
+    cursor: pointer;
+}
+.bigicons{
+    width: 100%;
+    display: flex;
+    align-items:center;
+    gap: 92px;
+}
+.bigico{
+    width: 31.80555555556vw;
+    aspect-ratio: 458/214;
+    position: relative;
+    cursor: pointer;
+
+}
+
+@media (max-width:450px) {
+    .lestsec{
+        margin-top: 25px;
+        gap: 22px;
+    }
+    .subsrc{
+        gap: 15px;
+    }
+    .subtxt{
+        font-size: 17.847px;
+    }
+    .smallicons{
+        flex-direction: column;
+        gap: 25px;
+    }
+    .smallico{
+        width: 100%;
+        aspect-ratio: 312/96;
+    }
+    .bigicons{
+        flex-direction: column;
+        gap: 22px;
+    }
+    .bigico{
+
+        width: 85%;
+        aspect-ratio: 275/128;
+    }
+    .sec{
+        margin-top: 68px;
+        gap: 15px;
+    }
+    .icons{
+        flex-wrap: wrap;
+        gap: 28px;
+    }
+    .ico{
+        flex: unset;
+        width: 45%;
+    }
+
+}

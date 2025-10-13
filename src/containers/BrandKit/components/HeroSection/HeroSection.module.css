@@ -1,0 +1,105 @@
+.section {
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: flex-start;
+    align-items: center;
+    padding:14.58333333333vw 8.40277777778vw 5.90277777778vw 8.40277777778vw;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+
+
+}.background {
+    background: url('/assets/icons/subtract.svg');
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1439/673;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 81.875vw;
+    align-self: flex-start;
+    justify-content: flex-start;
+
+}
+
+.headtxt {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 4.16666666667vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    /* 66px */
+    letter-spacing: 0.6px;
+}
+
+.brand {
+    color: var(--primary-blue-70, #D2F1FF);
+}
+
+.kit {
+    color: var(--primary-coral-70, #FFE5E5);
+}
+
+.subtxt {
+    color: #F5F5F5;
+    font-family: Montserrat;
+    font-size: 1.66666666667vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 33.6px */
+}
+
+.frame {
+    position: absolute;
+    width: 14.236vw;
+    aspect-ratio: 215/100;
+    top: 14vw;
+    right: 40vw;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+@media (max-width:450px) {
+    .section{
+        padding: 138px 21px 0px 21px;
+         width: 378px;
+         justify-self: center;
+    }
+    .parent{
+        width: 333px;
+        gap: 11px;
+    }
+    .headtxt{
+        font-size: 31px;
+
+    }
+    .subtxt{
+        font-size: 13px;
+    }
+    .frame{
+        width: 82px;
+        aspect-ratio: 82/40;
+           top: 122px;
+        right: 33px;
+    }
+}

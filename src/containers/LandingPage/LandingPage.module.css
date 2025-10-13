@@ -1,0 +1,199 @@
+.hero {
+  width: 100%;
+  position: relative;
+  max-height: 792px;
+}
+
+.bigcircle {
+  background-image: url("/assets/images/deskcircle.svg");
+  position: absolute;
+  top: -1vw;
+  left: -2vw;
+  /* path relative to public/ folder */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  /* height: ; */
+  aspect-ratio: 118/99;
+  z-index: 0;
+
+}
+
+.bootcampcircle {
+  background-image: url("/assets/BootCamp/bgcircles.svg");
+  position: absolute;
+  top: 231vw;
+  left: -4vw;
+  /* path relative to public/ folder */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  /* height: ; */
+  aspect-ratio: 1398/1380;
+  z-index: -1;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 65px;
+  overflow: hidden;
+}
+
+.circle {
+
+  background-image: url("/assets/images/smallcircles.png");
+  /* path relative to public/ folder */
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  top: 86vw;
+  right: -8vw;
+  width: 35.375vw;
+  aspect-ratio: 1/1;
+  z-index: -1;
+  /* z-index: 99; */
+}
+
+.guding {
+  width: 100%;
+  position: relative;
+}
+
+.knowmore {
+  position: absolute;
+  top: 87vw;
+  right: 9vw;
+  z-index: 99;
+}
+
+.pinkbox,
+.blueBox {
+  border-radius: 16.47px;
+  overflow: hidden;
+  width: 10.22222222222vw;
+  position: absolute;
+  aspect-ratio: 1/1;
+  z-index: -1;
+
+}
+
+.pinkbox {
+
+  top: 98vw;
+  right: 24vw;
+  animation: dvdSmooth 19s ease-in-out infinite;
+
+}
+
+.blueBox {
+  top: 105vw;
+  right: 16vw;
+  animation: dvdSmooth 14s ease-in-out infinite;
+
+}
+
+@keyframes dvdSmooth {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(30px, 20px);
+  }
+
+  50% {
+    transform: translate(0, 40px);
+  }
+
+  75% {
+    transform: translate(-30px, 20px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
+
+@media (max-width:450px) {
+  .bigcircle {
+    aspect-ratio: 390/765;
+    background-image: url("/assets/icons/circlemob.svg");
+    top: -22vw;
+  }
+
+  .mobilecircles {
+    background-image: url("/assets/images/ellipse.png");
+    top: 2570px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    left: 0;
+    background-repeat: no-repeat;
+    /* transform: rotate(180deg); */
+    background-size: contain;
+    position: absolute;
+    z-index: -2;
+  }
+
+  .circle {
+    background-image: url("/assets/images/mobcircle.png");
+    top: 1000px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    left: 0;
+    background-repeat: no-repeat;
+    /* transform: rotate(180deg); */
+    background-size: contain;
+
+  }
+
+  .pinkbox {
+    top: 1100px;
+    width: 147px;
+  }
+
+  .blueBox {
+    width: 147px;
+    top: 1150px;
+  }
+
+  .container {
+    gap: 39px;
+  }
+
+  .knowmore {
+    display: none;
+  }
+
+  .mobilestroke {
+    width: 100%;
+    height: 21.5px;
+    background-image: url("/assets/icons/pagestroke.svg");
+    background-repeat: no-repeat;
+    /* transform: rotate(180deg); */
+    background-size: cover;
+
+  }
+
+  .bootcampcircle {
+    width: 399.34px;
+    height: 399.34px;
+    top: 2872px;
+    left: -54px;
+
+    background-image: url("/assets/BootCamp/phonebg.svg");
+  }
+
+ 
+}
+
+@media (min-width:451px) {
+  .mobilestroke {
+    display: none;
+  }
+}
