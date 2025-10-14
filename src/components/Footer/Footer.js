@@ -277,7 +277,7 @@ const Footer = () => {
         <hr className={classes.rule} />
         <div className={classes.bottom}>
           <p className={classes.coptxtx}>
-            © 2025 Rooobaroo.ai All Rights Reserved.
+            © {new Date().getFullYear()} Roobaroo.ai All Rights Reserved.
           </p>
           <div className={classes.subbottom}>
             <Link href={"terms-of-service"} className={`${classes.linkl} link`}>

@@ -16,6 +16,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "staging-roobaroo-assets.s3.amazonaws.com",
       },
+      {
+        protocol: "https",
+        hostname: "roobaroo-assets.s3.ap-south-1.amazonaws.com",
+      },
     ],
   },
 };

@@ -31,7 +31,7 @@ export default async function sitemap() {
   //   const Blogitems = Blogdata?.data || [];
 
   const BlogEntries = BlogData?.map(({ blog_seo_title, createdAt }) => ({
-    url: `https://www.roobaroo.ai/blog/${slugify(blog_seo_title)}`,
+    url: `https://www.roobaroo.ai/blog/${blog_seo_title}`,
     lastModified: createdAt?.split("T")[0],
     changeFrequency: "daily",
     priority: 0.9,

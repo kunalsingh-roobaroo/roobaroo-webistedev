@@ -23,14 +23,14 @@ export async function generateMetadata({ params }) {
     description: blog?.blog_meta_description,
     keywords: `Roobaroo.ai blog, holistic education, youth development, career clarity, school innovation, personal growth, Roobaroo insights,${blog?.blog_meta_keywords}`,
     alternates: {
-      canonical: `https://www.roobaroo.ai/blog/${slugify(
+      canonical: `https://www.roobaroo.ai/blog/${
         blog?.blog_seo_title
-      )}`,
+      }`,
     },
     openGraph: {
       title: `Roobaroo.ai | Blog – ${blog?.blog_page_title}`,
       description: blog?.blog_meta_description,
-      url: `https://www.roobaroo.ai/blog/${slugify(blog?.blog_seo_title)}`,
+      url: `https://www.roobaroo.ai/blog/${blog?.blog_seo_title}`,
       siteName: "Roobaroo.ai",
       locale: "en_US",
       type: "article",
