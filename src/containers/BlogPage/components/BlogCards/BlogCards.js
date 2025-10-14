@@ -84,7 +84,7 @@ const BlogCards = () => {
       <div className={classes.blogs}>
         {data?.map((value, index) => (
           <Link
-            href={`/blog/${slugify(value?.blog_seo_title)}`}
+            href={`/blog/${value?.blog_seo_title}`}
             key={index}
             className={classes.blog}
             onClick={() =>
