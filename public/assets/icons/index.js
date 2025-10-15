@@ -53,7 +53,7 @@ import chart_y from "./chart-y.svg";
 import chart_x from "./chart-x.svg";
 import arrow_down from "./arrow-down.svg";
 import brush_border_2 from "./brush-border-2.svg";
-import brush_border from "./brush-border.svg";
+import brush_border from "./brush_border.png";
 
 export {
   quotes,
