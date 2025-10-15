@@ -48,29 +48,8 @@ import {
 } from "../../../../../public/assets/logos";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
-import { foundertag } from "../../../../../public/assets/animations";
-import {
-  amritanew,
-  atal,
-  cpr,
-  dron,
-  dubuddy,
-  favcynew,
-  iitkwhite,
-  mesanew,
-  metadomewhite,
-  ministry,
-  nitinew,
-  paytmnew,
-  set,
-  tanishqnew,
-  titaneyeplus,
-  titannew,
-  unilevernew,
-  zeptonew,
-} from "../../../../../public/assets/workwith";
-import { X } from "lucide-react";
 import { useMediaQuery } from "react-responsive";
+import { newamrita, newatal, newcareer, newcpr, newdronstudy, newdu, newfavcy, newiit, newmesa, newmetadome, newmini, newniti, newpaytm, newtanishq, newtitan, newtitianeye, newunilever, newzepto } from "../../../../../public/assets/founderLogos";
 const KnowYourBuddy = () => {
   const isMobile = useMediaQuery({ maxWidth: 450 });
   const links = [
@@ -89,24 +68,24 @@ const KnowYourBuddy = () => {
     {
       title: "Worked with:",
       brands: [
-        metadomewhite,
-        ministry,
-        titaneyeplus,
-        dron,
-        atal,
-        nitinew,
-        iitkwhite,
-        cpr,
-        unilevernew,
-        mesanew,
-        titannew,
-        set,
-        amritanew,
-        favcynew,
-        zeptonew,
-        dubuddy,
-        tanishqnew,
-        paytmnew,
+        newmetadome,
+        newmini,
+        newtitianeye,
+        newdronstudy,
+        newatal,
+        newniti,
+        newiit,
+        newcpr,
+        newunilever,
+        newmesa,
+        newtitan,
+        newcareer,
+        newamrita,
+        newfavcy,
+        newzepto,
+        newdu,
+        newtanishq,
+        newpaytm,
       ],
     },
   ];

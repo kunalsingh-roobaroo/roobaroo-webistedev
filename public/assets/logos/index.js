@@ -1,11 +1,11 @@
 import whitelogo from "./whitelogo.svg";
 import wework from "./wework.svg";
-import rishihood from "./rishihood.svg";
+import rishihood from "./rishihood.png";
 import metadome from "./metadome.svg";
 import dron_study from "./dron-study.svg";
-import colorlinkedin from "./linkedin.svg";
-import colorinstagram from "./instagram.svg";
-import colorlinktree from "./linktree.svg";
+import colorlinkedin from "./linkedin.png";
+import colorinstagram from "./instagram.png";
+import colorlinktree from "./linktree.png";
 import iitkgp_black from "./iitkgp-black.svg";
 import iitkgp_white from "./iitkgp-white.svg";
 import MoHUA from "./MoHUA.svg";
@@ -27,8 +27,8 @@ import whatsapp from "./whatsapp.svg";
 import techbillion from "./techbillion.png";
 import master from "./master.png";
 import istart from "./istart.png";
-import stanford_seed from "./stanford-seed.svg";
-import google_for_startups from "./google-for-startups.svg";
+import stanford_seed from "./stanford.png";
+import google_for_startups from "./googlestartup.png";
 export {
   paytm,
   red,
