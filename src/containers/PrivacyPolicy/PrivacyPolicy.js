@@ -166,10 +166,10 @@ export default function PrivacyPolicyPage() {
         <div className={classes.section}>
           <h1 className={classes.headtxt}>Privacy Policy</h1>
           <h3 className={classes.subtxt}>
-            Roobaroo.ai ("Company," "we," "our," or "us") respects your privacy
+            Roobaroo.ai (&ldquo;Company,&rdquo; &ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) respects your privacy
             and is committed to protecting it through this Privacy Policy. This
             Policy explains how we collect, use, disclose, and safeguard your
-            information when you visit our website www.roobaroo.ai (the "Site")
+            information when you visit our website www.roobaroo.ai (the &ldquo;Site&rdquo;)
             and when you purchase our digital products, tools, or subscription-based
             services. <br /> <br /> By accessing or using the Site, you agree to the
             terms of this Privacy Policy. If you do not agree, please
