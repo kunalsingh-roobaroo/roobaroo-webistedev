@@ -1,0 +1,124 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 170px 0px 72px 0px;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 75.83333333333vw;
+    padding: 170px 0px 72px 0px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+    justify-self: center;
+    align-self: center;
+}
+
+.headtxt {
+    color: var(--Blacks-Base, #0C0C0C);
+    font-family: Montserrat;
+    font-size: 6.52777777778vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.94px;
+}
+
+.h2 {
+    color: var(--Blacks-Base, #0C0C0C);
+    font-family: Montserrat;
+    font-size: 1.66666666667vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.94px;
+}
+
+.h3 {
+    color: var(--Blacks-Base, #0C0C0C);
+    font-family: Montserrat;
+    font-size: 1.38888888889vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.94px;
+    margin-bottom: 14px;
+}
+
+.ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+.li {
+    margin-bottom: 6px;
+}
+
+.mainSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.emailLink {
+    font-weight: 600;
+}
+
+.infoBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.subtxt {
+    color: var(--Blacks-Base, #0C0C0C);
+    font-family: Montserrat;
+    font-size: 1.25vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.18px;
+}
+
+@media (max-width: 450px) {
+    .container {
+        padding: 89px 0px 10px 0px;
+    }
+
+    .section {
+        width: 100%;
+        padding: 89px 27px 27px 27px;
+    }
+
+    .headtxt {
+        font-size: 60px;
+    }
+
+    .subtxt {
+        font-size: 11px;
+    }
+
+    .mainSection {
+        gap: 8px;
+    }
+
+    .h2 {
+        font-size: 16px;
+    }
+
+    .h3 {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+}

@@ -69,6 +69,12 @@ export default async function sitemap() {
       priority: 0.8,
     },
     {
+      url: "https://www.roobaroo.ai/refund-policy",
+      lastModified: "2025-10-08",
+      changeFrequency: "daily",
+      priority: 0.8,
+    },
+    {
       url: "https://www.roobaroo.ai/blog",
       lastModified: "2025-10-08",
       changeFrequency: "daily",

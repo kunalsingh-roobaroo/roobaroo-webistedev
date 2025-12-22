@@ -50,7 +50,7 @@ const BootCamp = () => {
   const data = [
     {
       icon: calendar,
-      text: "Starts December",
+      text: "Starts 11 March",
     },
     {
       icon: laptop,
