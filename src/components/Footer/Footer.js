@@ -78,10 +78,10 @@ const Footer = () => {
       analvalue: "footer_calendly",
     },
     {
-      name: "Read our Blog",
-      link: "/blog",
-      label: "Blog",
-      analvalue: "footer_blog",
+      name: "Challenges",
+      link: "https://www.challenge.roobaroo.ai/",
+      label: "Challenges",
+      analvalue: "footer_challenges",
     },
   ];
   const socials = [
@@ -280,6 +280,9 @@ const Footer = () => {
             © {new Date().getFullYear()} Roobaroo.ai All Rights Reserved.
           </p>
           <div className={classes.subbottom}>
+            <Link href={"/refund-policy"} className={`${classes.linkl} link`}>
+              Refund Policy
+            </Link>
             <Link href={"terms-of-service"} className={`${classes.linkl} link`}>
               Terms of Service
             </Link>

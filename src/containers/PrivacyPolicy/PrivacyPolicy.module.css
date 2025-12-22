@@ -36,6 +36,16 @@
     letter-spacing: -0.94px;
 }
 
+.updated {
+    color: var(--Blacks-60, #5e6366);
+    font-family: Montserrat;
+    font-size: 1.25vw;
+    font-style: italic;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: -8px;
+}
+
 .h2 {
     color: var(--Blacks-Base, #0C0C0C);
     font-family: Montserrat;
@@ -203,6 +213,10 @@
 
     .headtxt {
         font-size: 60px;
+    }
+
+    .updated {
+        font-size: 14px;
     }
 
     .subtxt {

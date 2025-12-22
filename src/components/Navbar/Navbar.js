@@ -91,8 +91,8 @@ const Navbar = () => {
             >
               Community
             </Link>
-            <Link href="/blog" className={classes.navitems}>
-              Blogs
+            <Link href="https://www.challenge.roobaroo.ai/" target="_blank" className={classes.navitems}>
+              Challenges
             </Link>
 
             <Link
@@ -132,8 +132,8 @@ const Navbar = () => {
           >
             Community
           </Link>
-          <Link href="/blog" className={classes.navitems}>
-            Blogs
+          <Link href="https://www.challenge.roobaroo.ai/" target="_blank" className={classes.navitems}>
+            Challenges
           </Link>
           {/* <div
             onMouseEnter={() => setIsDropdownOpen(true)}

@@ -12,12 +12,14 @@ export default function PrivacyPolicyPage() {
         {
           section: "Personal Information You Provide",
           description:
-            "If you voluntarily contact us, subscribe to a newsletter, or complete a form, we may collect information such as:",
+            "If you voluntarily contact us, subscribe to a newsletter, create an account, purchase a product, or complete a form, we may collect information such as:",
           items: [
             "Name",
             "Email address",
             "Phone number",
-            "Any other details you provide",
+            "Billing details (excluding full card numbers)",
+            "Account information for subscriptions",
+            "Any other details you provide voluntarily",
           ],
         },
         {
@@ -30,19 +32,14 @@ export default function PrivacyPolicyPage() {
             "Pages viewed and time spent",
             "Referring website and exit pages",
             "Device information",
+            "Usage patterns",
+            "Cookies and other identifiers",
           ],
         },
         {
           section: "Cookies and Similar Technologies",
           description:
-            "We use cookies, pixels, and similar tools to enhance user experience, measure performance, and analyze traffic patterns. You can adjust your browser settings to refuse cookies, though this may impact site functionality.",
-          // items: [
-          //   "IP address",
-          //   "Browser type and version",
-          //   "Pages viewed and time spent",
-          //   "Referring website and exit pages",
-          //   "Device information",
-          // ],
+            "We use cookies, pixels, and similar tools to enhance user experience, measure performance, facilitate payments, support login sessions, and analyze traffic patterns. You can adjust your browser settings to refuse cookies, though this may impact site functionality.",
         },
       ],
     },
@@ -50,13 +47,14 @@ export default function PrivacyPolicyPage() {
       title: "2. How We Use Your Information",
       content: [
         {
-          // section: "",
           description: "We may use collected information to:",
           items: [
             "Operate, maintain, and improve the Site",
+            "Process payments and deliver purchased digital products or subscriptions",
+            "Enable account access and subscription management",
             "Analyze usage and optimize content",
-            "Communicate with you (if you’ve contacted us or subscribed)",
-            "Detect and prevent fraud or abuse",
+            "Communicate with you for support, updates, or transactional notifications",
+            "Detect and prevent fraud or unauthorized activity",
             "Comply with legal obligations",
           ],
         },
@@ -66,73 +64,73 @@ export default function PrivacyPolicyPage() {
       title: "3. Disclosure of Information",
       content: [
         {
-          // section: "",
           description:
             "We do not sell, rent, or trade your personal data. We may share information with:",
           items: [
-            "Service Providers who assist in website hosting, analytics, or communications",
+            "Service Providers who assist with payments (e.g., Cashfree), website hosting, analytics, communication tools, and subscription management",
+            "Payment Processors for transaction verification and fraud prevention (we do not store your complete card details)",
             "Legal Authorities when required by applicable law",
-            "Business Transfers in connection with a merger, acquisition, or sale of assets",
+            "Business Transfers, such as a merger, acquisition, or sale of assets",
           ],
         },
       ],
     },
     {
-      title: "4. Data Retention",
+      title: "4. Payment Information (Cashfree)",
       content: [
         {
-          // section: "",
           description:
-            "We retain personal information only for as long as necessary to fulfill the purposes outlined in this Policy, unless a longer retention period is required by law.",
-          // items: [
-          //   "Service Providers who assist in website hosting, analytics, or communications",
-          //   "Legal Authorities when required by applicable law",
-          //   "Business Transfers in connection with a merger, acquisition, or sale of assets",
-          // ],
+            "Payments made on Roobaroo.ai are processed securely through Cashfree Payments, which may collect:",
+          items: [
+            "Cardholder name",
+            "Masked card details",
+            "Transaction IDs",
+            "Payment status",
+          ],
+        },
+        {
+          description:
+            "We do not store or have access to your full card numbers, CVV, or sensitive financial information.",
         },
       ],
     },
     {
-      title: "5. Third-Party Links",
+      title: "5. Data Retention",
       content: [
         {
-          // section: "",
+          description:
+            "We retain personal information only for as long as necessary to fulfill the purposes outlined in this Policy, or longer if required by law or for legitimate business interests (e.g., tax, compliance, anti-fraud).",
+        },
+      ],
+    },
+    {
+      title: "6. Third-Party Links",
+      content: [
+        {
           description:
             "The Site may link to third-party websites. We are not responsible for the privacy practices or content of such sites.",
-          // items: [
-          //   "Service Providers who assist in website hosting, analytics, or communications",
-          //   "Legal Authorities when required by applicable law",
-          //   "Business Transfers in connection with a merger, acquisition, or sale of assets",
-          // ],
         },
       ],
     },
-
     {
-      title: "6. Security",
+      title: "7. Security",
       content: [
         {
-          // section: "",
           description:
             "We implement reasonable administrative, technical, and physical safeguards to protect your information. However, no security system is impenetrable, and we cannot guarantee complete security.",
-          // items: [
-          //   "Service Providers who assist in website hosting, analytics, or communications",
-          //   "Legal Authorities when required by applicable law",
-          //   "Business Transfers in connection with a merger, acquisition, or sale of assets",
-          // ],
         },
       ],
     },
     {
-      title: "7. Your Rights",
+      title: "8. Your Rights",
       content: [
         {
-          // section: "",
           description:
             "Depending on your jurisdiction, you may have the right to:",
           items: [
             "Access, correct, or delete personal data",
             "Restrict or object to data processing",
+            "Request data portability",
             "Withdraw consent to marketing communications",
           ],
           contactEmail: " contact@roobaroo.ai",
@@ -140,35 +138,22 @@ export default function PrivacyPolicyPage() {
       ],
     },
     {
-      title: "8. Changes to This Policy",
+      title: "9. Changes to This Policy",
       content: [
         {
-          // section: "",
           description:
-            "We may update this Privacy Policy from time to time. The updated version will be effective when posted.",
-          // items: [
-          //   "Service Providers who assist in website hosting, analytics, or communications",
-          //   "Legal Authorities when required by applicable law",
-          //   "Business Transfers in connection with a merger, acquisition, or sale of assets",
-          // ],
+            "We may update this Privacy Policy from time to time. The updated version will be effective when posted on the Site.",
         },
       ],
     },
     {
-      title: "9. Contact Us",
+      title: "10. Contact Us",
       content: [
         {
-          // section: "",
           description:
             "For questions about this Privacy Policy, contact us at:",
-          // items: [
-          //   "Service Providers who assist in website hosting, analytics, or communications",
-          //   "Legal Authorities when required by applicable law",
-          //   "Business Transfers in connection with a merger, acquisition, or sale of assets",
-          // ],
           Email: " contact@roobaroo.ai",
-          address:
-            "ROOBAROO PRODUCTIONS PRIVATE LIMITED, INNOV8 ORCHID CENTER, 3RD FLOOR, NEAR IIIM INSTITUTE, DLF QE, GURUGRAM- 122002, HARYANA",
+          company: "Roobaroo Productions Private Limited",
         },
       ],
     },
@@ -181,11 +166,12 @@ export default function PrivacyPolicyPage() {
         <div className={classes.section}>
           <h1 className={classes.headtxt}>Privacy Policy</h1>
           <h3 className={classes.subtxt}>
-            Roobaroo.ai (“Company,” “we,” “our,” or “us”) respects your privacy
+            Roobaroo.ai ("Company," "we," "our," or "us") respects your privacy
             and is committed to protecting it through this Privacy Policy. This
             Policy explains how we collect, use, disclose, and safeguard your
-            information when you visit our website [www.roobaroo.ai] (the
-            “Site”). <br /> <br /> By accessing or using the Site, you agree to the
+            information when you visit our website www.roobaroo.ai (the "Site")
+            and when you purchase our digital products, tools, or subscription-based
+            services. <br /> <br /> By accessing or using the Site, you agree to the
             terms of this Privacy Policy. If you do not agree, please
             discontinue use of the Site.
           </h3>
@@ -194,15 +180,17 @@ export default function PrivacyPolicyPage() {
               <h2 className={classes.h2}>{mainSection.title}</h2>
               {mainSection.content.map((info, i) => (
                 <div key={i} className={classes.infoBlock}>
-                  <h3 className={classes.h3}>{info.section}</h3>
+                  {info.section && <h3 className={classes.h3}>{info.section}</h3>}
                   <h4 className={classes.subtxt}>{info.description}</h4>
-                  <ul className={classes.ul}>
-                    {info?.items?.map((item, j) => (
-                      <li key={j} className={classes.subtxt}>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                  {info.items && (
+                    <ul className={classes.ul}>
+                      {info.items.map((item, j) => (
+                        <li key={j} className={classes.subtxt}>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                   {info.contactEmail && (
                     <h4
                       style={{
@@ -212,7 +200,7 @@ export default function PrivacyPolicyPage() {
                     >
                       Requests may be sent to
                       <Link
-                        href={`mailto:${info.contactEmail}`}
+                        href={`mailto:${info.contactEmail.trim()}`}
                         className={classes.emailLink}
                       >
                         {info.contactEmail}
@@ -228,21 +216,21 @@ export default function PrivacyPolicyPage() {
                     >
                       Email:
                       <Link
-                        href={`mailto:${info.Email}`}
+                        href={`mailto:${info.Email.trim()}`}
                         className={classes.emailLink}
                       >
                         {info.Email}
                       </Link>
                     </h4>
                   )}
-                  {info.address && (
+                  {info.company && (
                     <h4
                       style={{
                         marginTop: "12px",
                       }}
                       className={classes.subtxt}
                     >
-                      Address: {info.address}
+                      Company: {info.company}
                     </h4>
                   )}
                 </div>
