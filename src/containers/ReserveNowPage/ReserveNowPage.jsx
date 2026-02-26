@@ -118,7 +118,7 @@ export default function ReserveNowPage() {
                         {/* Student Details */}
                         <div className={classes.formGroup}>
                             <h3 className={classes.formGroupTitle}>
-                                <span className={classes.formIconGreen}>🎓</span> Student
+                                <img src="/assets/images/student-details-form.svg" alt="Student Details" className={classes.formSectionIcon} /> Student
                                 Details
                             </h3>
                             <div className={classes.formRow}>
@@ -181,7 +181,7 @@ export default function ReserveNowPage() {
                         {/* Contact Details */}
                         <div className={classes.formGroup}>
                             <h3 className={classes.formGroupTitle}>
-                                <span className={classes.formIconBlue}>💬</span> Contact
+                                <img src="/assets/images/contact-details-form.svg" alt="Contact Details" className={classes.formSectionIcon} /> Contact
                                 Details
                             </h3>
                             <div className={classes.formRow}>
@@ -211,7 +211,7 @@ export default function ReserveNowPage() {
                         {/* Program Preference */}
                         <div className={classes.formGroup}>
                             <h3 className={classes.formGroupTitle}>
-                                <span className={classes.formIconStar}>⭐</span> Program
+                                <img src="/assets/images/program-preference-forn.svg" alt="Program Preference" className={classes.formSectionIcon} /> Program
                                 Preference
                             </h3>
                             <p className={classes.batchLabel}>Select Batch*</p>
@@ -252,39 +252,44 @@ export default function ReserveNowPage() {
 
                 {/* Disclaimer */}
                 <section className={classes.disclaimerSection}>
-                    <img
-                        src="/assets/images/deco-rocket.svg"
-                        alt=""
-                        className={classes.decoRocket}
-                        onError={(e) => (e.target.style.display = "none")}
-                    />
-                    <p className={classes.disclaimerText}>
-                        <strong>You're not committing yet,</strong> just reserving priority
-                        access.
-                        <br />
-                        We review every booking to ensure the program is the right fit for
-                        the student.
-                    </p>
+                    <div className={classes.quoteWrapper}>
+                        <div className={classes.disclaimerContent}>
+                            <p className={classes.disclaimerText}>
+                                You're not committing yet, just reserving priority access.<br />
+                                We review every booking to ensure the program is the right fit for the student.
+                            </p>
+                            <img
+                                src="/assets/images/Rocket doodle 1.svg"
+                                alt="Rocket Doodle"
+                                className={classes.decoRocket}
+                                onError={(e) => (e.target.style.display = "none")}
+                            />
+                        </div>
+                        <div className={`${classes.quoteLine} ${classes.quoteLineBlue}`}></div>
+                        <div className={`${classes.quoteLine} ${classes.quoteLinePurple}`}></div>
+                        <div className={`${classes.quoteLine} ${classes.quoteLineCoral}`}></div>
+                    </div>
                 </section>
 
                 {/* What Happens Next */}
                 <section className={classes.nextSection}>
-                    <div className={classes.nextGradientBg}></div>
                     <h2 className={classes.nextTitle}>
                         What happens <em>next:</em>
                     </h2>
                     <div className={classes.nextTimeline}>
-                        <div className={classes.nextStep}>
+                        <div className={`${classes.nextStep} ${classes.nextStep1}`}>
                             <div className={classes.nextStepCircle}>
+                                <img src="/assets/images/Ellipse 96.svg" className={classes.stepBg} alt="" />
                                 <span>1</span>
                             </div>
                             <p>
                                 Our team will reach out within <strong>24–48 hours</strong>
                             </p>
                         </div>
-                        <div className={classes.nextArrow}>⤳</div>
-                        <div className={classes.nextStep}>
+                        <img src="/assets/images/Arrow 5.svg" className={classes.nextArrow} alt="" />
+                        <div className={`${classes.nextStep} ${classes.nextStep2}`}>
                             <div className={classes.nextStepCircle}>
+                                <img src="/assets/images/Ellipse 96.svg" className={classes.stepBg} alt="" />
                                 <span>2</span>
                             </div>
                             <p>
@@ -292,9 +297,10 @@ export default function ReserveNowPage() {
                                 <strong>answer all questions</strong>
                             </p>
                         </div>
-                        <div className={classes.nextArrow}>⤳</div>
-                        <div className={classes.nextStep}>
+                        <img src="/assets/images/Arrow 6.svg" className={classes.nextArrow} alt="" />
+                        <div className={`${classes.nextStep} ${classes.nextStep3}`}>
                             <div className={classes.nextStepCircle}>
+                                <img src="/assets/images/Ellipse 96.svg" className={classes.stepBg} alt="" />
                                 <span>3</span>
                             </div>
                             <p>
@@ -302,13 +308,14 @@ export default function ReserveNowPage() {
                                 peers for <strong>group discount</strong> if applicable
                             </p>
                         </div>
-                        <div className={classes.nextArrow}>⤳</div>
-                        <div className={classes.nextStep}>
+                        <img src="/assets/images/Arrow 7.svg" className={classes.nextArrow} alt="" />
+                        <div className={`${classes.nextStep} ${classes.nextStep4}`}>
                             <div className={classes.nextStepCircle}>
+                                <img src="/assets/images/Ellipse 96.svg" className={classes.stepBg} alt="" />
                                 <span>4</span>
                             </div>
                             <p>
-                                <strong>Final confirmation</strong> & remaining fee will be
+                                <strong>Final confirmation</strong> &amp; remaining fee will be
                                 requested only after the call
                             </p>
                         </div>
@@ -317,72 +324,102 @@ export default function ReserveNowPage() {
 
                 {/* What People Are Saying */}
                 <section className={classes.testimonialSection}>
-                    <div className={classes.testimonialHeader}>
-                        <h2 className={classes.testimonialTitle}>What people are</h2>
-                        <h2 className={classes.testimonialScript}>Saying</h2>
-                    </div>
+                    <div className={classes.decoEdgePink}></div>
+                    <div className={classes.decoEdgeBlue}></div>
 
-                    <div className={classes.testimonialTabs}>
-                        <button className={classes.testimonialTabActive}>All</button>
-                        <button className={classes.testimonialTab}>Parents</button>
-                        <button className={classes.testimonialTab}>Students</button>
-                        <button className={classes.testimonialTab}>Educators</button>
-                        <button className={classes.testimonialTab}>Experts</button>
-                    </div>
 
-                    <div className={classes.testimonialGrid}>
-                        <div className={classes.testimonialCard}>
-                            <div className={classes.quoteIconPurple}>&ldquo;</div>
-                            <p>
-                                IIT gave me technical skills, but not clarity. The 21st century
-                                Bootcamp bridges this gap by blending hard skills with emotional
-                                & digital wellbeing.
-                            </p>
-                            <div className={classes.testimonialFooter}>
-                                <div>
-                                    <strong>Avinash Kumar</strong>
-                                    <span>Samsung, IIT Delhi</span>
-                                </div>
-                                <span className={classes.companyTag}>SAMSUNG</span>
-                            </div>
+                    <div className={classes.testimonialContainer}>
+                        <div className={classes.testimonialHeader}>
+                            <h2 className={classes.testimonialTitle}>What people are</h2>
+                            <h3 className={classes.testimonialScript}>Saying</h3>
                         </div>
-                        <div className={classes.testimonialCard}>
-                            <div className={classes.quoteIconBlue}>&ldquo;</div>
-                            <p>
-                                I've seen bright peers burn out. Roobaroo shows that success can
-                                be balanced, sustainable, and joyful.
-                            </p>
-                            <div className={classes.testimonialFooter}>
-                                <div>
-                                    <strong>Shivanshu</strong>
-                                    <span>Wipro, IIT BHU</span>
-                                </div>
-                                <span className={classes.companyTag}>wipro</span>
-                            </div>
+
+                        <div className={classes.testimonialTabs}>
+                            <button className={classes.testimonialTabActive}>All</button>
+                            <button className={classes.testimonialTab}>Parents</button>
+                            <button className={classes.testimonialTab}>Students</button>
+                            <button className={classes.testimonialTab}>Educators</button>
+                            <button className={classes.testimonialTab}>Experts</button>
                         </div>
-                        <div className={classes.testimonialCard}>
-                            <div className={classes.quoteIconOrange}>&ldquo;</div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor incididunt ut labore et dolore magna ali
-                            </p>
-                            <div className={classes.testimonialFooter}>
-                                <div>
-                                    <strong>Aleena</strong>
-                                    <span>Student, Lorem Ipsum University</span>
+
+                        <div className={classes.testimonialGrid}>
+                            {/* 6 testimonial cards */}
+                            <div className={classes.testimonialCard}>
+                                <div className={classes.quoteIconPurple}>&ldquo;</div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna ali
+                                </p>
+                                <div className={classes.testimonialFooter}>
+                                    <div>
+                                        <strong>Harsh Yadav</strong>
+                                        <span>Student, Lorem Ipsum University</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className={classes.testimonialCard}>
-                            <div className={classes.quoteIconPurple}>&ldquo;</div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor incididunt ut labore et dolore magna ali
-                            </p>
-                            <div className={classes.testimonialFooter}>
-                                <div>
-                                    <strong>Medhansh</strong>
-                                    <span>Student, Lorem Ipsum University</span>
+                            <div className={classes.testimonialCard}>
+                                <div className={classes.quoteIconBlue}>&ldquo;</div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna ali
+                                </p>
+                                <div className={classes.testimonialFooter}>
+                                    <div>
+                                        <strong>Avinash Kumar</strong>
+                                        <span>Student, Lorem Ipsum University</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={classes.testimonialCard}>
+                                <div className={classes.quoteIconOrange}>&ldquo;</div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna ali
+                                </p>
+                                <div className={classes.testimonialFooter}>
+                                    <div>
+                                        <strong>Shivanshu</strong>
+                                        <span>Student, Lorem Ipsum University</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={classes.testimonialCard}>
+                                <div className={classes.quoteIconPurple}>&ldquo;</div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna ali
+                                </p>
+                                <div className={classes.testimonialFooter}>
+                                    <div>
+                                        <strong>Aleena</strong>
+                                        <span>Student, Lorem Ipsum University</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={classes.testimonialCard}>
+                                <div className={classes.quoteIconOrange}>&ldquo;</div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna ali
+                                </p>
+                                <div className={classes.testimonialFooter}>
+                                    <div>
+                                        <strong>Medhansh</strong>
+                                        <span>Student, Lorem Ipsum University</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={classes.testimonialCard}>
+                                <div className={classes.quoteIconBlue}>&ldquo;</div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna ali
+                                </p>
+                                <div className={classes.testimonialFooter}>
+                                    <div>
+                                        <strong>Naitik</strong>
+                                        <span>Student, Lorem Ipsum University</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -402,7 +439,7 @@ export default function ReserveNowPage() {
                             </p>
                             <span className={classes.quoteAuthor}>~Warren Buffett</span>
                             <img
-                                src="/assets/images/warren.png"
+                                src="/assets/images/warren-buffet - reserve.svg"
                                 alt="Warren Buffett"
                                 className={classes.warrenImg}
                                 onError={(e) => (e.target.style.display = "none")}
@@ -490,36 +527,11 @@ export default function ReserveNowPage() {
                     </div>
                 </section>
 
-                {/* Footer CTA */}
-                <section className={classes.ctaSection}>
-                    <div className={classes.ctaCard}>
-                        <h2>The 21st Century Summer Camp</h2>
-                        <p>
-                            Your child's gateway to become future-ready in an evolving AI
-                            world
-                        </p>
-                        <Link
-                            href="/summer-camp"
-                            className={classes.ctaButton}
-                            onClick={() =>
-                                trackEvent({
-                                    category: "Reserve",
-                                    action: "Click",
-                                    label: "Back to Summer Camp",
-                                })
-                            }
-                        >
-                            Back to Summer Camp <ArrowUpRight size={20} />
-                        </Link>
-                    </div>
-                    <div className={classes.contactRow}>
-                        <a href="mailto:contact@roobaroo.ai">contact@roobaroo.ai</a>
-                        <a href="tel:+919039974840">+91 90399 74840</a>
-                        <span>WeWork, DLF 2 Horizon Centre, Gurgaon- 122002</span>
-                    </div>
-                </section>
+                {/* Footer CTA Removed as requested */}
             </main>
-            <Footer />
+            <div style={{ marginTop: '-8vw', position: 'relative', zIndex: 1 }}>
+                <Footer />
+            </div>
         </>
     );
 }

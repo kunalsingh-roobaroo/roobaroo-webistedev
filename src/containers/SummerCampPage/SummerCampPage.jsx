@@ -26,7 +26,10 @@ import {
   Paperclip,
   CheckCircle,
   CalendarDays,
-  ExternalLink
+  ExternalLink,
+  ChevronLeft,
+  ChevronRight,
+  Quote
 } from "lucide-react";
 import { trackEvent } from "@/utils/ga4";
 import classes from "./SummerCampPage.module.css";
@@ -345,8 +348,18 @@ export default function SummerCampPage() {
                 <div className={classes.pillWrapper}>
                   <span className={classes.pill}><Leaf size={14} className={classes.pillIconGreen} /> Public Speaking</span>
                   <span className={classes.pill}><Brain size={14} className={classes.pillIconGreen} /> Critical Thinking</span>
-                  <span className={classes.pill}><CircleDollarSign size={14} className={classes.pillIconGreen} /> Financial Literacy</span>
-                  <span className={classes.pill}><Sparkles size={14} className={classes.pillIconGreen} /> AI Literacy</span>
+                </div>
+                <div className={classes.pillMarqueeContainer}>
+                  <div className={classes.pillMarqueeTrack}>
+                    <div className={classes.pillGroup}>
+                      <span className={classes.pill}><CircleDollarSign size={14} className={classes.pillIconGreen} /> Financial Literacy</span>
+                      <span className={classes.pill}><Sparkles size={14} className={classes.pillIconGreen} /> AI Literacy</span>
+                    </div>
+                    <div className={classes.pillGroup}>
+                      <span className={classes.pill}><CircleDollarSign size={14} className={classes.pillIconGreen} /> Financial Literacy</span>
+                      <span className={classes.pill}><Sparkles size={14} className={classes.pillIconGreen} /> AI Literacy</span>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -396,6 +409,57 @@ export default function SummerCampPage() {
               </div>
             </div>
           </div>
+        </section>
+
+        <div className={classes.testimonialsSection}>
+          <h2 className={classes.testimonialsTitle}>What people are <span className={classes.testimonialsScript}>Saying</span><span className={classes.quotesAccent}>"</span></h2>
+
+          <div className={classes.testimonialsInner}>
+            <button className={classes.navArrow}><ChevronLeft size={20} strokeWidth={1.5} /></button>
+
+            <div className={classes.testimonialsGrid}>
+              {/* Card 1 */}
+              <div className={classes.testimonialCard}>
+                <div className={`${classes.quoteIconMark} ${classes.quotePurple}`}>”</div>
+                <p className={classes.testimonialText}>"Most programs either push academics or talk vaguely about careers. This camp stood out because it combines skill-building, guidance, and emotional support in a structured way."</p>
+                <div className={classes.testimonialAuthor}>
+                  <strong>Ankita Aggrawal</strong>
+                  <span>Parent, GD Goenka School</span>
+                </div>
+              </div>
+
+              {/* Card 2 */}
+              <div className={classes.testimonialCard}>
+                <div className={`${classes.quoteIconMark} ${classes.quoteBlue}`}>”</div>
+                <p className={classes.testimonialText}>"There is so much information online that it becomes overwhelming even for parents. We needed something structured and trustworthy to make sense of it. Happy that my child found this program."</p>
+                <div className={classes.testimonialAuthor}>
+                  <strong>Surbhi Jindal</strong>
+                  <span>Parent, DPS RK Puram</span>
+                </div>
+              </div>
+
+              {/* Card 3 */}
+              <div className={classes.testimonialCard}>
+                <div className={`${classes.quoteIconMark} ${classes.quoteCoral}`}>”</div>
+                <p className={classes.testimonialText}>"Everyone keeps talking about building a good profile, but no one tells you how. This program stood out because you actually create real projects instead of just talking about skills."</p>
+                <div className={classes.testimonialAuthor}>
+                  <strong>Shivam</strong>
+                  <span>Student, OP Jindal School</span>
+                </div>
+              </div>
+            </div>
+
+            <button className={classes.navArrow}><ChevronRight size={20} strokeWidth={1.5} /></button>
+          </div>
+
+          <div className={classes.dotsContainer}>
+            <div className={`${classes.dot} ${classes.dotActive}`}></div>
+            <div className={classes.dot}></div>
+            <div className={classes.dot}></div>
+          </div>
+        </div>
+
+        <section className={classes.section} style={{ paddingTop: '20px' }}>
           <div className={classes.realExpertsFrame}>
             <p className={classes.realExpertsTitle}>Learn from real experts</p>
             <div className={classes.whiteMarqueeContainer}>
@@ -524,6 +588,61 @@ export default function SummerCampPage() {
           </div>
         </section>
 
+        {/* What Students Walk Away With */}
+        <section className={classes.sectionLightSecondary}>
+          <div className={classes.walkAwayHeader}>
+            <h2 className={classes.walkAwayTitle}>What Students Walk Away With</h2>
+            <p className={classes.walkAwaySub}>More than learning - clarity, capability, and confidence for the years ahead</p>
+          </div>
+          <div className={classes.walkAwayGrid}>
+            <div className={classes.walkCard}>
+              <div className={classes.walkCardHeader}>
+                <div className={classes.walkIconPurple}><Microscope size={20} /></div>
+                <h3 className={classes.walkCardTitle}>Clarity About Careers & the<br /><span className={classes.textPurpleDark}>Future of Work</span></h3>
+              </div>
+              <ul className={classes.walkCardList}>
+                <li>Exposure to how careers are changing and what employers actually look for.</li>
+                <li>Self-awareness and direction around career, course, and college choices.</li>
+              </ul>
+            </div>
+
+            <div className={classes.walkCard}>
+              <div className={classes.walkCardHeader}>
+                <div className={classes.walkIconPink}><BarChart2 size={20} /></div>
+                <h3 className={classes.walkCardTitle}>Core Skills for <span className={classes.textPink}>College, Work,</span><br /><span className={classes.textPink}>and Life</span></h3>
+              </div>
+              <ul className={classes.walkCardList}>
+                <li>Exposure to how careers are changing and what employers actually look for.</li>
+                <li>Self-awareness and direction around career, course, and college choices.</li>
+              </ul>
+            </div>
+
+            <div className={classes.walkCard}>
+              <div className={classes.walkCardHeader}>
+                <div className={classes.walkIconBlue}><Sparkles size={20} /></div>
+                <h3 className={classes.walkCardTitle}>Create a <span className={classes.textBlue}>Standout Profile,</span><br /><span className={classes.textBlue}>Not Just Certificates</span></h3>
+              </div>
+              <ul className={classes.walkCardList}>
+                <li>Entrepreneurial mindset and capability to build startup ideas.</li>
+                <li>Confidence in using AI to learn and build real projects.</li>
+                <li>Building a profile that supports strong college applications and internships.</li>
+              </ul>
+            </div>
+
+            <div className={classes.walkCard}>
+              <div className={classes.walkCardHeader}>
+                <div className={classes.walkIconPurpleDark}><BarChart2 size={20} /></div>
+                <h3 className={classes.walkCardTitle}>Stability, Focus & Lifelong<br /><span className={classes.textPurpleDark}>Life Skills</span></h3>
+              </div>
+              <ul className={classes.walkCardList}>
+                <li>Emotional resilience and a bounce-back mindset</li>
+                <li>Tools to reduce mobile and screen addiction and improve focus</li>
+                <li>Practical money skills for lifelong financial wellbeing</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
         {/* Lived Experience */}
         <section className={classes.section}>
           <div className={classes.livedExpHeader}>
@@ -590,148 +709,6 @@ export default function SummerCampPage() {
           </div>
         </section>
 
-        {/* What Students Walk Away With */}
-        <section className={classes.sectionLightSecondary}>
-          <div className={classes.walkAwayHeader}>
-            <h2 className={classes.walkAwayTitle}>What Students Walk Away With</h2>
-            <p className={classes.walkAwaySub}>More than learning - clarity, capability, and confidence for the years ahead</p>
-          </div>
-          <div className={classes.walkAwayGrid}>
-            <div className={classes.walkCard}>
-              <div className={classes.walkCardHeader}>
-                <div className={classes.walkIconPurple}><Microscope size={20} /></div>
-                <h3 className={classes.walkCardTitle}>Clarity About Careers & the<br /><span className={classes.textPurpleDark}>Future of Work</span></h3>
-              </div>
-              <ul className={classes.walkCardList}>
-                <li>Exposure to how careers are changing and what employers actually look for.</li>
-                <li>Self-awareness and direction around career, course, and college choices.</li>
-              </ul>
-            </div>
-
-            <div className={classes.walkCard}>
-              <div className={classes.walkCardHeader}>
-                <div className={classes.walkIconPink}><BarChart2 size={20} /></div>
-                <h3 className={classes.walkCardTitle}>Core Skills for <span className={classes.textPink}>College, Work,</span><br /><span className={classes.textPink}>and Life</span></h3>
-              </div>
-              <ul className={classes.walkCardList}>
-                <li>Exposure to how careers are changing and what employers actually look for.</li>
-                <li>Self-awareness and direction around career, course, and college choices.</li>
-              </ul>
-            </div>
-
-            <div className={classes.walkCard}>
-              <div className={classes.walkCardHeader}>
-                <div className={classes.walkIconBlue}><Sparkles size={20} /></div>
-                <h3 className={classes.walkCardTitle}>Create a <span className={classes.textBlue}>Standout Profile,</span><br /><span className={classes.textBlue}>Not Just Certificates</span></h3>
-              </div>
-              <ul className={classes.walkCardList}>
-                <li>Entrepreneurial mindset and capability to build startup ideas.</li>
-                <li>Confidence in using AI to learn and build real projects.</li>
-                <li>Building a profile that supports strong college applications and internships.</li>
-              </ul>
-            </div>
-
-            <div className={classes.walkCard}>
-              <div className={classes.walkCardHeader}>
-                <div className={classes.walkIconPurpleDark}><BarChart2 size={20} /></div>
-                <h3 className={classes.walkCardTitle}>Stability, Focus & Lifelong<br /><span className={classes.textPurpleDark}>Life Skills</span></h3>
-              </div>
-              <ul className={classes.walkCardList}>
-                <li>Emotional resilience and a bounce-back mindset</li>
-                <li>Tools to reduce mobile and screen addiction and improve focus</li>
-                <li>Practical money skills for lifelong financial wellbeing</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* What people are Saying */}
-        <section className={classes.sectionLight}>
-          <div className={classes.testimonialsHeader}>
-            <h2 className={classes.testimonialsTitle}>What people are</h2>
-            <h2 className={classes.testimonialsScript}>Saying</h2>
-          </div>
-
-          <div className={classes.testimonialTabs}>
-            <button className={classes.testimonialTabActive}>All</button>
-            <button className={classes.testimonialTab}>Parents</button>
-            <button className={classes.testimonialTab}>Students</button>
-            <button className={classes.testimonialTab}>Educators</button>
-            <button className={classes.testimonialTab}>Experts</button>
-          </div>
-
-          <div className={classes.testimonialsGrid}>
-            <div className={classes.testimonialCard}>
-              <div className={classes.quoteIconOrange}>&ldquo;</div>
-              <p className={classes.testimonialText}>Future careers demand adaptability and emotional strength. Roobaroo trains those muscles early, making students truly future-ready.</p>
-              <div className={classes.testimonialFooter}>
-                <div>
-                  <p className={classes.testimonialAuthor}>Harsh Yadav</p>
-                  <p className={classes.testimonialRole}>Scientist, Amazon</p>
-                </div>
-                <div className={classes.testimonialCompany}>amazon</div>
-              </div>
-            </div>
-
-            <div className={classes.testimonialCard}>
-              <div className={classes.quoteIconPurple}>&ldquo;</div>
-              <p className={classes.testimonialText}>IIT gave me technical skills, but not clarity. The 21st century Bootcamp bridges this gap by blending hard skills with emotional & digital wellbeing.</p>
-              <div className={classes.testimonialFooter}>
-                <div>
-                  <p className={classes.testimonialAuthor}>Avinash Kumar</p>
-                  <p className={classes.testimonialRole}>Samsung, IIT Delhi</p>
-                </div>
-                <div className={classes.testimonialCompanyBlue}>SAMSUNG</div>
-              </div>
-            </div>
-
-            <div className={classes.testimonialCard}>
-              <div className={classes.quoteIconBlue}>&ldquo;</div>
-              <p className={classes.testimonialText}>I've seen bright peers burn out. Roobaroo shows that success can be balanced, sustainable, and joyful.</p>
-              <div className={classes.testimonialFooter}>
-                <div>
-                  <p className={classes.testimonialAuthor}>Shivanshu</p>
-                  <p className={classes.testimonialRole}>Wipro, IIT BHU</p>
-                </div>
-                <div className={classes.testimonialCompany}>wipro</div>
-              </div>
-            </div>
-
-            {/* Dummy cards to match the 2 row layout in Figma */}
-            <div className={classes.testimonialCard}>
-              <div className={classes.quoteIconPurple}>&ldquo;</div>
-              <p className={classes.testimonialText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <div className={classes.testimonialFooter}>
-                <div>
-                  <p className={classes.testimonialAuthor}>Aleena</p>
-                  <p className={classes.testimonialRole}>Student, Lorem Ipsum University</p>
-                </div>
-              </div>
-            </div>
-
-            <div className={classes.testimonialCard}>
-              <div className={classes.quoteIconBlue}>&ldquo;</div>
-              <p className={classes.testimonialText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <div className={classes.testimonialFooter}>
-                <div>
-                  <p className={classes.testimonialAuthor}>Medhansh</p>
-                  <p className={classes.testimonialRole}>Student, Lorem Ipsum University</p>
-                </div>
-              </div>
-            </div>
-
-            <div className={classes.testimonialCard}>
-              <div className={classes.quoteIconOrange}>&ldquo;</div>
-              <p className={classes.testimonialText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <div className={classes.testimonialFooter}>
-                <div>
-                  <p className={classes.testimonialAuthor}>Naitik</p>
-                  <p className={classes.testimonialRole}>Student, Lorem Ipsum University</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Experts */}
         <section className={classes.section}>
@@ -789,136 +766,6 @@ export default function SummerCampPage() {
                 {i < admissionSteps.length - 1 && <div className={classes.admissionConnector} />}
               </React.Fragment>
             ))}
-          </div>
-        </section>
-
-        {/* Program Fees */}
-        <section className={classes.section}>
-          <div className={classes.feesHeaderRow}>
-            <div className={classes.feesTitleBlock}>
-              <h2 className={classes.sectionTitleScript}>Program Fees</h2>
-              <div className={classes.arrowRightPurple}>→</div>
-            </div>
-          </div>
-          <div className={classes.feesLayout}>
-            <div className={classes.feesLeft}>
-              <div className={classes.quoteBlockLeft}>
-                <p className={classes.feesQuote}>"The best investment you can make is in your own abilities"</p>
-                <p className={classes.quoteAuthor}>~Warren Buffett</p>
-                <div className={classes.buffettImage}></div>
-              </div>
-              <div className={classes.futureReadyBlockLeft}>
-                <p><strong>"Become future-ready by spending a small fraction of what you do for entire education"</strong></p>
-                <Rocket className={classes.rocketIconBlue} size={32} />
-              </div>
-            </div>
-
-            <div className={classes.feesRight}>
-              <div className={`${classes.feesCardNew} ${classes.feesCardPurple}`}>
-                <div className={classes.feesCardLeft}>
-                  <div className={classes.feesIconCircle}><GraduationCap size={24} /></div>
-                  <div className={classes.feesCardText}>
-                    <p className={classes.feesCardTitle}>EARLY BIRD</p>
-                    <p className={classes.feesCardSub}>(TILL 31ST MARCH)</p>
-                  </div>
-                </div>
-                <div className={classes.feesCardPriceBox}>
-                  INR 41,999
-                </div>
-              </div>
-
-              <div className={`${classes.feesCardNew} ${classes.feesCardPink}`}>
-                <div className={classes.feesCardLeft}>
-                  <div className={classes.feesIconCirclePink}><User size={24} /></div>
-                  <div className={classes.feesCardTextDark}>
-                    <p className={classes.feesCardTitle}>STANDARD</p>
-                    <p className={classes.feesCardSub}>(FROM 1ST APRIL)</p>
-                  </div>
-                </div>
-                <div className={classes.feesCardPriceText}>
-                  INR 47,999
-                </div>
-              </div>
-
-              <div className={classes.feesRowSmall}>
-                <div className={`${classes.feesCardSmall} ${classes.feesCardBlue}`}>
-                  <div className={classes.feesCardSmallHeader}>
-                    <div className={classes.feesIconCircleSmall}><Users size={16} /></div>
-                    <div className={classes.feesCardTextDark}>
-                      <p className={classes.feesCardTitleSmall}>GROUP DISCOUNT</p>
-                      <p className={classes.feesCardSubSmall}>(MINIMUM 4 STUDENTS)</p>
-                    </div>
-                  </div>
-                  <div className={classes.feesCardPriceBottom}>
-                    <strong>INR 5,999</strong> <span className={classes.perText}>(PER PERSON)</span>
-                  </div>
-                </div>
-
-                <div className={`${classes.feesCardSmall} ${classes.feesCardPurpleLight}`}>
-                  <div className={classes.feesCardSmallHeader}>
-                    <div className={classes.feesIconCircleSmallPurple}><Home size={16} /></div>
-                    <div className={classes.feesCardTextDark}>
-                      <p className={classes.feesCardTitleSmall}>RESIDENTIAL</p>
-                      <p className={classes.feesCardSubSmall}>(OPTION AVAILABLE)</p>
-                    </div>
-                  </div>
-                  <div className={classes.feesCardPriceBottom}>
-                    <strong>INR 2,500</strong> <span className={classes.perText}>(PER DAY)</span>
-                  </div>
-                </div>
-              </div>
-
-              <p className={classes.feesDisclaimerNew}>
-                <span className={classes.textCoral}>*Fees includes Lunch</span>, <span className={classes.textPurpleDark}>Snacks</span>, and other program related <span className={classes.textBlue}>materials</span>*
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Bonus Sessions for Parents */}
-        <section className={`${classes.section} ${classes.bonusSectionBg}`}>
-          <div className={classes.bonusLayout}>
-            <div className={classes.bonusLeft}>
-              <div className={classes.bonusIconTop}><Rocket size={32} /></div>
-              <h2 className={classes.bonusTitleNew}>
-                Bonus Sessions <span className={classes.bonusScriptNew}>for Parents</span>
-              </h2>
-              <div className={classes.bonusOutlineText}>First of Its Kind in India</div>
-              <div className={classes.bonusSquigglyBottom}></div>
-            </div>
-
-            <div className={classes.bonusRight}>
-              <div className={classes.bonusCardNew}>
-                <Paperclip className={classes.paperclipIcon} size={28} />
-                <ul className={classes.bonusListNew}>
-                  <li>
-                    <Star className={classes.starIcon} size={20} />
-                    <p><strong>We recognize parents</strong> as the most important partners in a <strong>child's journey</strong>.</p>
-                  </li>
-                  <li>
-                    <Star className={classes.starIcon} size={20} />
-                    <p>These sessions are designed to equip parents with the right awareness, clarity, and tools to support their <strong>child's academic, career, and wellbeing decisions.</strong></p>
-                  </li>
-                  <li>
-                    <Star className={classes.starIcon} size={20} />
-                    <p>Parents also get a direct opportunity to ask questions, address concerns, and plan their <strong>child's next steps</strong> with confidence.</p>
-                  </li>
-                </ul>
-                <div className={classes.bonusFooterNew}>
-                  <div className={classes.bonusFooterItem}>
-                    <span className={classes.bonusFooterScript}>Number of Sessions:</span>
-                    <span className={classes.bonusCircleNum}>2</span>
-                  </div>
-                  <div className={classes.bonusFooterItemMode}>
-                    <span>Mode:</span>
-                    <span className={classes.bonusPillDark}>Online <span className={classes.dot}>•</span></span>
-                  </div>
-                </div>
-                <div className={classes.bonusCornerIcon}>
-                  <Users size={16} />
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -1144,7 +991,7 @@ export default function SummerCampPage() {
             <span>WeWork, DLF 2 Horizon Centre, Gurgaon- 122002</span>
           </div>
         </section>
-      </main>
+      </main >
       <Footer />
     </>
   );

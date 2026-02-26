@@ -4,6 +4,7 @@
 
 .main {
     position: relative;
+    z-index: 2;
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
     background: #ffffff !important;
@@ -275,7 +276,7 @@
 /* ---- Form Section ---- */
 .formSection {
     max-width: 1440px;
-    margin: 158px auto 60px;
+    margin: 158px auto 40px;
     padding: 0 76px;
     position: relative;
     z-index: 1;
@@ -327,16 +328,10 @@
     margin-left: 12px;
 }
 
-.formIconGreen {
-    font-size: 22px;
-}
-
-.formIconBlue {
-    font-size: 22px;
-}
-
-.formIconStar {
-    font-size: 22px;
+.formSectionIcon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
 }
 
 .formRow {
@@ -441,7 +436,7 @@
     width: 100%;
     max-width: 340px;
     margin: 16px auto 0;
-    background: linear-gradient(135deg, #FB7D7D 0%, #e96464 100%);
+    background: #815FAA;
     color: white;
     border: none;
     border-radius: 40px;
@@ -461,41 +456,137 @@
 /* ---- Disclaimer ---- */
 .disclaimerSection {
     text-align: center;
-    padding: 40px 40px 20px;
+    padding: 40px 0 60px;
     position: relative;
     z-index: 1;
+    overflow: hidden;
+    width: 100%;
+}
+
+.quoteWrapper {
+    position: relative;
+    padding: 20px 0;
+}
+
+.quoteLineBlue {
+    top: calc(50% - 4px);
+}
+
+.quoteLineBlue::before,
+.quoteLineBlue::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 2px;
+    width: 420px;
+    background: #27AAE7;
+}
+
+.quoteLineBlue::before {
+    left: 0;
+}
+
+.quoteLineBlue::after {
+    right: 0;
+}
+
+.quoteLine {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 0;
+    z-index: 1;
+}
+
+.quoteLinePurple {
+    top: calc(50% + 4px);
+}
+
+.quoteLinePurple::before,
+.quoteLinePurple::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 2px;
+    width: 310.57px;
+    background: #815FAA;
+}
+
+.quoteLinePurple::before {
+    left: 0;
+}
+
+.quoteLinePurple::after {
+    right: 0;
+}
+
+.quoteLineCoral {
+    top: calc(50% + 12px);
+}
+
+.quoteLineCoral::before,
+.quoteLineCoral::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 2px;
+    width: 234.703px;
+    background: #FB7D7D;
+}
+
+.quoteLineCoral::before {
+    left: 0;
+}
+
+.quoteLineCoral::after {
+    right: 0;
+}
+
+.disclaimerContent {
+    position: relative;
+    display: inline-block;
+    background: white;
+    padding: 0 40px;
+    z-index: 2;
+}
+
+.disclaimerText {
+    color: #232323;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    /* 26px */
+    margin: 0;
 }
 
 .decoRocket {
     position: absolute;
-    top: -10px;
-    right: 80px;
+    top: -40px;
+    right: 40px;
+    transform: rotate(-5deg);
     width: 72px;
-    opacity: 0.75;
-}
-
-.disclaimerText {
-    font-size: 15px;
-    color: #333;
-    font-weight: 500;
-    line-height: 1.7;
+    z-index: 3;
 }
 
 /* ---- What Happens Next ---- */
 .nextSection {
     position: relative;
-    max-width: 1100px;
+    width: 1440px;
+    max-width: 100%;
     margin: 40px auto;
-    padding: 60px 40px;
+    padding: 64px 102px 47px 102px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    /* approximates 20.065px */
     z-index: 1;
-}
-
-.nextGradientBg {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(39, 170, 231, 0.06) 0%, rgba(251, 125, 125, 0.06) 100%);
-    border-radius: 24px;
-    z-index: -1;
+    background: linear-gradient(269deg, #FDBBBB -6.78%, #FFF 58%, #B9E9FF 99.06%);
 }
 
 .nextTitle {
@@ -515,31 +606,72 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    gap: 16px;
+    gap: 0;
+    margin-top: 20px;
 }
 
 .nextStep {
     text-align: center;
-    max-width: 200px;
+    max-width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Staggered vertical offsets from Figma measurements:
+   Circle 3 = 182px (highest), Circle 1 = 210px, Circle 4 = 248px, Circle 2 = 266px (lowest)
+   Using Circle 3 as baseline (0px offset) */
+.nextStep1 {
+    padding-top: 28px;
+}
+
+/* 210 - 182 = 28 */
+.nextStep2 {
+    padding-top: 84px;
+}
+
+/* 266 - 182 = 84 */
+.nextStep3 {
+    padding-top: 0px;
+}
+
+/* 182 - 182 = 0  (highest) */
+.nextStep4 {
+    padding-top: 66px;
+}
+
+/* 248 - 182 = 66 */
+
 .nextStepCircle {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background: white;
-    border: 2px solid #E0E0E0;
+    position: relative;
+    width: 101px;
+    height: 101px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 16px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.stepBg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: 0;
+    filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.06));
 }
 
 .nextStepCircle span {
-    font-size: 28px;
-    font-weight: 700;
+    position: relative;
+    z-index: 1;
     color: #815FAA;
+    text-align: center;
+    text-shadow: 4px 0 6.4px rgba(0, 0, 0, 0.25);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 130%;
 }
 
 .nextStep p {
@@ -547,56 +679,97 @@
     color: #555;
     line-height: 1.6;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .nextArrow {
-    font-size: 32px;
-    color: #bbb;
-    padding-top: 16px;
-    user-select: none;
+    width: 208px;
+    height: 130px;
+    object-fit: contain;
+    align-self: flex-start;
+    margin-top: 40px;
 }
 
-/* ---- Testimonials ---- */
+/* ---- Testimonial Section ---- */
 .testimonialSection {
-    max-width: 1100px;
-    margin: 60px auto;
-    padding: 60px 40px;
+    background: #FFF;
+    padding: 60px 0;
     position: relative;
-    z-index: 1;
+}
+
+/* We need an inner container to center the actual content, but keep edge decorations on the outer full-width section */
+.testimonialContainer {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.decoEdgePink {
+    position: absolute;
+    right: -55px;
+    /* Cut half off screen */
+    top: 100px;
+    /* Align with top-ish area of testimonials */
+    width: 110.535px;
+    height: 98.211px;
+    transform: rotate(-12deg);
+    border-radius: 16px;
+    background: #FDBBBB;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.10), 0 2px 4px -2px rgba(0, 0, 0, 0.10);
+    z-index: 0;
+}
+
+.decoEdgeBlue {
+    position: absolute;
+    right: -25px;
+    top: 1750px;
+    width: 55.429px;
+    height: 55.429px;
+    transform: rotate(-6deg);
+    border-radius: 8px;
+    background: #A8D8F0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.10), 0 2px 4px -2px rgba(0, 0, 0, 0.10);
+    z-index: 0;
 }
 
 .testimonialHeader {
     display: flex;
-    align-items: baseline;
-    gap: 12px;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
     margin-bottom: 24px;
 }
 
 .testimonialTitle {
-    font-size: 36px;
-    font-weight: 700;
     color: #232323;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
     margin: 0;
 }
 
 .testimonialScript {
-    font-family: 'Caveat', cursive;
-    font-size: 42px;
-    color: #FB7D7D;
+    font-family: 'Simple Cakes', cursive;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #815FAA;
     margin: 0;
-    text-decoration: line-through;
-    text-decoration-color: rgba(251, 125, 125, 0.4);
 }
 
 .testimonialTabs {
     display: flex;
-    gap: 12px;
-    margin-bottom: 32px;
+    gap: 24px;
+    margin-bottom: 40px;
+    justify-content: center;
 }
 
 .testimonialTab,
 .testimonialTabActive {
-    padding: 8px 20px;
+    padding: 8px 16px;
     border-radius: 40px;
     border: 1.5px solid #d0d0d0;
     background: white;
@@ -616,39 +789,54 @@
 
 .testimonialGrid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    justify-content: center;
 }
 
 .testimonialCard {
-    background: white;
-    border-radius: 16px;
+    width: 337px;
+    min-height: 172px;
+    background: #FFF;
+    border-radius: 11px;
     padding: 24px;
-    border: 1px solid #eee;
+    padding-top: 48px;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     display: flex;
     flex-direction: column;
     gap: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.quoteIconPurple,
+.quoteIconBlue,
+.quoteIconOrange {
+    position: absolute;
+    top: -30px;
+    right: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 140px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 1.4px;
+    z-index: 0;
+    pointer-events: none;
+    transform: scaleX(-1);
 }
 
 .quoteIconPurple {
-    font-size: 36px;
-    font-weight: 700;
     color: #815FAA;
-    line-height: 1;
 }
 
 .quoteIconBlue {
-    font-size: 36px;
-    font-weight: 700;
     color: #27AAE7;
-    line-height: 1;
 }
 
 .quoteIconOrange {
-    font-size: 36px;
-    font-weight: 700;
     color: #FB7D7D;
-    line-height: 1;
 }
 
 .testimonialCard p {
@@ -688,10 +876,9 @@
 /* ---- Program Fees ---- */
 .feesSection {
     display: flex;
-    max-width: 1100px;
-    margin: 40px auto 60px;
-    padding: 0 40px;
-    gap: 60px;
+    margin: 40px 95px 60px 96px;
+    /* top right bottom left */
+    gap: 140px;
     position: relative;
     z-index: 1;
 }
@@ -705,15 +892,21 @@
 
 .feesDoodleWrapper {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
+    margin-bottom: 24px;
 }
 
 .feesScript {
-    font-family: 'Caveat', cursive;
-    font-size: 48px;
     color: #FB7D7D;
+    font-family: 'Simple Cakes', cursive;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
     margin: 0;
+    white-space: nowrap;
 }
 
 .feesArrow {
@@ -722,45 +915,66 @@
 }
 
 .feesQuoteCard {
-    background: white;
-    border-radius: 16px;
-    padding: 24px;
-    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 69px 31px 21px;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 1px 1px 4.5px 0 rgba(0, 0, 0, 0.25);
     position: relative;
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+    border: none;
+    z-index: 1;
+    /* For stacking over ::before */
 }
+
+
 
 .feesQuoteCard p {
     font-size: 15px;
     color: #333;
     font-style: italic;
     line-height: 1.6;
-    margin: 0 0 8px 0;
-    max-width: 250px;
+    margin: 0 0 4px 0;
+    max-width: 260px;
 }
 
 .quoteAuthor {
-    font-size: 13px;
-    color: #FB7D7D;
+    font-size: 15px;
+    color: #815FAA;
     font-style: italic;
 }
 
 .warrenImg {
     position: absolute;
     bottom: 0;
-    right: 16px;
-    width: 100px;
-    height: auto;
-    border-radius: 0 0 16px 0;
+    right: 0;
+    width: auto;
+    height: 130%;
+    z-index: 0;
+}
+
+.feesQuoteCard p,
+.quoteAuthor {
+    position: relative;
+    z-index: 1;
 }
 
 .feesQuoteCardBlue {
-    background: rgba(39, 170, 231, 0.08);
-    border: 1px solid rgba(39, 170, 231, 0.2);
-    border-radius: 16px;
-    padding: 24px;
+    display: flex;
+    padding: 28px 8px 26px 21px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 1px 1px 4.5px 0 rgba(0, 0, 0, 0.25);
     position: relative;
+    border: none;
+    z-index: 1;
 }
+
 
 .feesQuoteCardBlue p {
     font-size: 15px;
@@ -782,12 +996,13 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
 }
 
 .feeCardEarly {
     display: flex;
     width: 634px;
+    height: 140px;
     padding: 12px;
     flex-direction: column;
     justify-content: center;
@@ -796,12 +1011,11 @@
     border-radius: 12px;
     background: #815FAA;
     /* Solid Purple */
-    margin-bottom: 24px;
 }
 
 .feeCardEarlyInner {
     display: flex;
-    height: 139px;
+    height: 100%;
     padding: 8px 32px;
     align-items: center;
     align-self: stretch;
@@ -860,7 +1074,6 @@
     border: 8px solid #FADCDC;
     /* Coral border */
     background: #FFF;
-    margin-bottom: 24px;
     box-sizing: border-box;
 }
 
@@ -912,6 +1125,7 @@
     padding: 8px;
     gap: 8px;
     box-sizing: border-box;
+    height: 122px;
 }
 
 .feeExtraBlue {
@@ -929,7 +1143,9 @@
     background: white;
     border-radius: 8px;
     padding: 16px;
-    min-height: 80px;
+    height: 66px;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .feeExtraIconBlue,
@@ -969,8 +1185,12 @@
     font-size: 22px;
     font-weight: 800;
     color: #333;
-    text-align: center;
-    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin: 0;
+    padding: 0;
 }
 
 .feeExtraPrice span {

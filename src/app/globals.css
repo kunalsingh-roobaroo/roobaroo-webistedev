@@ -13,6 +13,8 @@
 body,
 html {
   background-color: #ffffff !important;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 @font-face {
