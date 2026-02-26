@@ -3,7 +3,6 @@ import Navbar from "@/components/Navbar/Navbar";
 import BackgroundBoxesWrapper from "@/components/BackgroundWrapper/BackgroundWrapper";
 import Link from "next/link";
 import Footer from "@/components/Footer/Footer";
-
 export default function PrivacyPolicyPage() {
   const privacySections = [
     {

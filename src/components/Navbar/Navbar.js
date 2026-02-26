@@ -73,9 +73,9 @@ const Navbar = () => {
 
         {isOpen && (
           <div className={`${classes.menu} `}>
-            <HashLink hash="#bootcamp" className={classes.navitems}>
-              Bootcamp{" "}
-            </HashLink>
+            <Link href="/summer-camp" className={`${classes.navitems} ${classes.bootcampBtn}`}>
+              Bootcamp
+            </Link>
             <HashLink hash="#b2b" className={classes.navitems}>
               Consulting
             </HashLink>
@@ -114,9 +114,9 @@ const Navbar = () => {
         )}
 
         <div className={classes.links}>
-          <HashLink hash="#bootcamp" className={classes.navitems}>
-            Bootcamp{" "}
-          </HashLink>
+          <Link href="/summer-camp" className={`${classes.navitems} ${classes.bootcampBtn}`}>
+            Bootcamp
+          </Link>
           <HashLink hash="#b2b" className={classes.navitems}>
             Consulting
           </HashLink>

@@ -59,6 +59,28 @@
     text-decoration-line: underline;
 }
 
+/* Bootcamp button – Figma design: purple pill CTA (matches Book a Meeting) */
+.bootcampBtn {
+    border-radius: 17px;
+    background: var(--Accent-Purple-Base, #815FAA);
+    padding: 0.55555555556vw 0.97222222222vw;
+    color: var(--Whites-Base, #FFF);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.18055555556vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.169px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.bootcampBtn:hover {
+    text-decoration: none;
+    opacity: 0.92;
+}
+
 .links {
     display: flex;
     align-items: center;
@@ -203,6 +225,14 @@
 
     .navitems {
         font-size: 15.669px;
+    }
+
+    .bootcampBtn {
+        font-size: 14.167px;
+        padding: 8px 16px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .mobbtn {

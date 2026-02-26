@@ -10,6 +10,11 @@
   scroll-behavior: smooth;
 }
 
+body,
+html {
+  background-color: #ffffff !important;
+}
+
 @font-face {
   font-family: "Simple Cakes";
   src: url("/assets/fonts/simple-cakes/simple_cakes.otf") format("opentype");
@@ -36,13 +41,13 @@
   letter-spacing: 0.94px;
 }
 
-.hash-link:hover{
-    text-decoration-line: underline;
+.hash-link:hover {
+  text-decoration-line: underline;
 }
 
 
 @media (max-width:450px) {
-  .subheading{
+  .subheading {
     font-size: 31px;
   }
 }

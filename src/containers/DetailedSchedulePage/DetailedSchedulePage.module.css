@@ -1,0 +1,727 @@
+.main {
+    background-color: #FAFAFA;
+    /* Soft off-white to match the design */
+    min-height: 100vh;
+    padding-bottom: 120px;
+    overflow-x: hidden;
+}
+
+/* Typography styles */
+.textPurple {
+    color: #815FAA;
+}
+
+.textBlue {
+    color: #3B82F6;
+}
+
+.textCoral {
+    color: #FB7D7D;
+}
+
+.textPurpleDark {
+    color: #6D5C96;
+}
+
+/* Header Section */
+.headerSection {
+    padding: 80px 4.16vw 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.headerTitleBox {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.pageTitle {
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 800;
+    color: #202325;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.pageTitleScriptWrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+}
+
+.pageTitleScript {
+    color: #815FAA;
+    font-family: "Simple Cakes";
+    font-size: clamp(48px, 6vw, 76px);
+    font-weight: 400;
+    margin: 0;
+}
+
+.bulbIcon {
+    width: 48px;
+    height: 48px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23815FAA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18h6'/%3E%3Cpath d='M10 22h4'/%3E%3Cpath d='M12 2v1'/%3E%3Cpath d='M12 7v1'/%3E%3Cpath d='M5.6 5.6l.7.7'/%3E%3Cpath d='M8.5 8.5l.7.7'/%3E%3Cpath d='M2 12h1'/%3E%3Cpath d='M7 12h1'/%3E%3Cpath d='M18.4 5.6l-.7.7'/%3E%3Cpath d='M15.5 8.5l-.7.7'/%3E%3Cpath d='M22 12h-1'/%3E%3Cpath d='M17 12h-1'/%3E%3Cpath d='M15.2 16.2H8.8c-.5 0-.9-.4-1-1v-.2c0-1.7-1.1-3.2-2.7-3.8A4.9 4.9 0 0112 3a4.9 4.9 0 016.9 8.2c-1.6.6-2.7 2.1-2.7 3.8v.2c-.1.6-.5 1-1 1z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Timeline Layout */
+.timelineSection {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4.16vw;
+    position: relative;
+}
+
+/* A very loose approximation of the cursive timeline. In a real scenario, this would be an absolute SVG.
+   For now, we'll use a thin vertical line that anchors the days */
+.timelinePath {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 6vw;
+    width: 2px;
+    background-color: rgba(129, 95, 170, 0.2);
+    z-index: 0;
+}
+
+/* Day Blocks */
+.dayBlock {
+    position: relative;
+    z-index: 1;
+    padding-left: 10vw;
+    margin-bottom: 80px;
+}
+
+.dayHeader {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.dayHeader::before {
+    content: "";
+    position: absolute;
+    left: -4vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background: #815FAA;
+    border-radius: 50%;
+}
+
+.dayNumber {
+    font-family: "Simple Cakes";
+    font-size: clamp(40px, 5vw, 64px);
+    color: #202325;
+    margin: 0;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.dayArrow {
+    width: 40px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23374151' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14'/%3E%3Cpath d='M12 5l7 7-7 7'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+}
+
+.rocketIconSmall {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.dayTitleRow {
+    margin-bottom: 16px;
+}
+
+.dayMainTitle {
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 700;
+    color: #202325;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.dayDesc {
+    font-size: 1.05rem;
+    color: #4B5563;
+    margin: 0 0 24px 0;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+.daySubtitle {
+    font-size: 1rem;
+    color: #815FAA;
+    margin: -8px 0 16px 0;
+}
+
+.daySubtitleScript {
+    font-family: "Simple Cakes";
+    color: #202325;
+    font-size: 1.25rem;
+    margin: -8px 0 24px 0;
+}
+
+/* Card Grids */
+.cardsRow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.cardsRowSmall {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 16px;
+    max-width: 800px;
+}
+
+.cardsRow2 {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.infoCard {
+    background: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #F3F4F6;
+    display: flex;
+    flex-direction: column;
+}
+
+.infoCardHorizontal {
+    background: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #F3F4F6;
+    display: flex;
+    flex: 1;
+}
+
+.cardContent,
+.cardContentHorizontal {
+    padding: 16px 20px;
+    flex: 1;
+}
+
+.cardContent p,
+.cardContentHorizontal p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #374151;
+    line-height: 1.5;
+}
+
+.cardContentHorizontalWrapper {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.cardContentHorizontalWrapper p {
+    flex: 1;
+    padding: 24px;
+    margin: 0;
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+/* Placeholder Images for Cards */
+.cardImage1,
+.cardImage2,
+.cardImage3,
+.cardImage4,
+.cardImage5,
+.cardImage6,
+.cardImage7,
+.cardImage8,
+.cardImage9,
+.cardImage10,
+.cardImage11,
+.cardImage12,
+.cardImage13,
+.cardImage14,
+.cardImage15,
+.cardImage16,
+.cardImage17,
+.cardImage18,
+.cardImage19,
+.cardImage20,
+.cardImage21,
+.cardImage22,
+.cardImage23,
+.cardImage24,
+.cardImage25 {
+    background-color: #E5E7EB;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Vertical card images */
+.cardImage1,
+.cardImage2,
+.cardImage3,
+.cardImage5,
+.cardImage6,
+.cardImage7,
+.cardImage12,
+.cardImage13,
+.cardImage14,
+.cardImage17,
+.cardImage18,
+.cardImage19,
+.cardImage20,
+.cardImage21,
+.cardImage22,
+.cardImage23,
+.cardImage24,
+.cardImage25 {
+    height: 140px;
+    width: 100%;
+}
+
+/* Horizontal card left images */
+.cardImage4,
+.cardImage8,
+.cardImage10,
+.cardImage11,
+.cardImage15 {
+    width: 140px;
+    flex-shrink: 0;
+}
+
+/* Horizontal card right images */
+.cardImage9,
+.cardImage16 {
+    width: 140px;
+    flex-shrink: 0;
+}
+
+/* Special Custom Layouts for Specific Day Cards */
+
+/* Day 1 - Tools Card */
+.toolsCard {
+    flex: 1.5;
+    background: #FCF9F9;
+    border: 1px solid #FB7D7D;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.toolsContent {
+    padding: 16px 20px 0;
+}
+
+.toolsTitle {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.toolsScript {
+    font-family: "Simple Cakes";
+    font-size: 1.3rem;
+    margin: 0 0 12px 0;
+    color: #374151;
+}
+
+.toolsList {
+    margin: 0;
+    padding: 0 20px 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.toolsList li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: #4B5563;
+}
+
+.checkIcon {
+    color: #815FAA;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Day 3 - AI Tools & Projects */
+.aiToolsBox {
+    flex: 0.8;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.aiToolsBox p {
+    margin: 0 0 16px 0;
+    font-size: 1rem;
+    color: #374151;
+}
+
+.toolsLogos {
+    background: #F3F4F6;
+    height: 80px;
+    border-radius: 8px;
+}
+
+.aiProjectsBox {
+    flex: 1.2;
+    background: #FEF2F2;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.aiProjectsHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.aiProjectsHeader p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #374151;
+    max-width: 60%;
+}
+
+.projectBadges {
+    display: flex;
+    gap: 8px;
+}
+
+.projectBadges span {
+    font-size: 0.75rem;
+    background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    padding: 4px 10px;
+    border-radius: 999px;
+    color: #6B7280;
+}
+
+.projectCardsRow {
+    display: flex;
+    gap: 12px;
+}
+
+.miniProject {
+    flex: 1;
+    background: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.miniProj1,
+.miniProj2,
+.miniProj3 {
+    height: 64px;
+    background: #E5E7EB;
+}
+
+.miniProject p {
+    margin: 0;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #374151;
+    text-align: center;
+}
+
+/* Day 4 - Founder Box */
+.founderBox {
+    background: #EAF5FD;
+    border: 1px solid #3B82F6;
+    border-radius: 12px;
+}
+
+/* Day 5 - Incubation & Cheque */
+.incubationBox {
+    flex: 1;
+    background: #FEF2F2;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.incubationBox p {
+    margin: 0 0 16px 0;
+    font-size: 1rem;
+    color: #374151;
+}
+
+.incubationLogos {
+    height: 64px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+}
+
+.chequeBox {
+    flex: 1;
+    background: #FFFBEB;
+    border: 1px solid #FCD34D;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.chequeImage {
+    width: 140px;
+    height: 80px;
+    background: #FDE68A;
+    border-radius: 8px;
+}
+
+.chequeContent {
+    flex: 1;
+    z-index: 2;
+}
+
+.chequeContent p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #4B5563;
+}
+
+.chequeTitle {
+    font-family: "Simple Cakes";
+    font-size: 2rem !important;
+    color: #B45309 !important;
+    margin-bottom: 4px !important;
+}
+
+.chequeTitle strong {
+    font-family: var(--font-inter);
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.chequeAmount {
+    display: inline-block;
+    background: #B45309;
+    color: #FFFFFF;
+    font-weight: 800;
+    padding: 6px 16px;
+    border-radius: 8px;
+    margin-top: 12px;
+}
+
+/* Certification Section */
+.certSectionWrapper {
+    margin-top: 40px;
+    border-top: 1px solid #E5E7EB;
+    padding-top: 40px;
+}
+
+.certHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.certIcon {
+    font-size: 1.8rem;
+}
+
+.certHeader h2 {
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 700;
+    color: #202325;
+    margin: 0;
+}
+
+.certSub {
+    text-align: center;
+    color: #6B7280;
+    margin: 0 0 32px 0;
+    font-size: 1.05rem;
+}
+
+.certBox {
+    background: #FFFFFF;
+    border: 1px solid #F3F4F6;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.certLeft {
+    flex: 1.2;
+    text-align: center;
+}
+
+.certTitleGold {
+    font-size: 1.5rem;
+    color: #D97706;
+    margin: 0 0 24px 0;
+    font-weight: 600;
+}
+
+.certImageMockup {
+    width: 100%;
+    max-width: 400px;
+    height: 240px;
+    margin: 0 auto 16px;
+    background: linear-gradient(135deg, #FDE68A 0%, #D97706 100%);
+    border-radius: 12px;
+}
+
+.certDescSmall {
+    font-size: 0.85rem;
+    color: #6B7280;
+    margin: 0;
+}
+
+.certRight {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.certMiniCard {
+    background: #FAFAFA;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.certMiniIconBlue,
+.certMiniIconCoral,
+.certMiniIconPurple {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.certMiniIconBlue {
+    background: #EAF5FD;
+}
+
+.certMiniIconCoral {
+    background: #FEF2F2;
+}
+
+.certMiniIconPurple {
+    background: #F3E8FF;
+}
+
+.certMiniTitleBlue {
+    color: #3B82F6;
+    margin: 0 0 4px 0;
+    font-size: 1.05rem;
+}
+
+.certMiniTitleCoral {
+    color: #FB7D7D;
+    margin: 0 0 4px 0;
+    font-size: 1.05rem;
+}
+
+.certMiniTitlePurple {
+    color: #815FAA;
+    margin: 0 0 4px 0;
+    font-size: 1.05rem;
+}
+
+.certMiniDesc {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #4B5563;
+    line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .dayBlock {
+        padding-left: 0;
+    }
+
+    .timelinePath {
+        display: none;
+    }
+
+    .dayHeader::before {
+        display: none;
+    }
+
+    .cardsRow,
+    .cardsRowSmall {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cardsRow2 {
+        flex-direction: column;
+    }
+
+    .certBox {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .cardsRow,
+    .cardsRowSmall {
+        grid-template-columns: 1fr;
+    }
+
+    .infoCardHorizontal {
+        flex-direction: column;
+    }
+
+    .cardImage4,
+    .cardImage8,
+    .cardImage10,
+    .cardImage11,
+    .cardImage15,
+    .cardImage9,
+    .cardImage16 {
+        width: 100%;
+        height: 140px;
+    }
+
+    .cardContentHorizontalWrapper {
+        flex-direction: column;
+    }
+
+    .certImageMockup {
+        height: 180px;
+    }
+}
