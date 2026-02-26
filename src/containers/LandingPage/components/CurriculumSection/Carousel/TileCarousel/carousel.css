@@ -12,19 +12,21 @@
   background: #815FAA !important;
 }
 
-.carouselwrapper .slick-slide > div {
-  margin: 0 5px; /* left and right 5px = 10px gap total */
+.carouselwrapper .slick-slide>div {
+  margin: 0 5px;
+  /* left and right 5px = 10px gap total */
 }
 
 .carouselwrapper .slick-list {
-  margin: 0 -5px; /* compensate so content aligns correctly */
+  margin: 0 -5px;
+  /* compensate so content aligns correctly */
 }
 
 
-.carouselwrapper :global(.slick-slide > div) {
+.carouselwrapper .slick-slide>div {
   margin: 0 5px;
 }
 
-.carouselwrapper :global(.slick-list) {
+.carouselwrapper .slick-list {
   margin: 0 -5px;
 }
