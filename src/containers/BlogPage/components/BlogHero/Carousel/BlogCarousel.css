@@ -83,10 +83,11 @@
 
 
 }
-  .carouselwrapper :global(.slick-slide > .slide) {
-    margin: 0 5px;
-  }
 
-  .carouselwrapper :global(.slick-list) {
-    margin: 0 -5px;
-  }
+.carouselwrapper .slick-slide>.slide {
+  margin: 0 5px;
+}
+
+.carouselwrapper .slick-list {
+  margin: 0 -5px;
+}
