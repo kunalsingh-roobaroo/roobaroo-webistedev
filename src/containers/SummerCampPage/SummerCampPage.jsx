@@ -29,7 +29,13 @@ import {
   ExternalLink,
   ChevronLeft,
   ChevronRight,
-  Quote
+  Quote,
+  CheckCircle2,
+  PencilRuler,
+  UserPlus,
+  Atom,
+  Calculator,
+  Scale
 } from "lucide-react";
 import { trackEvent } from "@/utils/ga4";
 import classes from "./SummerCampPage.module.css";
@@ -459,6 +465,485 @@ export default function SummerCampPage() {
           </div>
         </div>
 
+        {/* Lived Experience */}
+        <section className={classes.livedExpOuterSection}>
+          <div className={classes.livedExpHeader}>
+            <h2 className={classes.livedExpTitle}>
+              This Program Was Built <br />
+              From <span className={`${classes.livedExpScript} ${classes.livedExpScriptCoral}`}>Lived Experience <span className={classes.clockIcon}>⏰</span></span>
+            </h2>
+          </div>
+          <div className={classes.livedExpCardsWrapper}>
+            {/* Card 1: Blue */}
+            <div className={classes.livedExpBlueCard}>
+              <div className={classes.blueCardTop}>
+                <div className={classes.founderImagePlaceholder}></div>
+                <div className={classes.founderInfo}>
+                  <h3 className={classes.founderName}>Bhaskar<br />Singhania</h3>
+                  <p className={classes.founderTitle}>Founder & CEO, Roobaroo.ai</p>
+                  <div className={classes.socialIconsRow}>
+                    <div className={classes.socialIconInsta}></div>
+                    <div className={classes.socialIconLinked}></div>
+                    <div className={classes.socialIconLinktree}></div>
+                  </div>
+                </div>
+              </div>
+              <div className={classes.blueCardBottom}>
+                <div className={classes.blueCardQuote}>
+                  <p>" I've seen both<br />sides of the system —<br /><strong>what works, and what<br />quietly fails students</strong> "</p>
+                </div>
+                <div className={classes.blueCardMentor}>
+                  <p className={classes.mentorTitle}>Mentor at :</p>
+                  <div className={classes.mentorLogosGrid}>
+                    <div className={classes.mentorLogoItem}><span className={classes.mentorInitial}>m</span> Mesa<br />School</div>
+                    <div className={classes.mentorLogoItem}>NITI<br />Aayog</div>
+                    <div className={classes.mentorLogoItem}><strong>masters'</strong><br /><strong>union</strong></div>
+                    <div className={classes.mentorLogoItem}>IIT<br />Kharagpur</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 2: Purple */}
+            <div className={classes.livedExpPurpleCard}>
+              <div className={classes.purpleCardTop}>
+                <div className={classes.alumniHeader}>
+                  <span className={classes.alumniIcon}>🎓</span> Alumni of IIT Kharagpur
+                </div>
+                <div className={classes.alumniLogosRow}>
+                  <span className={classes.alumniLogoItemText}><span style={{ color: '#E03C31' }}>Stanford</span></span> |
+                  <span className={classes.alumniLogoItemText}><span style={{ color: '#4285F4' }}>G</span><span style={{ color: '#EA4335' }}>o</span><span style={{ color: '#FBBC05' }}>o</span><span style={{ color: '#4285F4' }}>g</span><span style={{ color: '#34A853' }}>l</span><span style={{ color: '#EA4335' }}>e</span> for Startups</span>
+                </div>
+              </div>
+              <div className={classes.purpleCardBottom}>
+                <div className={classes.purpleCardImage}>
+                  <img src="/assets/images/thumbnail.png" alt="Classroom" className={classes.pupleImg} />
+                </div>
+                <div className={classes.purpleCardStats}>
+                  <h3>1000+</h3>
+                  <p>Students &<br />professionals<br />Coached</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className={classes.section}>
+          {/* Built with students */}
+          <div className={classes.builtWithCard}>
+            <h3 className={classes.builtWithTitle}>Built With <span className={classes.textPink}>Students</span>,<br />Not Assumptions</h3>
+            <div className={classes.builtWithFlow}>
+              <div className={classes.flowStep}>
+                <p>I researched <span className={classes.textPink}>65+ student</span> programs globally</p>
+                <div className={classes.arrowDown}>↓</div>
+                <p>To understand what works and what doesn't</p>
+              </div>
+              <div className={classes.arrowRight}>→</div>
+              <div className={classes.flowStepPink}>
+                <p>I spoke directly to <strong>70+ students</strong> across <strong>grades 8-12</strong>, across streams, to hear what they actually want.</p>
+              </div>
+              <div className={classes.arrowRight}>✨</div>
+              <div className={classes.flowStepBlue}>
+                <p className={classes.flowStepSub}>What emerged was clear: students don't want pressure</p>
+                <p>They want clarity, confidence, and capability.</p>
+              </div>
+            </div>
+            <p className={classes.builtWithFooter}>That's how this became the <span className={classes.textPink}>most comprehensive summer program</span> of its kind</p>
+          </div>
+
+        </section>
+
+        {/* Program Schedule Header */}
+        <section className={classes.scheduleHeaderSection}>
+          <div className={classes.headerTitleBox}>
+            <h1 className={classes.pageTitle}>Program</h1>
+            <div className={classes.pageTitleScriptWrapper}>
+              <h1 className={classes.pageTitleScript}>Schedule</h1>
+              <div className={classes.bulbIcon}></div>
+            </div>
+          </div>
+        </section>
+
+        {/* Timeline Section */}
+        <section className={classes.timelineSection}>
+          <div className={classes.timelineDaysWrap}>
+            <div className={classes.timelinePath}></div>
+
+            {/* Day 1 */}
+            <div className={classes.dayBlock}>
+              <div className={classes.dayHeader}>
+                <h2 className={classes.dayNumber}>Day 1</h2>
+                <div className={classes.dayArrow}></div>
+              </div>
+              <div className={classes.dayTitleRow}>
+                <h3 className={classes.dayMainTitle}>The <span className={classes.textPurple}>Career Lab</span></h3>
+              </div>
+              <p className={classes.dayDesc}>Students experience the full journey of building a startup, from identifying a problem to creating, testing, & pitching a solution.</p>
+
+              <div className={classes.cardsRow}>
+                <div className={classes.infoCard}>
+                  <div className={classes.cardImage1}></div>
+                  <div className={classes.cardContent}>
+                    <p><span className={classes.textBlue}>Icebreaking activities</span> to build comfort and peer connections</p>
+                  </div>
+                </div>
+                <div className={classes.infoCard}>
+                  <div className={classes.cardImage2}></div>
+                  <div className={classes.cardContent}>
+                    <p>Keynote on the Present & Future of <span className={classes.textPurple}>Career, Work, & Wellbeing</span></p>
+                  </div>
+                </div>
+                <div className={classes.infoCard}>
+                  <div className={classes.cardImage3}></div>
+                  <div className={classes.cardContent}>
+                    <p><span className={classes.textCoral}>Immersive Workshops</span> on self-awareness & career thinking</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className={classes.cardsRow2}>
+                <div className={`${classes.infoCardHorizontal} ${classes.mentorshipCard}`}>
+                  <div className={classes.cardImage4}></div>
+                  <div className={classes.cardContentHorizontal}>
+                    <p><span className={classes.textPurple}>1:1 Career Mentorship</span> with the Founder for personal guidance</p>
+                  </div>
+                </div>
+                <div className={`${classes.infoCardHorizontal} ${classes.toolsCard}`}>
+                  <div className={classes.toolsContent}>
+                    <p className={classes.toolsTitle}><span className={classes.textPurple}>Exclusive Career Tools:</span></p>
+                    <p className={classes.toolsScript}>Beyond ChatGPT, Google Search, or Wiki</p>
+                  </div>
+                  <ul className={classes.toolsList}>
+                    <li><CheckCircle2 size={16} className={classes.checkIcon} /> Career Studio to explore <strong>2,500+</strong> roles with real examples and context</li>
+                    <li><CheckCircle2 size={16} className={classes.checkIcon} /> <strong>AI Career Companion</strong> with insights from top founders, mentors & thinkers</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Day 2 */}
+            <div className={classes.dayBlock}>
+              <div className={classes.dayHeader}>
+                <h2 className={classes.dayNumber}>Day 2</h2>
+              </div>
+              <div className={classes.dayTitleRow}>
+                <h3 className={classes.dayMainTitle}><span className={classes.textBlue}>Emotional Resilience</span><br />& Communication Day</h3>
+              </div>
+              <p className={classes.dayDesc}>Learn to manage stress, emotions, and express yourself confidently in academics, relationships, and real life.</p>
+
+              <div className={classes.cardsRow}>
+                <div className={classes.infoCard}>
+                  <div className={classes.cardImage5}></div>
+                  <div className={classes.cardContent}>
+                    <p><span className={classes.textBlue}>Understand Emotions</span> & learn ways to bounce back from difficulties in life</p>
+                  </div>
+                </div>
+                <div className={classes.infoCard}>
+                  <div className={classes.cardImage6}></div>
+                  <div className={classes.cardContent}>
+                    <p>Learn how to <span className={classes.textPurple}>manage stress</span>, manage anxiety, FOMO, and <span className={classes.textBlue}>peer pressure</span></p>
+                  </div>
+                </div>
+                <div className={classes.infoCard}>
+                  <div className={classes.cardImage7}></div>
+                  <div className={classes.cardContent}>
+                    <p><span className={classes.textCoral}>Practical guide</span> on time management, prioritization, and increasing productivity</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className={classes.cardsRow2}>
+                <div className={`${classes.infoCardHorizontal} ${classes.stageCard}`}>
+                  <div className={classes.cardImage8}></div>
+                  <div className={classes.cardContentHorizontal}>
+                    <p>Build a strong stage presence with <span className={classes.textPurple}>verbal & non-verbal communication</span></p>
+                  </div>
+                </div>
+                <div className={`${classes.infoCardHorizontal} ${classes.tedCard}`}>
+                  <div className={classes.cardContentHorizontalWrapper}>
+                    <p>Learn <span className={classes.textCoral}>Ted-style story telling</span> and how to present yourself with confidence</p>
+                    <div className={classes.cardImage9}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Day 3 */}
+            <div className={classes.dayBlock}>
+              <div className={classes.dayHeader}>
+                <h2 className={classes.dayNumber}>Day 3</h2>
+              </div>
+              <div className={classes.dayTitleRow}>
+                <h3 className={classes.dayMainTitle}><span className={classes.textCoral}>AI</span> Innovation Lab</h3>
+              </div>
+              <p className={classes.daySubtitle}><em>No Coding</em> <strong>required</strong></p>
+              <p className={classes.dayDesc}>Learn how to think clearly, break problems, and confidently use AI tools to build real solutions</p>
+
+              <div className={classes.cardsRowSmall}>
+                <div className={`${classes.infoCardHorizontal} ${classes.consultantCard}`}>
+                  <div className={classes.cardImage10}></div>
+                  <div className={classes.cardContentHorizontal}>
+                    <p>Learn how top consultants from <span className={classes.textPurple}>BCG, Bain, Mckinsey</span> solve problems</p>
+                  </div>
+                </div>
+                <div className={`${classes.infoCardHorizontal} ${classes.interactiveCard}`}>
+                  <div className={classes.cardImage11}></div>
+                  <div className={classes.cardContentHorizontal}>
+                    <p><span className={classes.textCoral}>Interactive activities</span> on how to break complex problems and find solutions</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className={classes.cardsRow2}>
+                <div className={classes.aiToolsBox}>
+                  <p><strong>Master the best AI tools</strong> for productivity, creativity, and <span className={classes.textCoral}>problem solving</span></p>
+                  <div className={classes.toolsLogos}></div>
+                </div>
+                <div className={classes.aiProjectsBox}>
+                  <div className={classes.aiProjectsHeader}>
+                    <p><strong>Build live projects</strong> using AI for a <strong>standout profile</strong></p>
+                    <div className={classes.projectBadges}>
+                      <span>No coding required</span>
+                      <span>Beginner friendly</span>
+                    </div>
+                  </div>
+                  <div className={classes.projectCardsRow}>
+                    <div className={classes.miniProject}><div className={classes.miniProj1}></div><p>Create your own App</p></div>
+                    <div className={classes.miniProject}><div className={classes.miniProj2}></div><p>Create Short Film & AI Content</p></div>
+                    <div className={classes.miniProject}><div className={classes.miniProj3}></div><p>Create AI Agents to automate tasks</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Day 4 */}
+            <div className={classes.dayBlock}>
+              <div className={classes.dayHeader}>
+                <h2 className={classes.dayNumber}>Day 4</h2>
+              </div>
+              <div className={classes.dayTitleRow}>
+                <h3 className={classes.dayMainTitle}><span className={classes.textBlue}>Finance & Startup</span><br />Fundamentals Day</h3>
+              </div>
+              <p className={classes.dayDesc}>Build money confidence, smart habits, and a founder's mindset early — while you're still in school.</p>
+
+              <div className={classes.cardsRow}>
+                <div className={classes.infoCard}>
+                  <div className={classes.cardImage12}></div>
+                  <div className={classes.cardContent}>
+                    <p>Understand the <span className={classes.textCoral}>psychology of money</span> to build the right mindset</p>
+                  </div>
+                </div>
+                <div className={classes.infoCard}>
+                  <div className={classes.cardImage13}></div>
+                  <div className={classes.cardContent}>
+                    <p><span className={classes.textPurple}>Live activities</span> on budgeting, saving, investing, and compounding</p>
+                  </div>
+                </div>
+                <div className={classes.infoCard}>
+                  <div className={classes.cardImage14}></div>
+                  <div className={`${classes.cardContent} ${classes.founderBox}`}>
+                    <p>Learn how to find ideas, how to explore them, and <span className={classes.textBlue}>unlock founder mindset</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <div className={classes.cardsRow2}>
+                <div className={`${classes.infoCardHorizontal} ${classes.earningCard}`}>
+                  <div className={classes.cardImage15}></div>
+                  <div className={classes.cardContentHorizontal}>
+                    <p>Understand ways to <span className={classes.textBlue}>start earning</span> while you are <span className={classes.textCoral}>still in school</span></p>
+                  </div>
+                </div>
+                <div className={`${classes.infoCardHorizontal} ${classes.summitCard}`}>
+                  <div className={classes.cardContentHorizontalWrapper}>
+                    <p>Case stories & insights from real stories and <span className={classes.textPurple}>global best practices</span></p>
+                    <div className={classes.cardImage16}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Day 5 */}
+            <div className={classes.dayBlock}>
+              <div className={classes.dayHeader}>
+                <h2 className={classes.dayNumber}>Day 5</h2>
+              </div>
+              <div className={classes.dayTitleRow}>
+                <h3 className={classes.dayMainTitle}><span className={classes.textPurple}>The Startup</span> Challenge</h3>
+              </div>
+              <p className={classes.dayDesc}>Experience the full journey of building a startup, from identifying a problem to creating, testing, and pitching a solution.</p>
+              <p className={classes.daySubtitleScript}>* no experience required * beginner friendly</p>
+
+              <div className={classes.cardsRow}>
+                <div className={classes.infoCard}>
+                  <div className={classes.cardImage17}></div>
+                  <div className={classes.cardContent}>
+                    <p><strong className={classes.textPurple}>Team Ideation</strong><br />Collaborate with peers and shape breakthrough ideas.</p>
+                  </div>
+                </div>
+                <div className={classes.infoCard}>
+                  <div className={classes.cardImage18}></div>
+                  <div className={classes.cardContent}>
+                    <p><strong className={classes.textCoral}>Create Solutions</strong><br />Turn your concepts into basic products & solutions</p>
+                  </div>
+                </div>
+                <div className={classes.infoCard}>
+                  <div className={classes.cardImage19}></div>
+                  <div className={classes.cardContent}>
+                    <p><strong className={classes.textPurpleDark}>Pitch & Prizes</strong><br />Present to experts with a chance to win support and rewards.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className={classes.cardsRow2}>
+                <div className={classes.incubationBox}>
+                  <p><strong>Top startups get assistance for...</strong><br />Incorporation, Govt. Grants, Incubation</p>
+                  <div className={classes.incubationLogos}></div>
+                </div>
+                <div className={classes.chequeBox}>
+                  <div className={classes.chequeImage}></div>
+                  <div className={classes.chequeContent}>
+                    <p className={classes.chequeTitle}>Cheque <strong>Prize</strong></p>
+                    <p>The best startup will get a cheque prize of</p>
+                    <div className={classes.chequeAmount}>INR 50,000/-</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Day 6 */}
+            <div className={classes.dayBlock}>
+              <div className={classes.dayHeader}>
+                <h2 className={classes.dayNumber}>Day 6</h2>
+                <div className={classes.rocketIconSmall}>🚀</div>
+              </div>
+              <div className={classes.dayTitleRow}>
+                <h3 className={classes.dayMainTitle}><span className={classes.textBlue}>Mindfulness</span> &<br />Digital Detox Day</h3>
+              </div>
+              <p className={classes.dayDesc}>Slow down, reset, and learn to use technology mindfully without burnout or distraction.</p>
+
+              <div className={classes.cardsRow}>
+                <div className={classes.infoCard}>
+                  <div className={classes.cardImage20}></div>
+                  <div className={classes.cardContent}>
+                    <p>Immerse in a <span className={classes.textPurple}>guided art activities</span> to let go of your past burden</p>
+                  </div>
+                </div>
+                <div className={classes.infoCard}>
+                  <div className={classes.cardImage21}></div>
+                  <div className={classes.cardContent}>
+                    <p><span className={classes.textBlue}>Develop mindfulness and calm</span> to live with ease and balance</p>
+                  </div>
+                </div>
+                <div className={classes.infoCard}>
+                  <div className={classes.cardImage22}></div>
+                  <div className={classes.cardContent}>
+                    <p>Live activities to reorganise your digital life for <span className={classes.textCoral}>focus and productivity</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <div className={classes.cardsRow}>
+                <div className={classes.infoCard}>
+                  <div className={classes.cardImage23}></div>
+                  <div className={classes.cardContent}>
+                    <p>Master tools to setup <span className={classes.textBlue}>healthier digital boundaries</span> for study & rest</p>
+                  </div>
+                </div>
+                <div className={classes.infoCard}>
+                  <div className={classes.cardImage24}></div>
+                  <div className={classes.cardContent}>
+                    <p>Live demonstration on radiations and the <span className={classes.textPurple}>health impacts of our phone</span></p>
+                  </div>
+                </div>
+                <div className={classes.infoCard}>
+                  <div className={classes.cardImage25}></div>
+                  <div className={classes.cardContent}>
+                    <p>Learn about cyber safety, privacy, and <span className={classes.textCoral}>responsible internet usage</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Certification Section */}
+          <div className={classes.certSectionWrapper}>
+            <div className={classes.certHeader}>
+              <img src="/assets/images/Badge Verification - iconSvg.co.svg" alt="Certification Badge" className={classes.certIcon} />
+              <h2>Certification & Recognition</h2>
+            </div>
+            <p className={classes.certSub}>A stamp of credibility for the skills and expertise you master here</p>
+
+            <div className={classes.certBox}>
+              <div className={classes.certLeftText}>
+                <h3 className={classes.certTitleGold}>Completion Certificate</h3>
+                <p className={classes.certDescSmall}>A credible & verifiable proof that can also be added to LinkedIn</p>
+              </div>
+              <div className={classes.certRightImage}>
+                <div className={classes.certImageMockup}></div>
+              </div>
+            </div>
+
+            <div className={classes.certMiniCardsRow}>
+              <div className={`${classes.certMiniCard} ${classes.certMiniCard1}`}>
+                <img src="/assets/images/Letter Of Recommendation - iconSvg.co.svg" alt="Letter of Recommendation" className={classes.certMiniImg} />
+                <div>
+                  <h4 className={classes.certMiniTitleBlue}>Letter Of Recommendation</h4>
+                  <p className={classes.certMiniDesc}>Reserved upon request for exceptional participants from the Summer Camp</p>
+                </div>
+              </div>
+              <div className={`${classes.certMiniCard} ${classes.certMiniCard2}`}>
+                <img src="/assets/images/Certificate Program - iconSvg.co.svg" alt="Startup Certificate" className={classes.certMiniImg} />
+                <div>
+                  <h4 className={classes.certMiniTitleCoral}>Startup Certificate</h4>
+                  <p className={classes.certMiniDesc}>Presented to members from all teams of the Startup Challenge</p>
+                </div>
+              </div>
+              <div className={`${classes.certMiniCard} ${classes.certMiniCard3}`}>
+                <div>
+                  <h4 className={classes.certMiniTitlePurple}>Talent Show & Open Mic</h4>
+                  <p className={classes.certMiniDesc}>Share your talents & exchange learnings, takeaways, and parting thoughts from the Camp</p>
+                </div>
+                <img src="/assets/images/Spotlight Mic - iconSvg.co.svg" alt="Talent Show Spotlight" className={classes.certMiniImgRight} />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Experts Section */}
+        <section className={classes.expertsSectionWrapper}>
+          <div className={classes.expertsTitleRow}>
+            <div className={classes.expertsLine} />
+            <h2 className={classes.expertsTitleMain}>
+              <span className={classes.textPurpleDark}>Experts</span> you will
+            </h2>
+            <div className={classes.expertsLine} />
+          </div>
+          <div className={classes.expertsTitleSubRow}>
+            <h2 className={classes.expertsTitleSub}>
+              learn from
+              <img src="/assets/icons/underline.svg" className={classes.expertsUnderline} alt="underline" />
+            </h2>
+            <div className={classes.expertsSparkle}>✨</div>
+          </div>
+
+          <div className={classes.expertFilters}>
+            {["Practical insights", "Interactive", "Beginner-friendly", "Doubt-clearing"].map((label, i) => (
+              <button key={i} className={classes.expertFilterBtn}>{label}</button>
+            ))}
+          </div>
+          <div className={classes.expertsGrid}>
+            {experts.map((ex, i) => (
+              <div key={i} className={classes.expertCard}>
+                <div className={classes.expertAvatar} />
+                <h4 className={classes.expertName}>{ex.name}</h4>
+                <p className={classes.expertRoles}>{ex.roles}</p>
+                <p className={classes.expertAff}>{ex.aff}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
         <section className={classes.section} style={{ paddingTop: '20px' }}>
           <div className={classes.realExpertsFrame}>
             <p className={classes.realExpertsTitle}>Learn from real experts</p>
@@ -473,20 +958,104 @@ export default function SummerCampPage() {
           </div>
         </section>
 
-        {/* Getting Future-Ready Is Everyone's Right */}
-        <section className={classes.section}>
-          <div className={classes.futureReadyHeader}>
-            <h2 className={classes.futureReadyTitle}>Getting Future-Ready Is</h2>
-            <h2 className={classes.futureReadyScript}>Everyone's Right <Sparkles size={24} className={classes.sparklesIcon} /></h2>
+        {/* Admission Process */}
+        <section className={classes.admissionProcessSection}>
+          <div className={classes.admissionProcessHeaderRow}>
+            <h2 className={classes.admissionProcessTitle}>Admission</h2>
+            <h2 className={classes.admissionProcessScript}>Process</h2>
           </div>
+          <div className={classes.admissionProcessTimeline}>
+            <div className={`${classes.admissionStepNode} ${classes.admissionStepNode1}`}>
+              <div className={classes.admissionStepCircle}>
+                <img src="/assets/images/Ellipse 96.svg" className={classes.admissionStepBg} alt="" />
+                <span>1</span>
+              </div>
+              <h4>1. Apply Online</h4>
+              <p>
+                Reserve your spot with basic details, batch preference, and booking fees(INR 2499)
+              </p>
+            </div>
+            <img src="/assets/images/Arrow 5.svg" className={classes.admissionStepArrow} alt="" />
+            <div className={`${classes.admissionStepNode} ${classes.admissionStepNode2}`}>
+              <div className={classes.admissionStepCircle}>
+                <img src="/assets/images/Ellipse 96.svg" className={classes.admissionStepBg} alt="" />
+                <span>2</span>
+              </div>
+              <h4>2. Personal Interview</h4>
+              <p>
+                Our team will reach out <strong>within 48 hours</strong> to understand the student's motivation
+              </p>
+            </div>
+            <img src="/assets/images/Arrow 6.svg" className={classes.admissionStepArrow} alt="" />
+            <div className={`${classes.admissionStepNode} ${classes.admissionStepNode3}`}>
+              <div className={classes.admissionStepCircle}>
+                <img src="/assets/images/Ellipse 96.svg" className={classes.admissionStepBg} alt="" />
+                <span>3</span>
+              </div>
+              <h4>3. Final Selection</h4>
+              <p>
+                Receive final confirmation along with request for the remaining fees
+              </p>
+            </div>
+          </div>
+        </section>
 
-          <div className={classes.futureReadyGrid}>
-            <img src="/assets/images/purple%20card.svg" alt="All School Stages" className={classes.futureReadyImgCard} />
-            <img src="/assets/images/blue%20card.svg" alt="All Academic Streams" className={classes.futureReadyImgCard} />
-            <img src="/assets/images/coral%20card.svg" alt="All Career Aspirations" className={classes.futureReadyImgCard} />
-          </div>
-          <div className={classes.futureReadyFooter}>
-            ...and those still exploring
+
+        {/* Getting Future-Ready Is Everyone's Right */}
+        <section className={`${classes.section} ${classes.futureReadySection}`}>
+          <div className={classes.futureReadyWrapper}>
+            <div className={classes.futureReadyHeader}>
+              <h2 className={classes.futureReadyTitle}>Getting Future-Ready Is</h2>
+              <h2 className={classes.futureReadyScript}>Everyone's Right <Sparkles size={24} className={classes.sparklesIcon} /></h2>
+            </div>
+
+            <div className={classes.futureReadyGrid}>
+              <div className={`${classes.frCard} ${classes.frCard1}`}>
+                <div className={classes.frCardHeader}>
+                  <PencilRuler className={classes.frIconPurple} size={28} />
+                  <h3 className={classes.frCardTitle}>All School Stages</h3>
+                </div>
+                <div className={classes.frPillContainer}>
+                  <span className={`${classes.frPill} ${classes.borderBlue}`}>Class 8</span>
+                  <span className={`${classes.frPill} ${classes.borderPink}`}>Class 9</span>
+                  <span className={`${classes.frPill} ${classes.borderPink}`}>Class 10</span>
+                  <span className={`${classes.frPill} ${classes.borderBlue}`}>Class 11</span>
+                  <span className={`${classes.frPill} ${classes.borderPink}`}>Class 12</span>
+                  <span className={`${classes.frPill} ${classes.borderBlue}`}>Gap Year Students</span>
+                </div>
+              </div>
+
+              <div className={`${classes.frCard} ${classes.frCard2}`}>
+                <div className={classes.frCardHeader}>
+                  <GraduationCap className={classes.frIconBlue} size={32} />
+                  <h3 className={classes.frCardTitle}>All Academic Streams</h3>
+                </div>
+                <div className={classes.frPillContainer}>
+                  <span className={`${classes.frPill} ${classes.borderBlue}`}><Atom size={14} className={classes.pillIconGray} /> Science</span>
+                  <span className={`${classes.frPill} ${classes.borderPink}`}><Calculator size={14} className={classes.pillIconGray} /> Commerce</span>
+                  <span className={`${classes.frPill} ${classes.borderPink}`}><Scale size={14} className={classes.pillIconGray} /> Humanities</span>
+                </div>
+              </div>
+
+              <div className={`${classes.frCard} ${classes.frCard3}`}>
+                <div className={classes.frCardHeader}>
+                  <UserPlus className={classes.frIconCoral} size={28} />
+                  <h3 className={classes.frCardTitle}>All Career Aspirations</h3>
+                </div>
+                <div className={classes.frPillContainer}>
+                  <span className={`${classes.frPill} ${classes.borderBlue}`}>Doctor</span>
+                  <span className={`${classes.frPill} ${classes.borderBlue}`}>IAS</span>
+                  <span className={`${classes.frPill} ${classes.borderBlue}`}>CA</span>
+                  <span className={`${classes.frPill} ${classes.borderPink}`}>Engineer</span>
+                  <span className={`${classes.frPill} ${classes.borderBlue}`}>Entrepreneur</span>
+                  <span className={`${classes.frPill} ${classes.borderPink}`}>Designer</span>
+                  <span className={`${classes.frPill} ${classes.borderPink}`}>Creator</span>
+                </div>
+              </div>
+            </div>
+            <div className={classes.futureReadyFooter}>
+              ...and those still exploring
+            </div>
           </div>
         </section>
 
@@ -643,92 +1212,8 @@ export default function SummerCampPage() {
           </div>
         </section>
 
-        {/* Lived Experience */}
-        <section className={classes.section}>
-          <div className={classes.livedExpHeader}>
-            <h2 className={classes.livedExpTitle}>This Program Was Built From</h2>
-            <h2 className={`${classes.livedExpScript} ${classes.livedExpScriptCoral}`}>Lived Experience <span className={classes.clockIcon}>⏰</span></h2>
-          </div>
-          <div className={classes.livedExpCenter}>
-            {/* The complex center graphic will go here, simplified for now */}
-            <div className={classes.livedExpFounder}>
-              <div className={classes.founderImagePlaceholder}></div>
-              <h3 className={classes.founderName}>Bhaskar<br />Singhania</h3>
-            </div>
-            <div className={classes.livedExpStats}>
-              <div className={classes.livedExpStatCard}>
-                <p>Alumni of IIT Kharagpur</p>
-                <div className={classes.logoRowSmall}><span>Stanford</span><span>Google for Startups</span></div>
-              </div>
-              <div className={classes.livedExpStatCard}>
-                <p><strong>Coached 1000+ students & professional</strong></p>
-                <p className={classes.minorText}>Mentor at:</p>
-                <div className={classes.logoRowSmall}><span>Masters' Union</span></div>
-              </div>
-            </div>
-            <div className={classes.livedExpQuote}>
-              <p>" I've seen both sides of the spectrum — what works and what constantly fails students "</p>
-              <button className={classes.btnPlay}>▶ Watch Video</button>
-            </div>
-          </div>
-
-          {/* Built with students */}
-          <div className={classes.builtWithCard}>
-            <h3 className={classes.builtWithTitle}>Built With <span className={classes.textPink}>Students</span>,<br />Not Assumptions</h3>
-            <div className={classes.builtWithFlow}>
-              <div className={classes.flowStep}>
-                <p>I researched <span className={classes.textPink}>65+ student</span> programs globally</p>
-                <div className={classes.arrowDown}>↓</div>
-                <p>To understand what works and what doesn't</p>
-              </div>
-              <div className={classes.arrowRight}>→</div>
-              <div className={classes.flowStepPink}>
-                <p>I spoke directly to <strong>70+ students</strong> across <strong>grades 8-12</strong>, across streams, to hear what they actually want.</p>
-              </div>
-              <div className={classes.arrowRight}>✨</div>
-              <div className={classes.flowStepBlue}>
-                <p className={classes.flowStepSub}>What emerged was clear: students don't want pressure</p>
-                <p>They want clarity, confidence, and capability.</p>
-              </div>
-            </div>
-            <p className={classes.builtWithFooter}>That's how this became the <span className={classes.textPink}>most comprehensive summer program</span> of its kind</p>
-          </div>
-
-          {/* Guided by Those */}
-          <div className={classes.guidedCard}>
-            <div className={classes.guidedLeft}>
-              <p className={classes.guidedScript}>Guided by Those</p>
-              <h3 className={classes.guidedTitle}>Who've Shaped Education,<br />Technology & Wellbeing</h3>
-              <button className={classes.btnPurple}>Our Mentors</button>
-              <p className={classes.guidedStats}>Collectively, we've mentored, coached, and taught <span className={classes.textPink}>15,000+</span> students and professionals.</p>
-            </div>
-            <div className={classes.guidedRight}>
-              <h4 className={classes.missionTitle}><span className={classes.textPink}>Our mission</span> is simple yet urgent:</h4>
-              <p className={classes.missionBody}>To help students grow <strong>without burning out</strong>, pursue success <strong>with stability</strong>, and chase ambition <strong>with calm</strong>.</p>
-            </div>
-          </div>
-        </section>
 
 
-        {/* Experts */}
-        <section className={classes.section}>
-          <h2 className={classes.sectionTitle}>Experts you will learn from</h2>
-          <div className={classes.expertFilters}>
-            {["Practical insights", "Interactive", "Beginner-friendly", "Doubt-clearing"].map((label, i) => (
-              <button key={i} className={classes.expertFilterBtn}>{label}</button>
-            ))}
-          </div>
-          <div className={classes.expertsGrid}>
-            {experts.map((ex, i) => (
-              <div key={i} className={classes.expertCard}>
-                <div className={classes.expertAvatar} />
-                <h4 className={classes.expertName}>{ex.name}</h4>
-                <p className={classes.expertRoles}>{ex.roles}</p>
-                <p className={classes.expertAff}>{ex.aff}</p>
-              </div>
-            ))}
-          </div>
-        </section>
 
         {/* Program Schedule */}
         <section id="schedule" className={classes.section}>
@@ -751,113 +1236,72 @@ export default function SummerCampPage() {
           </div>
         </section>
 
-        {/* Admission Process */}
-        <section className={classes.section}>
-          <h2 className={classes.sectionTitle}>Admission</h2>
-          <h2 className={classes.sectionTitleScript}>Process</h2>
-          <div className={classes.admissionFlow}>
-            {admissionSteps.map((step, i) => (
-              <React.Fragment key={i}>
-                <div className={classes.admissionStep}>
-                  <div className={classes.admissionNum}>{step.num}</div>
-                  <h3 className={classes.admissionTitle}>{step.title}</h3>
-                  <p className={classes.admissionDesc}>{step.desc}</p>
-                </div>
-                {i < admissionSteps.length - 1 && <div className={classes.admissionConnector} />}
-              </React.Fragment>
-            ))}
+
+
+        {/* Lived Experience */}
+        <section className={classes.livedExpOuterSection}>
+          <div className={classes.livedExpHeader}>
+            <h2 className={classes.livedExpTitle}>
+              This Program Was Built <br />
+              From <span className={`${classes.livedExpScript} ${classes.livedExpScriptCoral}`}>Lived Experience <span className={classes.clockIcon}>⏰</span></span>
+            </h2>
           </div>
-        </section>
-
-        {/* What people are Saying */}
-        <section className={classes.sectionLight}>
-          <div className={classes.testimonialsHeader}>
-            <h2 className={classes.testimonialsTitle}>What people are</h2>
-            <h2 className={classes.testimonialsScript}>Saying</h2>
-          </div>
-
-          <div className={classes.testimonialTabs}>
-            <button className={classes.testimonialTabActive}>All</button>
-            <button className={classes.testimonialTab}>Parents</button>
-            <button className={classes.testimonialTab}>Students</button>
-            <button className={classes.testimonialTab}>Educators</button>
-            <button className={classes.testimonialTab}>Experts</button>
-          </div>
-
-          <div className={classes.testimonialsGrid}>
-            <div className={classes.testimonialCard}>
-              <div className={classes.quoteIconOrange}>&ldquo;</div>
-              <p className={classes.testimonialText}>Future careers demand adaptability and emotional strength. Roobaroo trains those muscles early, making students truly future-ready.</p>
-              <div className={classes.testimonialFooter}>
-                <div>
-                  <p className={classes.testimonialAuthor}>Harsh Yadav</p>
-                  <p className={classes.testimonialRole}>Scientist, Amazon</p>
+          <div className={classes.livedExpCardsWrapper}>
+            {/* Card 1: Blue */}
+            <div className={classes.livedExpBlueCard}>
+              <div className={classes.blueCardTop}>
+                <div className={classes.founderImagePlaceholder}></div>
+                <div className={classes.founderInfo}>
+                  <h3 className={classes.founderName}>Bhaskar<br />Singhania</h3>
+                  <p className={classes.founderTitle}>Founder & CEO, Roobaroo.ai</p>
+                  <div className={classes.socialIconsRow}>
+                    <div className={classes.socialIconInsta}></div>
+                    <div className={classes.socialIconLinked}></div>
+                    <div className={classes.socialIconLinktree}></div>
+                  </div>
                 </div>
-                <div className={classes.testimonialCompany}>amazon</div>
               </div>
-            </div>
-
-            <div className={classes.testimonialCard}>
-              <div className={classes.quoteIconPurple}>&ldquo;</div>
-              <p className={classes.testimonialText}>IIT gave me technical skills, but not clarity. The 21st century Bootcamp bridges this gap by blending hard skills with emotional & digital wellbeing.</p>
-              <div className={classes.testimonialFooter}>
-                <div>
-                  <p className={classes.testimonialAuthor}>Avinash Kumar</p>
-                  <p className={classes.testimonialRole}>Samsung, IIT Delhi</p>
+              <div className={classes.blueCardBottom}>
+                <div className={classes.blueCardQuote}>
+                  <p>" I've seen both<br />sides of the system —<br /><strong>what works, and what<br />quietly fails students</strong> "</p>
                 </div>
-                <div className={classes.testimonialCompanyBlue}>SAMSUNG</div>
-              </div>
-            </div>
-
-            <div className={classes.testimonialCard}>
-              <div className={classes.quoteIconBlue}>&ldquo;</div>
-              <p className={classes.testimonialText}>I've seen bright peers burn out. Roobaroo shows that success can be balanced, sustainable, and joyful.</p>
-              <div className={classes.testimonialFooter}>
-                <div>
-                  <p className={classes.testimonialAuthor}>Shivanshu</p>
-                  <p className={classes.testimonialRole}>Wipro, IIT BHU</p>
-                </div>
-                <div className={classes.testimonialCompany}>wipro</div>
-              </div>
-            </div>
-
-            {/* Dummy cards to match the 2 row layout in Figma */}
-            <div className={classes.testimonialCard}>
-              <div className={classes.quoteIconPurple}>&ldquo;</div>
-              <p className={classes.testimonialText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <div className={classes.testimonialFooter}>
-                <div>
-                  <p className={classes.testimonialAuthor}>Aleena</p>
-                  <p className={classes.testimonialRole}>Student, Lorem Ipsum University</p>
+                <div className={classes.blueCardMentor}>
+                  <p className={classes.mentorTitle}>Mentor at :</p>
+                  <div className={classes.mentorLogosGrid}>
+                    <div className={classes.mentorLogoItem}><span className={classes.mentorInitial}>m</span> Mesa<br />School</div>
+                    <div className={classes.mentorLogoItem}>NITI<br />Aayog</div>
+                    <div className={classes.mentorLogoItem}><strong>masters'</strong><br /><strong>union</strong></div>
+                    <div className={classes.mentorLogoItem}>IIT<br />Kharagpur</div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className={classes.testimonialCard}>
-              <div className={classes.quoteIconBlue}>&ldquo;</div>
-              <p className={classes.testimonialText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <div className={classes.testimonialFooter}>
-                <div>
-                  <p className={classes.testimonialAuthor}>Medhansh</p>
-                  <p className={classes.testimonialRole}>Student, Lorem Ipsum University</p>
+            {/* Card 2: Purple */}
+            <div className={classes.livedExpPurpleCard}>
+              <div className={classes.purpleCardTop}>
+                <div className={classes.alumniHeader}>
+                  <span className={classes.alumniIcon}>🎓</span> Alumni of IIT Kharagpur
+                </div>
+                <div className={classes.alumniLogosRow}>
+                  <span className={classes.alumniLogoItemText}><span style={{ color: '#E03C31' }}>Stanford</span></span> |
+                  <span className={classes.alumniLogoItemText}><span style={{ color: '#4285F4' }}>G</span><span style={{ color: '#EA4335' }}>o</span><span style={{ color: '#FBBC05' }}>o</span><span style={{ color: '#4285F4' }}>g</span><span style={{ color: '#34A853' }}>l</span><span style={{ color: '#EA4335' }}>e</span> for Startups</span>
                 </div>
               </div>
-            </div>
-
-            <div className={classes.testimonialCard}>
-              <div className={classes.quoteIconOrange}>&ldquo;</div>
-              <p className={classes.testimonialText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <div className={classes.testimonialFooter}>
-                <div>
-                  <p className={classes.testimonialAuthor}>Naitik</p>
-                  <p className={classes.testimonialRole}>Student, Lorem Ipsum University</p>
+              <div className={classes.purpleCardBottom}>
+                <div className={classes.purpleCardImage}>
+                  <img src="/assets/images/thumbnail.png" alt="Classroom" className={classes.pupleImg} />
+                </div>
+                <div className={classes.purpleCardStats}>
+                  <h3>1000+</h3>
+                  <p>Students &<br />professionals<br />Coached</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Beyond the Summer Camp */}
+
         <section className={classes.section}>
           <div className={classes.beyondHeaderRow}>
             <div className={classes.beyondTitleLeft}>
