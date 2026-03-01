@@ -67,6 +67,557 @@
     background-repeat: no-repeat;
 }
 
+.section {
+    padding: 80px 4.16vw;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Why blocks */
+.whyHeader {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.whyTitle {
+    color: var(--Black, #232323);
+    text-align: center;
+    font-family: "Simple Cakes";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 0 16px 0;
+}
+
+.whyScript {
+    color: #815FAA;
+    font-family: "Simple Cakes", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.whyIntroText {
+    color: var(--Black, #232323);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+}
+
+.whyBurstLeft {
+    position: absolute;
+    left: -40px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    background-image: url("/assets/images/burst-left.svg");
+    /* Fallback if missing */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.whyNodesRight {
+    position: absolute;
+    right: -40px;
+    bottom: 5px;
+    width: 30px;
+    height: 30px;
+    background-image: url("/assets/images/nodes-right.svg");
+    /* Fallback if missing */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.graduatePill {
+    background: #FB7D7D;
+    color: #FFFFFF;
+    padding: 2px 12px;
+    border-radius: 999px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.graduateIconSvg {
+    height: 32px;
+    vertical-align: middle;
+    margin: 0 8px;
+    transform: translateY(-2px);
+}
+
+.yearText {
+    color: #815FAA;
+    font-weight: 700;
+}
+
+.circleText {
+    border: 1px solid #815FAA;
+    border-radius: 50px;
+    padding: 2px 14px;
+    display: inline-block;
+    color: var(--Black, #232323);
+    font-weight: 600;
+}
+
+.wavyText {
+    text-decoration: underline wavy #FB7D7D;
+    text-underline-offset: 4px;
+}
+
+.whyBlocksGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.whyCircle1 {
+    position: absolute;
+    top: -40px;
+    right: -50px;
+    width: 279px;
+    height: 279px;
+    background-color: #27AAE74D;
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.whyCircle2 {
+    position: absolute;
+    top: 50%;
+    left: -80px;
+    width: 454px;
+    height: 454px;
+    background-color: #FB7D7D4D;
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.whyCard {
+    display: flex;
+    background: #FFFFFF;
+    border-radius: 16px;
+    border: 6px solid #815FAA;
+    min-height: 343px;
+    width: 100%;
+    max-width: 927px;
+    padding: 40px 48px;
+    gap: 40px;
+    position: relative;
+    align-items: stretch;
+}
+
+@media (max-width: 900px) {
+    .whyCard {
+        flex-direction: column;
+        padding: 24px;
+        gap: 24px;
+        min-height: auto;
+    }
+}
+
+.whyBorderPurple {
+    border: 6px solid #815FAA;
+}
+
+.whyBorderPink {
+    border: 6px solid #FB7D7D;
+}
+
+.whyBorderPurpleDark {
+    border: 6px solid #815FAA;
+}
+
+.whyCardLeft {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    padding-top: 40px;
+}
+
+.whyCardIconBox {
+    margin-bottom: 8px;
+}
+
+.whyCardIconBoxImg {
+    width: 44px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: -8px;
+    display: block;
+}
+
+.recycleIconSvg {
+    width: 28px;
+    height: 28px;
+    vertical-align: bottom;
+    margin-left: 8px;
+    transform: translateY(4px);
+    display: inline-block;
+}
+
+.iconPurple {
+    color: #815FAA;
+}
+
+.iconPink {
+    color: #FB7D7D;
+}
+
+.iconBlue {
+    color: #3B82F6;
+}
+
+.whyCardHeading {
+    color: var(--Black, #232323);
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.3;
+    /* 130% */
+    letter-spacing: 0.32px;
+    margin: 0;
+}
+
+.underlineThick {
+    border-bottom: 4px solid #C0A9E2;
+}
+
+.circlePink {
+    border: 2px solid #FB7D7D;
+    border-radius: 50%;
+    padding: 2px 16px;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.whyCardBody {
+    color: var(--Black, #232323);
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.16px;
+    margin: 0;
+}
+
+.textPink {
+    color: #FB7D7D;
+    font-weight: 600;
+}
+
+.textBlue {
+    color: #3B82F6;
+    font-weight: 600;
+}
+
+.textPurpleDark {
+    color: #6D5C96;
+    font-weight: 600;
+}
+
+.whyCardDivider {
+    width: 1px;
+    background: #E5E7EB;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .whyCardDivider {
+        width: 100%;
+        height: 1px;
+        margin: 0;
+    }
+}
+
+.whyCardRight,
+.whyCardRightDetails {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    position: relative;
+}
+
+.whyStatBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+@media (max-width: 600px) {
+    .whyStatBlock {
+        gap: 4px;
+    }
+}
+
+.whyStatNumberPurple {
+    color: #815FAA;
+    font-family: "Montserrat", sans-serif;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -1.08px;
+}
+
+.whyStatNumberPink {
+    color: #FB7D7D;
+    font-family: "Montserrat", sans-serif;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -1.08px;
+}
+
+.whyStatNumberBlue {
+    color: #3B82F6;
+    font-family: "Montserrat", sans-serif;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -1.08px;
+}
+
+.whyStatLabel {
+    color: var(--Black, #232323);
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.16px;
+    margin: 0;
+    flex: 1;
+    padding-top: 4px;
+}
+
+.wavyTextPurple {
+    text-decoration: underline wavy #815FAA;
+    text-underline-offset: 4px;
+    font-weight: 600;
+}
+
+.strikethroughText {
+    text-decoration: line-through;
+    text-decoration-color: #6B7280;
+    color: #6B7280;
+    background: #E5E7EB;
+    padding: 0 6px;
+    border-radius: 4px;
+}
+
+.sparkleTopRight {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    color: #60A5FA;
+}
+
+.squigglyTopRight {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    color: #FB7D7D;
+    font-size: 1.5rem;
+}
+
+.alertListItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.alertIconTriangle {
+    background: #F3EEF9;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.alertIconPhone {
+    background: #FCE8E8;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.alertIconTriangleImg,
+.alertIconPhoneImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.alertText {
+    color: var(--Black, #232323);
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.16px;
+}
+
+.greyAlertBox {
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 0.9rem;
+    color: #4B5563;
+    line-height: 1.5;
+    margin-top: 8px;
+}
+
+.quoteBox {
+    display: flex;
+    padding: 16px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    border: 2px solid var(--Solid-Blue, #27AAE7);
+    background-color: white;
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 2;
+}
+
+.quoteBoxInner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(39, 170, 231, 0.08);
+    border-radius: 6px;
+    z-index: -1;
+}
+
+.quoteBox p {
+    margin: 0;
+    font-size: 1.05rem;
+    color: #1F2937;
+    line-height: 1.6;
+    padding-left: 20px;
+}
+
+.bottomQuoteIcon {
+    position: absolute;
+    top: -20px;
+    left: 32px;
+    width: 56px;
+    height: auto;
+    z-index: 3;
+    background: white;
+    padding: 0 8px;
+}
+
+.quoteWrapper {
+    position: relative;
+    padding-bottom: 20px;
+    overflow: visible;
+}
+
+.quoteWrapper::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 2px;
+    background: #27AAE7;
+    z-index: 1;
+}
+
+.quoteLine {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 0;
+}
+
+.quoteLinePurple {
+    top: calc(50% + 4px);
+}
+
+.quoteLinePurple::before,
+.quoteLinePurple::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 2px;
+    width: 310.57px;
+    background: #815FAA;
+}
+
+.quoteLinePurple::before {
+    left: 0;
+}
+
+.quoteLinePurple::after {
+    right: 0;
+}
+
+.quoteLineCoral {
+    top: calc(50% + 12px);
+}
+
+.quoteLineCoral::before,
+.quoteLineCoral::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 2px;
+    width: 234.703px;
+    background: #FB7D7D;
+}
+
+.quoteLineCoral::before {
+    left: 0;
+}
+
+.quoteLineCoral::after {
+    right: 0;
+}
+
 /* Timeline Layout */
 .timelineSection {
     max-width: 1200px;

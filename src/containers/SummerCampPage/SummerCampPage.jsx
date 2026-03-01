@@ -470,35 +470,37 @@ export default function SummerCampPage() {
           <div className={classes.livedExpHeader}>
             <h2 className={classes.livedExpTitle}>
               This Program Was Built <br />
-              From <span className={`${classes.livedExpScript} ${classes.livedExpScriptCoral}`}>Lived Experience <span className={classes.clockIcon}>⏰</span></span>
+              From <span className={`${classes.livedExpScript} ${classes.livedExpScriptCoral}`}>Lived Experience <img src="/assets/images/clock-svg lived experience.svg" alt="Clock" className={classes.clockIconImg} /></span>
             </h2>
           </div>
           <div className={classes.livedExpCardsWrapper}>
             {/* Card 1: Blue */}
             <div className={classes.livedExpBlueCard}>
               <div className={classes.blueCardTop}>
-                <div className={classes.founderImagePlaceholder}></div>
+                <img src="/assets/images/ellipse-bhaskar.svg" alt="" className={classes.bhaskarEllipse} />
+                <img src="/assets/images/bhaskar-lived experience.svg" alt="Bhaskar Singhania" className={classes.founderImage} />
                 <div className={classes.founderInfo}>
                   <h3 className={classes.founderName}>Bhaskar<br />Singhania</h3>
                   <p className={classes.founderTitle}>Founder & CEO, Roobaroo.ai</p>
                   <div className={classes.socialIconsRow}>
-                    <div className={classes.socialIconInsta}></div>
-                    <div className={classes.socialIconLinked}></div>
-                    <div className={classes.socialIconLinktree}></div>
+                    <img src="/assets/images/instagram-bootcamp.svg" alt="Instagram" className={classes.socialIconImg} />
+                    <img src="/assets/images/linkedin-bootcamp.svg" alt="LinkedIn" className={classes.socialIconImg} />
+                    <img src="/assets/images/linktree-bootcamp.svg" alt="Linktree" className={classes.socialIconImg} />
                   </div>
                 </div>
               </div>
               <div className={classes.blueCardBottom}>
                 <div className={classes.blueCardQuote}>
+                  <img src="/assets/images/coral inverted comma bootcamp.svg" alt="Quote" className={classes.quoteBootcampIcon} />
                   <p>" I've seen both<br />sides of the system —<br /><strong>what works, and what<br />quietly fails students</strong> "</p>
                 </div>
                 <div className={classes.blueCardMentor}>
                   <p className={classes.mentorTitle}>Mentor at :</p>
                   <div className={classes.mentorLogosGrid}>
-                    <div className={classes.mentorLogoItem}><span className={classes.mentorInitial}>m</span> Mesa<br />School</div>
-                    <div className={classes.mentorLogoItem}>NITI<br />Aayog</div>
-                    <div className={classes.mentorLogoItem}><strong>masters'</strong><br /><strong>union</strong></div>
-                    <div className={classes.mentorLogoItem}>IIT<br />Kharagpur</div>
+                    <img src="/assets/images/mesa school bootcamp.svg" alt="Mesa School" className={classes.mentorLogoImg} />
+                    <img src="/assets/images/niti-aayog bootcamp.svg" alt="NITI Aayog" className={classes.mentorLogoImg} />
+                    <img src="/assets/images/master's union bootcamp.svg" alt="Masters Union" className={classes.mentorLogoImg} />
+                    <img src="/assets/images/iit-kharagpur bootcamp.svg" alt="IIT Kharagpur" className={classes.mentorLogoImg} />
                   </div>
                 </div>
               </div>
@@ -508,49 +510,39 @@ export default function SummerCampPage() {
             <div className={classes.livedExpPurpleCard}>
               <div className={classes.purpleCardTop}>
                 <div className={classes.alumniHeader}>
-                  <span className={classes.alumniIcon}>🎓</span> Alumni of IIT Kharagpur
+                  <img src="/assets/logos/iitkgp-black.svg" alt="IIT Kharagpur" className={classes.alumniIconImg} />
+                  Alumni of IIT Kharagpur
                 </div>
                 <div className={classes.alumniLogosRow}>
-                  <span className={classes.alumniLogoItemText}><span style={{ color: '#E03C31' }}>Stanford</span></span> |
-                  <span className={classes.alumniLogoItemText}><span style={{ color: '#4285F4' }}>G</span><span style={{ color: '#EA4335' }}>o</span><span style={{ color: '#FBBC05' }}>o</span><span style={{ color: '#4285F4' }}>g</span><span style={{ color: '#34A853' }}>l</span><span style={{ color: '#EA4335' }}>e</span> for Startups</span>
+                  <img src="/assets/logos/stanford.png" alt="Stanford" className={classes.alumniStanfordImg} />
+                  <span className={classes.alumniDivider}>|</span>
+                  <img src="/assets/images/google-for-startups-bootcamp.svg" alt="Google for Startups" className={classes.alumniGoogleImg} />
                 </div>
               </div>
               <div className={classes.purpleCardBottom}>
-                <div className={classes.purpleCardImage}>
-                  <img src="/assets/images/thumbnail.png" alt="Classroom" className={classes.pupleImg} />
+                <div className={classes.purpleCardImageContainer}>
+                  <img src="/assets/images/bhaskar-bootcamp image.svg" alt="Classroom" className={classes.purpleImg} />
+                  <img src="/assets/images/Badge Verification - bhaskar.svg" alt="Badge" className={classes.purpleBadge} />
                 </div>
                 <div className={classes.purpleCardStats}>
-                  <h3>1000+</h3>
-                  <p>Students &<br />professionals<br />Coached</p>
+                  <div className={classes.statsContent}>
+                    <div className={classes.statsTopRow}>
+                      <h3>1000+</h3>
+                      <img src="/assets/BootCamp/badge.svg" alt="Verified" className={classes.statsBadgeIcon} />
+                    </div>
+                    <p>Students &<br />professionals<br />Coached</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className={classes.section}>
+        <section className={classes.builtWithOuterWrapper}>
           {/* Built with students */}
-          <div className={classes.builtWithCard}>
-            <h3 className={classes.builtWithTitle}>Built With <span className={classes.textPink}>Students</span>,<br />Not Assumptions</h3>
-            <div className={classes.builtWithFlow}>
-              <div className={classes.flowStep}>
-                <p>I researched <span className={classes.textPink}>65+ student</span> programs globally</p>
-                <div className={classes.arrowDown}>↓</div>
-                <p>To understand what works and what doesn't</p>
-              </div>
-              <div className={classes.arrowRight}>→</div>
-              <div className={classes.flowStepPink}>
-                <p>I spoke directly to <strong>70+ students</strong> across <strong>grades 8-12</strong>, across streams, to hear what they actually want.</p>
-              </div>
-              <div className={classes.arrowRight}>✨</div>
-              <div className={classes.flowStepBlue}>
-                <p className={classes.flowStepSub}>What emerged was clear: students don't want pressure</p>
-                <p>They want clarity, confidence, and capability.</p>
-              </div>
-            </div>
-            <p className={classes.builtWithFooter}>That's how this became the <span className={classes.textPink}>most comprehensive summer program</span> of its kind</p>
+          <div className={classes.builtWithCardWrapper}>
+            <img src="/assets/images/built by students.svg" alt="Built With Students" className={classes.builtWithSvg} />
           </div>
-
         </section>
 
         {/* Program Schedule Header */}
@@ -1056,104 +1048,6 @@ export default function SummerCampPage() {
             <div className={classes.futureReadyFooter}>
               ...and those still exploring
             </div>
-          </div>
-        </section>
-
-        {/* Why do you need this Camp */}
-        <section className={classes.section}>
-          <div className={classes.whyHeader}>
-            <h2 className={classes.whyTitle}>Why do you need <span className={classes.whyScript}>this Camp?</span></h2>
-            <p className={classes.whyIntroText}>
-              If you are in school, you will likely <img src="/assets/images/Graduate-bootcamp.svg" alt="graduate" className={classes.graduateIconSvg} /> from college after <span className={classes.yearText}>2030</span>
-              <br />
-              But the <span className={classes.circleText}>world</span> of work and wellbeing has already <span className={classes.wavyText}>transformed</span>
-            </p>
-          </div>
-
-          <div className={classes.whyBlocksGrid}>
-            <div className={classes.whyCircle1}></div>
-            <div className={classes.whyCircle2}></div>
-            {/* Card 1 */}
-            <div className={`${classes.whyCard} ${classes.whyBorderPurple}`}>
-              <div className={classes.whyCardLeft}>
-                <img src="/assets/images/asset-card1.svg" alt="card1" className={classes.whyCardIconBoxImg} />
-                <h3 className={classes.whyCardHeading}>The World Changed.<br /><span className={classes.underlineThick}>Education</span> Didn't.</h3>
-                <p className={classes.whyCardBody}>
-                  Employers now prioritise skills such as <span className={classes.textPink}>AI literacy</span>, <span className={classes.textBlue}>critical thinking</span>, <span className={classes.textBlue}>communication</span>, and <span className={classes.textPink}>real-world exposure</span>
-                </p>
-              </div>
-              <div className={classes.whyCardDivider}></div>
-              <div className={classes.whyCardRight}>
-                <div className={classes.whyStatBlock}>
-                  <div className={classes.whyStatNumberPurple}>96%</div>
-                  <p className={classes.whyStatLabel}>of employers in India priorities hiring <span className={classes.wavyTextPurple}>AI-skilled talent</span></p>
-                </div>
-                <div className={classes.whyStatBlock}>
-                  <div className={classes.whyStatNumberBlue}>84%</div>
-                  <p className={classes.whyStatLabel}>of Indian hiring managers prefer candidates with <strong>digital portfolios</strong></p>
-                </div>
-                <Sparkles className={classes.sparkleTopRight} size={24} />
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className={`${classes.whyCard} ${classes.whyBorderPink}`}>
-              <div className={classes.whyCardLeft}>
-                <img src="/assets/images/leaves-bootcamp.svg" alt="leaves" className={classes.whyCardIconBoxImg} />
-                <h3 className={classes.whyCardHeading}>Students Aren't Lost.<br /><span className={classes.circlePink}>The Path Is.</span></h3>
-                <p className={classes.whyCardBody}>
-                  Career clarity is not about counselling but an open ecosystem that enables <span className={classes.textPurpleDark}>self-awareness & exploration.</span>
-                </p>
-              </div>
-              <div className={classes.whyCardDivider}></div>
-              <div className={classes.whyCardRight}>
-                <div className={classes.whyStatBlock}>
-                  <div className={classes.whyStatNumberPink}>53%</div>
-                  <p className={classes.whyStatLabel}>of students find it hard to get a job in their <span className={classes.strikethroughText}>preferred role</span></p>
-                </div>
-                <div className={classes.whyStatBlock}>
-                  <div className={classes.whyStatNumberPink}>70%</div>
-                  <p className={classes.whyStatLabel}>of students feel their <strong>school doesn't help</strong> them explore careers</p>
-                </div>
-                <div className={classes.squigglyTopRight}>〰️</div>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className={`${classes.whyCard} ${classes.whyBorderPurpleDark}`}>
-              <div className={classes.whyCardLeft}>
-                <img src="/assets/images/blue%20wave.svg" alt="wave" className={classes.whyCardIconBoxImg} />
-                <h3 className={classes.whyCardHeading}>Success Without<br />Stability Is Breaking<br />Students</h3>
-                <p className={classes.whyCardBody}>
-                  Alongside career uncertainty is a growing wellbeing crisis. <span className={classes.textPink}>Academic performance</span> no longer guarantees <span className={classes.textPurpleDark}>emotional health</span>
-                  <img src="/assets/images/recycle-bootcamp.svg" alt="recycle" className={classes.recycleIconSvg} />
-                </p>
-              </div>
-              <div className={classes.whyCardDivider}></div>
-              <div className={classes.whyCardRightDetails}>
-                <div className={classes.alertListItem}>
-                  <img src="/assets/images/alert-bootcamp.svg" alt="alert" className={classes.alertIconTriangleImg} />
-                  <div className={classes.alertText}><strong>1 in 4</strong> toppers report feeling emotionally disconnected</div>
-                </div>
-                <div className={classes.alertListItem}>
-                  <img src="/assets/images/mobile-bootcamp.svg" alt="mobile" className={classes.alertIconPhoneImg} />
-                  <div className={classes.alertText}><strong>83%</strong> of Gen Z students struggle with phone addiction</div>
-                </div>
-                <div className={classes.greyAlertBox}>
-                  Student <span className={classes.textBlue}>suicide rates are rising</span> at twice the pace of the general population
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className={classes.quoteWrapper}>
-            <div className={classes.quoteBox}>
-              <div className={classes.quoteBoxInner}></div>
-              <img src="/assets/images/quotation bootcamp.svg" alt="quote" className={classes.bottomQuoteIcon} />
-              <p>In <strong className={classes.textPink}>2026</strong>, Students need more than isolated workshops or surface-level programs.</p>
-            </div>
-            <div className={classes.quoteLine + ' ' + classes.quoteLinePurple}></div>
-            <div className={classes.quoteLine + ' ' + classes.quoteLineCoral}></div>
           </div>
         </section>
 

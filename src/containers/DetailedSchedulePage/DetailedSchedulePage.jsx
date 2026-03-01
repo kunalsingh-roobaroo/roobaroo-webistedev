@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import classes from "./DetailedSchedulePage.module.css";
-import { ChevronDown, CheckCircle2 } from "lucide-react";
+import { ChevronDown, CheckCircle2, Sparkles } from "lucide-react";
 
 export default function DetailedSchedulePage() {
     const [openFaq, setOpenFaq] = useState(null);
@@ -22,14 +22,104 @@ export default function DetailedSchedulePage() {
             <Navbar />
             <main className={classes.main}>
 
-                {/* Header Section */}
-                <section className={classes.headerSection}>
-                    <div className={classes.headerTitleBox}>
-                        <h1 className={classes.pageTitle}>Program</h1>
-                        <div className={classes.pageTitleScriptWrapper}>
-                            <h1 className={classes.pageTitleScript}>Schedule</h1>
-                            <div className={classes.bulbIcon}></div>
+
+                {/* Why do you need this Camp */}
+                <section className={classes.section}>
+                    <div className={classes.whyHeader}>
+                        <h2 className={classes.whyTitle}>Why do you need <span className={classes.whyScript}>this Camp?</span></h2>
+                        <p className={classes.whyIntroText}>
+                            <span className={classes.whyBurstLeft}></span>
+                            If you are in school, you will likely <img src="/assets/images/Graduate-bootcamp.svg" alt="graduate" className={classes.graduateIconSvg} /> from college after <span className={classes.yearText}>2030</span>
+                            <br />
+                            But the <span className={classes.circleText}>world</span> of work and wellbeing has already <span className={classes.wavyText}>transformed</span>
+                            <span className={classes.whyNodesRight}></span>
+                        </p>
+                    </div>
+
+                    <div className={classes.whyBlocksGrid}>
+                        <div className={classes.whyCircle1}></div>
+                        <div className={classes.whyCircle2}></div>
+                        {/* Card 1 */}
+                        <div className={`${classes.whyCard} ${classes.whyBorderPurple}`}>
+                            <div className={classes.whyCardLeft}>
+                                <img src="/assets/images/asset-card1.svg" alt="card1" className={classes.whyCardIconBoxImg} />
+                                <h3 className={classes.whyCardHeading}>The World Changed.<br /><span className={classes.underlineThick}>Education</span> Didn't.</h3>
+                                <p className={classes.whyCardBody}>
+                                    Employers now prioritise skills such as <span className={classes.textPink}>AI literacy</span>, <span className={classes.textBlue}>critical thinking</span>, <span className={classes.textBlue}>communication</span>, and <span className={classes.textPink}>real-world exposure</span>
+                                </p>
+                            </div>
+                            <div className={classes.whyCardDivider}></div>
+                            <div className={classes.whyCardRight}>
+                                <div className={classes.whyStatBlock}>
+                                    <div className={classes.whyStatNumberPurple}>96%</div>
+                                    <p className={classes.whyStatLabel}>of employers in India priorities hiring <span className={classes.wavyTextPurple}>AI-skilled talent</span></p>
+                                </div>
+                                <div className={classes.whyStatBlock}>
+                                    <div className={classes.whyStatNumberBlue}>84%</div>
+                                    <p className={classes.whyStatLabel}>of Indian hiring managers prefer candidates with <strong>digital portfolios</strong></p>
+                                </div>
+                                <Sparkles className={classes.sparkleTopRight} size={24} />
+                            </div>
                         </div>
+
+                        {/* Card 2 */}
+                        <div className={`${classes.whyCard} ${classes.whyBorderPink}`}>
+                            <div className={classes.whyCardLeft}>
+                                <img src="/assets/images/leaves-bootcamp.svg" alt="leaves" className={classes.whyCardIconBoxImg} />
+                                <h3 className={classes.whyCardHeading}>Students Aren't Lost.<br /><span className={classes.circlePink}>The Path Is.</span></h3>
+                                <p className={classes.whyCardBody}>
+                                    Career clarity is not about counselling but an open ecosystem that enables <span className={classes.textPurpleDark}>self-awareness & exploration.</span>
+                                </p>
+                            </div>
+                            <div className={classes.whyCardDivider}></div>
+                            <div className={classes.whyCardRight}>
+                                <div className={classes.whyStatBlock}>
+                                    <div className={classes.whyStatNumberPink}>53%</div>
+                                    <p className={classes.whyStatLabel}>of students find it hard to get a job in their <span className={classes.strikethroughText}>preferred role</span></p>
+                                </div>
+                                <div className={classes.whyStatBlock}>
+                                    <div className={classes.whyStatNumberPink}>70%</div>
+                                    <p className={classes.whyStatLabel}>of students feel their <strong>school doesn't help</strong> them explore careers</p>
+                                </div>
+                                <div className={classes.squigglyTopRight}>〰️</div>
+                            </div>
+                        </div>
+
+                        {/* Card 3 */}
+                        <div className={`${classes.whyCard} ${classes.whyBorderPurpleDark}`}>
+                            <div className={classes.whyCardLeft}>
+                                <img src="/assets/images/blue%20wave.svg" alt="wave" className={classes.whyCardIconBoxImg} />
+                                <h3 className={classes.whyCardHeading}>Success Without<br />Stability Is Breaking<br />Students</h3>
+                                <p className={classes.whyCardBody}>
+                                    Alongside career uncertainty is a growing wellbeing crisis. <span className={classes.textPink}>Academic performance</span> no longer guarantees <span className={classes.textPurpleDark}>emotional health</span>
+                                    <img src="/assets/images/recycle-bootcamp.svg" alt="recycle" className={classes.recycleIconSvg} />
+                                </p>
+                            </div>
+                            <div className={classes.whyCardDivider}></div>
+                            <div className={classes.whyCardRightDetails}>
+                                <div className={classes.alertListItem}>
+                                    <img src="/assets/images/alert-bootcamp.svg" alt="alert" className={classes.alertIconTriangleImg} />
+                                    <div className={classes.alertText}><strong>1 in 4</strong> toppers report feeling emotionally disconnected</div>
+                                </div>
+                                <div className={classes.alertListItem}>
+                                    <img src="/assets/images/mobile-bootcamp.svg" alt="mobile" className={classes.alertIconPhoneImg} />
+                                    <div className={classes.alertText}><strong>83%</strong> of Gen Z students struggle with phone addiction</div>
+                                </div>
+                                <div className={classes.greyAlertBox}>
+                                    Student <span className={classes.textBlue}>suicide rates are rising</span> at twice the pace of the general population
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={classes.quoteWrapper}>
+                        <div className={classes.quoteBox}>
+                            <div className={classes.quoteBoxInner}></div>
+                            <img src="/assets/images/quotation bootcamp.svg" alt="quote" className={classes.bottomQuoteIcon} />
+                            <p>In <strong className={classes.textPink}>2026</strong>, Students need more than isolated workshops or surface-level programs.</p>
+                        </div>
+                        <div className={classes.quoteLine + ' ' + classes.quoteLinePurple}></div>
+                        <div className={classes.quoteLine + ' ' + classes.quoteLineCoral}></div>
                     </div>
                 </section>
 
