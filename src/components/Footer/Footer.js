@@ -277,7 +277,7 @@ const Footer = () => {
         <hr className={classes.rule} />
         <div className={classes.bottom}>
           <p className={classes.coptxtx}>
-            © {new Date().getFullYear()} Roobaroo.ai All Rights Reserved.
+            © {new Date().getFullYear()} Roobaroo Productions Pvt. Ltd. All Rights Reserved.
           </p>
           <div className={classes.subbottom}>
             <Link href={"/refund-policy"} className={`${classes.linkl} link`}>
