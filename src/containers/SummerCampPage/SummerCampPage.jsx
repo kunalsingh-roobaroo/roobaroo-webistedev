@@ -35,13 +35,19 @@ import {
   UserPlus,
   Atom,
   Calculator,
-  Scale
+  Scale,
+  ArrowRight
 } from "lucide-react";
 import { trackEvent } from "@/utils/ga4";
+import campScheduleImage from "../../../public/assets/images/camp schedule - bootcamp.svg";
+import rocketDoodle from "../../../public/assets/images/Rocket doodle 1.svg";
+import yourImaginationImg from "../../../public/assets/images/your-imagination.svg";
+import sparklesBootcamp from "../../../public/assets/images/sparkles bootcamp.svg";
+import livedUnderline from "../../../public/assets/images/lived underline bootcamp.svg";
+import day1TickMark from "../../../public/assets/images/day 1 tick mark.svg";
 import classes from "./SummerCampPage.module.css";
 
 export default function SummerCampPage() {
-  const [batch, setBatch] = useState(1);
   const [faqOpen, setFaqOpen] = useState(null);
 
   const tags = [
@@ -221,7 +227,8 @@ export default function SummerCampPage() {
                   <p className={classes.heroSub}>Not just another camp</p>
                 </div>
                 <p className={classes.heroDesc}>
-                  Your gateway to build the right <strong>skills</strong>, <strong>portfolio</strong> and <strong>confidence</strong> to stand out in the AI world.
+                  Your gateway to build the right <span className={classes.heroDescSkills}>skills</span>, <span className={classes.heroDescPortfolio}>portfolio</span> and <span className={classes.heroDescConfidence}>confidence</span> to stand out in the AI world.{" "}
+                  <Image src={rocketDoodle} alt="Rocket" className={classes.heroDescRocket} />
                 </p>
                 <div className={classes.tags}>
                   {tags.map((t, i) => (
@@ -230,19 +237,11 @@ export default function SummerCampPage() {
                 </div>
               </div>
               <div className={classes.batchCard}>
-                <div className={classes.batchTabs}>
-                  <button
-                    className={batch === 1 ? classes.batchTabActive : classes.batchTab}
-                    onClick={() => setBatch(1)}
-                  >
-                    Batch 1 : 2-7 Jun
-                  </button>
-                  <button
-                    className={batch === 2 ? classes.batchTabActive : classes.batchTab}
-                    onClick={() => setBatch(2)}
-                  >
-                    Batch 2 : 23-28 Jun
-                  </button>
+                <div className={classes.batchInfoSingle}>
+                  <CalendarDays size={18} className={classes.batchCalendarIcon} />
+                  <span>Batch 1 : 2-7 June</span>
+                  <span className={classes.batchDivider}>|</span>
+                  <span>Batch 2 : 16-21 June</span>
                 </div>
                 <div className={classes.batchMeta}>
                   <span className={classes.batchMetaItem}>Location: IIT Delhi</span>
@@ -254,23 +253,30 @@ export default function SummerCampPage() {
                     <span className={classes.sixDaysTitle}>Days</span>
                     <span className={classes.sixDaysSub}>for a life long transformational <span className={classes.sixDaysScript}>journey</span></span>
                   </div>
+                  <p className={classes.residential}>*Residential Option Available</p>
                 </div>
-                <p className={classes.residential}>*Residential Option Available</p>
-                <p className={classes.seats}>Limited seats only!</p>
                 <div className={classes.cardActions}>
-                  <Link href="#schedule" className={classes.btnOutline}>Camp Schedule</Link>
-                  <Link
-                    href="https://calendly.com/bhaskar-roobaroo/30min"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={classes.btnPrimary}
-                    onClick={() => trackEvent({ category: "Summer Camp", action: "Click", label: "Reserve Now" })}
-                  >
-                    Reserve Now <ArrowUpRight size={18} />
+                  <Link href="#schedule" className={classes.btnOutline}>
+                    Camp Schedule <Image src={campScheduleImage} alt="Camp Schedule" width={24} height={24} />
                   </Link>
+                  <div className={classes.btnPrimaryWrapper}>
+                    <div className={classes.seats}>
+                      <span className={classes.seatsNumber}>60</span>
+                      <span className={classes.seatsText}>seats only!</span>
+                    </div>
+                    <Link
+                      href="https://calendly.com/bhaskar-roobaroo/30min"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={classes.btnPrimary}
+                      onClick={() => trackEvent({ category: "Summer Camp", action: "Click", label: "Reserve Now" })}
+                    >
+                      Reserve Seat <ArrowRight size={18} />
+                    </Link>
+                  </div>
                 </div>
                 <Link href="#" className={classes.downloadBrochure}>
-                  <Download size={16} /> Download brochure
+                  Download brochure <Download size={16} />
                 </Link>
               </div>
             </div>
@@ -300,7 +306,14 @@ export default function SummerCampPage() {
                 Explore What Your <br />
                 Summer <span className={classes.exploreScript}>Could Become</span>
               </h2>
-              <p className={classes.sectionSub}>A world of possibilities beyond your imagination.</p>
+              <p className={classes.sectionSub}>
+                A world of possibilities beyond{" "}
+                <span className={classes.imaginationWrapper}>
+                  your imagination
+                  <Image src={yourImaginationImg} alt="underline" className={classes.imaginationUnderline} />
+                </span>
+                .
+              </p>
             </div>
             <div className={classes.rocketDoodleWrapper}>
               <img src="/assets/images/Rocket doodle 1.svg" alt="Rocket doodle" className={classes.rocketDoodle} />
@@ -468,10 +481,25 @@ export default function SummerCampPage() {
         {/* Lived Experience */}
         <section className={classes.livedExpOuterSection}>
           <div className={classes.livedExpHeader}>
-            <h2 className={classes.livedExpTitle}>
-              This Program Was Built <br />
-              From <span className={`${classes.livedExpScript} ${classes.livedExpScriptCoral}`}>Lived Experience <img src="/assets/images/clock-svg lived experience.svg" alt="Clock" className={classes.clockIconImg} /></span>
-            </h2>
+            <div className={classes.livedExpTitleWrapper}>
+              <div className={classes.livedExpSparklesWrapper}>
+                <Image src={sparklesBootcamp} alt="Sparkles" />
+              </div>
+              <h2 className={classes.livedExpTitle}>
+                This Program Was Built <br />
+                From <span className={`${classes.livedExpScript} ${classes.livedExpScriptCoral}`}>
+                  <span style={{ position: "relative", display: "inline-block" }}>
+                    Lived
+                    <Image src={livedUnderline} alt="underline" className={classes.underlineLived} />
+                  </span>{" "}
+                  Experience <img src="/assets/images/clock-svg lived experience.svg" alt="Clock" className={classes.clockIconImg} />
+                </span>
+              </h2>
+            </div>
+            <Link href="#learn-more" className={classes.btnLearnMore}>
+              <span className={classes.btnLearnMoreText}>Learn more</span>
+              <ArrowUpRight size={24} className={classes.btnLearnMoreArrow} />
+            </Link>
           </div>
           <div className={classes.livedExpCardsWrapper}>
             {/* Card 1: Blue */}
@@ -572,44 +600,14 @@ export default function SummerCampPage() {
               </div>
               <p className={classes.dayDesc}>Students experience the full journey of building a startup, from identifying a problem to creating, testing, & pitching a solution.</p>
 
-              <div className={classes.cardsRow}>
-                <div className={classes.infoCard}>
-                  <div className={classes.cardImage1}></div>
-                  <div className={classes.cardContent}>
-                    <p><span className={classes.textBlue}>Icebreaking activities</span> to build comfort and peer connections</p>
-                  </div>
-                </div>
-                <div className={classes.infoCard}>
-                  <div className={classes.cardImage2}></div>
-                  <div className={classes.cardContent}>
-                    <p>Keynote on the Present & Future of <span className={classes.textPurple}>Career, Work, & Wellbeing</span></p>
-                  </div>
-                </div>
-                <div className={classes.infoCard}>
-                  <div className={classes.cardImage3}></div>
-                  <div className={classes.cardContent}>
-                    <p><span className={classes.textCoral}>Immersive Workshops</span> on self-awareness & career thinking</p>
-                  </div>
-                </div>
+              <div className={classes.day1TopRow}>
+                <img src="/assets/images/card 1 day 1.svg" alt="Day 1 Card 1" className={classes.day1CardImgLeft} />
+                <img src="/assets/images/card 2 day 1.svg" alt="Day 1 Card 2" className={classes.day1CardImgRight} />
               </div>
 
               <div className={classes.cardsRow2}>
-                <div className={`${classes.infoCardHorizontal} ${classes.mentorshipCard}`}>
-                  <div className={classes.cardImage4}></div>
-                  <div className={classes.cardContentHorizontal}>
-                    <p><span className={classes.textPurple}>1:1 Career Mentorship</span> with the Founder for personal guidance</p>
-                  </div>
-                </div>
-                <div className={`${classes.infoCardHorizontal} ${classes.toolsCard}`}>
-                  <div className={classes.toolsContent}>
-                    <p className={classes.toolsTitle}><span className={classes.textPurple}>Exclusive Career Tools:</span></p>
-                    <p className={classes.toolsScript}>Beyond ChatGPT, Google Search, or Wiki</p>
-                  </div>
-                  <ul className={classes.toolsList}>
-                    <li><CheckCircle2 size={16} className={classes.checkIcon} /> Career Studio to explore <strong>2,500+</strong> roles with real examples and context</li>
-                    <li><CheckCircle2 size={16} className={classes.checkIcon} /> <strong>AI Career Companion</strong> with insights from top founders, mentors & thinkers</li>
-                  </ul>
-                </div>
+                <img src="/assets/images/card 3 day 1.svg" alt="Day 1 Card 3" className={classes.day1CardImgLeft} />
+                <img src="/assets/images/card 4 day 1.svg" alt="Day 1 Card 4" className={classes.day1CardImgRight} />
               </div>
             </div>
 
@@ -623,40 +621,14 @@ export default function SummerCampPage() {
               </div>
               <p className={classes.dayDesc}>Learn to manage stress, emotions, and express yourself confidently in academics, relationships, and real life.</p>
 
-              <div className={classes.cardsRow}>
-                <div className={classes.infoCard}>
-                  <div className={classes.cardImage5}></div>
-                  <div className={classes.cardContent}>
-                    <p><span className={classes.textBlue}>Understand Emotions</span> & learn ways to bounce back from difficulties in life</p>
-                  </div>
-                </div>
-                <div className={classes.infoCard}>
-                  <div className={classes.cardImage6}></div>
-                  <div className={classes.cardContent}>
-                    <p>Learn how to <span className={classes.textPurple}>manage stress</span>, manage anxiety, FOMO, and <span className={classes.textBlue}>peer pressure</span></p>
-                  </div>
-                </div>
-                <div className={classes.infoCard}>
-                  <div className={classes.cardImage7}></div>
-                  <div className={classes.cardContent}>
-                    <p><span className={classes.textCoral}>Practical guide</span> on time management, prioritization, and increasing productivity</p>
-                  </div>
-                </div>
+              <div className={classes.day2TopRow}>
+                <img src="/assets/images/card 1 day 2.svg" alt="Day 2 Card 1" className={classes.day2CardImgLeft} />
+                <img src="/assets/images/card 2 day 2.svg" alt="Day 2 Card 2" className={classes.day2CardImgRight} />
               </div>
 
-              <div className={classes.cardsRow2}>
-                <div className={`${classes.infoCardHorizontal} ${classes.stageCard}`}>
-                  <div className={classes.cardImage8}></div>
-                  <div className={classes.cardContentHorizontal}>
-                    <p>Build a strong stage presence with <span className={classes.textPurple}>verbal & non-verbal communication</span></p>
-                  </div>
-                </div>
-                <div className={`${classes.infoCardHorizontal} ${classes.tedCard}`}>
-                  <div className={classes.cardContentHorizontalWrapper}>
-                    <p>Learn <span className={classes.textCoral}>Ted-style story telling</span> and how to present yourself with confidence</p>
-                    <div className={classes.cardImage9}></div>
-                  </div>
-                </div>
+              <div className={classes.day2BottomRow}>
+                <img src="/assets/images/card 3 day 2.svg" alt="Day 2 Card 3" className={classes.day2CardImgRight} />
+                <img src="/assets/images/card 4 day 2.svg" alt="Day 2 Card 4" className={classes.day2CardImgLeft} />
               </div>
             </div>
 
@@ -671,38 +643,18 @@ export default function SummerCampPage() {
               <p className={classes.daySubtitle}><em>No Coding</em> <strong>required</strong></p>
               <p className={classes.dayDesc}>Learn how to think clearly, break problems, and confidently use AI tools to build real solutions</p>
 
-              <div className={classes.cardsRowSmall}>
-                <div className={`${classes.infoCardHorizontal} ${classes.consultantCard}`}>
-                  <div className={classes.cardImage10}></div>
-                  <div className={classes.cardContentHorizontal}>
-                    <p>Learn how top consultants from <span className={classes.textPurple}>BCG, Bain, Mckinsey</span> solve problems</p>
-                  </div>
-                </div>
-                <div className={`${classes.infoCardHorizontal} ${classes.interactiveCard}`}>
-                  <div className={classes.cardImage11}></div>
-                  <div className={classes.cardContentHorizontal}>
-                    <p><span className={classes.textCoral}>Interactive activities</span> on how to break complex problems and find solutions</p>
-                  </div>
-                </div>
+              <div className={classes.day3TopRow}>
+                <img src="/assets/images/card 1 day 3.svg" alt="Day 3 Card 1" className={classes.day3CardImg1} />
+                <img src="/assets/images/card 2 day 3.svg" alt="Day 3 Card 2" className={classes.day3CardImg2} />
               </div>
 
-              <div className={classes.cardsRow2}>
-                <div className={classes.aiToolsBox}>
-                  <p><strong>Master the best AI tools</strong> for productivity, creativity, and <span className={classes.textCoral}>problem solving</span></p>
-                  <div className={classes.toolsLogos}></div>
-                </div>
-                <div className={classes.aiProjectsBox}>
-                  <div className={classes.aiProjectsHeader}>
-                    <p><strong>Build live projects</strong> using AI for a <strong>standout profile</strong></p>
-                    <div className={classes.projectBadges}>
-                      <span>No coding required</span>
-                      <span>Beginner friendly</span>
-                    </div>
-                  </div>
-                  <div className={classes.projectCardsRow}>
-                    <div className={classes.miniProject}><div className={classes.miniProj1}></div><p>Create your own App</p></div>
-                    <div className={classes.miniProject}><div className={classes.miniProj2}></div><p>Create Short Film & AI Content</p></div>
-                    <div className={classes.miniProject}><div className={classes.miniProj3}></div><p>Create AI Agents to automate tasks</p></div>
+              <div className={classes.day3BottomRow}>
+                <div className={classes.day3CardBottom}>
+                  <p className={classes.day3ProjectsTitle}><strong><span className={classes.textCoralHover}>Build live projects</span></strong> using AI for a<br /><strong>standout profile</strong></p>
+                  <div className={classes.day3ProjectsSVGRow}>
+                    <img src="/assets/images/card 3 day 3.svg" alt="Day 3 Card 3" className={classes.day3CardImg3} />
+                    <img src="/assets/images/card 4 day 3.svg" alt="Day 3 Card 4" className={classes.day3CardImg4} />
+                    <img src="/assets/images/card 5 day 3.svg" alt="Day 3 Card 5" className={classes.day3CardImg5} />
                   </div>
                 </div>
               </div>
@@ -718,40 +670,14 @@ export default function SummerCampPage() {
               </div>
               <p className={classes.dayDesc}>Build money confidence, smart habits, and a founder's mindset early — while you're still in school.</p>
 
-              <div className={classes.cardsRow}>
-                <div className={classes.infoCard}>
-                  <div className={classes.cardImage12}></div>
-                  <div className={classes.cardContent}>
-                    <p>Understand the <span className={classes.textCoral}>psychology of money</span> to build the right mindset</p>
-                  </div>
-                </div>
-                <div className={classes.infoCard}>
-                  <div className={classes.cardImage13}></div>
-                  <div className={classes.cardContent}>
-                    <p><span className={classes.textPurple}>Live activities</span> on budgeting, saving, investing, and compounding</p>
-                  </div>
-                </div>
-                <div className={classes.infoCard}>
-                  <div className={classes.cardImage14}></div>
-                  <div className={`${classes.cardContent} ${classes.founderBox}`}>
-                    <p>Learn how to find ideas, how to explore them, and <span className={classes.textBlue}>unlock founder mindset</span></p>
-                  </div>
-                </div>
+              <div className={classes.day4TopRow}>
+                <img src="/assets/images/card 1 day 4.svg" alt="Day 4 Card 1" className={classes.day4CardImg1} />
+                <img src="/assets/images/card 2 day 4.svg" alt="Day 4 Card 2" className={classes.day4CardImg2} />
               </div>
 
-              <div className={classes.cardsRow2}>
-                <div className={`${classes.infoCardHorizontal} ${classes.earningCard}`}>
-                  <div className={classes.cardImage15}></div>
-                  <div className={classes.cardContentHorizontal}>
-                    <p>Understand ways to <span className={classes.textBlue}>start earning</span> while you are <span className={classes.textCoral}>still in school</span></p>
-                  </div>
-                </div>
-                <div className={`${classes.infoCardHorizontal} ${classes.summitCard}`}>
-                  <div className={classes.cardContentHorizontalWrapper}>
-                    <p>Case stories & insights from real stories and <span className={classes.textPurple}>global best practices</span></p>
-                    <div className={classes.cardImage16}></div>
-                  </div>
-                </div>
+              <div className={classes.day4BottomRow}>
+                <img src="/assets/images/card 3 day 4.svg" alt="Day 4 Card 3" className={classes.day4CardImg3} />
+                <img src="/assets/images/card 4 day 4.svg" alt="Day 4 Card 4" className={classes.day4CardImg4} />
               </div>
             </div>
 
@@ -766,45 +692,21 @@ export default function SummerCampPage() {
               <p className={classes.dayDesc}>Experience the full journey of building a startup, from identifying a problem to creating, testing, and pitching a solution.</p>
               <p className={classes.daySubtitleScript}>* no experience required * beginner friendly</p>
 
-              <div className={classes.cardsRow}>
-                <div className={classes.infoCard}>
-                  <div className={classes.cardImage17}></div>
-                  <div className={classes.cardContent}>
-                    <p><strong className={classes.textPurple}>Team Ideation</strong><br />Collaborate with peers and shape breakthrough ideas.</p>
-                  </div>
-                </div>
-                <div className={classes.infoCard}>
-                  <div className={classes.cardImage18}></div>
-                  <div className={classes.cardContent}>
-                    <p><strong className={classes.textCoral}>Create Solutions</strong><br />Turn your concepts into basic products & solutions</p>
-                  </div>
-                </div>
-                <div className={classes.infoCard}>
-                  <div className={classes.cardImage19}></div>
-                  <div className={classes.cardContent}>
-                    <p><strong className={classes.textPurpleDark}>Pitch & Prizes</strong><br />Present to experts with a chance to win support and rewards.</p>
-                  </div>
-                </div>
+              <div className={classes.day5TopRow}>
+                <img src="/assets/images/card 1 day 5.svg" alt="Day 5 Card 1" className={classes.day5CardImg1} />
+                <img src="/assets/images/card 2 day 5.svg" alt="Day 5 Card 2" className={classes.day5CardImg2} />
+                <img src="/assets/images/card 3 day 5.svg" alt="Day 5 Card 3" className={classes.day5CardImg3} />
               </div>
 
-              <div className={classes.cardsRow2}>
-                <div className={classes.incubationBox}>
-                  <p><strong>Top startups get assistance for...</strong><br />Incorporation, Govt. Grants, Incubation</p>
-                  <div className={classes.incubationLogos}></div>
-                </div>
-                <div className={classes.chequeBox}>
-                  <div className={classes.chequeImage}></div>
-                  <div className={classes.chequeContent}>
-                    <p className={classes.chequeTitle}>Cheque <strong>Prize</strong></p>
-                    <p>The best startup will get a cheque prize of</p>
-                    <div className={classes.chequeAmount}>INR 50,000/-</div>
-                  </div>
-                </div>
+              <div className={classes.day5BottomRow}>
+                <img src="/assets/images/card 4 day 5.svg" alt="Day 5 Card 4" className={classes.day5CardImg4} />
+                <img src="/assets/images/card 5 day 5.svg" alt="Day 5 Card 5" className={classes.day5CardImg5} />
               </div>
             </div>
 
             {/* Day 6 */}
-            <div className={classes.dayBlock}>
+            <div className={classes.dayBlock} style={{ position: 'relative' }}>
+              <img src="/assets/images/FloatingBoxes.svg" alt="Floating Boxes" className={classes.floatingBoxesDay6} />
               <div className={classes.dayHeader}>
                 <h2 className={classes.dayNumber}>Day 6</h2>
                 <div className={classes.rocketIconSmall}>🚀</div>
@@ -814,65 +716,37 @@ export default function SummerCampPage() {
               </div>
               <p className={classes.dayDesc}>Slow down, reset, and learn to use technology mindfully without burnout or distraction.</p>
 
-              <div className={classes.cardsRow}>
-                <div className={classes.infoCard}>
-                  <div className={classes.cardImage20}></div>
-                  <div className={classes.cardContent}>
-                    <p>Immerse in a <span className={classes.textPurple}>guided art activities</span> to let go of your past burden</p>
-                  </div>
-                </div>
-                <div className={classes.infoCard}>
-                  <div className={classes.cardImage21}></div>
-                  <div className={classes.cardContent}>
-                    <p><span className={classes.textBlue}>Develop mindfulness and calm</span> to live with ease and balance</p>
-                  </div>
-                </div>
-                <div className={classes.infoCard}>
-                  <div className={classes.cardImage22}></div>
-                  <div className={classes.cardContent}>
-                    <p>Live activities to reorganise your digital life for <span className={classes.textCoral}>focus and productivity</span></p>
-                  </div>
-                </div>
+              <div className={classes.day6TopRow}>
+                <img src="/assets/images/card 1 day 6.svg" alt="Day 6 Card 1" className={classes.day6CardImg1} />
+                <img src="/assets/images/card 2 day 6.svg" alt="Day 6 Card 2" className={classes.day6CardImg2} />
+                <img src="/assets/images/card 3 day 6.svg" alt="Day 6 Card 3" className={classes.day6CardImg3} />
               </div>
 
-              <div className={classes.cardsRow}>
-                <div className={classes.infoCard}>
-                  <div className={classes.cardImage23}></div>
-                  <div className={classes.cardContent}>
-                    <p>Master tools to setup <span className={classes.textBlue}>healthier digital boundaries</span> for study & rest</p>
-                  </div>
-                </div>
-                <div className={classes.infoCard}>
-                  <div className={classes.cardImage24}></div>
-                  <div className={classes.cardContent}>
-                    <p>Live demonstration on radiations and the <span className={classes.textPurple}>health impacts of our phone</span></p>
-                  </div>
-                </div>
-                <div className={classes.infoCard}>
-                  <div className={classes.cardImage25}></div>
-                  <div className={classes.cardContent}>
-                    <p>Learn about cyber safety, privacy, and <span className={classes.textCoral}>responsible internet usage</span></p>
-                  </div>
-                </div>
+              <div className={classes.day6BottomRow}>
+                <img src="/assets/images/card 4 day 6.svg" alt="Day 6 Card 4" className={classes.day6CardImg4} />
               </div>
             </div>
           </div>
 
           {/* Certification Section */}
           <div className={classes.certSectionWrapper}>
+            <img src="/assets/images/Container.svg" alt="" className={classes.certDivider} />
+            <img src="/assets/images/Vector 1555.svg" alt="" className={classes.certVectorIcon} />
+            <img src="/assets/images/leaves-bootcamp.svg" alt="" className={classes.certLeavesIcon} />
             <div className={classes.certHeader}>
               <img src="/assets/images/Badge Verification - iconSvg.co.svg" alt="Certification Badge" className={classes.certIcon} />
-              <h2>Certification & Recognition</h2>
+              <h2><span className={classes.certTitleRed}>Certification</span> <span className={classes.certTitleBlack}>& Recognition</span></h2>
             </div>
-            <p className={classes.certSub}>A stamp of credibility for the skills and expertise you master here</p>
+            <p className={classes.certSub}>A stamp of credibility for the skills and expertise<br />you master here</p>
 
             <div className={classes.certBox}>
               <div className={classes.certLeftText}>
                 <h3 className={classes.certTitleGold}>Completion Certificate</h3>
-                <p className={classes.certDescSmall}>A credible & verifiable proof that can also be added to LinkedIn</p>
+                <p className={classes.certDescSmall}>A credible & verifiable proof that can also<br />be added to LinkedIn</p>
               </div>
               <div className={classes.certRightImage}>
-                <div className={classes.certImageMockup}></div>
+                <img src="/assets/images/certificate rectangle.svg" alt="Certificate Background" className={classes.certRectangleImg} />
+                <img src="/assets/images/certificate.svg" alt="Certificate Foreground" className={classes.certForegroundImg} />
               </div>
             </div>
 
@@ -907,16 +781,16 @@ export default function SummerCampPage() {
           <div className={classes.expertsTitleRow}>
             <div className={classes.expertsLine} />
             <h2 className={classes.expertsTitleMain}>
-              <span className={classes.textPurpleDark}>Experts</span> you will
+              <span className={classes.expertsHighlight}>Experts</span> you will
+              <img src="/assets/images/sparkles bootcamp.svg" className={classes.expertsSparkleWill} alt="" />
             </h2>
             <div className={classes.expertsLine} />
           </div>
           <div className={classes.expertsTitleSubRow}>
             <h2 className={classes.expertsTitleSub}>
               learn from
-              <img src="/assets/icons/underline.svg" className={classes.expertsUnderline} alt="underline" />
+              <img src="/assets/images/Vector 1579.svg" className={classes.expertsUnderline} alt="underline" />
             </h2>
-            <div className={classes.expertsSparkle}>✨</div>
           </div>
 
           <div className={classes.expertFilters}>
@@ -924,27 +798,12 @@ export default function SummerCampPage() {
               <button key={i} className={classes.expertFilterBtn}>{label}</button>
             ))}
           </div>
-          <div className={classes.expertsGrid}>
-            {experts.map((ex, i) => (
-              <div key={i} className={classes.expertCard}>
-                <div className={classes.expertAvatar} />
-                <h4 className={classes.expertName}>{ex.name}</h4>
-                <p className={classes.expertRoles}>{ex.roles}</p>
-                <p className={classes.expertAff}>{ex.aff}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className={classes.section} style={{ paddingTop: '20px' }}>
-          <div className={classes.realExpertsFrame}>
-            <p className={classes.realExpertsTitle}>Learn from real experts</p>
-            <div className={classes.whiteMarqueeContainer}>
-              <div className={classes.marqueeContainer}>
-                <div className={classes.marqueeTrack}>
-                  <img src="/assets/images/real-experts-bootcamp.svg" alt="Real Experts" className={classes.realExpertSvg} />
-                  <img src="/assets/images/real-experts-bootcamp.svg" alt="Real Experts" className={classes.realExpertSvg} />
-                </div>
+          <div className={classes.expertsGridWrapper}>
+            <div className={classes.expertMarqueeContainer}>
+              <div className={classes.expertMarqueeTrack}>
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((num, i) => (
+                  <img key={i} src={`/assets/images/expert ${num}.svg`} alt={`Expert ${num}`} className={classes.expertCardImg} />
+                ))}
               </div>
             </div>
           </div>
@@ -964,10 +823,10 @@ export default function SummerCampPage() {
               </div>
               <h4>1. Apply Online</h4>
               <p>
-                Reserve your spot with basic details, batch preference, and booking fees(INR 2499)
+                Reserve your spot with basic<br />details, batch preference, and<br />booking fees(INR 899)
               </p>
             </div>
-            <img src="/assets/images/Arrow 5.svg" className={classes.admissionStepArrow} alt="" />
+            <img src="/assets/images/Arrow admission.svg" className={classes.admissionStepArrow} alt="" />
             <div className={`${classes.admissionStepNode} ${classes.admissionStepNode2}`}>
               <div className={classes.admissionStepCircle}>
                 <img src="/assets/images/Ellipse 96.svg" className={classes.admissionStepBg} alt="" />
@@ -975,10 +834,10 @@ export default function SummerCampPage() {
               </div>
               <h4>2. Personal Interview</h4>
               <p>
-                Our team will reach out <strong>within 48 hours</strong> to understand the student's motivation
+                Our team will reach out <strong>within<br />48 hours</strong> to understand the<br />student's motivation
               </p>
             </div>
-            <img src="/assets/images/Arrow 6.svg" className={classes.admissionStepArrow} alt="" />
+            <img src="/assets/images/Arrow admission 2.svg" className={classes.admissionStepArrow2} alt="" />
             <div className={`${classes.admissionStepNode} ${classes.admissionStepNode3}`}>
               <div className={classes.admissionStepCircle}>
                 <img src="/assets/images/Ellipse 96.svg" className={classes.admissionStepBg} alt="" />
@@ -986,7 +845,7 @@ export default function SummerCampPage() {
               </div>
               <h4>3. Final Selection</h4>
               <p>
-                Receive final confirmation along with request for the remaining fees
+                Receive final confirmation along<br />with request for the remaining fees
               </p>
             </div>
           </div>
@@ -994,11 +853,12 @@ export default function SummerCampPage() {
 
 
         {/* Getting Future-Ready Is Everyone's Right */}
-        <section className={`${classes.section} ${classes.futureReadySection}`}>
+        <section className={classes.futureReadySection}>
           <div className={classes.futureReadyWrapper}>
+            <img src="/assets/images/Vector 1568.svg" className={classes.futureReadyTopRightVector} alt="" />
             <div className={classes.futureReadyHeader}>
               <h2 className={classes.futureReadyTitle}>Getting Future-Ready Is</h2>
-              <h2 className={classes.futureReadyScript}>Everyone's Right <Sparkles size={24} className={classes.sparklesIcon} /></h2>
+              <h2 className={classes.futureReadyScript}>Everyone's Right <img src="/assets/images/sparkles bootcamp.svg" className={classes.sparklesIcon} alt="" /></h2>
             </div>
 
             <div className={classes.futureReadyGrid}>
@@ -1051,149 +911,172 @@ export default function SummerCampPage() {
           </div>
         </section>
 
-        {/* What Students Walk Away With */}
-        <section className={classes.sectionLightSecondary}>
-          <div className={classes.walkAwayHeader}>
-            <h2 className={classes.walkAwayTitle}>What Students Walk Away With</h2>
-            <p className={classes.walkAwaySub}>More than learning - clarity, capability, and confidence for the years ahead</p>
-          </div>
-          <div className={classes.walkAwayGrid}>
-            <div className={classes.walkCard}>
-              <div className={classes.walkCardHeader}>
-                <div className={classes.walkIconPurple}><Microscope size={20} /></div>
-                <h3 className={classes.walkCardTitle}>Clarity About Careers & the<br /><span className={classes.textPurpleDark}>Future of Work</span></h3>
+        {/* Program Fees */}
+        <section className={classes.feesSection}>
+          <div className={classes.feesLeft}>
+            <div className={classes.feesDoodleWrapper}>
+              <div className={classes.feesTitleStack}>
+                <h2 className={classes.feesScript}>Program Fees</h2>
+                <img src="/assets/images/Vector 1579.svg" className={classes.feesUnderline} alt="" />
               </div>
-              <ul className={classes.walkCardList}>
-                <li>Exposure to how careers are changing and what employers actually look for.</li>
-                <li>Self-awareness and direction around career, course, and college choices.</li>
-              </ul>
+              <img src="/assets/images/program fees tick.svg" className={classes.feesArrowIcon} alt="" />
             </div>
-
-            <div className={classes.walkCard}>
-              <div className={classes.walkCardHeader}>
-                <div className={classes.walkIconPink}><BarChart2 size={20} /></div>
-                <h3 className={classes.walkCardTitle}>Core Skills for <span className={classes.textPink}>College, Work,</span><br /><span className={classes.textPink}>and Life</span></h3>
-              </div>
-              <ul className={classes.walkCardList}>
-                <li>Exposure to how careers are changing and what employers actually look for.</li>
-                <li>Self-awareness and direction around career, course, and college choices.</li>
-              </ul>
+            <div className={classes.feesQuoteCard}>
+              <p>
+                "The best investment you can<br />
+                make is in your own abilities"
+              </p>
+              <span className={classes.quoteAuthor}>~Warren Buffett</span>
+              <img
+                src="/assets/images/warren-buffet - reserve.svg"
+                alt="Warren Buffett"
+                className={classes.warrenImg}
+                onError={(e) => (e.target.style.display = "none")}
+              />
             </div>
-
-            <div className={classes.walkCard}>
-              <div className={classes.walkCardHeader}>
-                <div className={classes.walkIconBlue}><Sparkles size={20} /></div>
-                <h3 className={classes.walkCardTitle}>Create a <span className={classes.textBlue}>Standout Profile,</span><br /><span className={classes.textBlue}>Not Just Certificates</span></h3>
-              </div>
-              <ul className={classes.walkCardList}>
-                <li>Entrepreneurial mindset and capability to build startup ideas.</li>
-                <li>Confidence in using AI to learn and build real projects.</li>
-                <li>Building a profile that supports strong college applications and internships.</li>
-              </ul>
-            </div>
-
-            <div className={classes.walkCard}>
-              <div className={classes.walkCardHeader}>
-                <div className={classes.walkIconPurpleDark}><BarChart2 size={20} /></div>
-                <h3 className={classes.walkCardTitle}>Stability, Focus & Lifelong<br /><span className={classes.textPurpleDark}>Life Skills</span></h3>
-              </div>
-              <ul className={classes.walkCardList}>
-                <li>Emotional resilience and a bounce-back mindset</li>
-                <li>Tools to reduce mobile and screen addiction and improve focus</li>
-                <li>Practical money skills for lifelong financial wellbeing</li>
-              </ul>
+            <div className={classes.feesQuoteCardBlue}>
+              <p>
+                "Become future-ready by<br />
+                spending a small fraction of<br />
+                what you do for entire education"
+              </p>
+              <img
+                src="/assets/images/Space-launch.svg"
+                alt="Space Launch"
+                className={classes.spacelaunchIcon}
+              />
             </div>
           </div>
-        </section>
 
-
-
-
-        {/* Program Schedule */}
-        <section id="schedule" className={classes.section}>
-          <h2 className={classes.sectionTitle}>Program</h2>
-          <h2 className={classes.sectionTitleScript}>Schedule</h2>
-          <div className={classes.scheduleHeader}>
-            <Link href="/summer-camp/schedule" className={classes.btnDetailedSolid}>
-              Check Detailed Schedule <ArrowUpRight size={18} />
-            </Link>
-          </div>
-          <div className={classes.scheduleGrid}>
-            {scheduleDays.map((d, i) => (
-              <div key={i} className={classes.scheduleCard}>
-                <p className={classes.scheduleDay}>Day {d.day}</p>
-                <h3 className={classes.scheduleTitle}>{d.title}</h3>
-                <p className={classes.scheduleDesc}>{d.desc}</p>
-                {d.note && <p className={classes.scheduleNote}>{d.note}</p>}
+          <div className={classes.feesRight}>
+            {/* Early Bird */}
+            <div className={classes.feeCardEarly}>
+              <div className={classes.feeCardEarlyInner}>
+                <div className={classes.feeCardIcon}>
+                  <img src="/assets/images/early-bird.svg" alt="Early Bird" className={classes.earlyBirdIcon} />
+                </div>
+                <div className={classes.feeCardText}>
+                  <h3>EARLY BIRD</h3>
+                  <p>(TILL 31ST MARCH)</p>
+                </div>
+                <div className={classes.feeAmountWhite}>INR 41,999</div>
               </div>
-            ))}
-          </div>
-        </section>
-
-
-
-        {/* Lived Experience */}
-        <section className={classes.livedExpOuterSection}>
-          <div className={classes.livedExpHeader}>
-            <h2 className={classes.livedExpTitle}>
-              This Program Was Built <br />
-              From <span className={`${classes.livedExpScript} ${classes.livedExpScriptCoral}`}>Lived Experience <span className={classes.clockIcon}>⏰</span></span>
-            </h2>
-          </div>
-          <div className={classes.livedExpCardsWrapper}>
-            {/* Card 1: Blue */}
-            <div className={classes.livedExpBlueCard}>
-              <div className={classes.blueCardTop}>
-                <div className={classes.founderImagePlaceholder}></div>
-                <div className={classes.founderInfo}>
-                  <h3 className={classes.founderName}>Bhaskar<br />Singhania</h3>
-                  <p className={classes.founderTitle}>Founder & CEO, Roobaroo.ai</p>
-                  <div className={classes.socialIconsRow}>
-                    <div className={classes.socialIconInsta}></div>
-                    <div className={classes.socialIconLinked}></div>
-                    <div className={classes.socialIconLinktree}></div>
+            </div>
+            {/* Standard */}
+            <div className={classes.feeCardStandard}>
+              <div className={classes.feeCardStandardInner}>
+                <img src="/assets/images/standard.svg" alt="Standard" className={classes.standardIcon} />
+                <div className={classes.feeCardText}>
+                  <h3>STANDARD</h3>
+                  <p>(FROM 1ST APRIL)</p>
+                </div>
+                <div className={classes.feeAmountStandard}>INR 47,999</div>
+              </div>
+            </div>
+            {/* Group Discount & Residential */}
+            <div className={classes.feeExtrasRow}>
+              <div className={`${classes.feeExtraCard} ${classes.feeExtraBlue}`}>
+                <div className={classes.feeExtraInnerWhite}>
+                  <div className={classes.feeExtraIconBlue}>
+                    <img src="/assets/images/group of students.svg" alt="Group of Students" className={classes.groupStudentsIcon} />
+                  </div>
+                  <div className={classes.feeExtraText}>
+                    <h4>GROUP DISCOUNT</h4>
+                    <p>(MINIMUM 4 STUDENTS)</p>
                   </div>
                 </div>
-              </div>
-              <div className={classes.blueCardBottom}>
-                <div className={classes.blueCardQuote}>
-                  <p>" I've seen both<br />sides of the system —<br /><strong>what works, and what<br />quietly fails students</strong> "</p>
+                <div className={classes.feeExtraPrice}>
+                  INR 5,999 <span>(PER PERSON)</span>
                 </div>
-                <div className={classes.blueCardMentor}>
-                  <p className={classes.mentorTitle}>Mentor at :</p>
-                  <div className={classes.mentorLogosGrid}>
-                    <div className={classes.mentorLogoItem}><span className={classes.mentorInitial}>m</span> Mesa<br />School</div>
-                    <div className={classes.mentorLogoItem}>NITI<br />Aayog</div>
-                    <div className={classes.mentorLogoItem}><strong>masters'</strong><br /><strong>union</strong></div>
-                    <div className={classes.mentorLogoItem}>IIT<br />Kharagpur</div>
+              </div>
+              <div className={`${classes.feeExtraCard} ${classes.feeExtraPurple}`}>
+                <div className={classes.feeExtraInnerWhite}>
+                  <img src="/assets/images/residential.svg" alt="Residential" className={classes.residentialIcon} />
+                  <div className={classes.feeExtraText}>
+                    <h4>RESIDENTIAL</h4>
+                    <p>(OPTION AVAILABLE)</p>
                   </div>
+                </div>
+                <div className={classes.feeExtraPrice}>
+                  INR 2,500 <span>(PER DAY)</span>
                 </div>
               </div>
             </div>
+            <div className={classes.feesNoteContainer}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="111" height="2" viewBox="0 0 111 2" fill="none" className={classes.feesNoteLineSvg}>
+                <path d="M0 1H110.5" stroke="#815FAA" strokeWidth="2" />
+              </svg>
+              <p className={classes.feesNote}>
+                *Fees includes{" "}
+                <span className={classes.textPink}>Lunch</span>,{" "}
+                <span className={classes.textPurple}>Snacks</span>, and other<br />
+                program related{" "}
+                <span className={classes.textBlue}>materials</span>'
+              </p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="111" height="2" viewBox="0 0 111 2" fill="none" className={classes.feesNoteLineSvg}>
+                <path d="M0 1H110.5" stroke="#815FAA" strokeWidth="2" />
+              </svg>
+            </div>
+          </div>
+        </section>
+        <section className={classes.bonusSection}>
+          <div className={classes.bonusHeader}>
+            <div className={classes.bonusTitleRow}>
+              <img src="/assets/images/space - launch bonus.svg" className={classes.bonusRocket} alt="" />
+              <h2 className={classes.bonusTitleText}>
+                <span className={classes.bonusPurpleText}>Bonus Sessions</span> for Parents
+              </h2>
+              <img src="/assets/images/parents design.svg" className={classes.bonusParentsDesign} alt="" />
+            </div>
+            <div className={classes.bonusSubtitleRow}>
+              <h3 className={classes.bonusSubtitleText}>First of Its Kind in India</h3>
+              <img src="/assets/images/kind in india.svg" className={classes.bonusCurlLine} alt="" />
+            </div>
+          </div>
 
-            {/* Card 2: Purple */}
-            <div className={classes.livedExpPurpleCard}>
-              <div className={classes.purpleCardTop}>
-                <div className={classes.alumniHeader}>
-                  <span className={classes.alumniIcon}>🎓</span> Alumni of IIT Kharagpur
-                </div>
-                <div className={classes.alumniLogosRow}>
-                  <span className={classes.alumniLogoItemText}><span style={{ color: '#E03C31' }}>Stanford</span></span> |
-                  <span className={classes.alumniLogoItemText}><span style={{ color: '#4285F4' }}>G</span><span style={{ color: '#EA4335' }}>o</span><span style={{ color: '#FBBC05' }}>o</span><span style={{ color: '#4285F4' }}>g</span><span style={{ color: '#34A853' }}>l</span><span style={{ color: '#EA4335' }}>e</span> for Startups</span>
+          <div className={classes.bonusCard}>
+            <img src="/assets/images/clip-bonus.svg" className={classes.bonusClip} alt="" />
+
+            <div className={classes.bonusCardList}>
+              <div className={classes.bonusListItem}>
+                <img src="/assets/images/star bonus.svg" className={classes.bonusStar} alt="" />
+                <p>
+                  <strong>We recognize parents</strong> as the most important partners in a <strong>child's journey</strong>.
+                </p>
+              </div>
+              <div className={classes.bonusListItem}>
+                <img src="/assets/images/star bonus.svg" className={classes.bonusStar} alt="" />
+                <p>
+                  These sessions are designed to equip parents with the right awareness, clarity, and tools to support their <strong>child's academic, career, and wellbeing decisions.</strong>
+                </p>
+              </div>
+              <div className={classes.bonusListItem}>
+                <img src="/assets/images/star bonus.svg" className={classes.bonusStar} alt="" />
+                <p>
+                  Parents also get a direct opportunity to ask questions, address concerns, and plan their <strong>child's next steps</strong> with confidence.
+                </p>
+              </div>
+            </div>
+
+            <div className={classes.bonusCardFooter}>
+              <div className={classes.bonusFooterSessions}>
+                <img src="/assets/images/number.svg" className={classes.bonusNumberAsset} alt="" />
+                <span className={classes.bonusCursiveLabel}>Number of Sessions:</span>
+                <div className={classes.bonusSessionCountWrapper}>
+                  <img src="/assets/images/2.svg" className={classes.bonusCountAsset} alt="" />
+                  <div className={classes.bonusSessionCount}>2</div>
                 </div>
               </div>
-              <div className={classes.purpleCardBottom}>
-                <div className={classes.purpleCardImage}>
-                  <img src="/assets/images/thumbnail.png" alt="Classroom" className={classes.pupleImg} />
-                </div>
-                <div className={classes.purpleCardStats}>
-                  <h3>1000+</h3>
-                  <p>Students &<br />professionals<br />Coached</p>
+              <div className={classes.bonusFooterMode}>
+                <span>Mode:</span>
+                <div className={classes.bonusModePill}>
+                  Online <span className={classes.bonusModeDot}></span>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
 
 
         <section className={classes.section}>

@@ -48,13 +48,26 @@ export default function ReserveNowPage() {
                             onError={(e) => (e.target.style.display = "none")}
                         />
                         <h1 className={classes.heroTitle}>
-                            <span className={classes.heroTitlePink}>Reserve</span> Your{"\n"}
+                            <span className={classes.heroWordRelative}>
+                                <img src="/assets/images/leaves-bootcamp.svg" alt="" className={classes.heroPetalSvg} />
+                                <span className={classes.heroTitlePink}>Reserve</span>
+                            </span>{" "}
+                            <span className={classes.heroWordRelative}>
+                                Your
+                                <img src="/assets/images/blue - bloom.svg" alt="" className={classes.heroBloomSvg} />
+                            </span>{"\n"}
                             Seat Now
                         </h1>
                         <p className={classes.heroSubtext}>
                             This booking helps us{" "}
-                            <span className={classes.textUnderlinePurple}>
-                                understand your interest and ensures you get priority access.
+                            <span className={classes.subtextPurple}>understand your interest and</span>
+                            <br />
+                            <span className={classes.subtextPink}>
+                                ensures you get{" "}
+                                <span className={classes.svgWrapper}>
+                                    priority access.
+                                    <img src="/assets/images/Vector 1579.svg" alt="" className={classes.priorityUnderlineSvg} />
+                                </span>
                             </span>
                         </p>
                         <img
@@ -286,7 +299,7 @@ export default function ReserveNowPage() {
                                 Our team will reach out within <strong>24–48 hours</strong>
                             </p>
                         </div>
-                        <img src="/assets/images/Arrow 5.svg" className={classes.nextArrow} alt="" />
+                        <img src="/assets/images/Arrow 5.svg" className={`${classes.nextArrow} ${classes.nextArrowUp}`} alt="" />
                         <div className={`${classes.nextStep} ${classes.nextStep2}`}>
                             <div className={classes.nextStepCircle}>
                                 <img src="/assets/images/Ellipse 96.svg" className={classes.stepBg} alt="" />
@@ -308,7 +321,7 @@ export default function ReserveNowPage() {
                                 peers for <strong>group discount</strong> if applicable
                             </p>
                         </div>
-                        <img src="/assets/images/Arrow 7.svg" className={classes.nextArrow} alt="" />
+                        <img src="/assets/images/Arrow 7.svg" className={`${classes.nextArrow} ${classes.nextArrowUp}`} alt="" />
                         <div className={`${classes.nextStep} ${classes.nextStep4}`}>
                             <div className={classes.nextStepCircle}>
                                 <img src="/assets/images/Ellipse 96.svg" className={classes.stepBg} alt="" />
@@ -430,12 +443,16 @@ export default function ReserveNowPage() {
                 <section className={classes.feesSection}>
                     <div className={classes.feesLeft}>
                         <div className={classes.feesDoodleWrapper}>
-                            <h2 className={classes.feesScript}>Program Fees</h2>
-                            <span className={classes.feesArrow}>→</span>
+                            <div className={classes.feesTitleStack}>
+                                <h2 className={classes.feesScript}>Program Fees</h2>
+                                <img src="/assets/images/Vector 1579.svg" className={classes.feesUnderline} alt="" />
+                            </div>
+                            <img src="/assets/images/program fees tick.svg" className={classes.feesArrowIcon} alt="" />
                         </div>
                         <div className={classes.feesQuoteCard}>
                             <p>
-                                "The best investment you can make is in your own abilities"
+                                "The best investment you can<br />
+                                make is in your own abilities"
                             </p>
                             <span className={classes.quoteAuthor}>~Warren Buffett</span>
                             <img
@@ -447,14 +464,14 @@ export default function ReserveNowPage() {
                         </div>
                         <div className={classes.feesQuoteCardBlue}>
                             <p>
-                                "Become future-ready by spending a small fraction of what you do
-                                for entire education"
+                                "Become future-ready by<br />
+                                spending a small fraction of<br />
+                                what you do for entire education"
                             </p>
                             <img
-                                src="/assets/images/deco-rocket-small.svg"
-                                alt=""
-                                className={classes.rocketSmall}
-                                onError={(e) => (e.target.style.display = "none")}
+                                src="/assets/images/Space-launch.svg"
+                                alt="Space Launch"
+                                className={classes.spacelaunchIcon}
                             />
                         </div>
                     </div>
@@ -464,7 +481,7 @@ export default function ReserveNowPage() {
                         <div className={classes.feeCardEarly}>
                             <div className={classes.feeCardEarlyInner}>
                                 <div className={classes.feeCardIcon}>
-                                    <GraduationCap size={24} />
+                                    <img src="/assets/images/early-bird.svg" alt="Early Bird" className={classes.earlyBirdIcon} />
                                 </div>
                                 <div className={classes.feeCardText}>
                                     <h3>EARLY BIRD</h3>
@@ -476,9 +493,7 @@ export default function ReserveNowPage() {
                         {/* Standard */}
                         <div className={classes.feeCardStandard}>
                             <div className={classes.feeCardStandardInner}>
-                                <div className={classes.feeCardIconStandard}>
-                                    <User size={24} />
-                                </div>
+                                <img src="/assets/images/standard.svg" alt="Standard" className={classes.standardIcon} />
                                 <div className={classes.feeCardText}>
                                     <h3>STANDARD</h3>
                                     <p>(FROM 1ST APRIL)</p>
@@ -491,7 +506,7 @@ export default function ReserveNowPage() {
                             <div className={`${classes.feeExtraCard} ${classes.feeExtraBlue}`}>
                                 <div className={classes.feeExtraInnerWhite}>
                                     <div className={classes.feeExtraIconBlue}>
-                                        <Users size={20} />
+                                        <img src="/assets/images/group of students.svg" alt="Group of Students" className={classes.groupStudentsIcon} />
                                     </div>
                                     <div className={classes.feeExtraText}>
                                         <h4>GROUP DISCOUNT</h4>
@@ -504,9 +519,7 @@ export default function ReserveNowPage() {
                             </div>
                             <div className={`${classes.feeExtraCard} ${classes.feeExtraPurple}`}>
                                 <div className={classes.feeExtraInnerWhite}>
-                                    <div className={classes.feeExtraIconPurple}>
-                                        <Star size={20} />
-                                    </div>
+                                    <img src="/assets/images/residential.svg" alt="Residential" className={classes.residentialIcon} />
                                     <div className={classes.feeExtraText}>
                                         <h4>RESIDENTIAL</h4>
                                         <p>(OPTION AVAILABLE)</p>
@@ -517,13 +530,21 @@ export default function ReserveNowPage() {
                                 </div>
                             </div>
                         </div>
-                        <p className={classes.feesNote}>
-                            *Fees includes{" "}
-                            <span className={classes.textPink}>Lunch</span>,{" "}
-                            <span className={classes.textPink}>Snacks</span>, and other
-                            program related{" "}
-                            <span className={classes.textBlue}>materials</span>*
-                        </p>
+                        <div className={classes.feesNoteContainer}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="111" height="2" viewBox="0 0 111 2" fill="none" className={classes.feesNoteLineSvg}>
+                                <path d="M0 1H110.5" stroke="#815FAA" strokeWidth="2" />
+                            </svg>
+                            <p className={classes.feesNote}>
+                                *Fees includes{" "}
+                                <span className={classes.textPink}>Lunch</span>,{" "}
+                                <span className={classes.textPurple}>Snacks</span>, and other<br />
+                                program related{" "}
+                                <span className={classes.textBlue}>materials</span>'
+                            </p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="111" height="2" viewBox="0 0 111 2" fill="none" className={classes.feesNoteLineSvg}>
+                                <path d="M0 1H110.5" stroke="#815FAA" strokeWidth="2" />
+                            </svg>
+                        </div>
                     </div>
                 </section>
 
