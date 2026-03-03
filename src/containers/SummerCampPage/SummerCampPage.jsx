@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import FAQ from "../FAQ/FAQ";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -48,9 +49,10 @@ import day1TickMark from "../../../public/assets/images/day 1 tick mark.svg";
 import classes from "./SummerCampPage.module.css";
 
 export default function SummerCampPage() {
-  const [faqOpen, setFaqOpen] = useState(null);
+  const [testimonialIndex, setTestimonialIndex] = React.useState(0);
 
   const tags = [
+
     "Career Lab",
     "Startup Competition",
     "AI Innovation Lab",
@@ -235,6 +237,14 @@ export default function SummerCampPage() {
                     <span key={i} className={classes.tag}>{t}</span>
                   ))}
                 </div>
+                {/* Mobile scrolling marquee */}
+                <div className={classes.tagsMarqueeWrapper}>
+                  <div className={classes.tagsMarqueeTrack}>
+                    {[...tags, ...tags].map((t, i) => (
+                      <span key={i} className={classes.tag}>{t}</span>
+                    ))}
+                  </div>
+                </div>
               </div>
               <div className={classes.batchCard}>
                 <div className={classes.batchInfoSingle}>
@@ -326,24 +336,28 @@ export default function SummerCampPage() {
                 <h3 className={classes.cardTitle}>Internships & Competition</h3>
                 <div className={classes.cardContentWrapper}>
                   <div className={classes.iconBox}>
-                    <div className={classes.iconWrapperBlue}><BarChart2 size={16} /></div>
+                    <img src="/assets/images/blue card 1.svg" alt="Startup" className={classes.blueCardIcon} />
                     <div>
-                      <p className={classes.iconBoxTitle}>Startup Competition - ₹50,000 prize</p>
+                      <p className={classes.iconBoxTitle}><span className={classes.iconBoxHighlight}>Startup Competition</span> - ₹50,000 prize</p>
                       <p className={classes.iconBoxSub}>(No experience needed)</p>
                     </div>
                   </div>
                   <div className={classes.iconBox}>
-                    <div className={classes.iconWrapperBlue}><Microscope size={16} /></div>
+                    <img src="/assets/images/blue card 2.svg" alt="Research" className={classes.blueCardIcon} />
                     <div>
-                      <p className={classes.iconBoxTitle}>Research Internship Opportunity</p>
-                      <p className={classes.iconBoxSub}>with <strong>IIT Kharagpur</strong></p>
+                      <p className={classes.iconBoxTitle}><span className={classes.iconBoxHighlight}>Research Internship Opportunity</span></p>
+                      <p className={classes.iconBoxSub}>with <img src="/assets/images/iit kgp.svg" alt="IIT Kharagpur" className={classes.iitkgpLogo} /> <span className={classes.iconBoxHighlight}>IIT Kharagpur</span></p>
                     </div>
                   </div>
                   <div className={classes.iconBox}>
-                    <div className={classes.iconWrapperBlue}><Rocket size={16} /></div>
+                    <img src="/assets/images/blue card 3.svg" alt="Startups" className={classes.blueCardIcon} />
                     <div>
-                      <p className={classes.iconBoxTitle}>Chance to work with startups like :</p>
-                      <div className={classes.logoRowSmall}><span>Digi</span><span>roobaroo.ai</span></div>
+                      <p className={classes.iconBoxTitle}><span className={classes.iconBoxHighlight}>Chance to work with startups like :</span></p>
+                      <div className={classes.logoRowSmall}>
+                        <span className={classes.startupLogoPill}><img src="/assets/images/icon 1.svg" alt="Icon" className={classes.startupLogoIcon} /></span>
+                        <span className={classes.startupLogoPill}><img src="/assets/images/digigo.svg" alt="DigiGo" className={classes.startupLogoIcon} /></span>
+                        <span className={classes.startupLogoPill}><img src="/assets/images/roobaroo logo.svg" alt="Roobaroo" className={classes.startupLogoIcon} /></span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -351,11 +365,17 @@ export default function SummerCampPage() {
 
               <div className={`${classes.card} ${classes.cardWhite}`}>
                 <h3 className={classes.cardTitle}>Strong Foundation for Wellbeing</h3>
-                <div className={classes.textGrid}>
-                  <div className={classes.textItem}>❤️ Emotional Resilience</div>
-                  <div className={classes.textItem}>📱 Digital Balance</div>
-                  <div className={classes.textItem}>🧘‍♀️ Mental Strength</div>
-                  <div className={classes.textItem}>⏱️ Mindfulness</div>
+                <div className={classes.foundationMarqueeWrapper}>
+                  <div className={classes.foundationMarqueeTrack}>
+                    {[1, 2, 3, 4, 1, 2, 3, 4].map((n, i) => (
+                      <img
+                        key={i}
+                        src={`/assets/images/foundation ${n}.svg`}
+                        alt={`Foundation ${n}`}
+                        className={classes.foundationImg}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -364,20 +384,16 @@ export default function SummerCampPage() {
             <div className={classes.exploreCol}>
               <div className={`${classes.card} ${classes.cardGreen}`}>
                 <h3 className={classes.cardTitle}>Build with skills that actually matter</h3>
-                <div className={classes.pillWrapper}>
-                  <span className={classes.pill}><Leaf size={14} className={classes.pillIconGreen} /> Public Speaking</span>
-                  <span className={classes.pill}><Brain size={14} className={classes.pillIconGreen} /> Critical Thinking</span>
-                </div>
-                <div className={classes.pillMarqueeContainer}>
-                  <div className={classes.pillMarqueeTrack}>
-                    <div className={classes.pillGroup}>
-                      <span className={classes.pill}><CircleDollarSign size={14} className={classes.pillIconGreen} /> Financial Literacy</span>
-                      <span className={classes.pill}><Sparkles size={14} className={classes.pillIconGreen} /> AI Literacy</span>
-                    </div>
-                    <div className={classes.pillGroup}>
-                      <span className={classes.pill}><CircleDollarSign size={14} className={classes.pillIconGreen} /> Financial Literacy</span>
-                      <span className={classes.pill}><Sparkles size={14} className={classes.pillIconGreen} /> AI Literacy</span>
-                    </div>
+                <div className={classes.skillsMarqueeWrapper}>
+                  <div className={classes.skillsMarqueeTrack}>
+                    {[1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7].map((n, i) => (
+                      <img
+                        key={i}
+                        src={`/assets/images/skills ${n}.svg`}
+                        alt={`Skill ${n}`}
+                        className={classes.skillPillImg}
+                      />
+                    ))}
                   </div>
                 </div>
               </div>
@@ -386,16 +402,16 @@ export default function SummerCampPage() {
                 <h3 className={classes.cardTitle}>Create stand out profile</h3>
                 <div className={classes.cardContentWrapper}>
                   <div className={classes.imageBox}>
-                    <div className={classes.imgPlaceholderDark}>AI</div>
-                    <p className={classes.imageBoxText}><strong>AI Projects:</strong> Website, Agents, Application (no coding)</p>
+                    <img src="/assets/images/purple card 1.svg" alt="AI Projects" className={classes.purpleCardImg} />
+                    <p className={classes.imageBoxText}><span className={classes.imageBoxHighlight}>AI Projects:</span> Website, Agents, Application (no coding)</p>
                   </div>
                   <div className={classes.imageBox}>
-                    <div className={classes.imgPlaceholderBook}>📖</div>
-                    <p className={classes.imageBoxText}>Path to <strong>publishing your first book</strong></p>
+                    <img src="/assets/images/purple card 2.svg" alt="Publishing" className={classes.purpleCardImg} />
+                    <p className={classes.imageBoxText}>Path to <span className={classes.imageBoxHighlight}>publishing your first book</span></p>
                   </div>
                   <div className={classes.imageBox}>
-                    <div className={classes.imgPlaceholderTed}>TED</div>
-                    <p className={classes.imageBoxText}>Assistance towards your own <strong>Ted Talk</strong></p>
+                    <img src="/assets/images/purple card 3.svg" alt="Ted Talk" className={classes.purpleCardImg} />
+                    <p className={classes.imageBoxText}>Assistance towards your own <span className={classes.imageBoxHighlight}>Ted Talk</span></p>
                   </div>
                 </div>
               </div>
@@ -410,19 +426,13 @@ export default function SummerCampPage() {
                     Immership Workshop & Access to Tools for Career Exploration
                   </div>
                   <div className={classes.whiteBox}>
-                    <p>Connect with students from <strong>New-Age Colleges</strong></p>
-                    <div className={classes.logoRow}>
-                      <span>Masters' Union</span><span>Plaksha</span><span>Flame</span>
-                    </div>
+                    <img src="/assets/images/row 2 coral card.svg" alt="Connect with students from New-Age Colleges" className={classes.coralCardRowImg} />
                   </div>
                   <div className={classes.whiteBox}>
                     Direct 1:1 Mentorship with the Founder
                   </div>
                   <div className={classes.whiteBox}>
-                    <p>Mentorship Opportunity by experts from</p>
-                    <div className={classes.logoRow}>
-                      <span>Wharton</span><span>NYU</span><span>Google</span><span>Amazon</span><span>PWC</span>
-                    </div>
+                    <img src="/assets/images/row 4 coral card.svg" alt="Mentorship Opportunity by experts from Wharton, NYU, Google, Amazon, PWC" className={classes.coralCardRowImg} />
                   </div>
                 </div>
               </div>
@@ -430,52 +440,56 @@ export default function SummerCampPage() {
           </div>
         </section>
 
+        {(() => {
+          const totalPeople = 6;
+          return null; // state is managed via useState above
+        })()}
+
         <div className={classes.testimonialsSection}>
-          <h2 className={classes.testimonialsTitle}>What people are <span className={classes.testimonialsScript}>Saying</span><span className={classes.quotesAccent}>"</span></h2>
+          <button
+            className={classes.navArrow}
+            onClick={() => setTestimonialIndex(i => (i - 1 + 6) % 6)}
+          >
+            <ChevronLeft size={20} strokeWidth={1.5} />
+          </button>
 
-          <div className={classes.testimonialsInner}>
-            <button className={classes.navArrow}><ChevronLeft size={20} strokeWidth={1.5} /></button>
+          <div className={classes.testimonialsGradientBox}>
+            <h2 className={classes.testimonialsTitle}><span className={classes.sayingTitleFirstLine}>What people <span className={classes.sayingAreWrapper}>are<img src="/assets/images/saying.svg" alt="" className={classes.sayingAccentImg} /></span></span> <span className={classes.testimonialsScript}>Saying</span></h2>
 
-            <div className={classes.testimonialsGrid}>
-              {/* Card 1 */}
-              <div className={classes.testimonialCard}>
-                <div className={`${classes.quoteIconMark} ${classes.quotePurple}`}>”</div>
-                <p className={classes.testimonialText}>"Most programs either push academics or talk vaguely about careers. This camp stood out because it combines skill-building, guidance, and emotional support in a structured way."</p>
-                <div className={classes.testimonialAuthor}>
-                  <strong>Ankita Aggrawal</strong>
-                  <span>Parent, GD Goenka School</span>
-                </div>
-              </div>
-
-              {/* Card 2 */}
-              <div className={classes.testimonialCard}>
-                <div className={`${classes.quoteIconMark} ${classes.quoteBlue}`}>”</div>
-                <p className={classes.testimonialText}>"There is so much information online that it becomes overwhelming even for parents. We needed something structured and trustworthy to make sense of it. Happy that my child found this program."</p>
-                <div className={classes.testimonialAuthor}>
-                  <strong>Surbhi Jindal</strong>
-                  <span>Parent, DPS RK Puram</span>
-                </div>
-              </div>
-
-              {/* Card 3 */}
-              <div className={classes.testimonialCard}>
-                <div className={`${classes.quoteIconMark} ${classes.quoteCoral}`}>”</div>
-                <p className={classes.testimonialText}>"Everyone keeps talking about building a good profile, but no one tells you how. This program stood out because you actually create real projects instead of just talking about skills."</p>
-                <div className={classes.testimonialAuthor}>
-                  <strong>Shivam</strong>
-                  <span>Student, OP Jindal School</span>
-                </div>
+            <div className={classes.testimonialsInner}>
+              <div className={classes.testimonialsGrid}>
+                {[0, 1, 2].map(offset => {
+                  const idx = (testimonialIndex + offset) % 6;
+                  return (
+                    <img
+                      key={idx}
+                      src={`/assets/images/people ${idx + 1}.svg`}
+                      alt={`Testimonial ${idx + 1}`}
+                      className={classes.peopleCard}
+                    />
+                  );
+                })}
               </div>
             </div>
 
-            <button className={classes.navArrow}><ChevronRight size={20} strokeWidth={1.5} /></button>
+            <div className={classes.dotsContainer}>
+              {[0, 1, 2, 3, 4, 5].map(i => (
+                <div
+                  key={i}
+                  className={`${classes.dot} ${i === testimonialIndex ? classes.dotActive : ''}`}
+                  onClick={() => setTestimonialIndex(i)}
+                  style={{ cursor: 'pointer' }}
+                />
+              ))}
+            </div>
           </div>
 
-          <div className={classes.dotsContainer}>
-            <div className={`${classes.dot} ${classes.dotActive}`}></div>
-            <div className={classes.dot}></div>
-            <div className={classes.dot}></div>
-          </div>
+          <button
+            className={classes.navArrow}
+            onClick={() => setTestimonialIndex(i => (i + 1) % 6)}
+          >
+            <ChevronRight size={20} strokeWidth={1.5} />
+          </button>
         </div>
 
         {/* Lived Experience */}
@@ -486,8 +500,8 @@ export default function SummerCampPage() {
                 <Image src={sparklesBootcamp} alt="Sparkles" />
               </div>
               <h2 className={classes.livedExpTitle}>
-                This Program Was Built <br />
-                From <span className={`${classes.livedExpScript} ${classes.livedExpScriptCoral}`}>
+                This Program Was Built From
+                <span className={`${classes.livedExpScript} ${classes.livedExpScriptCoral}`}>
                   <span style={{ position: "relative", display: "inline-block" }}>
                     Lived
                     <Image src={livedUnderline} alt="underline" className={classes.underlineLived} />
@@ -600,12 +614,12 @@ export default function SummerCampPage() {
               </div>
               <p className={classes.dayDesc}>Students experience the full journey of building a startup, from identifying a problem to creating, testing, & pitching a solution.</p>
 
-              <div className={classes.day1TopRow}>
+              <div className={classes.day2TopRow}>
                 <img src="/assets/images/card 1 day 1.svg" alt="Day 1 Card 1" className={classes.day1CardImgLeft} />
                 <img src="/assets/images/card 2 day 1.svg" alt="Day 1 Card 2" className={classes.day1CardImgRight} />
               </div>
 
-              <div className={classes.cardsRow2}>
+              <div className={classes.day2BottomRow}>
                 <img src="/assets/images/card 3 day 1.svg" alt="Day 1 Card 3" className={classes.day1CardImgLeft} />
                 <img src="/assets/images/card 4 day 1.svg" alt="Day 1 Card 4" className={classes.day1CardImgRight} />
               </div>
@@ -640,7 +654,7 @@ export default function SummerCampPage() {
               <div className={classes.dayTitleRow}>
                 <h3 className={classes.dayMainTitle}><span className={classes.textCoral}>AI</span> Innovation Lab</h3>
               </div>
-              <p className={classes.daySubtitle}><em>No Coding</em> <strong>required</strong></p>
+              <p className={classes.daySubtitle}><span className={classes.day3NoCoding}>No Coding</span> <span className={classes.day3Required}>required</span></p>
               <p className={classes.dayDesc}>Learn how to think clearly, break problems, and confidently use AI tools to build real solutions</p>
 
               <div className={classes.day3TopRow}>
@@ -651,10 +665,20 @@ export default function SummerCampPage() {
               <div className={classes.day3BottomRow}>
                 <div className={classes.day3CardBottom}>
                   <p className={classes.day3ProjectsTitle}><strong><span className={classes.textCoralHover}>Build live projects</span></strong> using AI for a<br /><strong>standout profile</strong></p>
-                  <div className={classes.day3ProjectsSVGRow}>
-                    <img src="/assets/images/card 3 day 3.svg" alt="Day 3 Card 3" className={classes.day3CardImg3} />
-                    <img src="/assets/images/card 4 day 3.svg" alt="Day 3 Card 4" className={classes.day3CardImg4} />
-                    <img src="/assets/images/card 5 day 3.svg" alt="Day 3 Card 5" className={classes.day3CardImg5} />
+                  <div className={classes.day3PillsRow}>
+                    <span className={classes.day3Pill}>No coding required</span>
+                    <span className={classes.day3Pill}>Beginner friendly</span>
+                  </div>
+                  <div className={classes.day3ProjectsGrid}>
+                    <div className={classes.day3ProjectCard}>
+                      <img src="/assets/images/card 3 day 3.svg" alt="Create your own App" className={classes.day3ProjectCardImg} />
+                    </div>
+                    <div className={classes.day3ProjectCard}>
+                      <img src="/assets/images/card 4 day 3.svg" alt="Create Short Film & AI Content" className={classes.day3ProjectCardImg} />
+                    </div>
+                    <div className={classes.day3ProjectCard}>
+                      <img src="/assets/images/card 5 day 3.svg" alt="Create AI Agents to automate tasks" className={classes.day3ProjectCardImg} />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -672,7 +696,7 @@ export default function SummerCampPage() {
 
               <div className={classes.day4TopRow}>
                 <img src="/assets/images/card 1 day 4.svg" alt="Day 4 Card 1" className={classes.day4CardImg1} />
-                <img src="/assets/images/card 2 day 4.svg" alt="Day 4 Card 2" className={classes.day4CardImg2} />
+                <img src="/assets/images/card 2 day 4.svg" alt="Day 4 Card 2" className={`${classes.day4CardImg2} ${classes.day4CardSecond}`} />
               </div>
 
               <div className={classes.day4BottomRow}>
@@ -685,22 +709,38 @@ export default function SummerCampPage() {
             <div className={classes.dayBlock}>
               <div className={classes.dayHeader}>
                 <h2 className={classes.dayNumber}>Day 5</h2>
+                <img src="/assets/images/Rocket doodle 1.svg" alt="Rocket" className={classes.rocketDoodleDay5} />
               </div>
               <div className={classes.dayTitleRow}>
                 <h3 className={classes.dayMainTitle}><span className={classes.textPurple}>The Startup</span> Challenge</h3>
               </div>
+              <p className={classes.day5Subtitle}><span className={classes.day5NoExperience}>No experience</span> <span className={classes.day5Required}>required</span></p>
               <p className={classes.dayDesc}>Experience the full journey of building a startup, from identifying a problem to creating, testing, and pitching a solution.</p>
-              <p className={classes.daySubtitleScript}>* no experience required * beginner friendly</p>
 
               <div className={classes.day5TopRow}>
-                <img src="/assets/images/card 1 day 5.svg" alt="Day 5 Card 1" className={classes.day5CardImg1} />
-                <img src="/assets/images/card 2 day 5.svg" alt="Day 5 Card 2" className={classes.day5CardImg2} />
-                <img src="/assets/images/card 3 day 5.svg" alt="Day 5 Card 3" className={classes.day5CardImg3} />
+                <picture>
+                  <source media="(max-width: 768px)" srcSet="/assets/images/day%205%20card%201%20mobile.svg" />
+                  <img src="/assets/images/card 1 day 5.svg" alt="Day 5 Card 1" className={classes.day5CardImg1} />
+                </picture>
+                <picture>
+                  <source media="(max-width: 768px)" srcSet="/assets/images/day%205%20card%202%20mobile.svg" />
+                  <img src="/assets/images/card 2 day 5.svg" alt="Day 5 Card 2" className={classes.day5CardImg2} />
+                </picture>
+                <picture>
+                  <source media="(max-width: 768px)" srcSet="/assets/images/day%205%20card%203%20mobile.svg" />
+                  <img src="/assets/images/card 3 day 5.svg" alt="Day 5 Card 3" className={classes.day5CardImg3} />
+                </picture>
               </div>
 
               <div className={classes.day5BottomRow}>
-                <img src="/assets/images/card 4 day 5.svg" alt="Day 5 Card 4" className={classes.day5CardImg4} />
-                <img src="/assets/images/card 5 day 5.svg" alt="Day 5 Card 5" className={classes.day5CardImg5} />
+                <picture>
+                  <source media="(max-width: 768px)" srcSet="/assets/images/day%205%20card%204%20mobile.svg" />
+                  <img src="/assets/images/card 4 day 5.svg" alt="Day 5 Card 4" className={classes.day5CardImg4} />
+                </picture>
+                <picture>
+                  <source media="(max-width: 768px)" srcSet="/assets/images/day%205%20card%205%20mobile.svg" />
+                  <img src="/assets/images/card 5 day 5.svg" alt="Day 5 Card 5" className={classes.day5CardImg5} />
+                </picture>
               </div>
             </div>
 
@@ -709,7 +749,6 @@ export default function SummerCampPage() {
               <img src="/assets/images/FloatingBoxes.svg" alt="Floating Boxes" className={classes.floatingBoxesDay6} />
               <div className={classes.dayHeader}>
                 <h2 className={classes.dayNumber}>Day 6</h2>
-                <div className={classes.rocketIconSmall}>🚀</div>
               </div>
               <div className={classes.dayTitleRow}>
                 <h3 className={classes.dayMainTitle}><span className={classes.textBlue}>Mindfulness</span> &<br />Digital Detox Day</h3>
@@ -730,6 +769,12 @@ export default function SummerCampPage() {
 
           {/* Certification Section */}
           <div className={classes.certSectionWrapper}>
+            {/* Mobile: single SVG for whole section */}
+            <div className={classes.certSectionMobile}>
+              <img src="/assets/images/certificate mobile.svg" alt="Certification & Recognition" className={classes.certMobileImg} />
+            </div>
+            {/* Desktop: full content */}
+            <div className={classes.certSectionDesktop}>
             <img src="/assets/images/Container.svg" alt="" className={classes.certDivider} />
             <img src="/assets/images/Vector 1555.svg" alt="" className={classes.certVectorIcon} />
             <img src="/assets/images/leaves-bootcamp.svg" alt="" className={classes.certLeavesIcon} />
@@ -773,6 +818,7 @@ export default function SummerCampPage() {
                 <img src="/assets/images/Spotlight Mic - iconSvg.co.svg" alt="Talent Show Spotlight" className={classes.certMiniImgRight} />
               </div>
             </div>
+            </div>
           </div>
         </section>
 
@@ -811,42 +857,49 @@ export default function SummerCampPage() {
 
         {/* Admission Process */}
         <section className={classes.admissionProcessSection}>
-          <div className={classes.admissionProcessHeaderRow}>
-            <h2 className={classes.admissionProcessTitle}>Admission</h2>
-            <h2 className={classes.admissionProcessScript}>Process</h2>
+          {/* Mobile: single asset */}
+          <div className={classes.admissionSectionMobile}>
+            <img src="/assets/images/admission process.svg" alt="Admission Process" className={classes.admissionMobileImg} />
           </div>
-          <div className={classes.admissionProcessTimeline}>
-            <div className={`${classes.admissionStepNode} ${classes.admissionStepNode1}`}>
-              <div className={classes.admissionStepCircle}>
-                <img src="/assets/images/Ellipse 96.svg" className={classes.admissionStepBg} alt="" />
-                <span>1</span>
-              </div>
-              <h4>1. Apply Online</h4>
-              <p>
-                Reserve your spot with basic<br />details, batch preference, and<br />booking fees(INR 899)
-              </p>
+          {/* Desktop: full content */}
+          <div className={classes.admissionSectionDesktop}>
+            <div className={classes.admissionProcessHeaderRow}>
+              <h2 className={classes.admissionProcessTitle}>Admission</h2>
+              <h2 className={classes.admissionProcessScript}>Process</h2>
             </div>
-            <img src="/assets/images/Arrow admission.svg" className={classes.admissionStepArrow} alt="" />
-            <div className={`${classes.admissionStepNode} ${classes.admissionStepNode2}`}>
-              <div className={classes.admissionStepCircle}>
-                <img src="/assets/images/Ellipse 96.svg" className={classes.admissionStepBg} alt="" />
-                <span>2</span>
+            <div className={classes.admissionProcessTimeline}>
+              <div className={`${classes.admissionStepNode} ${classes.admissionStepNode1}`}>
+                <div className={classes.admissionStepCircle}>
+                  <img src="/assets/images/Ellipse 96.svg" className={classes.admissionStepBg} alt="" />
+                  <span>1</span>
+                </div>
+                <h4>1. Apply Online</h4>
+                <p>
+                  Reserve your spot with basic<br />details, batch preference, and<br />booking fees(INR 899)
+                </p>
               </div>
-              <h4>2. Personal Interview</h4>
-              <p>
-                Our team will reach out <strong>within<br />48 hours</strong> to understand the<br />student's motivation
-              </p>
-            </div>
-            <img src="/assets/images/Arrow admission 2.svg" className={classes.admissionStepArrow2} alt="" />
-            <div className={`${classes.admissionStepNode} ${classes.admissionStepNode3}`}>
-              <div className={classes.admissionStepCircle}>
-                <img src="/assets/images/Ellipse 96.svg" className={classes.admissionStepBg} alt="" />
-                <span>3</span>
+              <img src="/assets/images/Arrow admission.svg" className={classes.admissionStepArrow} alt="" />
+              <div className={`${classes.admissionStepNode} ${classes.admissionStepNode2}`}>
+                <div className={classes.admissionStepCircle}>
+                  <img src="/assets/images/Ellipse 96.svg" className={classes.admissionStepBg} alt="" />
+                  <span>2</span>
+                </div>
+                <h4>2. Personal Interview</h4>
+                <p>
+                  Our team will reach out <strong>within<br />48 hours</strong> to understand the<br />student's motivation
+                </p>
               </div>
-              <h4>3. Final Selection</h4>
-              <p>
-                Receive final confirmation along<br />with request for the remaining fees
-              </p>
+              <img src="/assets/images/Arrow admission 2.svg" className={classes.admissionStepArrow2} alt="" />
+              <div className={`${classes.admissionStepNode} ${classes.admissionStepNode3}`}>
+                <div className={classes.admissionStepCircle}>
+                  <img src="/assets/images/Ellipse 96.svg" className={classes.admissionStepBg} alt="" />
+                  <span>3</span>
+                </div>
+                <h4>3. Final Selection</h4>
+                <p>
+                  Receive final confirmation along<br />with request for the remaining fees
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -864,7 +917,7 @@ export default function SummerCampPage() {
             <div className={classes.futureReadyGrid}>
               <div className={`${classes.frCard} ${classes.frCard1}`}>
                 <div className={classes.frCardHeader}>
-                  <PencilRuler className={classes.frIconPurple} size={28} />
+                  <img src="/assets/images/getting future ready card 1.svg" alt="Icon" style={{ width: 36, height: 36, objectFit: 'contain' }} />
                   <h3 className={classes.frCardTitle}>All School Stages</h3>
                 </div>
                 <div className={classes.frPillContainer}>
@@ -879,7 +932,7 @@ export default function SummerCampPage() {
 
               <div className={`${classes.frCard} ${classes.frCard2}`}>
                 <div className={classes.frCardHeader}>
-                  <GraduationCap className={classes.frIconBlue} size={32} />
+                  <img src="/assets/images/getting future ready card 2.svg" alt="Icon" style={{ width: 36, height: 36, objectFit: 'contain' }} />
                   <h3 className={classes.frCardTitle}>All Academic Streams</h3>
                 </div>
                 <div className={classes.frPillContainer}>
@@ -891,7 +944,7 @@ export default function SummerCampPage() {
 
               <div className={`${classes.frCard} ${classes.frCard3}`}>
                 <div className={classes.frCardHeader}>
-                  <UserPlus className={classes.frIconCoral} size={28} />
+                  <img src="/assets/images/getting future ready card 3.svg" alt="Icon" style={{ width: 36, height: 36, objectFit: 'contain' }} />
                   <h3 className={classes.frCardTitle}>All Career Aspirations</h3>
                 </div>
                 <div className={classes.frPillContainer}>
@@ -1020,6 +1073,12 @@ export default function SummerCampPage() {
           </div>
         </section>
         <section className={classes.bonusSection}>
+          {/* Mobile: parents mobile asset only */}
+          <div className={classes.bonusSectionMobile}>
+            <img src="/assets/images/parents mobile.svg" alt="Bonus Sessions for Parents" className={classes.bonusParentsMobileImg} />
+          </div>
+          {/* Desktop: full content */}
+          <div className={classes.bonusSectionDesktop}>
           <div className={classes.bonusHeader}>
             <div className={classes.bonusTitleRow}>
               <img src="/assets/images/space - launch bonus.svg" className={classes.bonusRocket} alt="" />
@@ -1075,143 +1134,37 @@ export default function SummerCampPage() {
               </div>
             </div>
           </div>
+          </div>
         </section>
 
 
 
-        <section className={classes.section}>
+        <section className={`${classes.section} ${classes.beyondSection}`}>
           <div className={classes.beyondHeaderRow}>
             <div className={classes.beyondTitleLeft}>
               <h2 className={classes.beyondTitle}>Beyond the</h2>
-              <div className={classes.beyondScriptWrapper}>
-                <h2 className={classes.beyondTitleScript}>Summer Camp</h2>
-                <div className={classes.beyondCircle}></div>
-              </div>
+              <h2 className={classes.beyondTitleScript}>
+                <span className={classes.summerCircleWrapper}>
+                  Summer
+                  <img src="/assets/images/summer camp circle.svg" className={classes.summerCircleImg} alt="" />
+                </span> Camp
+              </h2>
             </div>
             <div className={classes.beyondTextRight}>
-              <p>We understand that learning is a lifelong process and students would need support after the program as well, and hence we will</p>
+              <p className={classes.beyondPara}>We understand that learning is a lifelong process and students would need support after the program as well, and hence we will</p>
+              <img src="/assets/images/beyond doodle.svg" className={classes.beyondDoodle} alt="Bulb doodle" />
             </div>
           </div>
 
           <div className={classes.beyondCardsRow}>
-            <div className={`${classes.beyondCard} ${classes.borderPurpleThin}`}>
-              <div className={classes.beyondIconCirclePurple}><Users size={28} /></div>
-              <p className={classes.beyondCardText}>Create an <strong>exclusive alumni group</strong> for students who enroll with us</p>
-            </div>
-            <div className={`${classes.beyondCard} ${classes.borderBlueThin}`}>
-              <div className={classes.beyondIconCircleBlue}><CalendarDays size={28} /></div>
-              <p className={classes.beyondCardText}>Keep sharing resources & inviting them for <strong>online/offline events</strong></p>
-            </div>
-            <div className={`${classes.beyondCard} ${classes.borderPinkThin}`}>
-              <div className={classes.beyondIconCirclePink}><CheckCircle size={28} /></div>
-              <p className={classes.beyondCardText}>Even <strong>support</strong> them with their doubts <strong>after the program</strong> to the extent possible</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Learn More About the Bootcamp */}
-        <section className={classes.section}>
-          <div className={classes.learnMoreHeader}>
-            <h2 className={classes.learnMoreTitle}>Learn More About the <span className={classes.learnMoreScript}>Bootcamp</span></h2>
-            <div className={classes.decorativeLines}></div>
-          </div>
-          <div className={classes.learnMoreGrid}>
-            <div className={classes.blogCard}>
-              <div className={classes.blogImageWrapper}>
-                <img src="/assets/blog1.jpg" alt="Phones" className={classes.blogImage} />
-                <div className={classes.blogReadTime}>5 MIN READ</div>
-              </div>
-              <div className={classes.blogContent}>
-                <h3 className={classes.blogTitle}>why young voices matter: we build safe spaces for</h3>
-                <p className={classes.blogDesc}>Here's how we're creating platforms where young people feel seen, safe, and empowered.</p>
-              </div>
-            </div>
-
-            <div className={classes.blogCard}>
-              <div className={classes.blogImageWrapper}>
-                <img src="/assets/blog2.jpg" alt="Box robot" className={classes.blogImage} />
-                <div className={classes.blogReadTimeBlue}>5 MIN READ</div>
-              </div>
-              <div className={classes.blogContent}>
-                <h3 className={classes.blogTitle}>why young voices matter: we build safe spaces</h3>
-                <p className={classes.blogDesc}>Here's how we're creating platforms where young people feel seen, safe, and empowered.</p>
-              </div>
-            </div>
-
-            <div className={classes.blogCard}>
-              <div className={classes.blogImageWrapper}>
-                <img src="/assets/blog3.jpg" alt="Hands together" className={classes.blogImage} />
-                <div className={classes.blogReadTimePink}>5 MIN READ</div>
-              </div>
-              <div className={classes.blogContent}>
-                <h3 className={classes.blogTitle}>why young voices matter: we build for expression</h3>
-                <p className={classes.blogDesc}>Here's how we're creating platforms where young people feel seen, safe, and empowered.</p>
-              </div>
-            </div>
+            <img src="/assets/images/beyond card 1.svg" className={classes.beyondImageCard} alt="Create an exclusive alumni group for students who enroll with us" />
+            <img src="/assets/images/beyond card 2.svg" className={classes.beyondImageCard} alt="Keep sharing resources & inviting them for online/offline events" />
+            <img src="/assets/images/beyond card 3.svg" className={classes.beyondImageCard} alt="Even support them with their doubts after the program to the extent possible" />
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className={classes.section}>
-          <div className={classes.faqHeaderWrapper}>
-            <h2 className={classes.faqTitle}>Frequently</h2>
-            <div className={classes.faqScriptWrapper}>
-              <h2 className={classes.faqTitleScript}>Asked</h2>
-              <h2 className={classes.faqTitleScript}>Questions</h2>
-            </div>
-          </div>
-
-          <div className={classes.faqLayout}>
-            <div className={classes.faqSidebar}>
-              <button className={classes.faqTabActive}>Program & Curriculum</button>
-              <button className={classes.faqTab}>Certification & Outcomes</button>
-              <button className={classes.faqTab}>Application & Admission</button>
-              <button className={classes.faqTab}>Fees & Payment</button>
-              <button className={classes.faqTab}>Format & Delivery</button>
-              <button className={classes.faqTab}>Mentorship & Faculty</button>
-              <button className={classes.faqTab}>Well-being & Support</button>
-            </div>
-
-            <div className={classes.faqContentArea}>
-              {faqItems.map((item, i) => (
-                <div key={i} className={classes.faqItem}>
-                  <button
-                    className={classes.faqQuestion}
-                    onClick={() => setFaqOpen(faqOpen === i ? null : i)}
-                  >
-                    <span>{item.q}</span>
-                    <span className={classes.faqChevron}>
-                      {faqOpen === i ? 'ʌ' : 'v'}
-                    </span>
-                  </button>
-                  {faqOpen === i && (
-                    <p className={classes.faqAnswer}>{item.a}</p>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Footer CTA */}
-        <section className={classes.ctaSection}>
-          <div className={classes.ctaCard}>
-            <h2 className={classes.ctaTitle}>The 21st Century Summer Camp</h2>
-            <p className={classes.ctaSub}>Your child's gateway to become future-ready in an evolving AI world</p>
-            <Link
-              href="/summer-camp/reserve"
-              className={classes.ctaButton}
-              onClick={() => trackEvent({ category: "Summer Camp", action: "Click", label: "Footer CTA" })}
-            >
-              Reserve Now <ArrowUpRight size={20} />
-            </Link>
-          </div>
-          <div className={classes.contactRow}>
-            <a href="mailto:contact@roobaroo.ai">contact@roobaroo.ai</a>
-            <a href="tel:+919039974840">+91 90399 74840</a>
-            <span>WeWork, DLF 2 Horizon Centre, Gurgaon- 122002</span>
-          </div>
-        </section>
+        <FAQ />
       </main >
       <Footer />
     </>

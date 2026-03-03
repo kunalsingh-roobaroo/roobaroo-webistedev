@@ -1,0 +1,292 @@
+.faqSection {
+    padding: 80px 20px;
+    background: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+.faqHeader {
+    text-align: right;
+    margin-bottom: 0;
+    margin-right: -10px;
+    /* Slight offset to align with edge of background */
+}
+
+.title {
+    color: var(--Black, #232323);
+    text-align: right;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    /* 75.6px */
+    margin: 0;
+}
+
+.scriptWrapper {
+    width: 264.152px;
+    margin-left: auto;
+}
+
+.scriptTitle {
+    color: var(--Solid-Purple, #815FAA);
+    text-align: right;
+    font-family: "Simple Cakes", cursive;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 80%;
+    /* 57.6px */
+    margin: 0;
+}
+
+.contentWrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 283px;
+    height: 546px;
+    padding: 36px 34px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 11px;
+    border: 2px solid var(--Gradient-001, #FDBBBB);
+    background: rgba(129, 95, 170, 0.10);
+    /* Adding gradient border using pseudo-element masking to override solid color */
+    position: relative;
+    box-sizing: border-box;
+}
+
+.sidebar::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 11px;
+    padding: 2px;
+    background: linear-gradient(180deg, #27AAE7 0%, rgba(251, 125, 125, 0.35) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.categoryItem {
+    width: 100%;
+    padding: 16px 0;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #4A5568;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.categoryItem:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.categoryItem:hover {
+    background: rgba(129, 95, 170, 0.05);
+    color: #815FAA;
+}
+
+.categoryActive {
+    color: #2D3748;
+    font-weight: 600;
+}
+
+/* Accordions */
+.accordionsWrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.accordionItem {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: stretch;
+    align-self: stretch;
+    border-radius: 17px;
+    border: 1px solid var(--blacks-70, #404446);
+    background: var(--Whites-Base, #FFF);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.accordionOpen {
+    border-color: #FB7D7D;
+    box-shadow: 0px 4px 12px rgba(251, 125, 125, 0.1);
+}
+
+.accordionHeader {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.questionText {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #232323;
+    line-height: 1.4;
+}
+
+.toggleIcon {
+    color: #FB7D7D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.accordionBody {
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.answerText {
+    margin: 0;
+    padding: 0 24px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #4A5568;
+    line-height: 1.6;
+}
+
+@media (max-width: 991px) {
+    .contentWrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: 16px;
+        gap: 8px;
+    }
+
+    .categoryItem {
+        white-space: nowrap;
+        margin-bottom: 0;
+        border-bottom: none;
+        padding: 12px 20px;
+    }
+}
+
+/* Mobile: FAQ header on one line with specified typography */
+@media (max-width: 768px) {
+    .leftColumn {
+        align-items: center;
+        width: 100%;
+    }
+
+    .faqHeader {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 6px;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .faqHeader .title {
+        color: var(--Black, #232323);
+        text-align: center;
+        font-family: Montserrat, sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        margin: 0;
+    }
+
+    .faqHeader .scriptWrapper {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        gap: 4px;
+    }
+
+    .faqHeader .scriptTitle {
+        color: var(--Solid-Purple, #815FAA);
+        text-align: center;
+        font-family: "Simple Cakes", cursive;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 80%;
+        margin: 0;
+    }
+
+    /* Horizontal bar: full width, two options visible, equal gap left & right */
+    .sidebar {
+        width: 100%;
+        height: 43px;
+        min-height: 43px;
+        flex-direction: row;
+        padding: 0 12px;
+        gap: 0;
+        align-items: center;
+        justify-content: flex-start;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 7px;
+        border: 1px solid var(--Gradient-001, #FDBBBB);
+        background: linear-gradient(269deg, #FDBBBB -6.78%, #FFF 58%, #B9E9FF 99.06%);
+        margin-left: 0;
+        margin-right: 0;
+        box-sizing: border-box;
+    }
+
+    .sidebar::before {
+        display: none;
+    }
+
+    .categoryItem {
+        flex: 0 0 calc(50% - 8px);
+        min-width: calc(50% - 8px);
+        white-space: nowrap;
+        padding: 8px 6px;
+        font-size: 12px;
+        border-bottom: none;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
