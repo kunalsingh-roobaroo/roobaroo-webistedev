@@ -50,6 +50,42 @@ import classes from "./SummerCampPage.module.css";
 
 export default function SummerCampPage() {
   const [testimonialIndex, setTestimonialIndex] = React.useState(0);
+  const [sayingCategory, setSayingCategory] = React.useState('all');
+
+  const sayingCards = {
+    all: [
+      '/assets/images/expert 1 saying.svg',
+      '/assets/images/expert 2saying.svg',
+      '/assets/images/educator 1.svg',
+      '/assets/images/parents 1.svg',
+      '/assets/images/students 1.svg',
+      '/assets/images/students 2.svg',
+    ],
+    experts: [
+      '/assets/images/expert 1 saying.svg',
+      '/assets/images/expert 2saying.svg',
+      '/assets/images/expert 3 saying.svg',
+      '/assets/images/expert 4 saying.svg',
+    ],
+    educators: [
+      '/assets/images/educator 1.svg',
+      '/assets/images/educator 2.svg',
+      '/assets/images/educator 3.svg',
+    ],
+    parents: [
+      '/assets/images/parents 1.svg',
+      '/assets/images/parents 2.svg',
+      '/assets/images/parents 3.svg',
+      '/assets/images/parents 4.svg',
+    ],
+    students: [
+      '/assets/images/students 1.svg',
+      '/assets/images/students 2.svg',
+      '/assets/images/students 3.svg',
+      '/assets/images/students 4.svg',
+      '/assets/images/students 5.svg',
+    ],
+  };
 
   const tags = [
 
@@ -1160,6 +1196,29 @@ export default function SummerCampPage() {
             <img src="/assets/images/beyond card 1.svg" className={classes.beyondImageCard} alt="Create an exclusive alumni group for students who enroll with us" />
             <img src="/assets/images/beyond card 2.svg" className={classes.beyondImageCard} alt="Keep sharing resources & inviting them for online/offline events" />
             <img src="/assets/images/beyond card 3.svg" className={classes.beyondImageCard} alt="Even support them with their doubts after the program to the extent possible" />
+          </div>
+        </section>
+
+        {/* What people are Saying (pills) */}
+        <section className={classes.sayingSection}>
+          <div className={classes.sayingWrapper}>
+            <h2 className={classes.sayingTitleLine1}>What people are</h2>
+            <h2 className={classes.sayingTitleLine2}>Saying</h2>
+            <img src="/assets/images/lived underline bootcamp.svg" alt="" className={classes.sayingUnderline} />
+          </div>
+          <div className={classes.sayingPillsRow}>
+            <button type="button" onClick={() => setSayingCategory('all')} className={`${classes.sayingPill} ${sayingCategory === 'all' ? classes.sayingPillActive : ''}`}>All</button>
+            <button type="button" onClick={() => setSayingCategory('experts')} className={`${classes.sayingPill} ${sayingCategory === 'experts' ? classes.sayingPillActive : ''}`}>Experts</button>
+            <button type="button" onClick={() => setSayingCategory('educators')} className={`${classes.sayingPill} ${sayingCategory === 'educators' ? classes.sayingPillActive : ''}`}>Educators</button>
+            <button type="button" onClick={() => setSayingCategory('parents')} className={`${classes.sayingPill} ${sayingCategory === 'parents' ? classes.sayingPillActive : ''}`}>Parents</button>
+            <button type="button" onClick={() => setSayingCategory('students')} className={`${classes.sayingPill} ${sayingCategory === 'students' ? classes.sayingPillActive : ''}`}>Students</button>
+          </div>
+          <div className={classes.sayingCardsGrid}>
+            {sayingCards[sayingCategory].map((src, i) => (
+              <div key={`${sayingCategory}-${i}`} className={classes.sayingCard}>
+                <img src={src} alt="" className={classes.sayingCardImg} />
+              </div>
+            ))}
           </div>
         </section>
 
